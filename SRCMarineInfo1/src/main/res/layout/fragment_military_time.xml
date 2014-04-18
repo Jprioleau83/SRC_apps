@@ -1,0 +1,622 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cnsintegration.srcmarineinfo1.MilitaryTimeFragment">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="left|top"
+        android:weightSum="100">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_weight="70"
+        android:layout_height="fill_parent"
+        android:layout_gravity="left|top"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:layout_weight="1"
+            android:weightSum="70">
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_weight="30"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|top"
+                >
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Military Time:"
+
+                    android:id="@+id/millabel" />
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_weight="40"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|top"
+              >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Large Text"
+                    android:textSize="40sp"
+                    android:id="@+id/hour"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:textSize="40sp"
+                    android:id="@+id/textView4" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="40sp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Large Text"
+                    android:id="@+id/min"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:textSize="40sp"
+                    android:id="@+id/textView5" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Large Text"
+                    android:textSize="40sp"
+                    android:id="@+id/sec"
+                    />
+
+
+            </LinearLayout>
+
+
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:layout_weight="1"
+            android:weightSum="70">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_weight="30"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|top"
+                >
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Current Time:"
+                    android:id="@+id/curlabel" />
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_weight="40"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|top"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Large Text"
+                    android:textSize="40sp"
+                    android:id="@+id/curhour"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:textSize="40sp"
+                    android:id="@+id/curtextView4" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Large Text"
+                    android:textSize="40sp"
+                    android:id="@+id/curmin"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:textSize="40sp"
+                    android:id="@+id/curtextView5" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Large Text"
+                    android:textSize="40sp"
+                    android:id="@+id/cursec"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:textSize="30sp"
+                    android:id="@+id/curampm" />
+
+
+
+
+
+            </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_weight="30"
+        android:layout_height="fill_parent"
+        android:layout_gravity="left|top"
+        android:layout_width="0dp">
+
+        <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id = "@+id/RHE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:padding="15dp">
+
+            <TableRow android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/runLabel"
+                    android:text="24-hour clock"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    />
+                <TextView
+                    android:id="@+id/hitLabel"
+                    android:text="12-hour clock"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    />
+
+            </TableRow>
+
+            <TableRow android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/midnight24"
+                    android:text="00:00"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    />
+                <TextView
+                    android:id="@+id/midnight12"
+                    android:text="12:00 a.m"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    />
+
+            </TableRow>
+
+            <TableRow android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/one24"
+                    android:text="01:00"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    />
+                <TextView
+                    android:id="@+id/one12"
+                    android:text="1:00 a.m"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    />
+
+            </TableRow>
+            <TableRow android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/two24"
+                    android:text="02:00"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    />
+                <TextView
+                    android:id="@+id/two12"
+                    android:text="2:00 a.m"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    />
+
+            </TableRow>
+            <TableRow android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/three24"
+                    android:text="03:00"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    />
+                <TextView
+                    android:id="@+id/three12"
+                    android:text="3:00 a.m"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    />
+
+            </TableRow>
+            <TableRow android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/four24"
+                    android:text="04:00"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    />
+                <TextView
+                    android:id="@+id/four12"
+                    android:text="4:00 a.m"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    />
+
+            </TableRow>
+            <TableRow android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/five24"
+                    android:text="05:00"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    />
+                <TextView
+                    android:id="@+id/five12"
+                    android:text="5:00 a.m"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    />
+
+            </TableRow>
+            <TableRow android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/six24"
+                    android:text="06:00"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    />
+                <TextView
+                    android:id="@+id/six12"
+                    android:text="6:00 a.m"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    />
+
+            </TableRow>
+            <TableRow android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/seven24"
+                android:text="07:00"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_shape"
+                />
+            <TextView
+                android:id="@+id/seven12"
+                android:text="7:00 a.m"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cell_shape"
+                />
+
+        </TableRow>
+            <TableRow android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/eight24"
+                    android:text="08:00"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    />
+                <TextView
+                    android:id="@+id/eight12"
+                    android:text="8:00 a.m"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    />
+
+            </TableRow>
+            <TableRow android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/nine24"
+                    android:text="09:00"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    />
+                <TextView
+                    android:id="@+id/nine12"
+                    android:text="9:00 a.m"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    />
+
+            </TableRow>
+            <TableRow android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/ten24"
+                    android:text="10:00"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    />
+                <TextView
+                    android:id="@+id/ten12"
+                    android:text="10:00 a.m"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    />
+
+            </TableRow>
+            <TableRow android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/eleven24"
+                    android:text="11:00"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    />
+                <TextView
+                    android:id="@+id/eleven12"
+                    android:text="11:00 a.m"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    />
+
+            </TableRow>
+            <TableRow android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/twelve24"
+                    android:text="01:00"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    />
+                <TextView
+                    android:id="@+id/twelve12"
+                    android:text="1:00 a.m"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    />
+
+            </TableRow>
+            <TableRow android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/thirteen24"
+                    android:text="13:00"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    />
+                <TextView
+                    android:id="@+id/thirteen12"
+                    android:text="1:00 p.m"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    />
+
+            </TableRow>
+            <TableRow android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/fourteen24"
+                    android:text="14:00"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    />
+                <TextView
+                    android:id="@+id/fourteen12"
+                    android:text="2:00 p.m"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    />
+
+            </TableRow>
+            <TableRow android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/fifteen24"
+                    android:text="15:00"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    />
+                <TextView
+                    android:id="@+id/fifteen12"
+                    android:text="3:00 p.m"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    />
+
+            </TableRow>
+            <TableRow android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/sixteen24"
+                    android:text="16:00"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    />
+                <TextView
+                    android:id="@+id/sixteen12"
+                    android:text="4:00 p.m"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    />
+
+            </TableRow>
+            <TableRow android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/seventeen24"
+                    android:text="17:00"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    />
+                <TextView
+                    android:id="@+id/seventeen12"
+                    android:text="5:00 p.m"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    />
+
+            </TableRow>
+            <TableRow android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/eighteen24"
+                    android:text="18:00"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    />
+                <TextView
+                    android:id="@+id/eighteen12"
+                    android:text="6:00 p.m"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    />
+
+            </TableRow>
+            <TableRow android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/ninteen24"
+                    android:text="19:00"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    />
+                <TextView
+                    android:id="@+id/ninteen12"
+                    android:text="7:00 p.m"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    />
+
+            </TableRow>
+            <TableRow android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/twenty24"
+                    android:text="20:00"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    />
+                <TextView
+                    android:id="@+id/twenty12"
+                    android:text="8:00 p.m"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    />
+
+            </TableRow>
+            <TableRow android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/twentyone24"
+                    android:text="21:00"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    />
+                <TextView
+                    android:id="@+id/twentyone12"
+                    android:text="9:00 p.m"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    />
+
+            </TableRow>
+            <TableRow android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/twentytwo24"
+                    android:text="22:00"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    />
+                <TextView
+                    android:id="@+id/twentytwo12"
+                    android:text="10:00 p.m"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    />
+
+            </TableRow>
+            <TableRow android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/twentythree24"
+                    android:text="23:00"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    />
+                <TextView
+                    android:id="@+id/twentythree12"
+                    android:text="11:00 p.m"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cell_shape"
+                    />
+
+            </TableRow>
+
+
+        </TableLayout>
+    </LinearLayout>
+
+
+
+        </LinearLayout>
+
+</FrameLayout>

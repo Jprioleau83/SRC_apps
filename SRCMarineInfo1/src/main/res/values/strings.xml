@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SRCMarineInfo1</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="strBranch">USMC</string>
+
+    <string-array name="actions_array">
+        <item>Ranks</item>
+        <item>Military Time</item>
+        <item>MOS</item>
+        <item>Alpha Numeric</item>
+        <item>Org structure</item>
+        <item>Acks</item>
+    </string-array>
+
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+        <item>Home</item>
+        <item>Ranks</item>
+        <item>Military Time</item>
+        <item>MOS</item>
+        <item>Alpha Numeric</item>
+        <item>Org structure</item>
+        <item>Acks</item>
+    </string-array>
+
+    <!-- Nav Drawer List Item Icons -->
+    <!-- Keep them in order as the titles are in -->
+    <array name="nav_drawer_icons">
+        <item>@drawable/home_icon</item>
+        <item>@drawable/rank_icon</item>
+        <item>@drawable/wallclock</item>
+        <item>@drawable/sunny</item>
+        <item>@drawable/sunny</item>
+        <item>@drawable/sunny</item>
+        <item>@drawable/sunny</item>
+    </array>
+
+    <!-- Content Description -->
+    <string name="desc_list_item_icon">Item Icon</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UsmcRanks>
+    <ranksdata>
+        <id>1</id>
+        <payscale>0-1</payscale>
+        <short>ENS</short>
+        <name>Ensign</name>
+        <icon>ensign_uscg</icon>
+        <type>Officer</type>
+        <details>Ensign is the junior commissioned officer rank in the the United States Coast Guard. This rank is also used in the U.S. Maritime Service and the U.S. Naval Sea Cadet Corps. Ensign ranks below lieutenant junior grade, and it is equivalent to a second lieutenant in the U.S. Army, the Marine Corps, and the Air Force. Depending upon the warfare community, an ensign may go directly to a warship after being commissioned to serve as a division officer, or he or she may serve up one to two years of specialty training before reporting to a combat unit (e.g. flight school, weapons systems school, navigator school, submarine school, amphibious warfare school, radar school).</details>
+        <link>http://en.wikipedia.org/wiki/Ensign_(rank)#United_States</link>
+    </ranksdata>
+    <ranksdata>
+        <id>2</id>
+        <payscale>O-2</payscale>
+        <short>LTJG</short>
+        <name>Lieutenant (Junior Grade)</name>
+        <icon>ltjg_uscg</icon>
+        <type>Officer</type>
+        <details>Lieutenant (junior grade) is a junior commissioned officer rank in the United States Coast Guard, with the pay grade of O-2. The rank is also used in the United States Maritime Service and the United States Naval Sea Cadet Corps. Lieutenant, junior grade ranks above ensign and below lieutenant and is equivalent to a first lieutenant in the other uniformed services (the Army, Marine Corps and Air Force). Promotion to LTJG is governed by Department of Defense policies derived from the Defense Officer Personnel Management Act of 1980. DOPMA guidelines suggest all "fully qualified" ensigns should be promoted to LTJG. The time for promotion to LTJG is a minimum of 18 months after commissioning in the Coast Guard. Lieutenants, junior grade typically lead petty officers and non-rated personnel, unless assigned to small aircraft or on staff duty. A LTJG's usual shipboard billet is as a Division Officer.</details>
+        <link>http://en.wikipedia.org/wiki/Lieutenant_(junior_grade)</link>
+    </ranksdata>
+    <ranksdata>
+        <id>3</id>
+        <payscale>O-3</payscale>
+        <short>LT</short>
+        <name>Lieutenant</name>
+        <icon>lieutenant_uscg</icon>
+        <type>Officer</type>
+        <details>Lieutenant is the third commissioned officer rank in the United States Coast Guard and is comparable to the rank of Captain in the other branches of the Armed Service. Lieutenants serve as Division Officers aboard Coast Guard ships and command groups of sailors and petty officers in various divisions including the deck department, engineering, and others.</details>
+        <link>http://www.military-ranks.org/coast-guard/lieutenant</link>
+    </ranksdata>
+    <ranksdata>
+        <id>4</id>
+        <payscale>O-4</payscale>
+        <short>LCDR</short>
+        <name>Lieutenant Commander</name>
+        <icon>lcdr_uscg</icon>
+        <type>Officer</type>
+        <details>In the United States Army, Air Force, and Marine Corps, major is a field grade military officer rank above the rank of captain and below the rank of lieutenant colonel. It is equivalent to the naval rank of lieutenant commander in the other uniformed services.   DOPMA guidelines suggest 80% of captains should be promoted to major after serving a minimum of three years at their present rank and after attaining nine to eleven years of cumulative commissioned service. </details>
+        <link>http://en.wikipedia.org/wiki/Major_(United_States)</link>
+    </ranksdata>
+    <ranksdata>
+        <id>5</id>
+        <payscale>O-5</payscale>
+        <short>CDR</short>
+        <name>Commander</name>
+        <icon>commander_uscg</icon>
+        <type>Officer</type>
+        <details>In the United States Coast Guard, commander (abbreviated "CDR") is a senior officer rank, with the pay grade of O-5. Commander ranks above lieutenant commander and below captain. Commander is equivalent to the rank of lieutenant colonel in the other uniformed services. Notably, it is the first rank at which the holder wears an embellished cap, whereas officers of the other services are entitled to embellishment at O-4 rank. Promotion to commander in the US Coast Guard is governed by Department of Defense policies derived from the Defense Officer Personnel Management Act of 1980. DOPMA guidelines suggest 70% of lieutenant commanders should be promoted to commander after serving a minimum of three years at their present rank and after attaining 15-17 years of cumulative commissioned service. Commanders often serve as the captain of a small Coast Guard vessel, such as a cutter, frigate, destroyer, or submarine. Commanders may also lead squadrons of aircraft, be placed in charge of a small shore mission, or serve on the staff of a senior officer aboard a larger Coast Guard vessel.</details>
+        <link>http://en.wikipedia.org/wiki/Commander_(United_States)</link>
+    </ranksdata>
+    <ranksdata>
+        <id>6</id>
+        <payscale>O-6</payscale>
+        <short>CAPT</short>
+        <name>Captain</name>
+        <icon>captain_uscg</icon>
+        <type>Officer</type>
+        <details>In the United States Coast Guard,, captain is the senior-most commissioned officer rank below that of flag officer (i.e., admirals). Reflecting its nautical heritage, it also sometimes used as a military "title" by more junior officers who are serving as the commanding officer (CO) of a commissioned vessel of the Navy or Coast Guard of patrol boat size or greater. Coast Guard captains follow career paths very similar to their Navy counterparts, with seagoing officers typically commanding large maritime security cutters or high endurance cutters and aviators commanding coast guard air stations. Coast Guard captains will also command all types of major Coast Guard shore installations and activities, as well as serve as chiefs of staff for Coast Guard flag officers.</details>
+        <link>http://en.wikipedia.org/wiki/Captain_(United_States_O-6)</link>
+    </ranksdata>
+    <ranksdata>
+        <id>7</id>
+        <payscale>O-7</payscale>
+        <short>RDML</short>
+        <name>Rear Admiral (Lower Half)</name>
+        <icon>rdml_uscg</icon>
+        <type>Officer</type>
+        <details>In the United States Coast Guard, rear admiral (lower half) is a one-star flag officer, with the pay grade of O-7. The abbreviation for personnel from the USN, USCG, and NOAA is RDML. Rear admiral (lower half) ranks above captain and below rear admiral. Rear admiral (lower half) is equivalent to the rank of brigadier general in the other uniformed services, and equivalent to the rank of commodore in most other navies.[2] In the United States uniformed services, rear admiral (lower half) replaced the rank of commodore in 1985.</details>
+        <link>http://en.wikipedia.org/wiki/Rear_admiral_(United_States)</link>
+    </ranksdata>
+    <ranksdata>
+        <id>8</id>
+        <payscale>O-8</payscale>
+        <short>RADM</short>
+        <name>Rear Admiral</name>
+        <icon>rear_admiral_uscg</icon>
+        <type>Officer</type>
+        <details>In the United States Coast Guard, rear admiral (RADM), also sometimes referred to as rear admiral (upper half), is a two-star flag officer, with the pay grade of O-8. Rear admiral ranks above rear admiral (lower half) and below vice admiral. Rear admiral is equivalent to the rank of major general in the other uniformed services. It is the highest permanent rank during peacetime in the uniformed services; all higher ranks are temporary ranks linked to specific commands or office. A Rear Admiral generally commands a fleet of Coast Guard ships and air wings. As a flag officer, a Real Admiral may fly the Rear Admiral's pennant over any ship or base on which he is serving - two white stars on a navy-blue background.</details>
+        <link>http://en.wikipedia.org/wiki/Rear_admiral_(United_States)</link>
+    </ranksdata>
+    <ranksdata>
+        <id>9</id>
+        <payscale>O-9</payscale>
+        <short>VADM</short>
+        <name>Vice Admiral</name>
+        <icon>vice_admiral_uscg</icon>
+        <type>Officer</type>
+        <details>In the United States Coast Guard, vice admiral (VADM) is a three-star flag officer, with the pay grade of O-9. Vice admiral ranks above rear admiral and below admiral. Vice admiral is equivalent to the rank of lieutenant general in the other uniformed services. A Vice Admiral commands regional Coast Guard operations during an operation or war and answers directly to the Fleet Admiral and the President of the United States. As a three-star flag officer a Vice Admiral may fly the Vice Admiral's pennant over any ship or station on which he is serving, which is three white stars on a navy blue background.</details>
+        <link>http://en.wikipedia.org/wiki/Vice_Admiral_(United_States)</link>
+    </ranksdata>
+    <ranksdata>
+        <id>10</id>
+        <payscale>O-10</payscale>
+        <short>ADM</short>
+        <name>Admiral</name>
+        <icon>admiral_uscg</icon>
+        <type>Officer</type>
+        <details>In the United States Coast Guard, admiral (ADM) is a four-star flag officer rank, with the pay grade of O-10. Admiral ranks above vice admiral. The Coast Guard does not have an established grade above admiral. Admiral is equivalent to the rank of general in the other uniformed services. An Admiral commands regional Coast Guard operations and answers directly President of the United States. As a four-star flag officer, an Admiral may fly the Admiral's pennant over any ship or station on which he is serving, which is four white stars on a navy blue background.</details>
+        <link>http://en.wikipedia.org/wiki/Admiral_(United_States)</link>
+    </ranksdata>
+    <ranksdata>
+        <id>11</id>
+        <payscale>W-2</payscale>
+        <short>CWO2</short>
+        <name>Chief Warrant Officer 2</name>
+        <icon>wo2_uscg</icon>
+        <type>Warrant Officer</type>
+        <details>Chief Warrant Officer 2 is the United States Coast Guard's entry-level billeted warrant officer rank. Warrant officers serve as technical specialists with command authority within their field of expertise and hold a variety of positions essential to the smooth operation of the Coast Guard. Coast Guard Warrant Officers usually belong to one of 30 specialties including boatswain, master mate, surgeon, chaplain, and carpenter, which are specialized and skilled positions that often require specialists with command authority and leadership skills.</details>
+        <link>http://www.military-ranks.org/coast-guard/chief-warrant-officer-2</link>
+    </ranksdata>
+    <ranksdata>
+        <id>12</id>
+        <payscale>W-3</payscale>
+        <short>CWO3</short>
+        <name>Chief Warrant Officer 3</name>
+        <icon>wo3_uscg</icon>
+        <type>Warrant Officer</type>
+        <details>Chief Warrant Officer 3 is the United States Coast Guard's second billeted warrant officer rank. Warrant officers serve as technical specialists with command authority within their field of expertise, and hold a variety of positions essential to the smooth operations of the Coast Guard. Coast Guard Warrant Officers usually belong to one of 30 specialties including boatswain, master mate, surgeon, chaplain, and carpenter, which are specialized and skilled positions that often require specialists with command authority and leadership skills. Sailors are generally promoted to Chief Warrant Officer 3 from Chief Warrant Officer 2; they are chosen for promotion when they show exceptional service and experience.</details>
+        <link>http://www.military-ranks.org/coast-guard/chief-warrant-officer-3</link>
+    </ranksdata>
+    <ranksdata>
+        <id>13</id>
+        <payscale>W-4</payscale>
+        <short>CWO4</short>
+        <name>Chief Warrant Officer 4</name>
+        <icon>wo4_uscg</icon>
+        <type>Warrant Officer</type>
+        <details>Chief Warrant Officer 4 is the Unites States Coast Guard's fourth and highest billeted warrant officer rank. Warrant officers serve as technical specialists with command authority within their field of expertise, and hold a variety of positions essential to the smooth operations of the Coast Guard. Coast Guard Warrant Officers usually belong to one of 30 specialties including boatswain, master mate, surgeon, chaplain, and carpenter, which are specialized and skilled positions that often require specialists with command authority and leadership skills. Sailors are generally promoted to Chief Warrant Officer 4 from Chief Warrant Officer 3; they are chosen for promotion after showing exceptional service and and experience.</details>
+        <link>http://www.military-ranks.org/coast-guard/chief-warrant-officer-4</link>
+    </ranksdata>
+    <ranksdata>
+        <id>14</id>
+        <payscale>E-1</payscale>
+        <short>SR</short>
+        <name>Seaman Recruit</name>
+        <icon>sr_uscg</icon>
+        <type>Enlisted</type>
+        <details>Seaman recruit (SR) is the lowest enlisted rank in the U.S. Coast Guard,  just below seaman apprentice; this rank was formerly known as seaman third class. Two separate pay grades exist within this rank (and the corresponding ranks in the other branches of the United States military structure) — one for those with service of less than four months, with a higher pay scale for those in service for more than four months, even if they have not yet advanced to seaman apprentice.</details>
+        <link>http://en.wikipedia.org/wiki/Seaman_Recruit</link>
+    </ranksdata>
+    <ranksdata>
+        <id>15</id>
+        <payscale>E-2</payscale>
+        <short>SA</short>
+        <name>Seaman Apprentice</name>
+        <icon>sa_uscg</icon>
+        <type>Enlisted</type>
+        <details>Seaman apprentice is the second lowest enlisted rank in the U.S. Navy, U.S. Coast Guard, and the U.S. Naval Sea Cadet Corps just above seaman recruit and below seaman; this rank was formerly known as seaman second class. There are several titles and color-coded rank insignias assigned to sailors receiving this grade, determined by their operational specialty.</details>
+        <link>http://en.wikipedia.org/wiki/Seaman_Apprentice</link>
+    </ranksdata>
+
+    <ranksdata>
+        <id>16</id>
+        <payscale>E-3</payscale>
+        <short>SN</short>
+        <name>Seaman</name>
+        <icon>sn_uscg</icon>
+        <type>Enlisted</type>
+        <details>Seaman is the third enlisted rank from the bottom in the U.S. Navy, U.S. Coast Guard, ranking above Seaman Apprentice and below Petty Officer Third Class.  Several title and rank variations exist for sailors working in different specialties, though all share the same pay and rank grade. Sailors at this grade do not wear their stripe insignia on their working uniforms, although they are permitted to wear a silver collar device signifying their rank.</details>
+        <link>http://en.wikipedia.org/wiki/Seaman#United_States</link>
+    </ranksdata>
+    <ranksdata>
+        <id>17</id>
+        <payscale>E-4</payscale>
+        <short>PO3</short>
+        <name>Petty Officer Third Class</name>
+        <icon>potc_uscg</icon>
+        <type>Enlisted</type>
+        <details>Petty officer third class is the fourth enlisted rank in the U.S. Coast Guard, just above seaman and below petty officer second class, and is the lowest rank of non-commissioned officer, equivalent to a corporal in the U.S. Army and Marines. Petty officer third class shares the same pay grade as senior airman in the Air Force, which no longer has an NCO rank corresponding with E-4. A Petty Officer Third Class serves both as a leader and as a technical expert, and all Petty Officers have a specified rating, or job. The exact title with which a petty officer is addressed depends on their specialty - a Petty Officer Third Class serving as a Machinist's Mate, for example, would have the full title of Machinist's Mate Third Class.</details>
+        <link>http://en.wikipedia.org/wiki/Petty_Officer_Third_Class</link>
+    </ranksdata>
+    <ranksdata>
+        <id>18</id>
+        <payscale>E-5</payscale>
+        <short>PO2</short>
+        <name>Petty Officer Second Class</name>
+        <icon>posc_uscg</icon>
+        <type>Enlisted</type>
+        <details> Petty officer, second class is the fifth enlisted rate in the U.S. Coast Guard, just above petty officer third class and below petty officer first class, and is a non-commissioned officer. It is equivalent to the rate of sergeant in the Army, Marine Corps and Staff Sergeant in the Air Force. Similar to petty officer third class, advancement to petty officer second class is dependent on time in service, performance evaluations by superiors, and rate (technical specialty) examinations. The advancement cycle is currently every 6 months. Only a certain number of billets (job openings for this rate) open up biannually and all petty officers third class compete. The top scorers are chosen for advancement, but only in sufficient quantities to fill the billets available.</details>
+        <link>http://en.wikipedia.org/wiki/Petty_Officer_Second_Class</link>
+    </ranksdata>
+    <ranksdata>
+        <id>19</id>
+        <payscale>E-6</payscale>
+        <short>PO1</short>
+        <name>Petty Officer First Class</name>
+        <icon>pofc_uscg</icon>
+        <type>Enlisted</type>
+        <details>Petty officer, first class is the sixth enlisted rate in the United States Navy and the United States Coast Guard, just above petty officer, second class and below that of chief petty officer. A Petty Officer First Class serves both as a leader and as a technical expert, and all Petty Officers have a specified rating, or job. The exact title with which a petty officer is addressed depends on their specialty; a Petty Officer First Class serving as an Electronics Technician, for example, would have the full title of Electronics Technician First Class.</details>
+        <link>http://en.wikipedia.org/wiki/Petty_Officer_First_Class</link>
+    </ranksdata>
+    <ranksdata>
+        <id>20</id>
+        <payscale>E-7</payscale>
+        <short>CPO</short>
+        <name>Chief Petty Officer</name>
+        <icon>cpo_uscg</icon>
+        <type>Enlisted</type>
+        <details>Chief Petty Officer is the seventh enlisted rate (E-7) in the United States Coast Guard, just above Petty Officer First Class and below Senior Chief Petty Officer. Chief Petty Officer is the first Coast Guard rank that comes with vastly expanded powers and responsibilities over those of that below it. In addition to their rating's duties, a Chief Petty Officer is responsible for training junior officers and leading his division of sailors and petty officers.</details>
+        <link>http://en.wikipedia.org/wiki/Chief_Petty_Officer_(United_States)</link>
+    </ranksdata>
+    <ranksdata>
+        <id>21</id>
+        <payscale>E-8</payscale>
+        <short>SCPO</short>
+        <name>Senior Chief Petty Officer</name>
+        <icon>scpo_uscg</icon>
+        <type>Enlisted</type>
+        <details>Senior chief petty officer is the eighth of nine enlisted ranks in the U.S. Coast Guard, just above chief petty officer and below master chief petty officer, and is a noncommissioned officer. They are addressed as "Senior Chief" in most circumstances, or sometimes, less formally, as "Senior". Like Chief Petty Officers, a Senior Chief Petty Officer is responsible for a variety of administrative and leadership responsibilities in his specialized area, also known as his rating. Also similar to other Coast Guard sailors, the full rank for a Senior Chief Petty Officer includes his rating; a SCPO specializing as a Quartermaster, for example, would be referred to by his full title of Senior Chief Quartermaster.</details>
+        <link>http://en.wikipedia.org/wiki/Senior_Chief_Petty_Officer</link>
+    </ranksdata>
+    <ranksdata>
+        <id>22</id>
+        <payscale>E-9</payscale>
+        <short>MCPO</short>
+        <name>Master Chief Petty Officer</name>
+        <icon>mcpo_uscg</icon>
+        <type>Enlisted</type>
+        <details>Master Chief Petty Officer is the ninth, and highest, enlisted rate (paygrade E-9) in the U.S. Navy and U.S. Coast Guard, just above senior chief petty officer. Master chief petty officers are addressed as "Master Chief (last name)". Less then 1% of the Coast Guard's personnel make it to the rank of Master Chief, and those who do are considered to be among the best and the brightest in their respective specialties. Like the other Coast Guard ranks, all MCPOs have a rating, or job specialty, which is included in their full title. A Master Chief Petty Officer who specializes as a Gunner's Mate, for example, would have a full title of Master Chief Gunner's Mate. Most MCPOs, however, are simply referred to as Master Chief by their subordinates.</details>
+        <link>http://en.wikipedia.org/wiki/Master_Chief_Petty_Officer</link>
+    </ranksdata>
+    <ranksdata>
+        <id>23</id>
+        <payscale>E-9</payscale>
+        <short>CMC</short>
+        <name>Command Master Chief Petty Officer</name>
+        <icon>cmc_uscg</icon>
+        <type>Enlisted</type>
+        <details>Command Master Chief Petty Officer is the most senior enlisted rank in the United States Coast Guard, and serves as a bridge between the enlisted sailors and petty officers and the commanding officers above them. Command Master Chiefs are chosen from the ranks of eligible Master Chief Petty Officers, or lower Chief Petty Officers if necessary, by the Command Master Chief Program, which was started in 1995. Candidates receive specialized leadership and communications training, which enables them to serve in a unique and independent role as both the chief enlisted officer of their force and as a direct liaison and adviser to the commanding officer.</details>
+        <link>http://en.wikipedia.org/wiki/Command_Master_Chief_Petty_Officer</link>
+    </ranksdata>
+    <ranksdata>
+        <id>24</id>
+        <payscale>E-9</payscale>
+        <short>MCPOCG</short>
+        <name>Master Chief Petty Officer of the Coast Guard</name>
+        <icon>mcpocg_uscg</icon>
+        <type>Enlisted</type>
+        <details>Master Chief Petty Officer of the Coast Guard (MCPOCG) is a unique rank established to be held by only one sailor, who serves as the highest-ranking enlisted soldier in the Coast Guard. The MCPON is appointed personally by the Commandment of the Coast Guard and serves as the spokesman for the enlisted sailors as well as a Senior Enlisted Adviser to high-ranking officials including the Commandment of the Coast Guard.</details>
+        <link>http://en.wikipedia.org/wiki/Master_Chief_Petty_Officer_of_the_Coast_Guard</link>
+    </ranksdata>
+</UsmcRanks>

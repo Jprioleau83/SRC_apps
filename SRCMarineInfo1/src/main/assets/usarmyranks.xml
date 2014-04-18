@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UsmcRanks>
+    <ranksdata>
+        <id>1</id>
+        <payscale>0-1</payscale>
+        <short>2ndLt</short>
+        <name>Second Lieutenant</name>
+        <icon>second_lieutenant_usmc</icon>
+        <type>Officer</type>
+        <details>In the United States, second lieutenant is the normal entry-level rank for most commissioned officers in the Army, Air Force and Marine Corps and is equivalent to the rank of ensign in the Navy and Coast Guard. In the Army and Marine Corps, a second lieutenant typically leads a platoon-size element (16 to 44 soldiers or marines).</details>
+        <link>http://http://en.wikipedia.org/wiki/Second_Lieutenant_(United_States)#United_States</link>
+    </ranksdata>
+    <ranksdata>
+        <id>2</id>
+        <payscale>O-2</payscale>
+        <short>1stLt</short>
+        <name>First Lieutenant</name>
+        <icon>first_lieutenant_usmc</icon>
+        <type>Officer</type>
+        <details>In the United States Army, U.S. Air Force, and U.S. Marine Corps, a first lieutenant is a junior commissioned officer. It is just above the rank of second lieutenant and just below the rank of captain. It is equivalent to the rank of lieutenant (junior grade) in the other uniformed services.  A second lieutenant (grade O-1) is usually promoted to first lieutenant (grade O-2) after 18 months in the Army or 24 months in the Air Force[2] and Marine Corps. </details>
+        <link>http://en.wikipedia.org/wiki/First_Lieutenant_(United_States)#United_States</link>
+    </ranksdata>
+    <ranksdata>
+        <id>3</id>
+        <payscale>O-3</payscale>
+        <short>Capt</short>
+        <name>Captain</name>
+        <icon>captain_usmc</icon>
+        <type>Officer</type>
+        <details>In the United States Army, captain is a company grade officer rank, with the pay grade of O-3. It ranks above first lieutenant and below major. It is equivalent to the rank of lieutenant in the naval rank system.  DOPMA guidelines suggest 95% of first lieutenants should be promoted to captain after serving a minimum of two years at their present rank.</details>
+        <link>http://en.wikipedia.org/wiki/Captain_(United_States_O-3)</link>
+    </ranksdata>
+    <ranksdata>
+        <id>4</id>
+        <payscale>O-4</payscale>
+        <short>Maj</short>
+        <name>Major </name>
+        <icon>major_usmc</icon>
+        <type>Officer</type>
+        <details>In the United States Army, Air Force, and Marine Corps, major is a field grade military officer rank above the rank of captain and below the rank of lieutenant colonel. It is equivalent to the naval rank of lieutenant commander in the other uniformed services.   DOPMA guidelines suggest 80% of captains should be promoted to major after serving a minimum of three years at their present rank and after attaining nine to eleven years of cumulative commissioned service. </details>
+        <link>http://en.wikipedia.org/wiki/Major_(United_States)</link>
+    </ranksdata>
+    <ranksdata>
+        <id>5</id>
+        <payscale>O-5</payscale>
+        <short>LtCol</short>
+        <name>Lieutenant Colonel</name>
+        <icon>lieutenant_colonel_usmc</icon>
+        <type>Officer</type>
+        <details>In the United States Army, United States Air Force, and United States Marine Corps, a lieutenant colonel is a field grade military officer rank just above the rank of major and just below the rank of colonel. It is equivalent to the naval rank of commander in the other uniformed services.  DOPMA guidelines suggest 70% of majors should be promoted to lieutenant colonel after serving a minimum of three years at their present rank and after attaining 15-17 years of cumulative commissioned service.</details>
+        <link>http://en.wikipedia.org/wiki/Lieutenant_colonel_(United_States)</link>
+    </ranksdata>
+    <ranksdata>
+        <id>6</id>
+        <payscale>O-6</payscale>
+        <short>COL</short>
+        <name>Colonel</name>
+        <icon>colonel_usmc</icon>
+        <type>Officer</type>
+        <details>In the United States Army, Air Force, and Marine Corps, colonel is a senior field grade military officer rank immediately above the rank of lieutenant colonel and immediately below the rank of brigadier general. It is equivalent to the naval rank of captain in the other uniformed services, such as the United States Navy, United States Coast Guard.  DOPMA guidelines suggest 50% of lieutenant colonels should be promoted to colonel after serving a minimum of three years at their present rank and after attaining 21-23 years of cumulative commissioned service. </details>
+        <link>http://en.wikipedia.org/wiki/Colonel_(United_States)</link>
+    </ranksdata>
+    <ranksdata>
+        <id>7</id>
+        <payscale>O-7</payscale>
+        <short>BGen</short>
+        <name>Brigadier General</name>
+        <icon>brigadier_general_usmc</icon>
+        <type>Officer</type>
+        <details>A brigadier general (BG, Brig Gen, or BGen) is a one-star general officer with the pay grade of O-7 in the United States Army, Air Force, and Marine Corps. Brigadier general ranks above a colonel and below major general. The rank of brigadier general is equivalent to the rank of rear admiral (lower half) in the other United States Navy</details>
+        <link>http://en.wikipedia.org/wiki/Brigadier_general_(United_States)</link>
+    </ranksdata>
+    <ranksdata>
+        <id>8</id>
+        <payscale>O-8</payscale>
+        <short>MajGen</short>
+        <name>Major General</name>
+        <icon>major_general</icon>
+        <type>Officer</type>
+        <details>In the United States Army, United States Marine Corps, and United States Air Force, major general is a two-star general-officer rank, with the pay grade of O-8. Major general ranks above brigadier general and below lieutenant general. Major general is equivalent to the two-star rank of rear admiral in the other United States Navy, and is the highest permanent rank during peacetime in the uniformed services.</details>
+        <link>http://en.wikipedia.org/wiki/Major_general_(United_States)</link>
+    </ranksdata>
+    <ranksdata>
+        <id>9</id>
+        <payscale>O-9</payscale>
+        <short>LtGen</short>
+        <name>Lieutenant General</name>
+        <icon>lieutenant_general</icon>
+        <type>Officer</type>
+        <details>In the United States Army, the United States Air Force and the United States Marine Corps, lieutenant general (abbreviated LTG in the Army, Lt Gen in the Air Force, and LtGen in the Marine Corps) is a three-star general officer rank, with the pay grade of O-9. Lieutenant general ranks above major general and below general. Lieutenant general is equivalent to the rank of vice admiral in the United States Navy and United States Coast Guard.</details>
+        <link>http://en.wikipedia.org/wiki/Lieutenant_general_(United_States)</link>
+    </ranksdata>
+    <ranksdata>
+        <id>10</id>
+        <payscale>O-10</payscale>
+        <short>Gen</short>
+        <name>General </name>
+        <icon>general_usmc</icon>
+        <type>Officer</type>
+        <details>In the United States Army, U.S. Air Force, and U.S. Marine Corps, general is a four-star general officer rank, with the pay grade of O-10. General ranks above lieutenant general and below General of the Army or General of the Air Force; the Marine Corps does not have an established grade above general.  The Marine Corps has no five-star equivalent, the grade of general is currently considered to be the highest appointment an officer can achieve in these three services. </details>
+        <link>http://en.wikipedia.org/wiki/General_(United_States)</link>
+    </ranksdata>
+    <ranksdata>
+        <id>11</id>
+        <payscale>special</payscale>
+        <short>GA</short>
+        <name>General Of The Army </name>
+        <icon>gaf_usaf</icon>
+        <type>Officer</type>
+        <details>General of the Army (GA)[1] is a five-star general officer and is the second highest possible rank in the United States Army. A special rank of General of the Armies, which ranks above General of the Army, does exist but has only been conferred twice in the history of the Army. A General of the Army ranks immediately above a general and is equivalent to a fleet admiral and a general of the Air Force.  Often referred to as a "five-star general", the rank of General of the Army has historically been reserved for wartime use and is not currently active in the U.S. military.</details>
+        <link>http://en.wikipedia.org/wiki/General_of_the_Army_(United_States)</link>
+    </ranksdata>
+    <ranksdata>
+        <id>11</id>
+        <payscale>W-1</payscale>
+        <short>WO1</short>
+        <name>Warrant Officer 1</name>
+        <icon>wo1_usarmy</icon>
+        <type>Warrant Officer</type>
+        <details>Appointed by warrant from the Secretary of the Army, WO1s are technically and tactically focused officers who perform the primary duties of technical leader, trainer, operator, manager, maintainer, sustainer, and advisor.</details>
+
+        <link>http://www.google.com</link>     </ranksdata>
+    <ranksdata>
+        <id>12</id>
+        <payscale>W-2</payscale>
+        <short>CWO2</short>
+        <name>Chief Warrant Officer 2</name>
+        <icon>cw2_usarmy</icon>
+        <type>Warrant Officer</type>
+        <details>CW2s become commissioned officers by the President of the United States. They are intermediate-level technical and tactical experts who perform increased duties and responsibilities at the detachment through battalion levels.</details>
+
+        <link>http://en.wikipedia.org/wiki/Warrant_Officer_(United_States)#Army</link>
+    </ranksdata>
+    <ranksdata>
+        <id>13</id>
+        <payscale>W-3</payscale>
+        <short>CWO3</short>
+        <name>Chief Warrant Officer 3</name>
+        <icon>cw3_usarmy</icon>
+        <type>Warrant Officer</type>
+        <details>CW3s are advanced-level experts who perform the primary duties of a technical and tactical leader. They provide direction, guidance, resources, assistance, and supervision necessary for subordinates to perform their duties. They primarily support operations levels from team or detachment through brigade.</details>
+
+        <link>http://en.wikipedia.org/wiki/Warrant_Officer_(United_States)#Army</link>
+    </ranksdata>
+    <ranksdata>
+        <id>14</id>
+        <payscale>W-2</payscale>
+        <short>CWO4</short>
+        <name>Chief Warrant Officer 4</name>
+        <icon>cw4_usarmy</icon>
+        <type>Warrant Officer</type>
+        <details>CW4s are senior-level experts in their chosen field, primarily supporting battalion, brigade, division, corps, and echelons above corps operations. They typically have special mentorship responsibilities for other WOs and provide essential advice to commanders on WO issues.</details>
+
+        <link>http://en.wikipedia.org/wiki/Warrant_Officer_(United_States)#Army</link>
+    </ranksdata>
+    <ranksdata>
+        <id>15</id>
+        <payscale>W-2</payscale>
+        <short>CWO5</short>
+        <name>Chief Warrant Officer 5</name>
+        <icon>cw5_usarmy</icon>
+        <type>Warrant Officer</type>
+        <details>CW5s are master-level experts that support brigade, division, corps, echelons above corps, and major command operations. They provide leader development, mentorship, advice, and counsel to warrant officers and branch officers. CW5s have special warrant officer leadership and representation responsibilities within their respective commands.</details>
+
+        <link>http://en.wikipedia.org/wiki/Warrant_Officer_(United_States)#Army</link>
+    </ranksdata>
+
+    <ranksdata>
+        <id>16</id>
+        <payscale>E-1</payscale>
+        <short>PV1</short>
+        <name>Private</name>
+        <icon>sunny</icon>
+        <type>Enlisted</type>
+        <details>In the U.S. Army, private is used for the two lowest enlisted ranks, just below private first class. The lowest rank is "private E-1" (PVT) and sometimes referred to as recruit, but also held by some soldiers after punishment through the Uniform Code of Military Justice or prisoners after conviction until they are discharged. A PVT wears no uniform insignia; since the advent of the Army Combat Uniform, the term "fuzzy" has come into vogue, referring to the blank velcro patch on the ACU where the rank would normally be placed.</details>
+        <link>http://en.wikipedia.org/wiki/Private_(United_States)#United_States</link>
+    </ranksdata>
+    <ranksdata>
+        <id>17</id>
+        <payscale>E-2</payscale>
+        <short>PV2 </short>
+        <name>Private</name>
+        <icon>pv2_usarmy</icon>
+        <type>Enlisted</type>
+        <details>The second rank, private E-2 (PV2), wears a single chevron, known colloquially as "mosquito wings". Advancement to the PV2 is automatic after six months time in service, but may get shortened to four months if given a waiver. A person who earned the Eagle Scout award, the Gold Award, or completed at least two years of JROTC may enlist at anytime at the rank of PV2.[5] The term of address, "Private," may be properly applied to any Army soldier E-1 (PVT) to E-3 (PFC).</details>
+        <link>http://en.wikipedia.org/wiki/Private_(United_States)#United_States</link>
+    </ranksdata>
+    <ranksdata>
+        <id>18</id>
+        <payscale>E-3</payscale>
+        <short>PFC</short>
+        <name>Private First Class</name>
+        <icon>pfc_usarmy</icon>
+        <type>Enlisted</type>
+        <details> Private first class (E-3), equivalent to NATO grade OR-3, is designated by a single chevron and a rocker stripe and is more common among soldiers who have served in the U.S. Army for one year or more. Soldiers who have achieved an associate degree or its equivalent are entitled to enter the Army at this pay grade.[3] Advancement from private first class is typically to specialist, although occasionally it may be to corporal.</details>
+        <link>http://en.wikipedia.org/wiki/Private_First_Class#United_States_Army</link>
+    </ranksdata>
+    <ranksdata>
+        <id>19</id>
+        <payscale>E-4</payscale>
+        <short>SPC</short>
+        <name>Specialist</name>
+        <icon>spc_usarmy</icon>
+        <type>Enlisted</type>
+        <details>Specialist (abbreviated "SPC") is one of the four junior enlisted ranks in the U.S. Army. Unlike corporals, specialists are not considered junior non-commissioned officers (NCOs).   The rank of specialist is the typical rank to which privates first class are promoted after two years of service, although PFCs may be waivered into the rank of specialist after 18 months time in service and 6 months time in grade. It is granted far more often than corporal (E-4), which is now reserved for personnel who have either passed the leadership development course or have been assigned low-level supervisory (with two or more soldiers under direct command).</details>
+        <link>http://en.wikipedia.org/wiki/Specialist_(rank)</link>
+    </ranksdata>
+    <ranksdata>
+        <id>20</id>
+        <payscale>E-4</payscale>
+        <short>Cpl</short>
+        <name>Corporal</name>
+        <icon>cpl_usarmy</icon>
+        <type>Enlisted</type>
+        <details>In the U.S. Army corporal is preceded by the first three forms of private and the rank of specialist.[9] A corporal rank shares the same pay grade (E-4) as a specialist. Unlike a specialist, however, a corporal is a non-commissioned officer and may direct the activities of other soldiers.[10] A soldier may be promoted to corporal directly from the rank of private first class or laterally promoted from specialist. </details>
+        <link>http://en.wikipedia.org/wiki/Corporal#United_States_Army</link>
+    </ranksdata>
+    <ranksdata>
+        <id>21</id>
+        <payscale>E-5</payscale>
+        <short>Sgt</short>
+        <name>Sergeant</name>
+        <icon>sgt_usarmy</icon>
+        <type>Enlisted</type>
+        <details>Sergeant is the enlisted rank in the U.S. Army above specialist and corporal and below staff sergeant, and is the second-lowest grade of non-commissioned officer. The rank was often nicknamed "buck sergeant" to distinguish it from other senior grades of sergeants.[6] Sergeants in the infantry, for example, lead fire teams of four men. There are two fire teams in a 9-man rifle squad, which is led by a staff sergeant.</details>
+        <link>http://en.wikipedia.org/wiki/Sergeant#United_States</link>
+    </ranksdata>
+    <ranksdata>
+        <id>22</id>
+        <payscale>E-6</payscale>
+        <short>SSgt</short>
+        <name>Staff Sergeant</name>
+        <icon>ssgt_usarmy</icon>
+        <type>Enlisted</type>
+        <details>Staff sergeant (SSG) is E-6 rank in the U.S. Army, just above sergeant and below sergeant first class, and is a non-commissioned officer. Staff sergeants are generally placed in charge of squads, but can also act as platoon sergeants in the absence of a sergeant first class. In support units, staff sergeants ordinarily hold headquarters positions. Staff sergeants are referred to as "Sergeant" except for in certain training environments and schools.</details>
+        <link>http://en.wikipedia.org/wiki/Staff_Sergeant#United_States</link>
+    </ranksdata>
+    <ranksdata>
+        <id>23</id>
+        <payscale>E-7</payscale>
+        <short>SFC</short>
+        <name>Sergeant First Class</name>
+        <icon>sfc_usarmy</icon>
+        <type>Enlisted</type>
+        <details>Sergeant first class (SFC) is the seventh enlisted rank (E-7) in the U.S. Army, ranking above staff sergeant (E-6) and below master sergeant and first sergeant (E-8), and is the first non-commissioned officer rank designated as a senior non-commissioned officer (SNCO).  A sergeant first class is typically assigned as a platoon sergeant at the company level or battalion operations noncommissioned officer in charge at the battalion level, but may also hold other positions depending on the type of unit. In a combat arms role, a sergeant first class is typically in charge of from 18 soldiers and four tanks in an armor platoon to 40 soldiers in a rifle platoon. A sergeant first class' primary responsibility is training and mentoring lieutenants, tactical logistics, tactical casualty evacuations, and being senior tactical advisor to the platoon leader.</details>
+        <link>http://en.wikipedia.org/wiki/Sergeant_First_Class</link>
+    </ranksdata>
+    <ranksdata>
+        <id>24</id>
+        <payscale>E-8</payscale>
+        <short>MSgt</short>
+        <name>Master Sergeant</name>
+        <icon>msg_usarmy</icon>
+        <type>Enlisted</type>
+        <details>The eighth enlisted rank in the U.S. Army, just above sergeant first class, below sergeant major, command sergeant major, Sergeant Major of the Army and equal in grade but not authority to first sergeant.   A master sergeant is typically assigned as a brigade-level section noncommissioned officer in charge and serves as the subject matter expert in his or her field, but may also hold other positions depending on the type of unit.</details>
+        <link>http://en.wikipedia.org/wiki/Master_Sergeant#United_States</link>
+    </ranksdata>
+    <ranksdata>
+        <id>25</id>
+        <payscale>E-8</payscale>
+        <short>1st Sgt</short>
+        <name>First Sergeant</name>
+        <icon>first_sgt_usarmy</icon>
+        <type>Enlisted</type>
+        <details>In the United States Army, the rank of First Sergeant (abbreviated 1SG) is an OR8/E8 rank above the rank of Sergeant First Class (OR7), and below the rank of Sergeant Major. It is equal in grade to Master Sergeant, although the two ranks have different responsibilities, with a First Sergeant being senior to a Master Sergeant.  Master sergeants are laterally promoted to first sergeant upon selection by the senior leadership at Department of the Army, depending on available billets and opportunities. Commonly referred to as "first shirt", "top", "top sergeant", "top soldier", "top kick", or "top hat", due to their seniority and their position at the top of the company's enlisted ranks. </details>
+
+        <link>http://en.wikipedia.org/wiki/Top_sergeant#United_States_Army</link>
+    </ranksdata>
+    <ranksdata>
+        <id>26</id>
+        <payscale>E-9</payscale>
+        <short>SGM</short>
+        <name>Sergeant Major</name>
+        <icon>sgm_usarmy</icon>
+        <type>Enlisted</type>
+        <details>In the U.S. Army, sergeant major (SGM) refers to both a military rank and a specific leadership position. It is the highest enlisted rank, just above first sergeant and master sergeant, with a pay grade of E-9, NATO rank OR-9.Both the SGM and CSM are referred to, and addressed as, "Sergeant Major". The Sergeant Major of the Army is a separate and unique position, but is still addressed as "Sergeant Major".</details>
+
+        <link>http://en.wikipedia.org/wiki/Command_Sergeant_Major#United_States_Army</link>
+    </ranksdata>
+    <ranksdata>
+        <id>27</id>
+        <payscale>E-9</payscale>
+        <short>CSM</short>
+        <name>Command Sergeant Major</name>
+        <icon>csm_usarmy</icon>
+        <type>Enlisted</type>
+        <details> command sergeant major (CSM) — is the senior enlisted advisor to the commanding officer. The leadership position carries with it certain ceremonial functions such as caring for the unit's colors (flag). Additionally, CSMs serve as monitors of, and advocates for, the enlisted soldiers in the command. This position mostly exists in units of battalion size and larger. Because the CSM represents all of the enlisted soldiers in the command, he or she does not wear the collar insignia of his or her career specialty (e.g., infantry, quartermaster, intelligence, inter alia), but instead wears the CSM (formerly "branch immaterial") collar insignia. The insignia is a gold-color rendering of the coat of arms of the United States; like the branch of service insignia of all U.S. Army enlisted soldiers, it is placed upon a gold-colored metal disk, one inch in diameter. </details>
+
+        <link>http://en.wikipedia.org/wiki/Command_Sergeant_Major#United_States_Army</link>
+    </ranksdata>
+    <ranksdata>
+        <id>27</id>
+        <payscale>E-9</payscale>
+        <short>SMA</short>
+        <name>Sergeant Major of the Army</name>
+        <icon>sma_usarmy</icon>
+        <type>Enlisted</type>
+        <details>The Sergeant Major of the Army (SMA) is a unique non-commissioned rank in the United States Army. The holder of this rank and position is the most senior enlisted member of the Army, unless an army sergeant is serving as the senior enlisted advisor to the Chairman of the Joint Chiefs of Staff, in which case he would be the most senior enlisted man and the SMA will be the second-most senior enlisted member of the army. The SMA is appointed to serve as a spokesman to address the issues of enlisted soldiers to all officers. While the SMA is a non-commissioned officer, the billet is the protocol equivalent of a lieutenant general.</details>
+
+        <link>http://en.wikipedia.org/wiki/Sergeant_Major_of_the_Armys</link>
+    </ranksdata>
+
+
+</UsmcRanks>
+
+
+

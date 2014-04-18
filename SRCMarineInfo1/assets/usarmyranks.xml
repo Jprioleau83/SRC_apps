@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UsmcRanks>
+    <ranksdata>
+        <id>1</id>
+        <payscale>E-1</payscale>
+        <name>Private First Class</name>
+        <icon>sunny</icon>
+    </ranksdata>
+    <ranksdata>
+        <id>2</id>
+        <payscale>E-2</payscale>
+        <name>Private First Class</name>
+        <icon>sunny</icon>
+    </ranksdata>
+
+
+</UsmcRanks>

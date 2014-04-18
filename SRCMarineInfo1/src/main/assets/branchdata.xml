@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <Branch>
+    <branchdata>
+        <id>1</id>
+        <name>USMC</name>
+        <icon>usmc</icon>
+    </branchdata>
+    <branchdata>
+        <id>2</id>
+        <name>USAF</name>
+        <icon>usaf</icon>
+    </branchdata>
+    <branchdata>
+        <id>3</id>
+        <name>USARMY</name>
+        <icon>usarmy</icon>
+    </branchdata>
+    <branchdata>
+        <id>4</id>
+        <name>USNAVY</name>
+        <icon>usnavy</icon>
+    </branchdata>
+    <branchdata>
+        <id>5</id>
+        <name>USCOASTGUARD</name>
+        <icon>uscglogo</icon>
+    </branchdata>
+
+    </Branch>
