@@ -1,4 +1,4 @@
-package com.cnsintegration.srcmarineinfo1;
+package com.cnsintegration.srcmarineinfo1.adapter;
 
 import android.app.Activity;
 import android.content.Context;
@@ -11,17 +11,18 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.cnsintegration.srcmarineinfo1.R;
+
 import java.util.HashMap;
 import java.util.List;
 
 /**
  * Created by jprioleau on 4/5/2014.
  */
-public class RankData extends BaseAdapter {
+public class ActionData extends BaseAdapter {
 
-    static final String KEY_TAG = "rankdata"; // parent node
+    static final String KEY_TAG = "branchdata"; // parent node
     static final String KEY_ID = "id";
-    static final String KEY_PAY = "payscale";
     static final String KEY_NAME = "name";
     static final String KEY_ICON = "icon";
 
@@ -32,7 +33,7 @@ public class RankData extends BaseAdapter {
 
 
 
-    public RankData(Activity act, List<HashMap<String, String>> map) {
+    public ActionData(Activity act, List<HashMap<String, String>> map) {
 
         this.branchDataCollection = map;
 
@@ -64,12 +65,11 @@ public class RankData extends BaseAdapter {
         View vi=convertView;
         if(convertView==null){
 
-            vi = inflater.inflate(R.layout.rank_view, null);
+            vi = inflater.inflate(R.layout.article_view, null);
             holder = new ViewHolder();
 
-            holder.tvRank = (TextView)vi.findViewById(R.id.rank); // city name
-            holder.tvPay = (TextView)vi.findViewById(R.id.payscale); // city name
-            holder.tvRankImage =(ImageView)vi.findViewById(R.id.rank_image); // thumb image
+            holder.tvBranch = (TextView)vi.findViewById(R.id.article); // city name
+            holder.tvBranchImage =(ImageView)vi.findViewById(R.id.list_image); // thumb image
 
             vi.setTag(holder);
         }
@@ -80,17 +80,16 @@ public class RankData extends BaseAdapter {
 
         // Setting all values in listview
 
-        holder.tvRank.setText(branchDataCollection.get(position).get(KEY_NAME));
-        holder.tvPay.setText(branchDataCollection.get(position).get(KEY_PAY));
-        //holder.tvRank.setTextColor(Color.WHITE);
-        //holder.tvPay.setTextColor(Color.WHITE);
+        holder.tvBranch.setText(branchDataCollection.get(position).get(KEY_NAME));
+        holder.tvBranch.setTextColor(Color.GRAY);
+                // holder.tvBranch.setTextColor(Color.WHITE);
 
 
-        //Setting an image
-        String uri = "drawable/"+ branchDataCollection.get(position).get(KEY_ICON);
+                //Setting an image
+                String uri = "drawable/" + branchDataCollection.get(position).get(KEY_ICON);
         int imageResource = vi.getContext().getApplicationContext().getResources().getIdentifier(uri, null, vi.getContext().getApplicationContext().getPackageName());
         Drawable image = vi.getContext().getResources().getDrawable(imageResource);
-        holder.tvRankImage.setImageDrawable(image);
+        holder.tvBranchImage.setImageDrawable(image);
 
         return vi;
 
@@ -99,8 +98,8 @@ public class RankData extends BaseAdapter {
     }
     static class ViewHolder{
 
-        TextView tvRank;
-        TextView tvPay;
-        ImageView tvRankImage;
+        TextView tvBranch;
+
+        ImageView tvBranchImage;
     }
 }

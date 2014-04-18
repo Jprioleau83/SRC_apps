@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import org.w3c.dom.Document;
@@ -22,6 +21,9 @@ import java.util.List;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import android.content.Context;
+
+import com.cnsintegration.srcmarineinfo1.adapter.BinderData;
+
 /**
  * Created by jprioleau on 4/5/2014.
  */

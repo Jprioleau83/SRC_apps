@@ -1,4 +1,4 @@
-package com.cnsintegration.srcmarineinfo1;
+package com.cnsintegration.srcmarineinfo1.adapter;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -11,6 +11,8 @@ import android.widget.BaseExpandableListAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.cnsintegration.srcmarineinfo1.R;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +20,7 @@ import java.util.Map;
 /**
  * Created by jprioleau on 4/9/2014.
  */
-class ExpandabelListAdoptor extends BaseExpandableListAdapter
+public class ExpandabelListAdoptor extends BaseExpandableListAdapter
 {
 
     private Context _context;
@@ -35,7 +37,7 @@ class ExpandabelListAdoptor extends BaseExpandableListAdapter
     LayoutInflater inflater;
 
 
-    ExpandabelListAdoptor(Context con,List<String> listDataHeader ,HashMap<String, List<HashMap<String, String>>> listDataChild )
+    public ExpandabelListAdoptor(Context con,List<String> listDataHeader ,HashMap<String, List<HashMap<String, String>>> listDataChild )
     {
         this._context=con;
         //branchesDataCollection = listDataChild;
@@ -186,7 +188,7 @@ class ExpandabelListAdoptor extends BaseExpandableListAdapter
         // TODO Auto-generated method stub
         return true;
     }
-    static class ViewHolder{
+    public static class ViewHolder{
 
         TextView tvRank;
         TextView tvPay;

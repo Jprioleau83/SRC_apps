@@ -9,7 +9,6 @@ import java.util.HashMap;
 import java.util.List;
 
 import android.app.Activity;
-import android.app.Dialog;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
@@ -21,11 +20,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
-import android.widget.ListView;
 import android.widget.Toast;
+
+import com.cnsintegration.srcmarineinfo1.adapter.ExpandabelListAdoptor;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;

@@ -1,4 +1,4 @@
-package com.cnsintegration.srcmarineinfo1;
+package com.cnsintegration.srcmarineinfo1.adapter;
 
 import android.app.Activity;
 import android.content.Context;
@@ -12,6 +12,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.cnsintegration.srcmarineinfo1.R;
 
 import java.util.HashMap;
 import java.util.List;
