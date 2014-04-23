@@ -210,13 +210,18 @@ public class MainActivity extends FragmentActivity
                 hfragment = new HomeFragment();
                 break;
             case 1:
-                fragment = new ServiceFragment();
+                fragment = new ServiceFragment(0);
                 casenum = 1;
                 break;
             case 2:
                 fragment = new ActionFragment();
 
                 casenum = 2;
+                break;
+            case 3:
+                fragment = new ServiceFragment(1);
+
+                casenum = 3;
                 break;
 
             default:

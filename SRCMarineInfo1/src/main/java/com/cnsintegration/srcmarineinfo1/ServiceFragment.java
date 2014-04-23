@@ -30,6 +30,7 @@ import com.cnsintegration.srcmarineinfo1.adapter.BinderData;
 public class ServiceFragment extends ListFragment {
 
     OnServicesSelectedListener mCallback;
+    OnServicesSelectedListener2 mCallback1;
 
 
     static final String KEY_ID = "id";
@@ -37,19 +38,40 @@ public class ServiceFragment extends ListFragment {
     static final String KEY_NAME = "name";
     static final String KEY_ICON = "icon";
     final static String ARG_POSITION = "position";
+    public static int mActiontype;
     int mCurrentPosition = -1;
     public Context mCtx;
     ListView list;
     BinderData adapter = null;
     List<HashMap<String,String>> branchesDataCollection;
 
+    public ServiceFragment(int i) {
+        mActiontype = i;
+    }
+
     public interface OnServicesSelectedListener {
         /** Called by ServiceFragment when a list item is selected */
+
+
+
+            public void onServiceSelected ( int position);
+
+
+
+    }
+    public interface OnServicesSelectedListener2 {
+        /**
+         * Called by ServiceFragment when a list item is selected
+         */
+
+
         public void onServiceSelected(int position);
+
+
     }
 
 
-    @Override
+        @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
@@ -180,12 +202,28 @@ public class ServiceFragment extends ListFragment {
             throw new ClassCastException(activity.toString()
                     + " must implement OnHeadlineSelectedListener");
         }
+        try {
+            mCallback1 = (OnServicesSelectedListener2) activity;
+        } catch (ClassCastException e) {
+            throw new ClassCastException(activity.toString()
+                    + " must implement OnHeadlineSelectedListener");
+        }
+
+
+
     }
 
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
         // Notify the parent activity of selected item
-        mCallback.onServiceSelected(position);
+
+        if(mActiontype == 0){
+            mCallback.onServiceSelected(position);
+        }
+        if(mActiontype == 1){
+            mCallback.onServiceSelected(position);
+        }
+
 
         // Set the item as checked to be highlighted when in two-pane layout
         getListView().setItemChecked(position, true);
