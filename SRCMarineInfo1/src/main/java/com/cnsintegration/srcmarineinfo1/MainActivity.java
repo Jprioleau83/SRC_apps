@@ -361,6 +361,7 @@ public class MainActivity extends FragmentActivity
     }
 
     public void onServiceSelected2(int position) {
+        
         RankFrag rankFrag = (RankFrag)
                 getSupportFragmentManager().findFragmentById(R.id.rank_fragment);
 
