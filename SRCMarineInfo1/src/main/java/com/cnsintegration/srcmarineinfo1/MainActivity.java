@@ -39,7 +39,7 @@ import java.util.TimerTask;
 
 
 public class MainActivity extends FragmentActivity
-        implements ActionFragment.OnServicesSelectedListener, ServiceFragment.OnServicesSelectedListener, RankFrag.OnServicesSelectedListener, RankFrag.OnServicesSelectedListener1,HomeFragment.OnHomeCreatedListener, MilitaryTimeFragment.OnMilitaryTimeListener{
+        implements ActionFragment.OnServicesSelectedListener, ServiceFragment.OnServicesSelectedListener,  ServiceFragment.OnServicesSelectedListener2, RankFrag.OnServicesSelectedListener, RankFrag.OnServicesSelectedListener1,HomeFragment.OnHomeCreatedListener, MilitaryTimeFragment.OnMilitaryTimeListener{
 
 
     private DrawerLayout mDrawerLayout;
@@ -360,6 +360,43 @@ public class MainActivity extends FragmentActivity
 
     }
 
+    public void onServiceSelected2(int position) {
+        RankFrag rankFrag = (RankFrag)
+                getSupportFragmentManager().findFragmentById(R.id.rank_fragment);
+
+        if (rankFrag != null) {
+            // If article frag is available, we're in two-pane layout...
+
+            // Call a method in the ArticleFragment to update its content
+            rankFrag.updateRankView(position);
+
+        } else {
+
+
+            if (findViewById(R.id.fragment_container) != null) {
+
+                // However, if we're being restored from a previous state,
+                // then we don't need to do anything and should return or else
+                // we could end up with overlapping fragments.
+
+
+                // Create an instance of ExampleFragment
+                RankFrag rankFragment = new RankFrag();
+                Bundle args = new Bundle();
+                args.putInt(ServiceFragment.ARG_POSITION, position);
+                rankFragment.setArguments(args);
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+
+                transaction.replace(R.id.fragment_container, rankFragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
+
+            }
+
+        }
+
+
+    }
 
     public void onRankSelected(int position) {
         RankFrag rankFrag = (RankFrag)

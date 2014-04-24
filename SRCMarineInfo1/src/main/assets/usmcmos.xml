@@ -1,0 +1,1391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UsmcMOS>
+    <mosdata>
+        <type>
+            <mostitle>01 Personnel and Administration</mostitle>
+            <ranktype>
+                <rtype>
+                    <rtypetitle>Enlisted</rtypetitle>
+                     <mos>
+                         <mosnumber>0100</mosnumber>
+                         <mostitle>Basic Administrative Marine</mostitle>
+                         <mosranks>Pvt - GySgt</mosranks>
+
+
+                     </mos>
+                    <mos>
+                        <mosnumber>0111</mosnumber>
+                        <mostitle> Administrative Specialist</mostitle>
+                        <mosranks>Pvt to MGySgt</mosranks>
+
+
+                    </mos>
+                    <mos>
+                        <mosnumber>0149</mosnumber>
+                        <mostitle>Substance Abuse Control Specialist</mostitle>
+                        <mosranks>SSgt - MGySgt</mosranks>
+
+
+                    </mos>
+                    <mos>
+                        <mosnumber>0161</mosnumber>
+                        <mostitle>Postal Clerk</mostitle>
+                        <mosranks>Pvt to MGySgt</mosranks>
+
+
+                    </mos>
+                    <mos>
+                        <mosnumber>0171</mosnumber>
+                        <mostitle>Manpower Information Systems (MIS) Analyst</mostitle>
+                        <mosranks>Cpl to MGySgt</mosranks>
+
+
+                    </mos>
+
+
+
+
+
+                </rtype>
+
+                <rtype>
+                    <rtypetitle>Officers</rtypetitle>
+                    <mos>
+                        <mosnumber>0149</mosnumber>
+                        <mostitle>Substance Abuse Control Officer (SACO)</mostitle>
+                        <mosranks>WO - CWO5</mosranks>
+
+
+                    </mos>
+                    <mos>
+                        <mosnumber>0160</mosnumber>
+                        <mostitle>Postal Officer</mostitle>
+                        <mosranks>WO - CWO5</mosranks>
+
+
+                    </mos>
+                    <mos>
+                        <mosnumber>0170</mosnumber>
+                        <mostitle>Personnel Officer</mostitle>
+                        <mosranks>WO - CWO5</mosranks>
+
+
+                    </mos>
+                    <mos>
+                        <mosnumber>0180</mosnumber>
+                        <mostitle>Adjutant</mostitle>
+                        <mosranks>2ndLt - LtCol</mosranks>
+
+
+                    </mos>
+
+
+
+                </rtype>
+
+
+
+
+
+
+            </ranktype>
+
+
+        </type>
+    </mosdata>
+    <mosdata>
+        <type>
+            <mostitle>02 Intelligence</mostitle>
+            <ranktype>
+                <rtype>
+                    <rtypetitle>Enlisted</rtypetitle>
+                    <mos>
+                        <mosnumber></mosnumber>
+                        <mostitle></mostitle>
+                        <mosranks></mosranks>
+
+
+                    </mos>
+
+                </rtype>
+
+                <rtype>
+                    <rtypetitle>Officers</rtypetitle>
+
+
+                </rtype>
+
+
+
+
+
+
+            </ranktype>
+
+
+        </type>
+    </mosdata>
+    <mosdata>
+        <type>
+            <mostitle>03 Infantry</mostitle>
+            <ranktype>
+                <rtype>
+                    <rtypetitle>Enlisted</rtypetitle>
+                    <mos>
+                        <mosnumber></mosnumber>
+                        <mostitle></mostitle>
+                        <mosranks></mosranks>
+
+
+                    </mos>
+
+                </rtype>
+
+                <rtype>
+                    <rtypetitle>Officers</rtypetitle>
+
+
+                </rtype>
+
+
+
+
+
+
+            </ranktype>
+
+
+        </type>
+    </mosdata>
+    <mosdata>
+        <type>
+            <mostitle>04 Logistics</mostitle>
+            <ranktype>
+                <rtype>
+                    <rtypetitle>Enlisted</rtypetitle>
+                    <mos>
+                        <mosnumber></mosnumber>
+                        <mostitle></mostitle>
+                        <mosranks></mosranks>
+
+
+                    </mos>
+
+                </rtype>
+
+                <rtype>
+                    <rtypetitle>Officers</rtypetitle>
+
+
+                </rtype>
+
+
+
+
+
+
+            </ranktype>
+
+
+        </type>
+    </mosdata>
+    <mosdata>
+        <type>
+            <mostitle>05 Marine Air Ground Task Force (MAGTF) Plans</mostitle>
+            <ranktype>
+                <rtype>
+                    <rtypetitle>Enlisted</rtypetitle>
+                    <mos>
+                        <mosnumber></mosnumber>
+                        <mostitle></mostitle>
+                        <mosranks></mosranks>
+
+
+                    </mos>
+
+                </rtype>
+
+                <rtype>
+                    <rtypetitle>Officers</rtypetitle>
+
+
+                </rtype>
+
+
+
+
+
+
+            </ranktype>
+
+
+        </type>
+    </mosdata>
+    <mosdata>
+        <type>
+            <mostitle>06 Communications</mostitle>
+            <ranktype>
+                <rtype>
+                    <rtypetitle>Enlisted</rtypetitle>
+                    <mos>
+                        <mosnumber></mosnumber>
+                        <mostitle></mostitle>
+                        <mosranks></mosranks>
+
+
+                    </mos>
+
+                </rtype>
+
+                <rtype>
+                    <rtypetitle>Officers</rtypetitle>
+
+
+                </rtype>
+
+
+
+
+
+
+            </ranktype>
+
+
+        </type>
+    </mosdata>
+    <mosdata>
+        <type>
+            <mostitle>08 Artillery</mostitle>
+            <ranktype>
+                <rtype>
+                    <rtypetitle>Enlisted</rtypetitle>
+                    <mos>
+                        <mosnumber></mosnumber>
+                        <mostitle></mostitle>
+                        <mosranks></mosranks>
+
+
+                    </mos>
+
+                </rtype>
+
+                <rtype>
+                    <rtypetitle>Officers</rtypetitle>
+
+
+                </rtype>
+
+
+
+
+
+
+            </ranktype>
+
+
+        </type>
+    </mosdata>
+    <mosdata>
+        <type>
+            <mostitle>09 Training</mostitle>
+            <ranktype>
+                <rtype>
+                    <rtypetitle>Enlisted</rtypetitle>
+                    <mos>
+                        <mosnumber></mosnumber>
+                        <mostitle></mostitle>
+                        <mosranks></mosranks>
+
+
+                    </mos>
+
+                </rtype>
+
+                <rtype>
+                    <rtypetitle>Officers</rtypetitle>
+
+
+                </rtype>
+
+
+
+
+
+
+            </ranktype>
+
+
+        </type>
+    </mosdata>
+    <mosdata>
+        <type>
+            <mostitle>11 Utilities</mostitle>
+            <ranktype>
+                <rtype>
+                    <rtypetitle>Enlisted</rtypetitle>
+                    <mos>
+                        <mosnumber></mosnumber>
+                        <mostitle></mostitle>
+                        <mosranks></mosranks>
+
+
+                    </mos>
+
+                </rtype>
+
+                <rtype>
+                    <rtypetitle>Officers</rtypetitle>
+
+
+                </rtype>
+
+
+
+
+
+
+            </ranktype>
+
+
+        </type>
+    </mosdata>
+    <mosdata>
+        <type>
+            <mostitle>13 Engineer, Construction, Facilities, and Equipment</mostitle>
+            <ranktype>
+                <rtype>
+                    <rtypetitle>Enlisted</rtypetitle>
+                    <mos>
+                        <mosnumber></mosnumber>
+                        <mostitle></mostitle>
+                        <mosranks></mosranks>
+
+
+                    </mos>
+
+                </rtype>
+
+                <rtype>
+                    <rtypetitle>Officers</rtypetitle>
+
+
+                </rtype>
+
+
+
+
+
+
+            </ranktype>
+
+
+        </type>
+    </mosdata>
+    <mosdata>
+        <type>
+            <mostitle>18 Tank and Assault Amphibious Vehicle</mostitle>
+            <ranktype>
+                <rtype>
+                    <rtypetitle>Enlisted</rtypetitle>
+                    <mos>
+                        <mosnumber></mosnumber>
+                        <mostitle></mostitle>
+                        <mosranks></mosranks>
+
+
+                    </mos>
+
+                </rtype>
+
+                <rtype>
+                    <rtypetitle>Officers</rtypetitle>
+
+
+                </rtype>
+
+
+
+
+
+
+            </ranktype>
+
+
+        </type>
+    </mosdata>
+
+    <mosdata>
+        <type>
+            <mostitle>21 Ground Ordnance Maintenance</mostitle>
+            <ranktype>
+                <rtype>
+                    <rtypetitle>Enlisted</rtypetitle>
+                    <mos>
+                        <mosnumber></mosnumber>
+                        <mostitle></mostitle>
+                        <mosranks></mosranks>
+
+
+                    </mos>
+
+                </rtype>
+
+                <rtype>
+                    <rtypetitle>Officers</rtypetitle>
+
+
+                </rtype>
+
+
+
+
+
+
+            </ranktype>
+
+
+        </type>
+    </mosdata>
+
+    <mosdata>
+        <type>
+            <mostitle>23 Ammunition and Explosive Ordnance Disposal</mostitle>
+            <ranktype>
+                <rtype>
+                    <rtypetitle>Enlisted</rtypetitle>
+                    <mos>
+                        <mosnumber></mosnumber>
+                        <mostitle></mostitle>
+                        <mosranks></mosranks>
+
+
+                    </mos>
+
+                </rtype>
+
+                <rtype>
+                    <rtypetitle>Officers</rtypetitle>
+
+
+                </rtype>
+
+
+
+
+
+
+            </ranktype>
+
+
+        </type>
+    </mosdata>
+
+    <mosdata>
+        <type>
+            <mostitle>26 Signals Intelligence/Ground Electronic Warfare</mostitle>
+            <ranktype>
+                <rtype>
+                    <rtypetitle>Enlisted</rtypetitle>
+                    <mos>
+                        <mosnumber></mosnumber>
+                        <mostitle></mostitle>
+                        <mosranks></mosranks>
+
+
+                    </mos>
+
+                </rtype>
+
+                <rtype>
+                    <rtypetitle>Officers</rtypetitle>
+
+
+                </rtype>
+
+
+
+
+
+
+            </ranktype>
+
+
+        </type>
+    </mosdata>
+
+    <mosdata>
+        <type>
+            <mostitle>27 Linguist</mostitle>
+            <ranktype>
+                <rtype>
+                    <rtypetitle>Enlisted</rtypetitle>
+                    <mos>
+                        <mosnumber></mosnumber>
+                        <mostitle></mostitle>
+                        <mosranks></mosranks>
+
+
+                    </mos>
+
+                </rtype>
+
+                <rtype>
+                    <rtypetitle>Officers</rtypetitle>
+
+
+                </rtype>
+
+
+
+
+
+
+            </ranktype>
+
+
+        </type>
+    </mosdata>
+
+    <mosdata>
+        <type>
+            <mostitle>28 Data/Communications Maintenance</mostitle>
+            <ranktype>
+                <rtype>
+                    <rtypetitle>Enlisted</rtypetitle>
+                    <mos>
+                        <mosnumber></mosnumber>
+                        <mostitle></mostitle>
+                        <mosranks></mosranks>
+
+
+                    </mos>
+
+                </rtype>
+
+                <rtype>
+                    <rtypetitle>Officers</rtypetitle>
+
+
+                </rtype>
+
+
+
+
+
+
+            </ranktype>
+
+
+        </type>
+    </mosdata>
+    <mosdata>
+        <type>
+            <mostitle>30 Supply Administration and Operations</mostitle>
+            <ranktype>
+                <rtype>
+                    <rtypetitle>Enlisted</rtypetitle>
+                    <mos>
+                        <mosnumber></mosnumber>
+                        <mostitle></mostitle>
+                        <mosranks></mosranks>
+
+
+                    </mos>
+
+                </rtype>
+
+                <rtype>
+                    <rtypetitle>Officers</rtypetitle>
+
+
+                </rtype>
+
+
+
+
+
+
+            </ranktype>
+
+
+        </type>
+    </mosdata>
+    <mosdata>
+        <type>
+            <mostitle>31 Distribution Management</mostitle>
+            <ranktype>
+                <rtype>
+                    <rtypetitle>Enlisted</rtypetitle>
+                    <mos>
+                        <mosnumber></mosnumber>
+                        <mostitle></mostitle>
+                        <mosranks></mosranks>
+
+
+                    </mos>
+
+                </rtype>
+
+                <rtype>
+                    <rtypetitle>Officers</rtypetitle>
+
+
+                </rtype>
+
+
+
+
+
+
+            </ranktype>
+
+
+        </type>
+    </mosdata>
+
+    <mosdata>
+        <type>
+            <mostitle>33 Food Service</mostitle>
+            <ranktype>
+                <rtype>
+                    <rtypetitle>Enlisted</rtypetitle>
+                    <mos>
+                        <mosnumber></mosnumber>
+                        <mostitle></mostitle>
+                        <mosranks></mosranks>
+
+
+                    </mos>
+
+                </rtype>
+
+                <rtype>
+                    <rtypetitle>Officers</rtypetitle>
+
+
+                </rtype>
+
+
+
+
+
+
+            </ranktype>
+
+
+        </type>
+    </mosdata>
+    <mosdata>
+        <type>
+            <mostitle>34 Financial Management</mostitle>
+            <ranktype>
+                <rtype>
+                    <rtypetitle>Enlisted</rtypetitle>
+                    <mos>
+                        <mosnumber></mosnumber>
+                        <mostitle></mostitle>
+                        <mosranks></mosranks>
+
+
+                    </mos>
+
+                </rtype>
+
+                <rtype>
+                    <rtypetitle>Officers</rtypetitle>
+
+
+                </rtype>
+
+
+
+
+
+
+            </ranktype>
+
+
+        </type>
+    </mosdata>
+    <mosdata>
+        <type>
+            <mostitle> 35 Motor Transport</mostitle>
+            <ranktype>
+                <rtype>
+                    <rtypetitle>Enlisted</rtypetitle>
+                    <mos>
+                        <mosnumber></mosnumber>
+                        <mostitle></mostitle>
+                        <mosranks></mosranks>
+
+
+                    </mos>
+
+                </rtype>
+
+                <rtype>
+                    <rtypetitle>Officers</rtypetitle>
+
+
+                </rtype>
+
+
+
+
+
+
+            </ranktype>
+
+
+        </type>
+    </mosdata>
+    <mosdata>
+    <type>
+        <mostitle>41 Morale Welfare and Recreation</mostitle>
+        <ranktype>
+            <rtype>
+                <rtypetitle>Enlisted</rtypetitle>
+                <mos>
+                    <mosnumber></mosnumber>
+                    <mostitle></mostitle>
+                    <mosranks></mosranks>
+
+
+                </mos>
+
+            </rtype>
+
+            <rtype>
+                <rtypetitle>Officers</rtypetitle>
+
+
+            </rtype>
+
+
+
+
+
+
+        </ranktype>
+
+
+    </type>
+</mosdata>
+    <mosdata>
+        <type>
+            <mostitle>43 Public Affairs</mostitle>
+            <ranktype>
+                <rtype>
+                    <rtypetitle>Enlisted</rtypetitle>
+                    <mos>
+                        <mosnumber></mosnumber>
+                        <mostitle></mostitle>
+                        <mosranks></mosranks>
+
+
+                    </mos>
+
+                </rtype>
+
+                <rtype>
+                    <rtypetitle>Officers</rtypetitle>
+
+
+                </rtype>
+
+
+
+
+
+
+            </ranktype>
+
+
+        </type>
+    </mosdata>
+    <mosdata>
+        <type>
+            <mostitle>44 Legal Services</mostitle>
+            <ranktype>
+                <rtype>
+                    <rtypetitle>Enlisted</rtypetitle>
+                    <mos>
+                        <mosnumber></mosnumber>
+                        <mostitle></mostitle>
+                        <mosranks></mosranks>
+
+
+                    </mos>
+
+                </rtype>
+
+                <rtype>
+                    <rtypetitle>Officers</rtypetitle>
+
+
+                </rtype>
+
+
+
+
+
+
+            </ranktype>
+
+
+        </type>
+    </mosdata>
+    <mosdata>
+        <type>
+            <mostitle>46 Combat Camera (COMCAM)</mostitle>
+            <ranktype>
+                <rtype>
+                    <rtypetitle>Enlisted</rtypetitle>
+                    <mos>
+                        <mosnumber></mosnumber>
+                        <mostitle></mostitle>
+                        <mosranks></mosranks>
+
+
+                    </mos>
+
+                </rtype>
+
+                <rtype>
+                    <rtypetitle>Officers</rtypetitle>
+
+
+                </rtype>
+
+
+
+
+
+
+            </ranktype>
+
+
+        </type>
+    </mosdata>
+    <mosdata>
+        <type>
+            <mostitle>48 Recruiting and Retention Specialist</mostitle>
+            <ranktype>
+                <rtype>
+                    <rtypetitle>Enlisted</rtypetitle>
+                    <mos>
+                        <mosnumber></mosnumber>
+                        <mostitle></mostitle>
+                        <mosranks></mosranks>
+
+
+                    </mos>
+
+                </rtype>
+
+                <rtype>
+                    <rtypetitle>Officers</rtypetitle>
+
+
+                </rtype>
+
+
+
+
+
+
+            </ranktype>
+
+
+        </type>
+    </mosdata>
+
+
+    <mosdata>
+        <type>
+            <mostitle>55 Music</mostitle>
+            <ranktype>
+                <rtype>
+                    <rtypetitle>Enlisted</rtypetitle>
+                    <mos>
+                        <mosnumber></mosnumber>
+                        <mostitle></mostitle>
+                        <mosranks></mosranks>
+
+
+                    </mos>
+
+                </rtype>
+
+                <rtype>
+                    <rtypetitle>Officers</rtypetitle>
+
+
+                </rtype>
+
+
+
+
+
+
+            </ranktype>
+
+
+        </type>
+    </mosdata>
+    <mosdata>
+        <type>
+            <mostitle>57 Chemical, Biological, Radiological, and Nuclear (CBRN) Defense</mostitle>
+            <ranktype>
+                <rtype>
+                    <rtypetitle>Enlisted</rtypetitle>
+                    <mos>
+                        <mosnumber></mosnumber>
+                        <mostitle></mostitle>
+                        <mosranks></mosranks>
+
+
+                    </mos>
+
+                </rtype>
+
+                <rtype>
+                    <rtypetitle>Officers</rtypetitle>
+
+
+                </rtype>
+
+
+
+
+
+
+            </ranktype>
+
+
+        </type>
+    </mosdata>
+    <mosdata>
+        <type>
+            <mostitle>  58 Military Police and Corrections</mostitle>
+            <ranktype>
+                <rtype>
+                    <rtypetitle>Enlisted</rtypetitle>
+                    <mos>
+                        <mosnumber></mosnumber>
+                        <mostitle></mostitle>
+                        <mosranks></mosranks>
+
+
+                    </mos>
+
+                </rtype>
+
+                <rtype>
+                    <rtypetitle>Officers</rtypetitle>
+
+
+                </rtype>
+
+
+
+
+
+
+            </ranktype>
+
+
+        </type>
+    </mosdata>
+    <mosdata>
+        <type>
+            <mostitle>59 Electronics Maintenance</mostitle>
+            <ranktype>
+                <rtype>
+                    <rtypetitle>Enlisted</rtypetitle>
+                    <mos>
+                        <mosnumber></mosnumber>
+                        <mostitle></mostitle>
+                        <mosranks></mosranks>
+
+
+                    </mos>
+
+                </rtype>
+
+                <rtype>
+                    <rtypetitle>Officers</rtypetitle>
+
+
+                </rtype>
+
+
+
+
+
+
+            </ranktype>
+
+
+        </type>
+    </mosdata>
+    <mosdata>
+        <type>
+            <mostitle>60/61/62 Aircraft Maintenance</mostitle>
+            <ranktype>
+                <rtype>
+                    <rtypetitle>Enlisted</rtypetitle>
+                    <mos>
+                        <mosnumber></mosnumber>
+                        <mostitle></mostitle>
+                        <mosranks></mosranks>
+
+
+                    </mos>
+
+                </rtype>
+
+                <rtype>
+                    <rtypetitle>Officers</rtypetitle>
+
+
+                </rtype>
+
+
+
+
+
+
+            </ranktype>
+
+
+        </type>
+    </mosdata>
+    <mosdata>
+        <type>
+            <mostitle> 63/64 Avionics</mostitle>
+            <ranktype>
+                <rtype>
+                    <rtypetitle>Enlisted</rtypetitle>
+                    <mos>
+                        <mosnumber></mosnumber>
+                        <mostitle></mostitle>
+                        <mosranks></mosranks>
+
+
+                    </mos>
+
+                </rtype>
+
+                <rtype>
+                    <rtypetitle>Officers</rtypetitle>
+
+
+                </rtype>
+
+
+
+
+
+
+            </ranktype>
+
+
+        </type>
+    </mosdata>
+    <mosdata>
+        <type>
+            <mostitle>65 Aviation Ordnance</mostitle>
+            <ranktype>
+                <rtype>
+                    <rtypetitle>Enlisted</rtypetitle>
+                    <mos>
+                        <mosnumber></mosnumber>
+                        <mostitle></mostitle>
+                        <mosranks></mosranks>
+
+
+                    </mos>
+
+                </rtype>
+
+                <rtype>
+                    <rtypetitle>Officers</rtypetitle>
+
+
+                </rtype>
+
+
+
+
+
+
+            </ranktype>
+
+
+        </type>
+    </mosdata>
+    <mosdata>
+        <type>
+            <mostitle>66 Aviation Logisticst</mostitle>
+            <ranktype>
+                <rtype>
+                    <rtypetitle>Enlisted</rtypetitle>
+                    <mos>
+                        <mosnumber></mosnumber>
+                        <mostitle></mostitle>
+                        <mosranks></mosranks>
+
+
+                    </mos>
+
+                </rtype>
+
+                <rtype>
+                    <rtypetitle>Officers</rtypetitle>
+
+
+                </rtype>
+
+
+
+
+
+
+            </ranktype>
+
+
+        </type>
+    </mosdata>
+
+
+    <mosdata>
+        <type>
+            <mostitle>68 Meteorological and Oceanographic (METOC)</mostitle>
+            <ranktype>
+                <rtype>
+                    <rtypetitle>Enlisted</rtypetitle>
+                    <mos>
+                        <mosnumber></mosnumber>
+                        <mostitle></mostitle>
+                        <mosranks></mosranks>
+
+
+                    </mos>
+
+                </rtype>
+
+                <rtype>
+                    <rtypetitle>Officers</rtypetitle>
+
+
+                </rtype>
+
+
+
+
+
+
+            </ranktype>
+
+
+        </type>
+    </mosdata>
+    <mosdata>
+        <type>
+            <mostitle>70 Airfield Services</mostitle>
+            <ranktype>
+                <rtype>
+                    <rtypetitle>Enlisted</rtypetitle>
+                    <mos>
+                        <mosnumber></mosnumber>
+                        <mostitle></mostitle>
+                        <mosranks></mosranks>
+
+
+                    </mos>
+
+                </rtype>
+
+                <rtype>
+                    <rtypetitle>Officers</rtypetitle>
+
+
+                </rtype>
+
+
+
+
+
+
+            </ranktype>
+
+
+        </type>
+    </mosdata>
+    <mosdata>
+        <type>
+            <mostitle>72 Air Control/Air Support/Anti-air Warfare/Air Traffic Control</mostitle>
+            <ranktype>
+                <rtype>
+                    <rtypetitle>Enlisted</rtypetitle>
+                    <mos>
+                        <mosnumber></mosnumber>
+                        <mostitle></mostitle>
+                        <mosranks></mosranks>
+
+
+                    </mos>
+
+                </rtype>
+
+                <rtype>
+                    <rtypetitle>Officers</rtypetitle>
+
+
+                </rtype>
+
+
+
+
+
+
+            </ranktype>
+
+
+        </type>
+    </mosdata>
+    <mosdata>
+        <type>
+            <mostitle>73 Navigation Officer/Enlisted Flight Crews</mostitle>
+            <ranktype>
+                <rtype>
+                    <rtypetitle>Enlisted</rtypetitle>
+                    <mos>
+                        <mosnumber></mosnumber>
+                        <mostitle></mostitle>
+                        <mosranks></mosranks>
+
+
+                    </mos>
+
+                </rtype>
+
+                <rtype>
+                    <rtypetitle>Officers</rtypetitle>
+
+
+                </rtype>
+
+
+
+
+
+
+            </ranktype>
+
+
+        </type>
+    </mosdata>
+    <mosdata>
+        <type>
+            <mostitle>75 Pilots/Naval Flight Officers</mostitle>
+            <ranktype>
+                <rtype>
+                    <rtypetitle>Enlisted</rtypetitle>
+                    <mos>
+                        <mosnumber></mosnumber>
+                        <mostitle></mostitle>
+                        <mosranks></mosranks>
+
+
+                    </mos>
+
+                </rtype>
+
+                <rtype>
+                    <rtypetitle>Officers</rtypetitle>
+
+
+                </rtype>
+
+
+
+
+
+
+            </ranktype>
+
+
+        </type>
+    </mosdata>
+    <mosdata>
+        <type>
+            <mostitle>80 Miscellaneous MOS's (Category II)</mostitle>
+            <ranktype>
+                <rtype>
+                    <rtypetitle>Enlisted</rtypetitle>
+                    <mos>
+                        <mosnumber></mosnumber>
+                        <mostitle></mostitle>
+                        <mosranks></mosranks>
+
+
+                    </mos>
+
+                </rtype>
+
+                <rtype>
+                    <rtypetitle>Officers</rtypetitle>
+
+
+                </rtype>
+
+
+
+
+
+
+            </ranktype>
+
+
+        </type>
+    </mosdata>
+    <mosdata>
+        <type>
+            <mostitle>90 Reporting MOS's (Category III)</mostitle>
+            <ranktype>
+                <rtype>
+                    <rtypetitle>Enlisted</rtypetitle>
+                    <mos>
+                        <mosnumber></mosnumber>
+                        <mostitle></mostitle>
+                        <mosranks></mosranks>
+
+
+                    </mos>
+
+                </rtype>
+
+                <rtype>
+                    <rtypetitle>Officers</rtypetitle>
+
+
+                </rtype>
+
+
+
+
+
+
+            </ranktype>
+
+
+        </type>
+    </mosdata>
+
+
+
+
+</UsmcMOS>
+
