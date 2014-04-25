@@ -39,7 +39,7 @@ import java.util.TimerTask;
 
 
 public class MainActivity extends FragmentActivity
-        implements ActionFragment.OnServicesSelectedListener, ServiceFragment.OnServicesSelectedListener,  ServiceFragment.OnServicesSelectedListener2, RankFrag.OnServicesSelectedListener, RankFrag.OnServicesSelectedListener1,HomeFragment.OnHomeCreatedListener, MilitaryTimeFragment.OnMilitaryTimeListener, MOSFrag.OnMosSelectedListener,  MOSFrag.OnMosSelectedListener1{
+        implements ActionFragment.OnServicesSelectedListener, ServiceFragment.OnServicesSelectedListener,  ServiceFragment.OnServicesSelectedListener2, RankFrag.OnServicesSelectedListener, RankFrag.OnServicesSelectedListener1,HomeFragment.OnHomeCreatedListener, MilitaryTimeFragment.OnMilitaryTimeListener, MOSFragment.OnServicesSelectedListener,  MOSFragment.OnServicesSelectedListener2, MOSFrag.OnMosSelectedListener{
 
 
     private DrawerLayout mDrawerLayout;
@@ -294,6 +294,27 @@ public class MainActivity extends FragmentActivity
 
             }
 
+            if(casenum == 3){
+
+
+                if (findViewById(R.id.fragment_container) != null) {
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commit();
+                }else {
+
+
+                    MOSFrag mosFragview = new MOSFrag();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.service_fragment, fragment).addToBackStack(null)
+                            .replace(R.id.rank_fragment, mosFragview).commit();
+
+
+
+
+
+
+                }
+            }
+
+
 
             // update selected item and title, then close the drawer
             mDrawerList.setItemChecked(position, true);
@@ -361,15 +382,56 @@ public class MainActivity extends FragmentActivity
     }
 
     public void onServiceSelected2(int position) {
-        
-        RankFrag rankFrag = (RankFrag)
+
+        if (findViewById(R.id.fragment_container) != null) {
+
+
+            // However, if we're being restored from a previous state,
+            // then we don't need to do anything and should return or else
+            // we could end up with overlapping fragments.
+
+
+            // Create an instance of ExampleFragment
+            MOSFragment mosFragment = new MOSFragment(0);
+            Bundle args = new Bundle();
+            args.putInt(ServiceFragment.ARG_POSITION, position);
+            mosFragment.setArguments(args);
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+
+            transaction.replace(R.id.fragment_container, mosFragment);
+            transaction.addToBackStack(null);
+            transaction.commit();
+
+
+        }else {
+            MOSFragment mosFrag =  new MOSFragment(0);
+            MOSFrag mosFragview = new MOSFrag();
+            getSupportFragmentManager().beginTransaction().replace(R.id.service_fragment, mosFrag).addToBackStack(null)
+                    .replace(R.id.rank_fragment, mosFragview).commit();
+
+
+
+        }
+
+
+
+
+
+
+
+
+    }
+
+
+    public void onMOSSelected(int grpposition, int position ) {
+        MOSFrag mosFrag = (MOSFrag)
                 getSupportFragmentManager().findFragmentById(R.id.rank_fragment);
 
-        if (rankFrag != null) {
+        if (mosFrag != null) {
             // If article frag is available, we're in two-pane layout...
 
             // Call a method in the ArticleFragment to update its content
-            rankFrag.updateRankView(position);
+            mosFrag.updateMOSView(position);
 
         } else {
 
@@ -382,13 +444,13 @@ public class MainActivity extends FragmentActivity
 
 
                 // Create an instance of ExampleFragment
-                RankFrag rankFragment = new RankFrag();
+                MOSFrag mosFragment = new MOSFrag();
                 Bundle args = new Bundle();
-                args.putInt(ServiceFragment.ARG_POSITION, position);
-                rankFragment.setArguments(args);
+                args.putInt(MOSFrag.ARG_POSITION, position);
+                mosFragment.setArguments(args);
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
-                transaction.replace(R.id.fragment_container, rankFragment);
+                transaction.replace(R.id.fragment_container, mosFragment);
                 transaction.addToBackStack(null);
                 transaction.commit();
 
@@ -398,6 +460,10 @@ public class MainActivity extends FragmentActivity
 
 
     }
+
+
+
+
 
     public void onRankSelected(int position) {
         RankFrag rankFrag = (RankFrag)

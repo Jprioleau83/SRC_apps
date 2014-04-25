@@ -65,7 +65,7 @@ public class ServiceFragment extends ListFragment {
          */
 
 
-        public void onServiceSelected(int position);
+        public void onServiceSelected2(int position);
 
 
     }
@@ -221,7 +221,7 @@ public class ServiceFragment extends ListFragment {
             mCallback.onServiceSelected(position);
         }
         if(mActiontype == 1){
-            mCallback.onServiceSelected(position);
+            mCallback1.onServiceSelected2(position);
         }
 
 

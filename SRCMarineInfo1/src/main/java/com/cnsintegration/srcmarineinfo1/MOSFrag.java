@@ -12,6 +12,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.ListFragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,6 +22,7 @@ import android.widget.ExpandableListView;
 import android.widget.Toast;
 
 import com.cnsintegration.srcmarineinfo1.adapter.ExpandabelListAdoptor;
+import com.cnsintegration.srcmarineinfo1.adapter.MOSTitleData;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -49,7 +51,7 @@ public class MOSFrag extends Fragment {
 
     ExpandableListView lv;
     Context con;
-    OnMosSelectedListener1 mCallback1;
+
     OnMosSelectedListener mCallback;
 
 
@@ -75,12 +77,7 @@ public class MOSFrag extends Fragment {
     }
 
 
-    public interface OnMosSelectedListener1 {
-        /**
-         * Called by ServiceFragment when a list item is selected
-         */
-        public void onRankCreated();
-    }
+
 
 
 
@@ -129,12 +126,7 @@ public class MOSFrag extends Fragment {
             throw new ClassCastException(activity.toString()
                     + " must implement OnHeadlineSelectedListener");
         }
-        try {
-            mCallback1 = (OnMosSelectedListener1) activity;
-        } catch (ClassCastException e) {
-            throw new ClassCastException(activity.toString()
-                    + " must implement OnHeadlineSelectedListener");
-        }
+
     }
     @Override
     public void onStart() {
@@ -153,7 +145,6 @@ public class MOSFrag extends Fragment {
             // Set article based on saved instance state defined during onCreateView
             updateMOSView(mCurrentPosition);
         }
-        mCallback1.onRankCreated();
 
 
 
@@ -194,13 +185,14 @@ public class MOSFrag extends Fragment {
 
                 NodeList BranchList = doc.getElementsByTagName("mosdata");
 
-                HashMap<String, String> map = null;
+                _listDataChild = new HashMap<String, List<HashMap<String, String>>>();
+                _listDataHeader = new ArrayList<String>();
 
                 for (int i = 0; i < BranchList.getLength(); i++) {
 
-                    NodeList BranchList1 = doc.getElementsByTagName("type");
 
-                    map = new HashMap<String, String>();
+
+
                     Node firstBranchNode = BranchList.item(i);
 
 
@@ -212,9 +204,48 @@ public class MOSFrag extends Fragment {
                         Element ranktypeElement = (Element) ranktypeList.item(0);
                         NodeList typeList = ranktypeElement.getChildNodes();
                         //--city
-                        map.put("mostitle", ((Node) typeList.item(0)).getNodeValue().trim());
+                        _listDataHeader.add(((Node) typeList.item(0)).getNodeValue().trim());
 
                         NodeList BranchList2 = doc.getElementsByTagName("rtype");
+                        List<HashMap<String, String>> childGroupForFirstGroupRow;
+
+                        childGroupForFirstGroupRow = new ArrayList<HashMap<String, String>>();
+
+
+
+
+
+
+                        for (int j = 0; j < BranchList2.getLength(); j++) {
+                            Node firstBranchNode2 = BranchList2.item(j);
+                            HashMap<String, String> map = null;
+                            map = new HashMap<String, String>();
+                            if (firstBranchNode2.getNodeType() == Node.ELEMENT_NODE) {
+
+                                Element enlistmenttype = (Element) firstBranchNode2;
+
+                                NodeList enlisttypeList = enlistmenttype.getElementsByTagName("rtypetitle");
+                                Element enlisttypeElement = (Element) enlisttypeList.item(0);
+                                NodeList entypeList = enlisttypeElement.getChildNodes();
+
+                                map.put("rtypetitle", ((Node) entypeList.item(0)).getNodeValue().trim());
+                                childGroupForFirstGroupRow.add(map);
+
+                            }
+                            if(childGroupForFirstGroupRow!=null && !childGroupForFirstGroupRow.isEmpty()){
+
+                                _listDataChild.put(_listDataHeader.get(i), childGroupForFirstGroupRow);
+                            }
+
+                        }
+
+
+
+
+
+                        //map.put("mostitle", ((Node) typeList.item(0)).getNodeValue().trim());
+
+                       /** NodeList BranchList2 = doc.getElementsByTagName("rtype");
 
                         for (int k = 0; i < BranchList2.getLength(); k++) {
                             Node firstmosNode = BranchList2.item(i);
@@ -230,7 +261,7 @@ public class MOSFrag extends Fragment {
                                 map.put("mostitle", ((Node) mosList.item(0)).getNodeValue().trim());
 
                             }
-                         }
+                         }**/
 
 
                     }
@@ -238,7 +269,7 @@ public class MOSFrag extends Fragment {
 
                 }
 
-
+                //setListAdapter(new MOSTitleData(getActivity(),_listDataHeader));
 
 
 
