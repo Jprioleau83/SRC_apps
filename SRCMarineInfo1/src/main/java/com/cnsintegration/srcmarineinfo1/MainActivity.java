@@ -39,7 +39,7 @@ import java.util.TimerTask;
 
 
 public class MainActivity extends FragmentActivity
-        implements ActionFragment.OnServicesSelectedListener, ServiceFragment.OnServicesSelectedListener,  ServiceFragment.OnServicesSelectedListener2, RankFrag.OnServicesSelectedListener, RankFrag.OnServicesSelectedListener1,HomeFragment.OnHomeCreatedListener, MilitaryTimeFragment.OnMilitaryTimeListener{
+        implements ActionFragment.OnServicesSelectedListener, ServiceFragment.OnServicesSelectedListener,  ServiceFragment.OnServicesSelectedListener2, RankFrag.OnServicesSelectedListener, RankFrag.OnServicesSelectedListener1,HomeFragment.OnHomeCreatedListener, MilitaryTimeFragment.OnMilitaryTimeListener, MOSFrag.OnMosSelectedListener,  MOSFrag.OnMosSelectedListener1{
 
 
     private DrawerLayout mDrawerLayout;

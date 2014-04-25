@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <UsmcMOS>
     <mosdata>
-        <type>
+
             <mostitle>01 Personnel and Administration</mostitle>
-            <ranktype>
+
                 <rtype>
                     <rtypetitle>Enlisted</rtypetitle>
                      <mos>
@@ -88,10 +88,10 @@
 
 
 
-            </ranktype>
 
 
-        </type>
+
+
     </mosdata>
     <mosdata>
         <type>
