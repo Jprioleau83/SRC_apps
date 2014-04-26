@@ -1,31 +1,28 @@
 package com.cnsintegration.srcmarineinfo1;
 
 
-import android.graphics.Typeface;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v4.widget.DrawerLayout;
 import android.content.res.Configuration;
-import com.cnsintegration.srcmarineinfo1.model.NavDrawerItem;
-import com.cnsintegration.srcmarineinfo1.adapter.NavDrawerListAdapter;
-
 import android.content.res.TypedArray;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
-
-
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.cnsintegration.srcmarineinfo1.adapter.NavDrawerListAdapter;
+import com.cnsintegration.srcmarineinfo1.model.NavDrawerItem;
 
 import java.text.DateFormat;
 import java.util.ArrayList;
@@ -35,7 +32,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 
-public class MainActivity extends FragmentActivity
+public class MainActivitybak extends FragmentActivity
         implements ActionFragment.OnServicesSelectedListener, ServiceFragment.OnServicesSelectedListener,  ServiceFragment.OnServicesSelectedListener2, RankFrag.OnServicesSelectedListener, RankFrag.OnServicesSelectedListener1,HomeFragment.OnHomeCreatedListener, MilitaryTimeFragment.OnMilitaryTimeListener, MOSFragment.OnServicesSelectedListener,  MOSFragment.OnServicesSelectedListener2, MOSFrag.OnMosSelectedListener{
 
 
@@ -302,7 +299,6 @@ public class MainActivity extends FragmentActivity
                     MOSFrag mosFragview = new MOSFrag();
                     getSupportFragmentManager().beginTransaction().replace(R.id.service_fragment, fragment).addToBackStack(null)
                             .replace(R.id.rank_fragment, mosFragview).commit();
-                    onRankCreated();
 
 
 

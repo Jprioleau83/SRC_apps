@@ -15,7 +15,7 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="0dp"
-        android:layout_weight="70"
+        android:layout_weight="60"
         android:layout_height="fill_parent"
         android:layout_gravity="left|top"
         android:weightSum="2">
@@ -26,13 +26,13 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left|top"
             android:layout_weight="1"
-            android:weightSum="70">
+            android:weightSum="60">
 
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="0dp"
-                android:layout_weight="30"
+                android:layout_weight="20"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left|top"
                 >
@@ -114,12 +114,12 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left|top"
             android:layout_weight="1"
-            android:weightSum="70">
+            android:weightSum="60">
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="0dp"
-                android:layout_weight="30"
+                android:layout_weight="20"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left|top"
                 >
@@ -205,22 +205,11 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
     </LinearLayout>
 
     <LinearLayout
         android:orientation="vertical"
-        android:layout_weight="30"
+        android:layout_weight="40"
         android:layout_height="fill_parent"
         android:layout_gravity="left|top"
         android:layout_width="0dp">
@@ -229,7 +218,7 @@
             android:id = "@+id/RHE"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
-            android:layout_weight="0"
+
             android:padding="15dp">
 
             <TableRow android:layout_height="wrap_content">

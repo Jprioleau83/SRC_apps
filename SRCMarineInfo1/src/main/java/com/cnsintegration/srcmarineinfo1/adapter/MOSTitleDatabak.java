@@ -2,7 +2,6 @@ package com.cnsintegration.srcmarineinfo1.adapter;
 
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,7 +11,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.cnsintegration.srcmarineinfo1.R;
-import com.cnsintegration.srcmarineinfo1.model.MTitles;
 
 import java.util.HashMap;
 import java.util.List;
@@ -20,7 +18,7 @@ import java.util.List;
 /**
  * Created by jprioleau on 4/5/2014.
  */
-public class MOSTitleData extends BaseAdapter {
+public class MOSTitleDatabak extends BaseAdapter {
 
 
     LayoutInflater inflater;
@@ -28,11 +26,11 @@ public class MOSTitleData extends BaseAdapter {
     List<HashMap<String,String>> branchDataCollection;
     ViewHolder holder;
 
-    private List<MTitles> _listDataHeader;
+    private List<String> _listDataHeader;
 
 
 
-    public MOSTitleData(Activity act, List<MTitles> listDataHeader) {
+    public MOSTitleDatabak(Activity act, List<String> listDataHeader) {
 
         this._listDataHeader = listDataHeader;
 
@@ -65,7 +63,7 @@ public class MOSTitleData extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        MTitles title = (MTitles) getItem(position);
+        String headerTitle = (String) getItem(position);
         View vi=convertView;
         if (convertView == null) {
 
@@ -80,7 +78,7 @@ public class MOSTitleData extends BaseAdapter {
             holder = (ViewHolder)vi.getTag();
         }
 
-        holder.tvBranch.setText(title.getMOS_TITLES_TITLE());
+        holder.tvBranch.setText(headerTitle);
 
         // holder.tvBranch.setTextColor(Color.WHITE);
 

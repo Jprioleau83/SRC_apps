@@ -2,28 +2,22 @@ package com.cnsintegration.srcmarineinfo1;
 
 import android.app.Activity;
 import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
-import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
 
+import com.cnsintegration.srcmarineinfo1.Database.DataBaseWrapper;
 import com.cnsintegration.srcmarineinfo1.adapter.BinderData;
 import com.cnsintegration.srcmarineinfo1.adapter.MOSTitleData;
+import com.cnsintegration.srcmarineinfo1.model.MTitles;
 
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
 
 /**
  * Created by jprioleau on 4/5/2014.
@@ -46,8 +40,21 @@ public class MOSFragment extends ListFragment {
     BinderData adapter = null;
     List<HashMap<String,String>> branchesDataCollection;
 
-    List<String> _listDataHeader;
+    List<MTitles> _listDataHeader;
     HashMap<String, List<HashMap<String, String>>> _listDataChild;
+
+
+    public DataBaseWrapper dbHelper;
+
+    public SQLiteDatabase database;
+
+
+
+    public String[] MOS_TABLE_COLUMNS = { DataBaseWrapper.MOSTITLES_ID, DataBaseWrapper.MOSTITLES_TITLE, DataBaseWrapper.MOSTITLES_BRANCH};
+
+
+
+
 
     public MOSFragment(int i) {
         mActiontype = i;
@@ -69,13 +76,52 @@ public class MOSFragment extends ListFragment {
          */
 
 
-        public void onMOSSelected(int groupposition, int position);
+        public void onMOSSelected(int groupposition);
 
 
     }
 
 
-        @Override
+
+    public List getAllMOS(int branch) {
+        List titles = new ArrayList();
+        String tempposition = Integer.toString(branch);
+
+
+        Cursor cursor = database.query(DataBaseWrapper.MOSTITLES, MOS_TABLE_COLUMNS, "mos_branch=" + tempposition, null, null, null, null);
+
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            MTitles mtitles = parseStudent(cursor);
+            titles.add(mtitles);
+            cursor.moveToNext();
+        }
+
+        cursor.close();
+        return titles;
+    }
+
+    private MTitles parseStudent(Cursor cursor) {
+
+
+
+
+
+
+        MTitles mtitle = new MTitles();
+        mtitle.setMOS_TITLES_ID(cursor.getInt(0));
+        mtitle.setMOS_TITLES_BRANCH(cursor.getInt(2));
+        mtitle.setMOS_TITLES_TITLE(cursor.getString(1));
+
+
+
+
+        return mtitle;
+    }
+
+
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
@@ -87,137 +133,31 @@ public class MOSFragment extends ListFragment {
         Activity act = getActivity();
         // Create an array adapter for the list view, using the Ipsum headlines array
 
-            String mosfilename = "";
-            int position = mActiontype;
-           if (position == 0){
-                mosfilename = "usmcmos.xml";
-             }
+            dbHelper = new DataBaseWrapper(act);
 
+            database = dbHelper.getWritableDatabase();
 
-            Log.i("Click", String.valueOf(position));
-            if (mosfilename != "") {
-                try {
+            List values = getAllMOS(mActiontype);
+            branchesDataCollection = new ArrayList<HashMap<String, String>>();
+            HashMap<String,String> map = null;
+            _listDataHeader = new ArrayList<MTitles>();
 
+            for (int k = 0; k < values.size(); k++) {
+                MTitles mtitle = (MTitles) values.get(k);
 
-                    DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
-                    DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
-                    Document doc = docBuilder.parse(getActivity().getAssets().open(mosfilename));
-
-
-                    branchesDataCollection = new ArrayList<HashMap<String, String>>();
-
-                    doc.getDocumentElement().normalize();
-
-                    NodeList BranchList = doc.getElementsByTagName("mosdata");
-
-                    _listDataChild = new HashMap<String, List<HashMap<String, String>>>();
-                    _listDataHeader = new ArrayList<String>();
-
-                    for (int i = 0; i < BranchList.getLength(); i++) {
-
-
-
-
-                        Node firstBranchNode = BranchList.item(i);
-
-
-                        if (firstBranchNode.getNodeType() == Node.ELEMENT_NODE) {
-
-                            Element firstbranchElement = (Element) firstBranchNode;
-
-                            NodeList ranktypeList = firstbranchElement.getElementsByTagName("mostitle");
-                            Element ranktypeElement = (Element) ranktypeList.item(0);
-                            NodeList typeList = ranktypeElement.getChildNodes();
-                            //--city
-                            _listDataHeader.add(((Node) typeList.item(0)).getNodeValue().trim());
-
-                            NodeList BranchList2 = doc.getElementsByTagName("rtype");
-                            List<HashMap<String, String>> childGroupForFirstGroupRow;
-
-                            childGroupForFirstGroupRow = new ArrayList<HashMap<String, String>>();
-
-
-
-
-
-
-                            for (int j = 0; j < BranchList2.getLength(); j++) {
-                                Node firstBranchNode2 = BranchList2.item(j);
-                                HashMap<String, String> map = null;
-                                map = new HashMap<String, String>();
-                                if (firstBranchNode2.getNodeType() == Node.ELEMENT_NODE) {
-
-                                    Element enlistmenttype = (Element) firstBranchNode2;
-
-                                    NodeList enlisttypeList = enlistmenttype.getElementsByTagName("rtypetitle");
-                                    Element enlisttypeElement = (Element) enlisttypeList.item(0);
-                                    NodeList entypeList = enlisttypeElement.getChildNodes();
-
-                                    map.put("rtypetitle", ((Node) entypeList.item(0)).getNodeValue().trim());
-                                    childGroupForFirstGroupRow.add(map);
-
-                                }
-                                if(childGroupForFirstGroupRow!=null && !childGroupForFirstGroupRow.isEmpty()){
-
-                                    _listDataChild.put(_listDataHeader.get(i), childGroupForFirstGroupRow);
-                                }
-
-                            }
-
-
-
-
-
-                            //map.put("mostitle", ((Node) typeList.item(0)).getNodeValue().trim());
-
-                            /** NodeList BranchList2 = doc.getElementsByTagName("rtype");
-
-                             for (int k = 0; i < BranchList2.getLength(); k++) {
-                             Node firstmosNode = BranchList2.item(i);
-
-
-                             if (firstmosNode.getNodeType() == Node.ELEMENT_NODE) {
-                             Element firstmosElement = (Element) firstBranchNode;
-
-                             NodeList mostypeList = firstmosElement.getElementsByTagName("rtypetitle");
-                             Element mostypeElement = (Element) mostypeList.item(0);
-                             NodeList mosList = mostypeElement.getChildNodes();
-                             //--city
-                             map.put("mostitle", ((Node) mosList.item(0)).getNodeValue().trim());
-
-                             }
-                             }**/
-
-
-                        }
-
-
-                    }
-
-                    setListAdapter(new MOSTitleData(getActivity(),_listDataHeader));
-
-
-
-
-                } catch (IOException ex) {
-                    Log.e("Error", ex.getMessage());
-                } catch (Exception ex) {
-                    Log.e("Error", "Loading exception");
-                }
-
-
-
-
-
+                _listDataHeader.add(mtitle);
 
 
 
             }
+        setListAdapter(new MOSTitleData(getActivity(),_listDataHeader));
 
 
 
 
-    }
+
+
+        }
 
     @Override
     public void onStart() {
@@ -229,7 +169,7 @@ public class MOSFragment extends ListFragment {
         if (getFragmentManager().findFragmentById(R.id.rank_fragment) != null) {
             getListView().setChoiceMode(ListView.CHOICE_MODE_SINGLE);
         }
-        mCallback.onRankCreated();
+
 
 
 
@@ -264,8 +204,9 @@ public class MOSFragment extends ListFragment {
         // Notify the parent activity of selected item
 
 
+            MTitles selectedtitle = _listDataHeader.get(position);
 
-            mCallback1.onMOSSelected(mActiontype ,position);
+            mCallback1.onMOSSelected(selectedtitle.getMOS_TITLES_ID());
 
 
 

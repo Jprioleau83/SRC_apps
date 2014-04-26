@@ -5,37 +5,25 @@ package com.cnsintegration.srcmarineinfo1;
  */
 
 import android.app.Activity;
-import android.content.ActivityNotFoundException;
 import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.ListFragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
-import android.widget.Toast;
 
-import com.cnsintegration.srcmarineinfo1.adapter.ExpandabelListAdoptor;
-import com.cnsintegration.srcmarineinfo1.adapter.MOSTitleData;
+import com.cnsintegration.srcmarineinfo1.Database.DataBaseWrapper;
+import com.cnsintegration.srcmarineinfo1.adapter.ExpandabelListAdoptor2;
+import com.cnsintegration.srcmarineinfo1.model.MOS;
 
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
 
 /**
  * A simple {@link android.support.v4.app.Fragment} subclass.
@@ -47,7 +35,7 @@ public class MOSFrag extends Fragment {
     View v;
     ExpandableListAdapter mAdapter;
     List<String> _listDataHeader;
-    HashMap<String, List<HashMap<String, String>>> _listDataChild;
+    HashMap<String, List<MOS>> _listDataChild;
 
     ExpandableListView lv;
     Context con;
@@ -56,17 +44,24 @@ public class MOSFrag extends Fragment {
 
 
 
-    static final String KEY_ID = "id";
-    static final String KEY_PAY = "payscale";
-    static final String KEY_NAME = "name";
-    static final String KEY_TYPE = "type";
-    static final String KEY_ICON = "icon";
-    static final String KEY_DETAILS = "details";
-    static final String KEY_LINKS = "link";
+
 
     final static String ARG_POSITION = "position";
     int mCurrentPosition = -1;
     List<HashMap<String, String>> branchesDataCollection;
+
+
+
+    public DataBaseWrapper dbHelper;
+
+    public SQLiteDatabase database;
+
+
+
+
+    public String[] MOS_TABLE_COLUMNS = { DataBaseWrapper.MOS_ID, DataBaseWrapper.MOS_NUMBER, DataBaseWrapper.MOS_NAME, DataBaseWrapper.MOS_TYPE, DataBaseWrapper.MOS_RANK, DataBaseWrapper.MOS_TITLE};
+
+
 
 
     public interface OnMosSelectedListener {
@@ -160,134 +155,129 @@ public class MOSFrag extends Fragment {
 
 
 
+
+    public List getMOSES(int mostitleid) {
+        List moses = new ArrayList();
+        String tempposition = Integer.toString(mostitleid);
+
+
+        Cursor cursor = database.query(DataBaseWrapper.MOS, MOS_TABLE_COLUMNS, "most_id=" + tempposition, null, null, null, null);
+
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            MOS mos = parseStudent(cursor);
+            moses.add(mos);
+            cursor.moveToNext();
+        }
+
+        cursor.close();
+        return moses;
+    }
+
+    private MOS parseStudent(Cursor cursor) {
+
+
+
+       //DataBaseWrapper.MOS_NUMBER, DataBaseWrapper.MOS_TITLE, DataBaseWrapper.MOS_NAME,DataBaseWrapper.MOS_TYPE,DataBaseWrapper.MOS_RANK};
+
+
+
+
+        MOS mos = new MOS();
+        mos.setMOS_ID(cursor.getInt(0));
+        mos.setMOS_NUMBER(cursor.getString(1));
+        mos.setMOS_TITLE(cursor.getInt(5));
+        mos.setMOS_NAME(cursor.getString(2));
+        mos.setMOS_TYPE(cursor.getString(3));
+        mos.setMOS_RANK(cursor.getString(4));
+
+
+
+
+        return mos;
+    }
+
     public void updateMOSView(int position) {
+        Activity act = getActivity();
 
-        String mosfilename = "";
+        dbHelper = new DataBaseWrapper(act);
 
-        if (position == 0){
-            mosfilename = "usmcmos.xml";
+        database = dbHelper.getWritableDatabase();
+
+        List values = getMOSES(position);
+
+
+
+        _listDataHeader = new ArrayList<String>();
+
+        _listDataChild = new HashMap<String, List<MOS>>();
+
+        for (int h = 0; h <  values.size(); h++) {
+            MOS mos = (MOS) values.get(h);
+            if (_listDataHeader.contains(mos.getMOS_TYPE())) {
+                System.out.println("Account found");
+            } else {
+                // Map<String, String> map1 = new HashMap<String, String>();
+                //map1.put(KEY_TYPE, branchesDataCollection.get(i).get(KEY_TYPE));
+                //groupData.add(map1);
+                _listDataHeader.add(mos.getMOS_TYPE());
+            }
+
         }
 
 
-        Log.i("Click", String.valueOf(position));
-        if (mosfilename != "") {
-            try {
+        for (int i = 0; i < _listDataHeader.size(); i++) {
+            // get all the ranks for type and add it to an list then add the list to data array
+            HashMap<String, String> top250 = new HashMap<String, String>();
+            List<MOS> childGroupForFirstGroupRow;
 
 
-                DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
-                DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
-                Document doc = docBuilder.parse(getActivity().getAssets().open(mosfilename));
+            childGroupForFirstGroupRow = new ArrayList<MOS>();
+            for (int k = 0; k < values.size(); k++) {
+
+                MOS mos = (MOS) values.get(k);
+
+                String ty = (String) mos.getMOS_TYPE();
+                String t1 = (String) _listDataHeader.get(i);
+
+                if (ty.equals(t1)) {
+                    //add it to list
 
 
-                branchesDataCollection = new ArrayList<HashMap<String, String>>();
+                    HashMap<String, String> map1 = null;
 
-                doc.getDocumentElement().normalize();
-
-                NodeList BranchList = doc.getElementsByTagName("mosdata");
-
-                _listDataChild = new HashMap<String, List<HashMap<String, String>>>();
-                _listDataHeader = new ArrayList<String>();
-
-                for (int i = 0; i < BranchList.getLength(); i++) {
+                    map1 = new HashMap<String, String>();
+                    map1.put("Name", mos.getMOS_NAME());
+                    map1.put("Number", mos.getMOS_NUMBER());
+                    map1.put("Ranks", mos.getMOS_RANK());
 
 
-
-
-                    Node firstBranchNode = BranchList.item(i);
-
-
-                    if (firstBranchNode.getNodeType() == Node.ELEMENT_NODE) {
-
-                        Element firstbranchElement = (Element) firstBranchNode;
-
-                        NodeList ranktypeList = firstbranchElement.getElementsByTagName("mostitle");
-                        Element ranktypeElement = (Element) ranktypeList.item(0);
-                        NodeList typeList = ranktypeElement.getChildNodes();
-                        //--city
-                        _listDataHeader.add(((Node) typeList.item(0)).getNodeValue().trim());
-
-                        NodeList BranchList2 = doc.getElementsByTagName("rtype");
-                        List<HashMap<String, String>> childGroupForFirstGroupRow;
-
-                        childGroupForFirstGroupRow = new ArrayList<HashMap<String, String>>();
-
-
-
-
-
-
-                        for (int j = 0; j < BranchList2.getLength(); j++) {
-                            Node firstBranchNode2 = BranchList2.item(j);
-                            HashMap<String, String> map = null;
-                            map = new HashMap<String, String>();
-                            if (firstBranchNode2.getNodeType() == Node.ELEMENT_NODE) {
-
-                                Element enlistmenttype = (Element) firstBranchNode2;
-
-                                NodeList enlisttypeList = enlistmenttype.getElementsByTagName("rtypetitle");
-                                Element enlisttypeElement = (Element) enlisttypeList.item(0);
-                                NodeList entypeList = enlisttypeElement.getChildNodes();
-
-                                map.put("rtypetitle", ((Node) entypeList.item(0)).getNodeValue().trim());
-                                childGroupForFirstGroupRow.add(map);
-
-                            }
-                            if(childGroupForFirstGroupRow!=null && !childGroupForFirstGroupRow.isEmpty()){
-
-                                _listDataChild.put(_listDataHeader.get(i), childGroupForFirstGroupRow);
-                            }
-
-                        }
-
-
-
-
-
-                        //map.put("mostitle", ((Node) typeList.item(0)).getNodeValue().trim());
-
-                       /** NodeList BranchList2 = doc.getElementsByTagName("rtype");
-
-                        for (int k = 0; i < BranchList2.getLength(); k++) {
-                            Node firstmosNode = BranchList2.item(i);
-
-
-                            if (firstmosNode.getNodeType() == Node.ELEMENT_NODE) {
-                                Element firstmosElement = (Element) firstBranchNode;
-
-                                NodeList mostypeList = firstmosElement.getElementsByTagName("rtypetitle");
-                                Element mostypeElement = (Element) mostypeList.item(0);
-                                NodeList mosList = mostypeElement.getChildNodes();
-                                //--city
-                                map.put("mostitle", ((Node) mosList.item(0)).getNodeValue().trim());
-
-                            }
-                         }**/
-
-
-                    }
+                    childGroupForFirstGroupRow.add(mos);
 
 
                 }
+            }
+            if(childGroupForFirstGroupRow!=null && !childGroupForFirstGroupRow.isEmpty()){
 
-                //setListAdapter(new MOSTitleData(getActivity(),_listDataHeader));
-
-
-
-
-            } catch (IOException ex) {
-                Log.e("Error", ex.getMessage());
-            } catch (Exception ex) {
-                Log.e("Error", "Loading exception");
+                _listDataChild.put(_listDataHeader.get(i), childGroupForFirstGroupRow);
             }
 
-
-
-
-
-
-
-
         }
+
+        ExpandableListView lv = (ExpandableListView) v.findViewById(R.id.expandable_list);
+
+
+        con=getActivity();
+
+
+        mAdapter=new ExpandabelListAdoptor2(con,_listDataHeader, _listDataChild) ; //here i didnt set list values to this adoptor
+
+        lv.setAdapter(mAdapter);
+
+
+
+
+
     }
 
 

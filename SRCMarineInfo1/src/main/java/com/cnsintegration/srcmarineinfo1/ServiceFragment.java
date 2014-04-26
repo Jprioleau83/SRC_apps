@@ -1,6 +1,8 @@
 package com.cnsintegration.srcmarineinfo1;
 
 import android.app.Activity;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
@@ -22,7 +24,10 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import android.content.Context;
 
+import com.cnsintegration.srcmarineinfo1.Database.DataBaseWrapper;
 import com.cnsintegration.srcmarineinfo1.adapter.BinderData;
+import com.cnsintegration.srcmarineinfo1.model.Branch;
+import com.cnsintegration.srcmarineinfo1.model.Rank;
 
 /**
  * Created by jprioleau on 4/5/2014.
@@ -44,6 +49,16 @@ public class ServiceFragment extends ListFragment {
     ListView list;
     BinderData adapter = null;
     List<HashMap<String,String>> branchesDataCollection;
+
+
+
+    public DataBaseWrapper dbHelper;
+
+    public SQLiteDatabase database;
+
+    public String[] BRANCH_TABLE_COLUMNS = { DataBaseWrapper.Branch_ID, DataBaseWrapper.Branch_NAME, DataBaseWrapper.Branch_ICON };
+
+
 
     public ServiceFragment(int i) {
         mActiontype = i;
@@ -71,6 +86,38 @@ public class ServiceFragment extends ListFragment {
     }
 
 
+    public List getAllBranches() {
+        List branches = new ArrayList();
+
+        Cursor cursor = database.query(DataBaseWrapper.Branch, BRANCH_TABLE_COLUMNS , null, null, null, null, null);
+
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            Branch branch = parseStudent(cursor);
+            branches.add(branch);
+            cursor.moveToNext();
+        }
+
+        cursor.close();
+        return branches;
+    }
+
+    private Branch parseStudent(Cursor cursor) {
+
+
+
+
+        Branch branch = new Branch();
+        branch.setBranch_ID((cursor.getInt(0)));
+        branch.setBranch_NAME(cursor.getString(1));
+        branch.setBranch_ICON(cursor.getString(2));
+
+
+
+        return branch;
+    }
+
+
         @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -82,89 +129,29 @@ public class ServiceFragment extends ListFragment {
 
         Activity act = getActivity();
         // Create an array adapter for the list view, using the Ipsum headlines array
+            dbHelper = new DataBaseWrapper(act);
 
-        try {
-
-
-            DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
-            DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
-            Document doc = docBuilder.parse (getActivity().getAssets().open("branchdata.xml"));
+            database = dbHelper.getWritableDatabase();
 
 
 
-
+            List values = getAllBranches();
             branchesDataCollection = new ArrayList<HashMap<String, String>>();
-
-            doc.getDocumentElement ().normalize ();
-
-            NodeList BranchList = doc.getElementsByTagName("branchdata");
-
             HashMap<String,String> map = null;
+            for (int k = 0; k < values.size(); k++) {
 
-            for (int i = 0; i < BranchList.getLength(); i++) {
+                Branch branch = (Branch) values.get(k);
+                map = new HashMap<String, String>();
+                int id = branch.getBranch_ID();
 
-                map = new HashMap<String,String>();
-                Node firstBranchNode = BranchList.item(i);
+                map.put(KEY_ID, Integer.toString(id));
+                map.put(KEY_NAME, branch.getBranch_NAME());
+                map.put(KEY_ICON, branch.getBranch_ICON());
 
-
-
-                if(firstBranchNode.getNodeType() == Node.ELEMENT_NODE) {
-
-                    Element firstbranchElement = (Element)firstBranchNode;
-
-                    NodeList idList = firstbranchElement.getElementsByTagName(KEY_ID);
-                    Element firstIdElement = (Element) idList.item(0);
-                    NodeList textIdList = firstIdElement.getChildNodes();
-                    //--id
-                    map.put(KEY_ID, ((Node) textIdList.item(0)).getNodeValue().trim());
-
-                    //2.-------
-                    NodeList branchnameList = firstbranchElement.getElementsByTagName(KEY_NAME);
-                    Element firstCityElement = (Element) branchnameList.item(0);
-                    NodeList textCityList = firstCityElement.getChildNodes();
-                    //--city
-                    map.put(KEY_NAME, ((Node) textCityList.item(0)).getNodeValue().trim());
-
-                    //3.-------
-                    NodeList iconList = firstbranchElement.getElementsByTagName(KEY_ICON);
-                    Element firstTempElement = (Element) iconList.item(0);
-                    NodeList textTempList = firstTempElement.getChildNodes();
-                    //--city
-                    map.put(KEY_ICON, ((Node) textTempList.item(0)).getNodeValue().trim());
-
-
-                    branchesDataCollection.add(map);
-                }
+                branchesDataCollection.add(map);
             }
 
 
-
-        } catch (IOException ex) {
-            Log.e("Error", ex.getMessage());
-        } catch (Exception ex) {
-            Log.e("Error", "Loading exception");
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            //setListAdapter(new ArrayAdapter<String>(getActivity(), layout, Branches.Services));
         setListAdapter(new BinderData(getActivity(),branchesDataCollection));
 
 
@@ -218,10 +205,21 @@ public class ServiceFragment extends ListFragment {
         // Notify the parent activity of selected item
 
         if(mActiontype == 0){
-            mCallback.onServiceSelected(position);
+            HashMap<String,String> map1 = null;
+            map1 = new HashMap<String, String>();
+            map1 = branchesDataCollection.get(position);
+            int tid = Integer.parseInt(map1.get("id"));
+            mCallback.onServiceSelected(tid);
         }
         if(mActiontype == 1){
-            mCallback1.onServiceSelected2(position);
+            HashMap<String,String> map1 = null;
+            map1 = new HashMap<String, String>();
+            map1 = branchesDataCollection.get(position);
+            int tid = Integer.parseInt(map1.get("id"));
+            mCallback1.onServiceSelected2(tid);
+
+
+
         }
 
 
