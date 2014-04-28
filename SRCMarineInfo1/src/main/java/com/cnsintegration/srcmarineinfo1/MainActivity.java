@@ -40,7 +40,8 @@ import java.util.TimerTask;
 
 
 public class MainActivity extends FragmentActivity
-        implements ActionFragment.OnServicesSelectedListener, ServiceFragment.OnServicesSelectedListener,  ServiceFragment.OnServicesSelectedListener2, RankFrag.OnServicesSelectedListener, RankFrag.OnServicesSelectedListener1,HomeFragment.OnHomeCreatedListener, MilitaryTimeFragment.OnMilitaryTimeListener, MOSFragment.OnServicesSelectedListener,  MOSFragment.OnServicesSelectedListener2, MOSFrag.OnMosSelectedListener{
+        implements ActionFragment.OnServicesSelectedListener, ServiceFragment.OnServicesSelectedListener,  ServiceFragment.OnServicesSelectedListener2, RankFrag.OnServicesSelectedListener, RankFrag.OnServicesSelectedListener1,HomeFragment.OnHomeCreatedListener, MilitaryTimeFragment.OnMilitaryTimeListener,
+        MOSFragment.OnServicesSelectedListener,  MOSFragment.OnServicesSelectedListener2, MOSFrag.OnMosSelectedListener, RankTypeFragment.OnRankTypeSelectedListener{
 
 
     private DrawerLayout mDrawerLayout;
@@ -355,6 +356,19 @@ public class MainActivity extends FragmentActivity
 
 
     public void onServiceSelected(int position) {
+
+        if (findViewById(R.id.fragment_container) != null) {
+            RankTypeFragment rt = new RankTypeFragment(position);
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, rt).commit();
+        }else {
+            //two columns view
+            RankTypeFragment rt = new RankTypeFragment(position);
+            getSupportFragmentManager().beginTransaction().replace(R.id.rank_fragment, rt).addToBackStack(null).commit();
+
+        }
+
+
+        /**
         RankFrag rankFrag = (RankFrag)
                 getSupportFragmentManager().findFragmentById(R.id.rank_fragment);
 
@@ -389,8 +403,9 @@ public class MainActivity extends FragmentActivity
 
         }
 
-
+        **/
     }
+
 
     public void onServiceSelected2(int position) {
 
@@ -439,7 +454,38 @@ public class MainActivity extends FragmentActivity
 
 
     }
+    public void onRankTypeSelected(String ranktype, int position) {
+        if (findViewById(R.id.fragment_container) != null) {
 
+            RankFrag rt = new RankFrag();
+            Bundle args = new Bundle();
+            args.putInt(RankFrag.ARG_POSITION, position);
+            args.putString(RankFrag.ARG_POSITION1, ranktype);
+            rt.setArguments(args);
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+
+            transaction.replace(R.id.fragment_container, rt);
+            transaction.addToBackStack(null);
+            transaction.commit();
+
+
+
+        }else {
+            //two columns view
+            RankFrag rt = new RankFrag();
+            if (rt != null) {
+                // If article frag is available, we're in two-pane layout...
+
+                // Call a method in the ArticleFragment to update its content
+                rt.updateRankView(ranktype, position);
+
+            }
+            getSupportFragmentManager().beginTransaction().replace(R.id.rank_fragment, rt).addToBackStack(null).commit();
+
+        }
+
+
+    }
 
     public void onMOSSelected(int grpposition) {
 
@@ -504,7 +550,7 @@ public class MainActivity extends FragmentActivity
             // If article frag is available, we're in two-pane layout...
 
             // Call a method in the ArticleFragment to update its content
-            rankFrag.updateRankView(position);
+            //rankFrag.updateRankView(position);
 
         } else {
 

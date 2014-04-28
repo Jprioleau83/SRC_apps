@@ -96,7 +96,9 @@ public class RankFrag extends Fragment {
 
 
     final static String ARG_POSITION = "position";
+    final static String ARG_POSITION1 = "type";
     int mCurrentPosition = -1;
+    String mCurrentType = null;
     List<HashMap<String, String>> branchesDataCollection;
 
 
@@ -144,6 +146,7 @@ public class RankFrag extends Fragment {
 
         if (savedInstanceState != null) {
             mCurrentPosition = savedInstanceState.getInt(ARG_POSITION);
+            mCurrentType = savedInstanceState.getString(ARG_POSITION1);
         }
         dbHelper = new DataBaseWrapper(act);
 
@@ -176,10 +179,10 @@ public class RankFrag extends Fragment {
         Bundle args = getArguments();
         if (args != null) {
             // Set article based on argument passed in
-            updateRankView(args.getInt(ARG_POSITION));
+            updateRankView(args.getString(ARG_POSITION1),args.getInt(ARG_POSITION));
         } else if (mCurrentPosition != -1) {
             // Set article based on saved instance state defined during onCreateView
-            updateRankView(mCurrentPosition);
+            updateRankView(mCurrentType,mCurrentPosition);
         }
         mCallback1.onRankCreated();
 
@@ -217,10 +220,10 @@ public class RankFrag extends Fragment {
     }**/
 
 
-    public List getAllRanks(int position) {
+    public List getAllRanks(String rtype, int position) {
         List ranks = new ArrayList();
         String tempposition = Integer.toString(position);
-        Cursor cursor = database.query(DataBaseWrapper.Ranks, Ranks_TABLE_COLUMNS , "_branch=" + tempposition, null, null, null, null);
+        Cursor cursor = database.query(DataBaseWrapper.Ranks, Ranks_TABLE_COLUMNS , "_branch=" + tempposition + " AND _type='" + rtype + "'", null, null, null, null);
 
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
@@ -258,10 +261,10 @@ public class RankFrag extends Fragment {
 
 
 
-    public void updateRankView(int position) {
+    public void updateRankView(String rtype, int position) {
         database = dbHelper.getWritableDatabase();
 
-        List values = getAllRanks(position);
+        List values = getAllRanks(rtype, position);
 
 
         _listDataHeader = new ArrayList<String>();

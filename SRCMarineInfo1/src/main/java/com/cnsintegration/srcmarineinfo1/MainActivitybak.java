@@ -351,7 +351,7 @@ public class MainActivitybak extends FragmentActivity
             // If article frag is available, we're in two-pane layout...
 
             // Call a method in the ArticleFragment to update its content
-            rankFrag.updateRankView(position);
+            //rankFrag.updateRankView(position);
 
         } else {
 
@@ -473,7 +473,7 @@ public class MainActivitybak extends FragmentActivity
             // If article frag is available, we're in two-pane layout...
 
             // Call a method in the ArticleFragment to update its content
-            rankFrag.updateRankView(position);
+           // rankFrag.updateRankView(position);
 
         } else {
 
