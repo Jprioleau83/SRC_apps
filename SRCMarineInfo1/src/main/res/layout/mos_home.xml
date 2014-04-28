@@ -1,0 +1,34 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="0dip">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <!--  ListRow Left sied Thumbnail image -->
+    <LinearLayout android:id="@+id/homepic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="3dip"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="5dip"
+        android:orientation="vertical">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/homeimage"
+        android:src="@drawable/usmc" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text"
+            android:text="The United States Marine Corps's Military Occupational Specialty (MOS) is a system of categorizing career fields. All enlisted and officer Marines are assigned a four digit code denoting their occupational field and specialty.
+
+Occupational Fields (OccFlds) are identified in the first two digits and represent a grouping of related MOSs. Job codes are identified in the last two digits and represent a specific job within that OccFld. An MOS can be awarded as a Primary MOS (PMOS), an Additional MOS (AMOS), a Skill Designator,[1] or Category II MOS (which denote special skills assignments or simply to account for structure when required).
+
+Below are listed the current authorized Marine Corps MOSs, organized by OccFld, then by specific MOS. Most MOSs have specific rank/pay grade requirements and are listed to the right of the MOS title, if applicable (see United States Marine Corps rank insignia), abbreviated from the highest allowed rank to the lowest. Officer ranks are noted as Unrestricted Line Officers[2] (ULOs), Limited Duty Officers[3] (LDOs), and Warrant Officers[4] (WOs). Those MOSs which are no longer being awarded[5] are kept active to allow Marines to earn a new MOS."/>
+    </LinearLayout>
+
+
+</RelativeLayout>

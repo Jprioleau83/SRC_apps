@@ -403,16 +403,17 @@ public class MainActivity extends FragmentActivity
 
 
             // Create an instance of ExampleFragment
-            /** MOSFragment mosFragment = new MOSFragment(position);
+             MOSFragment mosFragment = new MOSFragment(position);
             Bundle args = new Bundle();
             args.putInt(ServiceFragment.ARG_POSITION, position);
             mosFragment.setArguments(args);
-           FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+           /**
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
             transaction.replace(R.id.fragment_container, mosFragment);
             transaction.addToBackStack(null);
             transaction.commit();**/
-            PageviewerFragment Pageview = new PageviewerFragment();
+            PageviewerSmallFragment Pageview = new PageviewerSmallFragment(mosFragment);
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, Pageview).addToBackStack(null).commit();
 
 
@@ -441,46 +442,52 @@ public class MainActivity extends FragmentActivity
 
 
     public void onMOSSelected(int grpposition) {
-        PageviewerFragment Pageview =  (PageviewerFragment) getSupportFragmentManager().findFragmentById(R.id.rank_fragment);
-        List frags = Pageview.getChildFragmentManager().getFragments();
-        MOSFrag mosFrag = (MOSFrag) frags.get(1);
 
-       // MOSFrag mosFrag = (MOSFrag) getSupportFragmentManager().findFragmentById(R.id.rank_fragment);
+        if (findViewById(R.id.fragment_container) != null) {
 
-
-
+            // However, if we're being restored from a previous state,
+            // then we don't need to do anything and should return or else
+            // we could end up with overlapping fragments.
 
 
-        if (mosFrag != null) {
-            // If article frag is available, we're in two-pane layout...
-
-            // Call a method in the ArticleFragment to update its content
-            mosFrag.updateMOSView(grpposition);
-
-        } else {
+            // Create an instance of ExampleFragment
 
 
-            if (findViewById(R.id.fragment_container) != null) {
+            MOSFrag mosFragment = new MOSFrag();
+            Bundle args = new Bundle();
+            args.putInt(MOSFrag.ARG_POSITION, grpposition);
+            mosFragment.setArguments(args);
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
-                // However, if we're being restored from a previous state,
-                // then we don't need to do anything and should return or else
-                // we could end up with overlapping fragments.
+            transaction.replace(R.id.fragment_container, mosFragment);
+            transaction.addToBackStack(null);
+            transaction.commit();
+
+        }else{
+            PageviewerFragment Pageview =  (PageviewerFragment) getSupportFragmentManager().findFragmentById(R.id.rank_fragment);
+            List frags = Pageview.getChildFragmentManager().getFragments();
+            MOSFrag mosFrag = (MOSFrag) frags.get(1);
+
+            // MOSFrag mosFrag = (MOSFrag) getSupportFragmentManager().findFragmentById(R.id.rank_fragment);
 
 
-                // Create an instance of ExampleFragment
-                MOSFrag mosFragment = new MOSFrag();
-                Bundle args = new Bundle();
-                args.putInt(MOSFrag.ARG_POSITION, grpposition);
-                mosFragment.setArguments(args);
-                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
-                transaction.replace(R.id.fragment_container, mosFragment);
-                transaction.addToBackStack(null);
-                transaction.commit();
+
+
+            if (mosFrag != null) {
+                // If article frag is available, we're in two-pane layout...
+
+                // Call a method in the ArticleFragment to update its content
+                mosFrag.updateMOSView(grpposition);
 
             }
-
         }
+
+
+
+
+
+
 
 
     }

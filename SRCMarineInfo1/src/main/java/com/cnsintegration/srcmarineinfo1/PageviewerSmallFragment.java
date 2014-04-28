@@ -7,15 +7,21 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.cnsintegration.srcmarineinfo1.R;
 import com.cnsintegration.srcmarineinfo1.adapter.MyAdapter;
+import com.cnsintegration.srcmarineinfo1.adapter.MyAdapter2;
 
 import java.lang.reflect.Field;
 
 /**
  * Created by jprioleau on 4/27/2014.
  */
-public class PageviewerFragment extends Fragment {
+public class PageviewerSmallFragment extends Fragment {
 
+    public MOSFragment passedfrag;
+    public PageviewerSmallFragment(MOSFragment mosFragment) {
+        passedfrag = mosFragment;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -25,7 +31,7 @@ public class PageviewerFragment extends Fragment {
         ViewPager mViewPager = (ViewPager) view.findViewById(R.id.pager);
 
         // Set the ViewPagerAdapter into ViewPager
-        mViewPager.setAdapter(new MyAdapter(getChildFragmentManager()));
+        mViewPager.setAdapter(new MyAdapter2(getChildFragmentManager(), passedfrag ));
 
         return view;
     }
