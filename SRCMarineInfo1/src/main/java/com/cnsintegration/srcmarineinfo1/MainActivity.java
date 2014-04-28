@@ -6,8 +6,11 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.content.res.Configuration;
+
+import com.cnsintegration.srcmarineinfo1.adapter.MyAdapter;
 import com.cnsintegration.srcmarineinfo1.model.NavDrawerItem;
 import com.cnsintegration.srcmarineinfo1.adapter.NavDrawerListAdapter;
 
@@ -31,6 +34,7 @@ import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -55,6 +59,9 @@ public class MainActivity extends FragmentActivity
 
     private ArrayList<NavDrawerItem> navDrawerItems;
     private NavDrawerListAdapter adapter;
+
+    private MyAdapter mAdapter;
+    private ViewPager mPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -239,12 +246,8 @@ public class MainActivity extends FragmentActivity
                     getSupportFragmentManager().beginTransaction().replace(R.id.service_fragment, fragment).addToBackStack(null)
                             .replace(R.id.rank_fragment, hfragment).commit();
 
-
-
-
-
-
                 }
+                onHomeCreated();
             }
 
             if (casenum == 1) {
@@ -299,12 +302,22 @@ public class MainActivity extends FragmentActivity
                 }else {
 
 
+                    /**PageviewerFragment Pageview = new PageviewerFragment();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.service_fragment, fragment).addToBackStack(null)
+                            .replace(R.id.rank_fragment, Pageview).commit();
+                    onRankCreated();
+                    **/
                     MOSFrag mosFragview = new MOSFrag();
                     getSupportFragmentManager().beginTransaction().replace(R.id.service_fragment, fragment).addToBackStack(null)
                             .replace(R.id.rank_fragment, mosFragview).commit();
                     onRankCreated();
 
 
+                    /**setContentView(R.layout.activity_main2);
+                    mAdapter = new MyAdapter(getSupportFragmentManager());
+
+                    mPager = (ViewPager) findViewById(R.id.pager);
+                    mPager.setAdapter(mAdapter);**/
 
 
 
@@ -390,22 +403,28 @@ public class MainActivity extends FragmentActivity
 
 
             // Create an instance of ExampleFragment
-            MOSFragment mosFragment = new MOSFragment(position);
+            /** MOSFragment mosFragment = new MOSFragment(position);
             Bundle args = new Bundle();
             args.putInt(ServiceFragment.ARG_POSITION, position);
             mosFragment.setArguments(args);
-            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+           FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
             transaction.replace(R.id.fragment_container, mosFragment);
             transaction.addToBackStack(null);
-            transaction.commit();
+            transaction.commit();**/
+            PageviewerFragment Pageview = new PageviewerFragment();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, Pageview).addToBackStack(null).commit();
 
 
         }else {
             MOSFragment mosFrag =  new MOSFragment(position);
-            MOSFrag mosFragview = new MOSFrag();
+           // MOSFrag mosFragview = new MOSFrag();
+            //getSupportFragmentManager().beginTransaction().replace(R.id.service_fragment, mosFrag).addToBackStack(null)
+              //      .replace(R.id.rank_fragment, mosFragview).commit();
+
+            PageviewerFragment Pageview = new PageviewerFragment();
             getSupportFragmentManager().beginTransaction().replace(R.id.service_fragment, mosFrag).addToBackStack(null)
-                    .replace(R.id.rank_fragment, mosFragview).commit();
+                    .replace(R.id.rank_fragment, Pageview).commit();
 
 
 
@@ -422,8 +441,15 @@ public class MainActivity extends FragmentActivity
 
 
     public void onMOSSelected(int grpposition) {
-        MOSFrag mosFrag = (MOSFrag)
-                getSupportFragmentManager().findFragmentById(R.id.rank_fragment);
+        PageviewerFragment Pageview =  (PageviewerFragment) getSupportFragmentManager().findFragmentById(R.id.rank_fragment);
+        List frags = Pageview.getChildFragmentManager().getFragments();
+        MOSFrag mosFrag = (MOSFrag) frags.get(1);
+
+       // MOSFrag mosFrag = (MOSFrag) getSupportFragmentManager().findFragmentById(R.id.rank_fragment);
+
+
+
+
 
         if (mosFrag != null) {
             // If article frag is available, we're in two-pane layout...
@@ -507,8 +533,7 @@ public class MainActivity extends FragmentActivity
     /**
      * Slide menu item click listener
      * */
-    private class SlideMenuClickListener implements
-            ListView.OnItemClickListener {
+    private class SlideMenuClickListener implements ListView.OnItemClickListener {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position,
                                 long id) {
@@ -541,6 +566,9 @@ public class MainActivity extends FragmentActivity
 
     public void onHomeCreated(){
         //if two columns
+
+        View t = findViewById(R.id.fragment_container);
+
         if (findViewById(R.id.fragment_container) == null) {
 
 

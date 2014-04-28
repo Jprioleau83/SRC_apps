@@ -19,6 +19,7 @@ limitations under the License.
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal">
+
     <ExpandableListView
         android:id="@+id/expandable_list"
         android:layout_width="fill_parent"
@@ -26,4 +27,7 @@ limitations under the License.
         android:groupIndicator="@drawable/spinner_background_ab_"
         android:background="@color/list_background"
         android:transcriptMode="disabled" />
+
+
+
 </LinearLayout>

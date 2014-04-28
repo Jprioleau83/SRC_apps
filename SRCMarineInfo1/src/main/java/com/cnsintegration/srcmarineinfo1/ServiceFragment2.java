@@ -1,38 +1,27 @@
 package com.cnsintegration.srcmarineinfo1;
 
 import android.app.Activity;
+import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
-import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
-
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import android.content.Context;
 
 import com.cnsintegration.srcmarineinfo1.Database.DataBaseWrapper;
 import com.cnsintegration.srcmarineinfo1.adapter.BinderData;
 import com.cnsintegration.srcmarineinfo1.model.Branch;
-import com.cnsintegration.srcmarineinfo1.model.Rank;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 /**
  * Created by jprioleau on 4/5/2014.
  */
-public class ServiceFragment extends ListFragment {
+public class ServiceFragment2 extends ListFragment {
 
     OnServicesSelectedListener mCallback;
     OnServicesSelectedListener2 mCallback1;
@@ -60,7 +49,7 @@ public class ServiceFragment extends ListFragment {
 
 
 
-    public ServiceFragment(int i) {
+    public ServiceFragment2(int i) {
         mActiontype = i;
     }
 
@@ -69,7 +58,7 @@ public class ServiceFragment extends ListFragment {
 
 
 
-            public void onServiceSelected ( int position);
+            public void onServiceSelected(int position);
 
 
 

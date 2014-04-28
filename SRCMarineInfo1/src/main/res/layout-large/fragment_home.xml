@@ -1,0 +1,30 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="0dip">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <!--  ListRow Left sied Thumbnail image -->
+    <LinearLayout android:id="@+id/homepic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="3dip"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="5dip"
+        android:orientation="vertical">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/homeimage"
+        android:src="@drawable/srcc4ilogo" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text"
+            android:text="USMC lskdjf sdjflkdjfs skdjflsdj skjdfljlj"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

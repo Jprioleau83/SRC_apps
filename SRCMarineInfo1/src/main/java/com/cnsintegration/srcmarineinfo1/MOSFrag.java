@@ -11,6 +11,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +20,7 @@ import android.widget.ExpandableListView;
 
 import com.cnsintegration.srcmarineinfo1.Database.DataBaseWrapper;
 import com.cnsintegration.srcmarineinfo1.adapter.ExpandabelListAdoptor2;
+import com.cnsintegration.srcmarineinfo1.adapter.MyAdapter;
 import com.cnsintegration.srcmarineinfo1.model.MOS;
 
 import java.util.ArrayList;
@@ -84,7 +86,12 @@ public class MOSFrag extends Fragment {
                 container, false);
 
 
-        return v;
+       // return v;
+
+       // ViewPager mViewPager = (ViewPager) v.findViewById(R.id.pager);
+        // Set the ViewPagerAdapter into ViewPager
+        //mViewPager.setAdapter(new MyAdapter(getChildFragmentManager()));
+       return v;
     }
 
 

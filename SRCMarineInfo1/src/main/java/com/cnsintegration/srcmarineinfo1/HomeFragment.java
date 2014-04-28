@@ -89,7 +89,7 @@ public class HomeFragment extends Fragment {
         super.onStart();
         //if two columns
 
-        mCallback.onHomeCreated();
+        //mCallback.onHomeCreated();
 
     }
 

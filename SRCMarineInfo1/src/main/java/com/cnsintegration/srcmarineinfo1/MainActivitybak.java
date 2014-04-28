@@ -1,28 +1,34 @@
 package com.cnsintegration.srcmarineinfo1;
 
 
-import android.content.res.Configuration;
-import android.content.res.TypedArray;
+import android.app.Activity;
+
 import android.graphics.Typeface;
-import android.os.Bundle;
-import android.support.v4.app.ActionBarDrawerToggle;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.widget.DrawerLayout;
+import android.content.res.Configuration;
+import com.cnsintegration.srcmarineinfo1.model.NavDrawerItem;
+import com.cnsintegration.srcmarineinfo1.adapter.NavDrawerListAdapter;
+
+import android.content.res.TypedArray;
+import android.os.Bundle;
+import android.support.v4.app.ActionBarDrawerToggle;
+
+
 import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
-
-import com.cnsintegration.srcmarineinfo1.adapter.NavDrawerListAdapter;
-import com.cnsintegration.srcmarineinfo1.model.NavDrawerItem;
 
 import java.text.DateFormat;
 import java.util.ArrayList;
@@ -268,7 +274,7 @@ public class MainActivitybak extends FragmentActivity
 
 
                 MilitaryTimeFragment Mfragment = null;
-                 Mfragment = new MilitaryTimeFragment();
+                Mfragment = new MilitaryTimeFragment();
 
                 //if two columns
                 if (findViewById(R.id.fragment_container) != null) {
@@ -386,7 +392,7 @@ public class MainActivitybak extends FragmentActivity
 
 
             // Create an instance of ExampleFragment
-            MOSFragment mosFragment = new MOSFragment(position);
+            MOSFragment mosFragment = new MOSFragment(0);
             Bundle args = new Bundle();
             args.putInt(ServiceFragment.ARG_POSITION, position);
             mosFragment.setArguments(args);
@@ -398,7 +404,7 @@ public class MainActivitybak extends FragmentActivity
 
 
         }else {
-            MOSFragment mosFrag =  new MOSFragment(position);
+            MOSFragment mosFrag =  new MOSFragment(0);
             MOSFrag mosFragview = new MOSFrag();
             getSupportFragmentManager().beginTransaction().replace(R.id.service_fragment, mosFrag).addToBackStack(null)
                     .replace(R.id.rank_fragment, mosFragview).commit();
@@ -417,7 +423,7 @@ public class MainActivitybak extends FragmentActivity
     }
 
 
-    public void onMOSSelected(int grpposition) {
+    public void onMOSSelected(int grpposition, int position ) {
         MOSFrag mosFrag = (MOSFrag)
                 getSupportFragmentManager().findFragmentById(R.id.rank_fragment);
 
@@ -425,7 +431,7 @@ public class MainActivitybak extends FragmentActivity
             // If article frag is available, we're in two-pane layout...
 
             // Call a method in the ArticleFragment to update its content
-            mosFrag.updateMOSView(grpposition);
+            mosFrag.updateMOSView(position);
 
         } else {
 
@@ -440,7 +446,7 @@ public class MainActivitybak extends FragmentActivity
                 // Create an instance of ExampleFragment
                 MOSFrag mosFragment = new MOSFrag();
                 Bundle args = new Bundle();
-                args.putInt(MOSFrag.ARG_POSITION, grpposition);
+                args.putInt(MOSFrag.ARG_POSITION, position);
                 mosFragment.setArguments(args);
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
@@ -497,7 +503,10 @@ public class MainActivitybak extends FragmentActivity
 
     }
 
+    @Override
+    public void onMOSSelected(int groupposition) {
 
+    }
 
 
     /**
@@ -575,7 +584,7 @@ public class MainActivitybak extends FragmentActivity
         //TextView t = (TextView) findViewById(R.id.textView);
 
 
-    // textView is the TextView view that should display it
+        // textView is the TextView view that should display it
         //t.setText(currentDateTimeString);
 
 
@@ -612,7 +621,7 @@ public class MainActivitybak extends FragmentActivity
                 int month = cal.get(Calendar.MINUTE); // month...
                 int day = cal.get(Calendar.SECOND); // current day in the month
 
-               final Integer test = new Integer(calendar.get(Calendar.HOUR_OF_DAY));
+                final Integer test = new Integer(calendar.get(Calendar.HOUR_OF_DAY));
 
                 final Integer hora = new Integer(Calendar.getInstance().get(Calendar.HOUR_OF_DAY));
                 final Integer minutes = new Integer(Calendar.getInstance().get(Calendar.MINUTE));
@@ -688,7 +697,7 @@ public class MainActivitybak extends FragmentActivity
 
 
 
-}
+    }
 
 
 }
