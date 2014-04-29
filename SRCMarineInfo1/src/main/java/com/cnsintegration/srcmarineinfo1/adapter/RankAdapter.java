@@ -22,6 +22,7 @@ public class RankAdapter extends FragmentPagerAdapter {
         super(fm);
         fragmanager = fm;
         Ranks = ranks;
+        
     }
 
     @Override
