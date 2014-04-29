@@ -1,6 +1,7 @@
 package com.cnsintegration.srcmarineinfo1;
 
 
+import android.database.Cursor;
 import android.graphics.Typeface;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
@@ -10,9 +11,11 @@ import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.content.res.Configuration;
 
+import com.cnsintegration.srcmarineinfo1.Database.DataBaseWrapper;
 import com.cnsintegration.srcmarineinfo1.adapter.MyAdapter;
 import com.cnsintegration.srcmarineinfo1.model.NavDrawerItem;
 import com.cnsintegration.srcmarineinfo1.adapter.NavDrawerListAdapter;
+import com.cnsintegration.srcmarineinfo1.model.Rank;
 
 import android.content.res.TypedArray;
 import android.os.Bundle;
@@ -40,7 +43,7 @@ import java.util.TimerTask;
 
 
 public class MainActivity extends FragmentActivity
-        implements ActionFragment.OnServicesSelectedListener, ServiceFragment.OnServicesSelectedListener,  ServiceFragment.OnServicesSelectedListener2, RankFrag.OnServicesSelectedListener, RankFrag.OnServicesSelectedListener1,HomeFragment.OnHomeCreatedListener, MilitaryTimeFragment.OnMilitaryTimeListener,
+        implements ActionFragment.OnServicesSelectedListener, ServiceFragment.OnServicesSelectedListener,  ServiceFragment.OnServicesSelectedListener2, RankFrag.OnRankCreated, RankFrag.OnServicesSelectedListener1,HomeFragment.OnHomeCreatedListener, MilitaryTimeFragment.OnMilitaryTimeListener,
         MOSFragment.OnServicesSelectedListener,  MOSFragment.OnServicesSelectedListener2, MOSFrag.OnMosSelectedListener, RankTypeFragment.OnRankTypeSelectedListener{
 
 
@@ -252,7 +255,7 @@ public class MainActivity extends FragmentActivity
             }
 
             if (casenum == 1) {
-                RankFrag rankFrag = new RankFrag();
+               // RankFrag rankFrag = new RankFrag();
 
                 //if two columns
                 if (findViewById(R.id.fragment_container) != null) {
@@ -262,8 +265,8 @@ public class MainActivity extends FragmentActivity
 
 
                 }else {
-                    getSupportFragmentManager().beginTransaction().replace(R.id.service_fragment, fragment).addToBackStack(null)
-                            .replace(R.id.rank_fragment, rankFrag).addToBackStack(null).commit();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.service_fragment, fragment).addToBackStack(null).addToBackStack(null).commit();
+                            //.replace(R.id.rank_fragment, rankFrag).addToBackStack(null).commit();
 
 
                 }
@@ -457,11 +460,9 @@ public class MainActivity extends FragmentActivity
     public void onRankTypeSelected(String ranktype, int position) {
         if (findViewById(R.id.fragment_container) != null) {
 
-            RankFrag rt = new RankFrag();
+            RankFrag rt = new RankFrag(ranktype, position);
             Bundle args = new Bundle();
-            args.putInt(RankFrag.ARG_POSITION, position);
-            args.putString(RankFrag.ARG_POSITION1, ranktype);
-            rt.setArguments(args);
+
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
             transaction.replace(R.id.fragment_container, rt);
@@ -472,20 +473,15 @@ public class MainActivity extends FragmentActivity
 
         }else {
             //two columns view
-            RankFrag rt = new RankFrag();
-            if (rt != null) {
-                // If article frag is available, we're in two-pane layout...
+            RankFrag rt = new RankFrag(ranktype, position);
 
-                // Call a method in the ArticleFragment to update its content
-                rt.updateRankView(ranktype, position);
-
-            }
             getSupportFragmentManager().beginTransaction().replace(R.id.rank_fragment, rt).addToBackStack(null).commit();
 
         }
 
 
     }
+
 
     public void onMOSSelected(int grpposition) {
 
@@ -541,9 +537,9 @@ public class MainActivity extends FragmentActivity
 
 
 
-
+/**
     public void onRankSelected(int position) {
-        RankFrag rankFrag = (RankFrag)
+        RankFragbak2 rankFrag = (RankFragbak2)
                 getSupportFragmentManager().findFragmentById(R.id.rank_fragment);
 
         if (rankFrag != null) {
@@ -563,7 +559,7 @@ public class MainActivity extends FragmentActivity
 
 
                 // Create an instance of ExampleFragment
-                RankFrag rankFragment = new RankFrag();
+                RankFragbak2 rankFragment = new RankFragbak2();
                 Bundle args = new Bundle();
                 args.putInt(ServiceFragment.ARG_POSITION, position);
                 rankFragment.setArguments(args);
@@ -579,8 +575,13 @@ public class MainActivity extends FragmentActivity
 
 
     }
+**/
+    /**@Override
+    public void onRankSelected(List Ranks) {
+        RankFragbak2 rankFrag = (RankFragbak2)
+                getSupportFragmentManager().findFragmentById(R.id.rank_fragment);
 
-
+    }**/
 
 
     /**

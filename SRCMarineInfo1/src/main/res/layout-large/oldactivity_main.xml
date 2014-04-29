@@ -25,7 +25,7 @@ limitations under the License.
         android:layout_weight="1"
         android:layout_width="0dp"
         android:layout_height="match_parent"/>
-    <fragment android:name="com.cnsintegration.srcmarineinfo1.RankFrag"
+    <fragment android:name="com.cnsintegration.srcmarineinfo1.RankFragbak2"
         android:id="@+id/rank_fragment"
         android:layout_weight="2"
         android:layout_width="0dp"

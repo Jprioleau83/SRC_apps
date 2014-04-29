@@ -121,7 +121,7 @@ public class RankTypeFragment extends ListFragment {
         // Create an array adapter for the list view, using the Ipsum headlines array
             dbHelper = new DataBaseWrapper(act);
 
-            database = dbHelper.getWritableDatabase();
+            database = dbHelper.getReadableDatabase();
 
 
 
@@ -149,7 +149,7 @@ public class RankTypeFragment extends ListFragment {
 
             setListAdapter(new ETypeData(getActivity(),branchesDataCollection));
 
-
+            dbHelper.close();
 
 
 

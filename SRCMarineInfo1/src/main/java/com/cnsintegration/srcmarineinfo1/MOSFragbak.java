@@ -112,12 +112,12 @@ public class MOSFragbak extends Fragment {
 
         // This makes sure that the container activity has implemented
         // the callback interface. If not, it throws an exception.
-        try {
+       /** try {
             mCallback = (OnMosSelectedListener) activity;
         } catch (ClassCastException e) {
             throw new ClassCastException(activity.toString()
                     + " must implement OnHeadlineSelectedListener");
-        }
+        }**/
 
     }
     @Override

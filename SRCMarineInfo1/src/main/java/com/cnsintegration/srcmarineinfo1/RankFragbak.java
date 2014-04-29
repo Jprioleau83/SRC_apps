@@ -8,11 +8,12 @@ import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,20 +21,14 @@ import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
 import android.widget.Toast;
 
+import com.cnsintegration.srcmarineinfo1.Database.DataBaseWrapper;
 import com.cnsintegration.srcmarineinfo1.adapter.ExpandabelListAdoptor;
+import com.cnsintegration.srcmarineinfo1.model.Rank;
 
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
 
 /**
  * A simple {@link android.support.v4.app.Fragment} subclass.
@@ -63,14 +58,23 @@ public class RankFragbak extends Fragment {
     static final String KEY_DETAILS = "details";
     static final String KEY_LINKS = "link";
 
+    public static final String Ranks = "Ranks";
+    public static final String rank_ID = "_id";
+    public static final String Rank_PAY = "_pay";
+    public static final String Rank_SHORT = "_short";
+    public static final String Rank_NAME = "_name";
+    public static final String Rank_ICON = "_icon";
+    public static final String Rank_TYPE = "_type";
+    public static final String Rank_DETAILS = "_details";
+    public static final String Rank_LINK = "_link";
+    public static final String Rank_Branch = "_branch";
 
+    public DataBaseWrapper dbHelper;
 
+    public SQLiteDatabase database;
 
-
-
-
-
-
+    public String[] Ranks_TABLE_COLUMNS = { DataBaseWrapper.rank_ID, DataBaseWrapper.Rank_PAY, DataBaseWrapper.Rank_SHORT, DataBaseWrapper.Rank_NAME,
+            DataBaseWrapper.Rank_ICON, DataBaseWrapper.Rank_TYPE, DataBaseWrapper.Rank_DETAILS, DataBaseWrapper.Rank_LINK, DataBaseWrapper.Rank_Branch };
 
 
 
@@ -79,7 +83,9 @@ public class RankFragbak extends Fragment {
 
 
     final static String ARG_POSITION = "position";
+    final static String ARG_POSITION1 = "type";
     int mCurrentPosition = -1;
+    String mCurrentType = null;
     List<HashMap<String, String>> branchesDataCollection;
 
 
@@ -127,7 +133,9 @@ public class RankFragbak extends Fragment {
 
         if (savedInstanceState != null) {
             mCurrentPosition = savedInstanceState.getInt(ARG_POSITION);
+            mCurrentType = savedInstanceState.getString(ARG_POSITION1);
         }
+        dbHelper = new DataBaseWrapper(act);
 
 
 
@@ -158,10 +166,10 @@ public class RankFragbak extends Fragment {
         Bundle args = getArguments();
         if (args != null) {
             // Set article based on argument passed in
-            updateRankView(args.getInt(ARG_POSITION));
+            updateRankView(args.getString(ARG_POSITION1),args.getInt(ARG_POSITION));
         } else if (mCurrentPosition != -1) {
             // Set article based on saved instance state defined during onCreateView
-            updateRankView(mCurrentPosition);
+            updateRankView(mCurrentType,mCurrentPosition);
         }
         mCallback1.onRankCreated();
 
@@ -180,216 +188,173 @@ public class RankFragbak extends Fragment {
 
 
 
-    public void updateRankView(int position) {
+/**
+    public List getAllRanks() {
+        List ranks = new ArrayList();
 
-        String rankfilename = "";
+        Cursor cursor = database.query(DataBaseWrapper.Ranks,
+                Ranks_TABLE_COLUMNS , null, null, null, null, null);
 
-        if (position == 0){
-            rankfilename = "usmcranks.xml";
-        }
-        if (position == 1){
-            rankfilename = "usafranks.xml";
-        }
-        if (position == 2){
-            rankfilename = "usarmyranks.xml";
-        }
-        if (position == 3){
-            rankfilename = "usnavyranks.xml";
-        }
-        if (position == 4){
-            rankfilename = "uscgranks.xml";
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            Rank rank = parseStudent(cursor);
+            ranks.add(rank);
+            cursor.moveToNext();
         }
 
-
-        Log.i("Click", String.valueOf(position));
-        if (rankfilename != "") {
-            try {
-
-
-                DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
-                DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
-                Document doc = docBuilder.parse(getActivity().getAssets().open(rankfilename));
+        cursor.close();
+        return ranks;
+    }**/
 
 
-                branchesDataCollection = new ArrayList<HashMap<String, String>>();
+    public List getAllRanks(String rtype, int position) {
+        List ranks = new ArrayList();
+        String tempposition = Integer.toString(position);
+        Cursor cursor = database.query(DataBaseWrapper.Ranks, Ranks_TABLE_COLUMNS , "_branch=" + tempposition + " AND _type='" + rtype + "'", null, null, null, null);
 
-                doc.getDocumentElement().normalize();
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            Rank rank = parseStudent(cursor);
+            ranks.add(rank);
+            cursor.moveToNext();
+        }
 
-                NodeList BranchList = doc.getElementsByTagName("ranksdata");
+        cursor.close();
+        return ranks;
+    }
 
-                HashMap<String, String> map = null;
-
-                for (int i = 0; i < BranchList.getLength(); i++) {
-
-                    map = new HashMap<String, String>();
-                    Node firstBranchNode = BranchList.item(i);
-
-
-                    if (firstBranchNode.getNodeType() == Node.ELEMENT_NODE) {
-
-                        Element firstbranchElement = (Element) firstBranchNode;
-
-                        NodeList ranktypeList = firstbranchElement.getElementsByTagName(KEY_TYPE);
-                        Element ranktypeElement = (Element) ranktypeList.item(0);
-                        NodeList typeList = ranktypeElement.getChildNodes();
-                        //--city
-                        map.put(KEY_TYPE, ((Node) typeList.item(0)).getNodeValue().trim());
+    private Rank parseStudent(Cursor cursor) {
 
 
 
-                        NodeList idList = firstbranchElement.getElementsByTagName(KEY_ID);
-                        Element firstIdElement = (Element) idList.item(0);
-                        NodeList textIdList = firstIdElement.getChildNodes();
-                        //--id
-                        map.put(KEY_ID, ((Node) textIdList.item(0)).getNodeValue().trim());
 
-                        //2.-------
-                        NodeList branchnameList = firstbranchElement.getElementsByTagName(KEY_NAME);
-                        Element firstCityElement = (Element) branchnameList.item(0);
-                        NodeList textCityList = firstCityElement.getChildNodes();
-                        //--city
-                        map.put(KEY_NAME, ((Node) textCityList.item(0)).getNodeValue().trim());
+        Rank rank = new Rank();
+        rank.setId((cursor.getInt(0)));
+        rank.setRank_PAY(cursor.getString(1));
+        rank.setShortName(cursor.getString(2));
+        rank.setName(cursor.getString(3));
+        rank.setIcon(cursor.getString(4));
 
-                        //3.-------
-                        NodeList paynameList = firstbranchElement.getElementsByTagName(KEY_PAY);
-                        Element payElement = (Element) paynameList.item(0);
-                        NodeList payList = payElement.getChildNodes();
-                        //--city
-                        map.put(KEY_PAY, ((Node) payList.item(0)).getNodeValue().trim());
-
-                        //4.-------
-                        NodeList iconList = firstbranchElement.getElementsByTagName(KEY_ICON);
-                        Element firstTempElement = (Element) iconList.item(0);
-                        NodeList textTempList = firstTempElement.getChildNodes();
-                        //--city
-                        map.put(KEY_ICON, ((Node) textTempList.item(0)).getNodeValue().trim());
-
-                        //4.-------
-                        NodeList detailList = firstbranchElement.getElementsByTagName(KEY_DETAILS);
-                        Element detailsElement = (Element) detailList.item(0);
-                        NodeList detailTempList = detailsElement.getChildNodes();
-                        //--city
-                        map.put(KEY_DETAILS, ((Node) detailTempList.item(0)).getNodeValue().trim());
-                        //5.-------
-                        NodeList linkList = firstbranchElement.getElementsByTagName(KEY_LINKS);
-                        Element linkElement = (Element) linkList.item(0);
-                        NodeList linkTempList = linkElement.getChildNodes();
-                        //--city
-                        map.put(KEY_LINKS, ((Node) linkTempList.item(0)).getNodeValue().trim());
+        rank.setRank_TYPE(cursor.getString(5));
+        rank.setRank_DETAILS(cursor.getString(6));
+        rank.setRank_LINK(cursor.getString(7));
+        rank.setRank_Branch(cursor.getInt(8));
+        return rank;
+    }
 
 
-                        branchesDataCollection.add(map);
-                    }
-                }
 
 
-                _listDataHeader = new ArrayList<String>();
-
-                _listDataChild = new HashMap<String, List<HashMap<String, String>>>();
-
-                for (int i = 0; i < branchesDataCollection.size(); i++) {
-                    if (_listDataHeader.contains(branchesDataCollection.get(i).get(KEY_TYPE))) {
-                        System.out.println("Account found");
-                    } else {
-                        // Map<String, String> map1 = new HashMap<String, String>();
-                        //map1.put(KEY_TYPE, branchesDataCollection.get(i).get(KEY_TYPE));
-                        //groupData.add(map1);
-                        _listDataHeader.add(branchesDataCollection.get(i).get(KEY_TYPE));
-                    }
-
-                }
-                _listDataChild = new HashMap<String, List<HashMap<String, String>>>();
-
-                for (int i = 0; i < _listDataHeader.size(); i++) {
-                    // get all the ranks for type and add it to an list then add the list to data array
-                    HashMap<String, String> top250 = new HashMap<String, String>();
-                    List<HashMap<String, String>> childGroupForFirstGroupRow;
 
 
-                    childGroupForFirstGroupRow = new ArrayList<HashMap<String, String>>();
-                    for (int k = 0; k < branchesDataCollection.size(); k++) {
-                        String ty = (String) branchesDataCollection.get(k).get(KEY_TYPE).toString();
-                        String t1 = (String) _listDataHeader.get(i);
 
-                        if (ty.equals(t1)) {
-                            //add it to list
-                            HashMap<String, String> map1 = null;
+    public void updateRankView(String rtype, int position) {
+        database = dbHelper.getWritableDatabase();
 
-                            map1 = new HashMap<String, String>();
-                            map1.put(KEY_NAME, branchesDataCollection.get(k).get(KEY_NAME));
-                            map1.put(KEY_PAY, branchesDataCollection.get(k).get(KEY_PAY));
-                            map1.put(KEY_ICON, branchesDataCollection.get(k).get(KEY_ICON));
-                            map1.put(KEY_DETAILS, branchesDataCollection.get(k).get(KEY_DETAILS));
-                            map1.put(KEY_LINKS, branchesDataCollection.get(k).get(KEY_LINKS));
-
-                            childGroupForFirstGroupRow.add(map1);
-                            //top250.add((branchesDataCollection.get(k).get(KEY_NAME)));
-                            // top250.add((branchesDataCollection.get(k).get(KEY_PAY)));
-                            //top250.add((branchesDataCollection.get(k).get(KEY_ICON)));
+        List values = getAllRanks(rtype, position);
 
 
-                        }
-                    }
-                    //listOfChildGroups.add(childGroupForFirstGroupRow);
-                    if(childGroupForFirstGroupRow!=null && !childGroupForFirstGroupRow.isEmpty()){
+        _listDataHeader = new ArrayList<String>();
 
-                        _listDataChild.put(_listDataHeader.get(i), childGroupForFirstGroupRow);
-                    }
+        _listDataChild = new HashMap<String, List<HashMap<String, String>>>();
+
+
+        for (int i = 0; i < values.size(); i++) {
+           Rank rank = (Rank) values.get(i);
+            if (_listDataHeader.contains(rank.getRank_TYPE())) {
+                System.out.println("Account found");
+            } else {
+                // Map<String, String> map1 = new HashMap<String, String>();
+                //map1.put(KEY_TYPE, branchesDataCollection.get(i).get(KEY_TYPE));
+                //groupData.add(map1);
+                _listDataHeader.add(rank.getRank_TYPE());
+                System.out.println("Account Added");
+            }
+
+        }
+        _listDataChild = new HashMap<String, List<HashMap<String, String>>>();
+
+        for (int i = 0; i < _listDataHeader.size(); i++) {
+            // get all the ranks for type and add it to an list then add the list to data array
+            HashMap<String, String> top250 = new HashMap<String, String>();
+            List<HashMap<String, String>> childGroupForFirstGroupRow;
+
+
+            childGroupForFirstGroupRow = new ArrayList<HashMap<String, String>>();
+            for (int k = 0; k < values.size(); k++) {
+                Rank rank = (Rank) values.get(k);
+
+                String ty = (String) rank.getRank_TYPE();
+                String t1 = (String) _listDataHeader.get(i);
+
+                if (ty.equals(t1)) {
+                    //add it to list
+                    HashMap<String, String> map1 = null;
+
+                    map1 = new HashMap<String, String>();
+                    map1.put(KEY_NAME, rank.getName());
+                    map1.put(KEY_PAY, rank.getRank_PAY());
+                    map1.put(KEY_ICON, rank.getIcon());
+                    map1.put(KEY_DETAILS,rank.getRank_DETAILS());
+                    map1.put(KEY_LINKS, rank.getRank_LINK());
+
+                    childGroupForFirstGroupRow.add(map1);
+
 
 
                 }
-
-
-            } catch (IOException ex) {
-                Log.e("Error", ex.getMessage());
-            } catch (Exception ex) {
-                Log.e("Error", "Loading exception");
             }
 
 
+            if(childGroupForFirstGroupRow!=null && !childGroupForFirstGroupRow.isEmpty()){
 
-
-            ExpandableListView lv = (ExpandableListView) v.findViewById(R.id.expandable_list);
-
-            //here setting all the values to Parent and child classes
-            // setDataValues();
-            //prepareListData();//here get the values and set this values to adoptor and set it visible
-            con=getActivity();
-
-            // mAdapter=new ExpandabelListAdoptor(con,_listDataHeader, _listDataChild) ; //here i didnt set list values to this adoptor
-            mAdapter=new ExpandabelListAdoptor(con,_listDataHeader, _listDataChild) ; //here i didnt set list values to this adoptor
-
-
-
-            // mAdapter = new ExpandableListAdapter(this, _listDataHeader, _listDataChild);
-
-            // setting list adapter
-            lv.setAdapter(mAdapter);
-
-            lv.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
-
-                @Override
-                public boolean onChildClick(ExpandableListView parent, View v,
-                                            int groupPosition, int childPosition, long id) {
-
-                    final HashMap<String, String> branchDataCollection1 = (HashMap<String, String>) mAdapter.getChild(groupPosition, childPosition);
-
-                    try {
-                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(branchDataCollection1.get(KEY_LINKS)));
-                        startActivity(browserIntent);
-                    } catch (ActivityNotFoundException e) {
-                        Toast.makeText(getActivity(), "No application can handle this request,"
-                                + " Please install a webbrowser", Toast.LENGTH_LONG).show();
-                        e.printStackTrace();
-                    }
-
-                    return false;
-                }
-            });
-
-
+                _listDataChild.put(_listDataHeader.get(i), childGroupForFirstGroupRow);
+            }
 
         }
+
+
+
+        ExpandableListView lv = (ExpandableListView) v.findViewById(R.id.expandable_list);
+
+        //here setting all the values to Parent and child classes
+        // setDataValues();
+        //prepareListData();//here get the values and set this values to adoptor and set it visible
+        con=getActivity();
+
+        // mAdapter=new ExpandabelListAdoptor(con,_listDataHeader, _listDataChild) ; //here i didnt set list values to this adoptor
+        mAdapter=new ExpandabelListAdoptor(con,_listDataHeader, _listDataChild) ; //here i didnt set list values to this adoptor
+
+
+
+        // mAdapter = new ExpandableListAdapter(this, _listDataHeader, _listDataChild);
+
+        // setting list adapter
+        lv.setAdapter(mAdapter);
+
+        lv.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+
+            @Override
+            public boolean onChildClick(ExpandableListView parent, View v,
+                                        int groupPosition, int childPosition, long id) {
+
+                final HashMap<String, String> branchDataCollection1 = (HashMap<String, String>) mAdapter.getChild(groupPosition, childPosition);
+
+                try {
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(branchDataCollection1.get(KEY_LINKS)));
+                    startActivity(browserIntent);
+                } catch (ActivityNotFoundException e) {
+                    Toast.makeText(getActivity(), "No application can handle this request,"
+                            + " Please install a webbrowser", Toast.LENGTH_LONG).show();
+                    e.printStackTrace();
+                }
+
+                return false;
+            }
+        });
+
+        dbHelper.close();
+    //end updaterank method
     }
 
 

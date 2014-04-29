@@ -70,7 +70,7 @@ public class MOSFrag extends Fragment {
         /**
          * Called by ServiceFragment when a list item is selected
          */
-        public void onRankSelected(int position);
+       // public void onRankSelected(int position);
     }
 
 
@@ -122,12 +122,12 @@ public class MOSFrag extends Fragment {
 
         // This makes sure that the container activity has implemented
         // the callback interface. If not, it throws an exception.
-        try {
+       /** try {
             mCallback = (OnMosSelectedListener) activity;
         } catch (ClassCastException e) {
             throw new ClassCastException(activity.toString()
                     + " must implement OnHeadlineSelectedListener");
-        }
+        }**/
 
     }
     @Override

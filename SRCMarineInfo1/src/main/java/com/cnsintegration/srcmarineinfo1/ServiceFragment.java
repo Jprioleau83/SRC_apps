@@ -131,7 +131,7 @@ public class ServiceFragment extends ListFragment {
         // Create an array adapter for the list view, using the Ipsum headlines array
             dbHelper = new DataBaseWrapper(act);
 
-            database = dbHelper.getWritableDatabase();
+            database = dbHelper.getReadableDatabase();
 
 
 
@@ -153,7 +153,7 @@ public class ServiceFragment extends ListFragment {
 
 
         setListAdapter(new BinderData(getActivity(),branchesDataCollection));
-
+            dbHelper.close();
 
 
 

@@ -182,7 +182,7 @@ public class MOSFragment extends ListFragment {
 
         // This makes sure that the container activity has implemented
         // the callback interface. If not, it throws an exception.
-        try {
+       /** try {
             mCallback = (OnServicesSelectedListener) activity;
         } catch (ClassCastException e) {
             throw new ClassCastException(activity.toString()
@@ -193,7 +193,7 @@ public class MOSFragment extends ListFragment {
         } catch (ClassCastException e) {
             throw new ClassCastException(activity.toString()
                     + " must implement OnServicesSelectedListener2");
-        }
+        }**/
 
 
 
