@@ -7,11 +7,12 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
+import android.view.View;
 import android.widget.ListView;
 
 import com.cnsintegration.srcmarineinfo1.Database.DataBaseWrapper;
 import com.cnsintegration.srcmarineinfo1.adapter.BinderData;
-import com.cnsintegration.srcmarineinfo1.adapter.RankData;
+import com.cnsintegration.srcmarineinfo1.adapter.ETypeData;
 import com.cnsintegration.srcmarineinfo1.model.Rank;
 
 import java.util.ArrayList;
@@ -21,9 +22,10 @@ import java.util.List;
 /**
  * Created by jprioleau on 4/5/2014.
  */
-public class RankFrag extends ListFragment {
+public class RankFragment extends ListFragment {
 
-
+    OnRankCreated mCallback;
+    OnRankCreatedListener1 mCallback1;
 
 
     static final String KEY_ID = "id";
@@ -52,30 +54,43 @@ public class RankFrag extends ListFragment {
 
 
 
-    public RankFrag(int id) {
-        mActiontype = id;
-
+    public RankFragment(String rtype, int position) {
+        mActiontype = position;
+        rank_type = rtype;
 
     }
 
+    public interface OnRankCreated {
+        /**
+         * Called by ServiceFragment when a list item is selected
+         */
+        //
+        public void onRankCreated();
+    }
 
 
+    public interface OnRankCreatedListener1 {
+        /**
+         * Called by ServiceFragment when a list item is selected
+         */
+        public void onRankSelected(List Ranks);
+    }
 
 
-    public Rank getRank(int id) {
-        Rank rank = new Rank();
-        String tempposition = Integer.toString(id);
-        Cursor cursor = database.query(DataBaseWrapper.Ranks, Ranks_TABLE_COLUMNS , "_id=" + tempposition, null, null, null, null);
+    public List getAllRanks(String rtype, int position) {
+        List ranks = new ArrayList();
+        String tempposition = Integer.toString(position);
+        Cursor cursor = database.query(DataBaseWrapper.Ranks, Ranks_TABLE_COLUMNS , "_branch=" + tempposition + " AND _type='" + rtype + "'", null, null, null, null);
 
         cursor.moveToFirst();
-
         while (!cursor.isAfterLast()) {
-            rank = parseStudent(cursor);
+            Rank rank = parseStudent(cursor);
+            ranks.add(rank);
             cursor.moveToNext();
         }
 
         cursor.close();
-        return rank;
+        return ranks;
     }
 
     private Rank parseStudent(Cursor cursor) {
@@ -116,11 +131,30 @@ public class RankFrag extends ListFragment {
 
 
 
-            Rank value = getRank(mActiontype);
+            List values = getAllRanks(rank_type,mActiontype);
+            branchesDataCollection = new ArrayList<String>();
+
+            HashMap<String,String> map = null;
+            for (int i = 0; i < values.size(); i++) {
+                Rank rank = (Rank) values.get(i);
+                if (branchesDataCollection.contains(rank.getRank_TYPE())) {
+                    System.out.println("Account found");
+                } else {
+                    // Map<String, String> map1 = new HashMap<String, String>();
+                    //map1.put(KEY_TYPE, branchesDataCollection.get(i).get(KEY_TYPE));
+                    //groupData.add(map1);
+                    branchesDataCollection.add(rank.getRank_TYPE());
+                    System.out.println("Account Added");
+                }
+
+            }
 
 
-            setListAdapter(new RankData(act,value));
 
+
+
+           // setListAdapter(new ETypeData(getActivity(),branchesDataCollection));
+        mCallback1.onRankSelected(values);
             dbHelper.close();
 
 
@@ -144,6 +178,25 @@ public class RankFrag extends ListFragment {
 
     }
 
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+
+        // This makes sure that the container activity has implemented
+        // the callback interface. If not, it throws an exception.
+       try {
+            mCallback1 = (OnRankCreatedListener1) activity;
+        } catch (ClassCastException e) {
+            throw new ClassCastException(activity.toString()
+                    + " must implement OnHeadlineSelectedListener");
+        }
+        try {
+            mCallback = (OnRankCreated) activity;
+        } catch (ClassCastException e) {
+            throw new ClassCastException(activity.toString()
+                    + " must implement OnHeadlineSelectedListener");
+        }
+    }
 
 
 

@@ -8,14 +8,22 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.cnsintegration.srcmarineinfo1.adapter.MyAdapter;
+import com.cnsintegration.srcmarineinfo1.adapter.RankAdapter;
+import com.cnsintegration.srcmarineinfo1.model.Rank;
 
 import java.lang.reflect.Field;
+import java.util.List;
 
 /**
  * Created by jprioleau on 4/27/2014.
  */
 public class RankviewerFragment extends Fragment {
 
+    List<Rank> Ranks;
+
+    public RankviewerFragment(List tRanks) {
+        Ranks = tRanks;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -25,7 +33,7 @@ public class RankviewerFragment extends Fragment {
         ViewPager mViewPager = (ViewPager) view.findViewById(R.id.pager);
 
         // Set the ViewPagerAdapter into ViewPager
-        mViewPager.setAdapter(new MyAdapter(getChildFragmentManager()));
+        mViewPager.setAdapter(new RankAdapter(getChildFragmentManager(),Ranks ));
 
         return view;
     }
