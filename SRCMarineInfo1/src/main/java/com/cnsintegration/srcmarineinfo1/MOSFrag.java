@@ -70,7 +70,7 @@ public class MOSFrag extends Fragment {
         /**
          * Called by ServiceFragment when a list item is selected
          */
-       // public void onRankSelected(int position);
+       // publigc void onRankSelected(int position);
     }
 
 

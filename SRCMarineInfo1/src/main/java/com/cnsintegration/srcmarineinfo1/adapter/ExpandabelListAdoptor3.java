@@ -179,6 +179,7 @@ public class ExpandabelListAdoptor3 extends BaseExpandableListAdapter
         return convertView;
     }
 
+
     @Override
     public boolean hasStableIds() {
         // TODO Auto-generated method stub

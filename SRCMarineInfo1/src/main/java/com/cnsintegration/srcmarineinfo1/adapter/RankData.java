@@ -98,6 +98,7 @@ public class RankData extends BaseAdapter {
     }
 
 
+
     public static class ViewHolder{
 
         TextView tvRank;
