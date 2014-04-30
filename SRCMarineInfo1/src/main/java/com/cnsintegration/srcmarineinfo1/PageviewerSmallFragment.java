@@ -18,8 +18,8 @@ import java.lang.reflect.Field;
  */
 public class PageviewerSmallFragment extends Fragment {
 
-    public MOSFragment passedfrag;
-    public PageviewerSmallFragment(MOSFragment mosFragment) {
+    public MOSFrag passedfrag;
+    public PageviewerSmallFragment(MOSFrag mosFragment) {
         passedfrag = mosFragment;
     }
 

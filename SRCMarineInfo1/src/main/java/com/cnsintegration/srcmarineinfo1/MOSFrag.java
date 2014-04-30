@@ -20,8 +20,10 @@ import android.widget.ExpandableListView;
 
 import com.cnsintegration.srcmarineinfo1.Database.DataBaseWrapper;
 import com.cnsintegration.srcmarineinfo1.adapter.ExpandabelListAdoptor2;
+import com.cnsintegration.srcmarineinfo1.adapter.ExpandabelListAdoptor3;
 import com.cnsintegration.srcmarineinfo1.adapter.MyAdapter;
 import com.cnsintegration.srcmarineinfo1.model.MOS;
+import com.cnsintegration.srcmarineinfo1.model.MTitles;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -36,7 +38,7 @@ public class MOSFrag extends Fragment {
 
     View v;
     ExpandableListAdapter mAdapter;
-    List<String> _listDataHeader;
+    List<MTitles> _listDataHeader;
     HashMap<String, List<MOS>> _listDataChild;
 
     ExpandableListView lv;
@@ -61,7 +63,10 @@ public class MOSFrag extends Fragment {
 
 
 
-    public String[] MOS_TABLE_COLUMNS = { DataBaseWrapper.MOS_ID, DataBaseWrapper.MOS_NUMBER, DataBaseWrapper.MOS_NAME, DataBaseWrapper.MOS_TYPE, DataBaseWrapper.MOS_RANK, DataBaseWrapper.MOS_TITLE};
+    public String[] MOS_TABLE_COLUMNS = { DataBaseWrapper.MOSTITLES_ID, DataBaseWrapper.MOSTITLES_TITLE, DataBaseWrapper.MOSTITLES_BRANCH};
+
+    public String[] MOS_TABLE_COLUMNS2 = { DataBaseWrapper.MOS_ID, DataBaseWrapper.MOS_NUMBER, DataBaseWrapper.MOS_NAME, DataBaseWrapper.MOS_TYPE, DataBaseWrapper.MOS_RANK, DataBaseWrapper.MOS_TITLE};
+
 
 
 
@@ -168,11 +173,11 @@ public class MOSFrag extends Fragment {
         String tempposition = Integer.toString(mostitleid);
 
 
-        Cursor cursor = database.query(DataBaseWrapper.MOS, MOS_TABLE_COLUMNS, "most_id=" + tempposition, null, null, null, null);
+        Cursor cursor = database.query(DataBaseWrapper.MOS, MOS_TABLE_COLUMNS2, "most_id=" + tempposition, null, null, null, null);
 
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
-            MOS mos = parseStudent(cursor);
+            MOS mos = parseStudent1(cursor);
             moses.add(mos);
             cursor.moveToNext();
         }
@@ -181,11 +186,11 @@ public class MOSFrag extends Fragment {
         return moses;
     }
 
-    private MOS parseStudent(Cursor cursor) {
+    private MOS parseStudent1(Cursor cursor) {
 
 
 
-       //DataBaseWrapper.MOS_NUMBER, DataBaseWrapper.MOS_TITLE, DataBaseWrapper.MOS_NAME,DataBaseWrapper.MOS_TYPE,DataBaseWrapper.MOS_RANK};
+        //DataBaseWrapper.MOS_NUMBER, DataBaseWrapper.MOS_TITLE, DataBaseWrapper.MOS_NAME,DataBaseWrapper.MOS_TYPE,DataBaseWrapper.MOS_RANK};
 
 
 
@@ -204,6 +209,45 @@ public class MOSFrag extends Fragment {
         return mos;
     }
 
+
+
+
+    public List getAllMOS(int branch) {
+        List titles = new ArrayList();
+        String tempposition = Integer.toString(branch);
+
+
+        Cursor cursor = database.query(DataBaseWrapper.MOSTITLES, MOS_TABLE_COLUMNS, "mos_branch= " + tempposition, null, null, null, null);
+
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            MTitles mtitles = parseStudent(cursor);
+            titles.add(mtitles);
+            cursor.moveToNext();
+        }
+
+        cursor.close();
+        return titles;
+    }
+
+    private MTitles parseStudent(Cursor cursor) {
+
+
+
+
+
+
+        MTitles mtitle = new MTitles();
+        mtitle.setMOS_TITLES_ID(cursor.getInt(0));
+        mtitle.setMOS_TITLES_BRANCH(cursor.getInt(2));
+        mtitle.setMOS_TITLES_TITLE(cursor.getString(1));
+
+
+
+
+        return mtitle;
+    }
+
     public void updateMOSView(int position) {
         Activity act = getActivity();
 
@@ -211,26 +255,21 @@ public class MOSFrag extends Fragment {
 
         database = dbHelper.getWritableDatabase();
 
-        List values = getMOSES(position);
+        List values = getAllMOS(position);
+
+        branchesDataCollection = new ArrayList<HashMap<String, String>>();
+        HashMap<String,String> map = null;
+        _listDataHeader = new ArrayList<MTitles>();
+
+        for (int k = 0; k < values.size(); k++) {
+            MTitles mtitle = (MTitles) values.get(k);
+
+            _listDataHeader.add(mtitle);
 
 
-
-        _listDataHeader = new ArrayList<String>();
-
-        _listDataChild = new HashMap<String, List<MOS>>();
-
-        for (int h = 0; h <  values.size(); h++) {
-            MOS mos = (MOS) values.get(h);
-            if (_listDataHeader.contains(mos.getMOS_TYPE())) {
-                System.out.println("Account found");
-            } else {
-                // Map<String, String> map1 = new HashMap<String, String>();
-                //map1.put(KEY_TYPE, branchesDataCollection.get(i).get(KEY_TYPE));
-                //groupData.add(map1);
-                _listDataHeader.add(mos.getMOS_TYPE());
-            }
 
         }
+        _listDataChild = new HashMap<String, List<MOS>>();
 
 
         for (int i = 0; i < _listDataHeader.size(); i++) {
@@ -238,16 +277,19 @@ public class MOSFrag extends Fragment {
             HashMap<String, String> top250 = new HashMap<String, String>();
             List<MOS> childGroupForFirstGroupRow;
 
+            List values1 = getMOSES( _listDataHeader.get(i).getMOS_TITLES_ID());
+
 
             childGroupForFirstGroupRow = new ArrayList<MOS>();
-            for (int k = 0; k < values.size(); k++) {
+            for (int k = 0; k < values1.size(); k++) {
 
-                MOS mos = (MOS) values.get(k);
+                MOS mos = (MOS) values1.get(k);
 
-                String ty = (String) mos.getMOS_TYPE();
-                String t1 = (String) _listDataHeader.get(i);
+                int ty = (int) mos.getMOS_TITLE();
+                MTitles selectedtitle = _listDataHeader.get(i);
+                int t1 = selectedtitle.getMOS_TITLES_ID();
 
-                if (ty.equals(t1)) {
+                if (ty == t1) {
                     //add it to list
 
 
@@ -266,10 +308,12 @@ public class MOSFrag extends Fragment {
             }
             if(childGroupForFirstGroupRow!=null && !childGroupForFirstGroupRow.isEmpty()){
 
-                _listDataChild.put(_listDataHeader.get(i), childGroupForFirstGroupRow);
+                _listDataChild.put(_listDataHeader.get(i).getMOS_TITLES_TITLE(), childGroupForFirstGroupRow);
             }
 
         }
+        //   v= inflater.inflate(R.layout.rank_lst, container, false);
+
 
         ExpandableListView lv = (ExpandableListView) v.findViewById(R.id.expandable_list);
 
@@ -277,7 +321,8 @@ public class MOSFrag extends Fragment {
         con=getActivity();
 
 
-        mAdapter=new ExpandabelListAdoptor2(con,_listDataHeader, _listDataChild) ; //here i didnt set list values to this adoptor
+        mAdapter=new ExpandabelListAdoptor3(con,_listDataHeader, _listDataChild) ; //here i didnt set list values to this adoptor
+
 
         lv.setAdapter(mAdapter);
 

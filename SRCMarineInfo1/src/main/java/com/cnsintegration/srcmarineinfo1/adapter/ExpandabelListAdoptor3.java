@@ -47,7 +47,7 @@ public class ExpandabelListAdoptor3 extends BaseExpandableListAdapter
 
     @Override
     public Object getChild(int groupPosition, int childPosititon) {
-        return this._listDataChild.get(this._listDataHeader.get(groupPosition))
+        return this._listDataChild.get(this._listDataHeader.get(groupPosition).getMOS_TITLES_TITLE())
                 .get(childPosititon);
 
 
@@ -124,7 +124,7 @@ public class ExpandabelListAdoptor3 extends BaseExpandableListAdapter
 
     @Override
     public int getChildrenCount(int groupPosition) {
-        return this._listDataChild.get(this._listDataHeader.get(groupPosition))
+        return this._listDataChild.get(this._listDataHeader.get(groupPosition).getMOS_TITLES_TITLE())
                 .size();
     }
 

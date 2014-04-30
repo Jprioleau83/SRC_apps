@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,7 +30,7 @@ import java.util.List;
 /**
  * Created by jprioleau on 4/5/2014.
  */
-public class MOSFragment extends ListFragment {
+public class MOSFragment extends Fragment {
 
     OnServicesSelectedListener mCallback;
     OnServicesSelectedListener2 mCallback1;
@@ -263,6 +264,7 @@ public class MOSFragment extends ListFragment {
             }
 
         }
+     //   v= inflater.inflate(R.layout.rank_lst, container, false);
 
 
         ExpandableListView lv = (ExpandableListView) v.findViewById(R.id.expandable_list);
@@ -272,6 +274,7 @@ public class MOSFragment extends ListFragment {
 
 
         mAdapter=new ExpandabelListAdoptor3(con,_listDataHeader, _listDataChild) ; //here i didnt set list values to this adoptor
+
 
         lv.setAdapter(mAdapter);
 
@@ -291,7 +294,7 @@ public class MOSFragment extends ListFragment {
         // (We do this during onStart because at the point the listview is available.)
 
         if (getFragmentManager().findFragmentById(R.id.rank_fragment) != null) {
-            getListView().setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+           // getListView().setChoiceMode(ListView.CHOICE_MODE_SINGLE);
         }
 
 
@@ -306,23 +309,24 @@ public class MOSFragment extends ListFragment {
 
         // This makes sure that the container activity has implemented
         // the callback interface. If not, it throws an exception.
-       /** try {
+        /**
+        try {
             mCallback = (OnServicesSelectedListener) activity;
         } catch (ClassCastException e) {
             throw new ClassCastException(activity.toString()
                     + " must implement OnServicesSelectedListener");
         }**/
-       /** try {
+        try {
             mCallback1 = (OnServicesSelectedListener2) activity;
         } catch (ClassCastException e) {
             throw new ClassCastException(activity.toString()
                     + " must implement OnServicesSelectedListener2");
         }
-        **/
+
 
 
     }
-
+/**
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
         // Notify the parent activity of selected item
@@ -335,10 +339,10 @@ public class MOSFragment extends ListFragment {
 
 
         // Set the item as checked to be highlighted when in two-pane layout
-        getListView().setItemChecked(position, true);
+        //getListView().setItemChecked(position, true);
     }
 
-
+**/
 
 
 

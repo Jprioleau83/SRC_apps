@@ -418,13 +418,15 @@ public class MainActivity extends FragmentActivity
             // we could end up with overlapping fragments.
 
 
-            // Create an instance of ExampleFragment
-            MOSFragment mosFragment = new MOSFragment(position);
+            // Create an instance of MOSFrag
+
+
+            MOSFrag mosFragment = new MOSFrag();
             Bundle args = new Bundle();
             args.putInt(ServiceFragment.ARG_POSITION, position);
             mosFragment.setArguments(args);
-           /**
-            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+
+           /** FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
             transaction.replace(R.id.fragment_container, mosFragment);
             transaction.addToBackStack(null);
@@ -434,14 +436,19 @@ public class MainActivity extends FragmentActivity
 
 
         }else {
-            MOSFragment mosFrag =  new MOSFragment(position);
+
+            MOSFrag mosFrag =  new MOSFrag();
+            Bundle args = new Bundle();
+            args.putInt(ServiceFragment.ARG_POSITION, position);
+            mosFrag.setArguments(args);
            // MOSFrag mosFragview = new MOSFrag();
             //getSupportFragmentManager().beginTransaction().replace(R.id.service_fragment, mosFrag).addToBackStack(null)
               //      .replace(R.id.rank_fragment, mosFragview).commit();
 
-            PageviewerFragment Pageview = new PageviewerFragment();
-            getSupportFragmentManager().beginTransaction().replace(R.id.service_fragment, mosFrag).addToBackStack(null)
-                    .replace(R.id.rank_fragment, Pageview).commit();
+            //PageviewerFragment Pageview = new PageviewerFragment();
+            PageviewerSmallFragment Pageview = new PageviewerSmallFragment(mosFrag);
+            getSupportFragmentManager().beginTransaction().replace(R.id.rank_fragment, Pageview).addToBackStack(null).commit();
+
 
 
 

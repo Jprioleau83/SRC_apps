@@ -14,8 +14,8 @@ import com.cnsintegration.srcmarineinfo1.MOSHomeFragment;
  */
 public class MyAdapter2 extends FragmentPagerAdapter {
     public FragmentManager fragmanager;
-    public MOSFragment passedfrag;
-    public MyAdapter2(FragmentManager fm, MOSFragment pfrag) {
+    public MOSFrag passedfrag;
+    public MyAdapter2(FragmentManager fm, MOSFrag pfrag) {
         super(fm);
         fragmanager = fm;
         passedfrag = pfrag;
