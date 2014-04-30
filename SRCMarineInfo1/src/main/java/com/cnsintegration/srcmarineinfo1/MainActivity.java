@@ -240,7 +240,7 @@ public class MainActivity extends FragmentActivity
 
 
                 if (findViewById(R.id.fragment_container) != null) {
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, hfragment).commit();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, hfragment).addToBackStack(null).commit();
                 }else {
 
 
@@ -369,42 +369,7 @@ public class MainActivity extends FragmentActivity
         }
 
 
-        /**
-        RankFragment rankFrag = (RankFragment)
-                getSupportFragmentManager().findFragmentById(R.id.rank_fragment);
 
-        if (rankFrag != null) {
-            // If article frag is available, we're in two-pane layout...
-
-            // Call a method in the ArticleFragment to update its content
-            rankFrag.updateRankView(position);
-
-        } else {
-
-
-            if (findViewById(R.id.fragment_container) != null) {
-
-                // However, if we're being restored from a previous state,
-                // then we don't need to do anything and should return or else
-                // we could end up with overlapping fragments.
-
-
-                // Create an instance of ExampleFragment
-                RankFragment rankFragment = new RankFragment();
-                Bundle args = new Bundle();
-                args.putInt(ServiceFragment.ARG_POSITION, position);
-                rankFragment.setArguments(args);
-                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-
-                transaction.replace(R.id.fragment_container, rankFragment);
-                transaction.addToBackStack(null);
-                transaction.commit();
-
-            }
-
-        }
-
-        **/
     }
 
 

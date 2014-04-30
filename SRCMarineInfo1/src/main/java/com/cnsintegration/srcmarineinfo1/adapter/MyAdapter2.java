@@ -45,7 +45,14 @@ public class MyAdapter2 extends FragmentPagerAdapter {
     // Returns the page title for the top indicator
     @Override
     public CharSequence getPageTitle(int position) {
-        return "Page " + position;
+
+
+        if (position == 0){
+            return "MOS Overview ";
+        }else{
+            return "MOS Details List ";
+        }
+
     }
 
 

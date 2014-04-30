@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 
 import com.cnsintegration.srcmarineinfo1.adapter.MyAdapter;
 import com.cnsintegration.srcmarineinfo1.adapter.RankAdapter;
+import com.cnsintegration.srcmarineinfo1.adapter.ViewPagerAdapter;
 import com.cnsintegration.srcmarineinfo1.model.Rank;
 
 import java.lang.reflect.Field;
@@ -20,6 +21,7 @@ import java.util.List;
 public class RankviewerFragment extends Fragment {
 
     List<Rank> Ranks;
+    private ViewPagerAdapter mPagerAdapter;
 
     public RankviewerFragment(List tRanks) {
         Ranks = tRanks;
@@ -32,8 +34,21 @@ public class RankviewerFragment extends Fragment {
         // Locate the ViewPager in viewpager_main.xml
         ViewPager mViewPager = (ViewPager) view.findViewById(R.id.pager);
 
-        // Set the ViewPagerAdapter into ViewPager
-        mViewPager.setAdapter(new RankAdapter(getChildFragmentManager(),Ranks ));
+        // Set the ViewPagerAdapter into ViewPager     mViewPager.setAdapter(new RankAdapter(getChildFragmentManager(),Ranks ));
+        this.mPagerAdapter  = new ViewPagerAdapter(getChildFragmentManager());
+
+        for (Rank rank : Ranks) {
+
+            int tid = (int) rank.getId();
+            final RankFrag rt = new RankFrag(tid);
+
+            mPagerAdapter.addTab(rt, rank.getName());
+
+        }
+
+        mViewPager.setAdapter(this.mPagerAdapter);
+
+
 
         return view;
     }

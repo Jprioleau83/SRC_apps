@@ -32,13 +32,16 @@ public class RankAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
+
+
         Rank rank = Ranks.get(position);
 
-        switch (position) {
+       switch (position) {
 
             default:
+
                 int tid = (int) rank.getId();
-                RankFrag rt = new RankFrag(tid);
+               final RankFrag rt = new RankFrag(tid);
                 return rt;
                 //return new rt
 

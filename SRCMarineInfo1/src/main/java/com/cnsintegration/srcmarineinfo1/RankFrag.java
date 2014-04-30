@@ -53,7 +53,7 @@ public class RankFrag extends ListFragment {
 
 
     public RankFrag(int id) {
-        mActiontype = id;
+        this.mActiontype = id;
 
 
     }
@@ -116,7 +116,7 @@ public class RankFrag extends ListFragment {
 
 
 
-            Rank value = getRank(mActiontype);
+            Rank value = getRank(this.mActiontype);
 
 
             setListAdapter(new RankData(act,value));

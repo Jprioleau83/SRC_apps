@@ -155,6 +155,7 @@ public class RankFragment extends ListFragment {
 
            // setListAdapter(new ETypeData(getActivity(),branchesDataCollection));
         mCallback1.onRankSelected(values);
+
             dbHelper.close();
 
 
