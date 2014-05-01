@@ -37,6 +37,7 @@ public class RankFrag extends ListFragment {
     ListView list;
     BinderData adapter = null;
     ArrayList<String> branchesDataCollection;
+    Rank tRanks;
 
 
 
@@ -49,11 +50,8 @@ public class RankFrag extends ListFragment {
             DataBaseWrapper.Rank_ICON, DataBaseWrapper.Rank_TYPE, DataBaseWrapper.Rank_DETAILS, DataBaseWrapper.Rank_LINK, DataBaseWrapper.Rank_Branch };
 
 
-
-
-
-    public RankFrag(int id) {
-        this.mActiontype = id;
+    public RankFrag(Rank rank) {
+        tRanks = rank;
 
 
     }
@@ -115,11 +113,10 @@ public class RankFrag extends ListFragment {
             database = dbHelper.getReadableDatabase();
 
 
+        // Rank value = getRank((int)tRanks.getId());
 
-            Rank value = getRank(this.mActiontype);
 
-
-            setListAdapter(new RankData(act,value));
+        setListAdapter(new RankData(act, tRanks));
 
             dbHelper.close();
 

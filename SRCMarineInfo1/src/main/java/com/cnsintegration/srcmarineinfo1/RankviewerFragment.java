@@ -40,7 +40,7 @@ public class RankviewerFragment extends Fragment {
         for (Rank rank : Ranks) {
 
             int tid = (int) rank.getId();
-            final RankFrag rt = new RankFrag(tid);
+            final RankFrag rt = new RankFrag(rank);
 
             mPagerAdapter.addTab(rt, rank.getName());
 

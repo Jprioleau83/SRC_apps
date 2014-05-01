@@ -18,11 +18,13 @@ import java.util.List;
 public class RankAdapter extends FragmentPagerAdapter {
     public FragmentManager fragmanager;
     public List<Rank> Ranks;
+
     public RankAdapter(FragmentManager fm, List ranks) {
         super(fm);
         fragmanager = fm;
         Ranks = ranks;
-        
+
+
     }
 
     @Override
@@ -41,7 +43,8 @@ public class RankAdapter extends FragmentPagerAdapter {
             default:
 
                 int tid = (int) rank.getId();
-               final RankFrag rt = new RankFrag(tid);
+                // final RankFrag rt = new RankFrag(tid);
+                final RankFrag rt = new RankFrag(rank);
                 return rt;
                 //return new rt
 
