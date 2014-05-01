@@ -73,14 +73,14 @@ public class ExpandabelListAdoptor3 extends BaseExpandableListAdapter
         View vi=convertView;
         if(convertView==null){
             inflater = (LayoutInflater) _context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            vi = inflater.inflate(R.layout.rank_view, null);
+            vi = inflater.inflate(R.layout.mos_view, null);
             holder = new ViewHolder();
 
             holder.tvRank = (TextView)vi.findViewById(R.id.rank); // city name
             holder.tvPay = (TextView)vi.findViewById(R.id.payscale); // city name
             holder.tvDetail = (TextView)vi.findViewById(R.id.rank_details); // city name
 
-            holder.tvRankImage =(ImageView)vi.findViewById(R.id.rank_image); // thumb image
+
 
             vi.setTag(holder);
         }
@@ -100,11 +100,7 @@ public class ExpandabelListAdoptor3 extends BaseExpandableListAdapter
         //holder.tvPay.setTextColor(Color.WHITE);
 
 
-        //Setting an image
-        String uri = "drawable/sunny";
-        int imageResource = vi.getContext().getApplicationContext().getResources().getIdentifier(uri, null, vi.getContext().getApplicationContext().getPackageName());
-        Drawable image = vi.getContext().getResources().getDrawable(imageResource);
-        holder.tvRankImage.setImageDrawable(image);
+
 
 
         return vi;
@@ -196,6 +192,6 @@ public class ExpandabelListAdoptor3 extends BaseExpandableListAdapter
         TextView tvRank;
         TextView tvPay;
         TextView tvDetail;
-        ImageView tvRankImage;
+
     }
 }

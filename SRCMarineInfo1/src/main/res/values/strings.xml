@@ -5,6 +5,8 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="strBranch">USMC</string>
+    <string name="MOSTitle"> <u>MOS Title</u>.</string>
+    <string name="MOSRank"> <u>MOS Ranks</u>.</string>
 
     <string-array name="actions_array">
         <item>Ranks</item>
