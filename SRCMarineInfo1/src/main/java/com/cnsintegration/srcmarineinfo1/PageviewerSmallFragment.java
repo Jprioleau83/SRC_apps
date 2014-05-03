@@ -19,8 +19,11 @@ import java.lang.reflect.Field;
 public class PageviewerSmallFragment extends Fragment {
 
     public MOSFrag passedfrag;
-    public PageviewerSmallFragment(MOSFrag mosFragment) {
+    public int Branch = 0;
+
+    public PageviewerSmallFragment(MOSFrag mosFragment, int position) {
         passedfrag = mosFragment;
+        Branch = position;
     }
 
     @Override
@@ -31,7 +34,7 @@ public class PageviewerSmallFragment extends Fragment {
         ViewPager mViewPager = (ViewPager) view.findViewById(R.id.pager);
 
         // Set the ViewPagerAdapter into ViewPager
-        mViewPager.setAdapter(new MyAdapter2(getChildFragmentManager(), passedfrag ));
+        mViewPager.setAdapter(new MyAdapter2(getChildFragmentManager(), passedfrag, Branch));
 
         return view;
     }

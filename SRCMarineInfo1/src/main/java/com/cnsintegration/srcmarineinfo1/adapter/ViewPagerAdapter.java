@@ -3,6 +3,7 @@ package com.cnsintegration.srcmarineinfo1.adapter;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.PagerTabStrip;
 
 import java.util.ArrayList;
 
@@ -12,6 +13,7 @@ import java.util.ArrayList;
 public class ViewPagerAdapter extends FragmentPagerAdapter {
     ArrayList<TabInfo> tabs;
 
+
     public ViewPagerAdapter(FragmentManager fm) {
         super(fm);
         tabs = new ArrayList<TabInfo>();
@@ -20,6 +22,8 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int i) {
         return tabs.get(i).fragment;
+
+
     }
 
     @Override
@@ -29,8 +33,10 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public CharSequence getPageTitle(int position) {
+
         return tabs.get(position).title;
     }
+
 
     public class TabInfo {
         public Fragment fragment;

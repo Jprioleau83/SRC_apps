@@ -20,8 +20,7 @@ import java.util.List;
 /**
  * Created by jprioleau on 4/9/2014.
  */
-public class ExpandabelListAdoptor3 extends BaseExpandableListAdapter
-{
+public class ExpandabelListAdoptor3 extends BaseExpandableListAdapter {
 
     private Context _context;
     private List<MTitles> _listDataHeader;
@@ -37,12 +36,11 @@ public class ExpandabelListAdoptor3 extends BaseExpandableListAdapter
     LayoutInflater inflater;
 
 
-    public ExpandabelListAdoptor3(Context con, List<MTitles> listDataHeader, HashMap<String, List<MOS>> listDataChild)
-    {
-        this._context=con;
+    public ExpandabelListAdoptor3(Context con, List<MTitles> listDataHeader, HashMap<String, List<MOS>> listDataChild) {
+        this._context = con;
         //branchesDataCollection = listDataChild;
-        this._listDataChild=listDataChild;
-        this._listDataHeader=listDataHeader;
+        this._listDataChild = listDataChild;
+        this._listDataHeader = listDataHeader;
     }
 
     @Override
@@ -52,7 +50,6 @@ public class ExpandabelListAdoptor3 extends BaseExpandableListAdapter
 
 
     }
-
 
 
     @Override
@@ -69,53 +66,42 @@ public class ExpandabelListAdoptor3 extends BaseExpandableListAdapter
         final MOS mos = (MOS) getChild(groupPosition, childPosition);
 
 
-
-        View vi=convertView;
-        if(convertView==null){
+        View vi = convertView;
+        if (convertView == null) {
             inflater = (LayoutInflater) _context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             vi = inflater.inflate(R.layout.mos_view, null);
             holder = new ViewHolder();
 
-            holder.tvRank = (TextView)vi.findViewById(R.id.rank); // city name
-            holder.tvPay = (TextView)vi.findViewById(R.id.payscale); // city name
-            holder.tvDetail = (TextView)vi.findViewById(R.id.rank_details); // city name
-
+            holder.tvRank = (TextView) vi.findViewById(R.id.rank); // city name
+            holder.tvPay = (TextView) vi.findViewById(R.id.payscale); // city name
+            holder.tvDetail = (TextView) vi.findViewById(R.id.rank_details); // city name
+            holder.tvLink = (TextView) vi.findViewById(R.id.mos_link); // city name
 
 
             vi.setTag(holder);
-        }
-        else{
+        } else {
 
-            holder = (ViewHolder)vi.getTag();
+            holder = (ViewHolder) vi.getTag();
         }
 
         // Setting all values in listview
 
 
-
         holder.tvRank.setText(mos.getMOS_NAME());
         holder.tvPay.setText(mos.getMOS_NUMBER());
         holder.tvDetail.setText(mos.getMOS_RANK());
+        if (mos.getMOS_LINK() != null) {
+            holder.tvLink.setText("Click here for more details");
+
+        }
         //holder.tvRank.setTextColor(Color.WHITE);
         //holder.tvPay.setTextColor(Color.WHITE);
-
-
-
 
 
         return vi;
 
 
-
-
-
-
-
-
-
-
     }
-
 
 
     @Override
@@ -162,13 +148,13 @@ public class ExpandabelListAdoptor3 extends BaseExpandableListAdapter
 
         //Setting an image
 /**
-        String iconname = lblListHeader.toString().toLowerCase();
-        String uri = "drawable/usmc";
-        int imageResource = _context.getResources().getIdentifier(uri, null, _context.getPackageName());
-        Drawable image = _context.getResources().getDrawable(imageResource);
+ String iconname = lblListHeader.toString().toLowerCase();
+ String uri = "drawable/usmc";
+ int imageResource = _context.getResources().getIdentifier(uri, null, _context.getPackageName());
+ Drawable image = _context.getResources().getDrawable(imageResource);
 
-        holder.tvRankImage =(ImageView)convertView.findViewById(R.id.rank_image);
-        ImageView groupimg =  holder.tvRankImage.setImageDrawable(image);
+ holder.tvRankImage =(ImageView)convertView.findViewById(R.id.rank_image);
+ ImageView groupimg =  holder.tvRankImage.setImageDrawable(image);
  **/
 
 
@@ -187,11 +173,13 @@ public class ExpandabelListAdoptor3 extends BaseExpandableListAdapter
         // TODO Auto-generated method stub
         return true;
     }
-    public static class ViewHolder{
+
+    public static class ViewHolder {
 
         TextView tvRank;
         TextView tvPay;
         TextView tvDetail;
+        TextView tvLink;
 
     }
 }

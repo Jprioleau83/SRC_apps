@@ -13,12 +13,16 @@ import com.cnsintegration.srcmarineinfo1.MOSHomeFragment;
  * Created by jprioleau on 4/26/2014.
  */
 public class MyAdapter2 extends FragmentPagerAdapter {
+
     public FragmentManager fragmanager;
     public MOSFrag passedfrag;
-    public MyAdapter2(FragmentManager fm, MOSFrag pfrag) {
+    public int branch = 0;
+
+    public MyAdapter2(FragmentManager fm, MOSFrag pfrag, int serviceb) {
         super(fm);
         fragmanager = fm;
         passedfrag = pfrag;
+        branch = serviceb;
     }
 
     @Override
@@ -30,7 +34,11 @@ public class MyAdapter2 extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                return new MOSHomeFragment();
+                if (passedfrag.mCurrentPosition == 1) {
+                    return new MOSHomeFragment();
+                } else {
+                    return new MOSHomeFragment();
+                }
             case 1:
 
 
@@ -47,9 +55,9 @@ public class MyAdapter2 extends FragmentPagerAdapter {
     public CharSequence getPageTitle(int position) {
 
 
-        if (position == 0){
+        if (position == 0) {
             return "MOS Overview ";
-        }else{
+        } else {
             return "MOS Details List ";
         }
 

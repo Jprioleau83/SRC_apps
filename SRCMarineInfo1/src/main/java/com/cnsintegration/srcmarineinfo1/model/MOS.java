@@ -4,13 +4,22 @@ package com.cnsintegration.srcmarineinfo1.model;
  * Created by jprioleau on 4/26/2014.
  */
 public class MOS {
-    public int MOS_ID ;
+    public int MOS_ID;
     public String MOS_NUMBER;
-    public  int MOS_TITLE;
+    public int MOS_TITLE;
 
     public String MOS_NAME;
-    public  String MOS_TYPE;
-    public  String MOS_RANK;
+    public String MOS_TYPE;
+    public String MOS_RANK;
+    public String MOS_LINK;
+
+    public String getMOS_LINK() {
+        return MOS_LINK;
+    }
+
+    public void setMOS_LINK(String MOS_LINK) {
+        this.MOS_LINK = MOS_LINK;
+    }
 
     public int getMOS_ID() {
         return MOS_ID;

@@ -51,6 +51,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
     public static final String MOS_NAME = "mos_name";
     public static final String MOS_TYPE = "mos_type";
     public static final String MOS_RANK = "mos_rank";
+    public static final String MOS_Link = "mos_link";
 
 
 
@@ -81,7 +82,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
 
     private static final String DATABASE_CREATE4 = "create table "+  MOS
             + "(" + MOS_ID + " integer primary key autoincrement, " + MOS_NUMBER + " text not null, " + MOS_NAME + " text not null, "
-            + MOS_TYPE + " text not null, " + MOS_RANK + " text not null, " + MOS_TITLE + " references " + MOSTITLES + ");";
+            + MOS_TYPE + " text not null, " + MOS_RANK + " text not null, " + MOS_Link + " text, " + MOS_TITLE + " references " + MOSTITLES + ");";
 
     public DataBaseWrapper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -1106,6 +1107,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_NAME, "Basic Administrative Marine");
         values1.put(MOS_TYPE, "Enlisted");
         values1.put(MOS_RANK, "Pvt - GySgt");
+        values1.put(MOS_Link, "http://en.wikipedia.org/wiki/Military_administration");
         db.insert(MOS, null, values1);
 
         values1 = new ContentValues();
@@ -1124,6 +1126,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_TITLE, mostitleId);
         values1.put(MOS_NAME, "Substance Abuse Control Specialist");
         values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_Link, "http://en.wikipedia.org/wiki/Substance_abuse");
         values1.put(MOS_RANK, "SSgt - MGySgt");
 
         db.insert(MOS, null, values1);
@@ -1185,6 +1188,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_TITLE, mostitleId);
         values1.put(MOS_NAME, "Adjutant");
         values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_Link, "http://en.wikipedia.org/wiki/Adjutant");
         values1.put(MOS_RANK, "2ndLt-LtCol");
 
         db.insert(MOS, null, values1);
@@ -1210,6 +1214,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_TITLE, mostitleId);
         values1.put(MOS_NAME, "Basic Intelligence Marine");
         values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_Link, "http://en.wikipedia.org/wiki/Military_intelligence");
         values1.put(MOS_RANK, "Pvt - GySgt");
         db.insert(MOS, null, values1);
 
@@ -1217,8 +1222,19 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
 
         values1.put(MOS_NUMBER, "0211");
         values1.put(MOS_TITLE, mostitleId);
-        values1.put(MOS_NAME, "Counterintelligence/HUMINT Specialist");
+        values1.put(MOS_NAME, "Counterintelligence");
         values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_Link, "http://en.wikipedia.org/wiki/Counter-intelligence");
+        values1.put(MOS_RANK, "CPL - MSGT");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "0211");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "HUMINT Specialist");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_Link, "http://en.wikipedia.org/wiki/HUMINT");
         values1.put(MOS_RANK, "CPL - MSGT");
         db.insert(MOS, null, values1);
 
@@ -1228,6 +1244,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_TITLE, mostitleId);
         values1.put(MOS_NAME, "Technical Surveillance Countermeasures Specialist");
         values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_Link, "http://en.wikipedia.org/wiki/Countersurveillance");
         values1.put(MOS_RANK, "SGT - MSGT");
         db.insert(MOS, null, values1);
 
@@ -1246,6 +1263,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_TITLE, mostitleId);
         values1.put(MOS_NAME, "Imagery Analysis Specialist");
         values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_Link, "http://en.wikipedia.org/wiki/Imagery_analysis");
         values1.put(MOS_RANK, "SGT - MSGT");
         db.insert(MOS, null, values1);
 
@@ -1253,8 +1271,19 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
 
         values1.put(MOS_NUMBER, "0251");
         values1.put(MOS_TITLE, mostitleId);
-        values1.put(MOS_NAME, "Interrogator/Debriefer");
+        values1.put(MOS_NAME, "Interrogator");
         values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_Link, "http://en.wikipedia.org/wiki/Interrogation");
+        values1.put(MOS_RANK, "CPL - MSGT (No Longer Officered)");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "0251");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Debriefer");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_Link, "http://en.wikipedia.org/wiki/Imagery_analysis");
         values1.put(MOS_RANK, "CPL - MSGT (No Longer Officered)");
         db.insert(MOS, null, values1);
 
@@ -1263,6 +1292,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_NUMBER, "0261");
         values1.put(MOS_TITLE, mostitleId);
         values1.put(MOS_NAME, "Geographic Intelligence Specialist");
+        values1.put(MOS_Link, "http://en.wikipedia.org/wiki/MOS_0261");
         values1.put(MOS_TYPE, "Enlisted");
         values1.put(MOS_RANK, "PVT - MSGT");
         db.insert(MOS, null, values1);
@@ -1327,7 +1357,9 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_NUMBER, "0202");
         values1.put(MOS_TITLE, mostitleId);
         values1.put(MOS_NAME, "Marine Air-Ground Task Force (MAGTF) Intelligence Officer");
+        values1.put(MOS_Link, "http://en.wikipedia.org/wiki/Marine_Air-Ground_Task_Force");
         values1.put(MOS_TYPE, "Officer");
+
         values1.put(MOS_RANK, "1stLt - LtCol");
         db.insert(MOS, null, values1);
 
@@ -1336,6 +1368,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_NUMBER, "0203");
         values1.put(MOS_TITLE, mostitleId);
         values1.put(MOS_NAME, "Ground Intelligence Officer");
+        values1.put(MOS_Link, "http://en.wikipedia.org/wiki/Ground_Intelligence_Officer");
         values1.put(MOS_TYPE, "Officer");
         values1.put(MOS_RANK, "2ndLt - Capt");
         db.insert(MOS, null, values1);
@@ -1362,6 +1395,17 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_NUMBER, "0206");
         values1.put(MOS_TITLE, mostitleId);
         values1.put(MOS_NAME, "Signals Intelligence/Ground Electronic Warfare Officer");
+        values1.put(MOS_Link, "http://en.wikipedia.org/wiki/Signals_intelligence");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "2ndLt - Capt");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "0206");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Ground Electronic Warfare Officer");
+        values1.put(MOS_Link, "http://en.wikipedia.org/wiki/Electronic_warfare");
         values1.put(MOS_TYPE, "Officer");
         values1.put(MOS_RANK, "2ndLt - Capt");
         db.insert(MOS, null, values1);
@@ -1371,6 +1415,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_NUMBER, "0207");
         values1.put(MOS_TITLE, mostitleId);
         values1.put(MOS_NAME, "Air Intelligence Officer");
+        values1.put(MOS_Link, "http://en.wikipedia.org/wiki/Air_Intelligence_Officer");
         values1.put(MOS_TYPE, "Officer");
         values1.put(MOS_RANK, "2ndLt - Capt");
         db.insert(MOS, null, values1);
@@ -1455,6 +1500,250 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_NAME, "Strategic Debriefing Officer");
         values1.put(MOS_TYPE, "Officer");
         values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values = new ContentValues();
+
+
+        values.put(MOSTITLES_TITLE, "03 Infantry");
+        values.put(MOSTITLES_BRANCH, Branch_USMC);
+
+
+        mostitleId = db.insert(MOSTITLES, null, values);
+
+
+        values1 = new ContentValues();
+
+
+        values1.put(MOS_NUMBER, "0300");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Basic Infantryman");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "Pvt - Sgt");
+        values1.put(MOS_Link, "http://en.wikipedia.org/wiki/Infantry");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+
+        values1.put(MOS_NUMBER, "0311");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Rifleman");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "Pvt - Sgt");
+        values1.put(MOS_Link, "http://en.wikipedia.org/wiki/Rifleman");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+
+        values1.put(MOS_NUMBER, "0312");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Riverine Assault Craft Crewman");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+
+        values1.put(MOS_NUMBER, "0313");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "LAV Crewman");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "Pvt - Mgysgt");
+        values1.put(MOS_Link, "http://en.wikipedia.org/wiki/LAV-25");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "0314");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, " Rigid Raiding Craft (RRC) Rigid Hull Inflatable Boat (RHIB) Coxswain (FMOS)");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/enlistedjo2/a/0314.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "0316");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Combat Rubber Reconnaissance Craft Coxswain (NMOS)");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/enlistedjo2/a/0316.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "0317");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Scout Sniper");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "Lcpl - Gysgt");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/enlistedjo2/a/0317.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "0321");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Reconnaissance Man");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "Pvt - MGysgt");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/enlistedjo2/a/0321new.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "0323");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Reconnaissance Man, Parachute Qualified (NMOS) [formerly 8652]");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "Pvt - MGysgt");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/enlistedjo2/a/0323.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "0324");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Reconnaissance Man, Combatant Diver Qualified (NMOS) [formerly 8653]");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "Pvt - MGysgt");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/enlistedjo2/a/0324.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "0326");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Reconnaissance Man, Parachute and Combatant Diver Qualified (NMOS) [formerly 8654]");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "Pvt - MGysgt");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/enlistedjo2/a/0326.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "0331");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Reconnaissance Man, Parachute and Combatant Diver Qualified (NMOS) [formerly 8654]");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "Pvt - Sgt");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/enlistedjo2/a/0331new.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "0341");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, " Mortarman");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "Pvt - Sgt");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/enlistedjo2/a/03.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "0351");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Assaultman");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "Pvt - Sgt");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/enlistedjo2/a/0351.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "0352");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Anti-Tank Missileman");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "Pvt - Sgt");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/enlistedjo2/a/0352.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "0352");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Force Reconnaissance man");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "Sgt - MGYSgt");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "0369");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Infantry Unit Leader");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "SSgt - MGYSgt");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/enlistedjo2/a/0369.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "0372");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Critical Skills Operator");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "SSgt - MGYSgt");
+        values1.put(MOS_Link, "http://en.wikipedia.org/wiki/MOS_0372");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "0302");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, " Infantry Officer");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "2ndLt - LtCol");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/0302.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "0303");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Light-Armored Reconnaissance (LAR) Officer");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "All");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/0303.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "0306");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Infantry Weapons Officer");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "CWO2 - CWO5");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/0306.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "0307");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Expeditionary Ground Reconnaissance Officer");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "2ndLt - LtCol");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "0370");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Special Operations Officer");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "2ndLt - LtCol");
+
         db.insert(MOS, null, values1);
 
 

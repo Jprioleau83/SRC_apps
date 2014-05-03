@@ -5,9 +5,12 @@ package com.cnsintegration.srcmarineinfo1;
  */
 
 import android.app.Activity;
+import android.content.ActivityNotFoundException;
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -17,6 +20,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
+import android.widget.Toast;
 
 import com.cnsintegration.srcmarineinfo1.Database.DataBaseWrapper;
 import com.cnsintegration.srcmarineinfo1.adapter.ExpandabelListAdoptor2;
@@ -31,7 +35,6 @@ import java.util.List;
 
 /**
  * A simple {@link android.support.v4.app.Fragment} subclass.
- *
  */
 
 public class MOSFrag extends Fragment {
@@ -47,13 +50,9 @@ public class MOSFrag extends Fragment {
     OnMosSelectedListener mCallback;
 
 
-
-
-
     final static String ARG_POSITION = "position";
-    int mCurrentPosition = -1;
+    public int mCurrentPosition = -1;
     List<HashMap<String, String>> branchesDataCollection;
-
 
 
     public DataBaseWrapper dbHelper;
@@ -61,42 +60,33 @@ public class MOSFrag extends Fragment {
     public SQLiteDatabase database;
 
 
+    public String[] MOS_TABLE_COLUMNS = {DataBaseWrapper.MOSTITLES_ID, DataBaseWrapper.MOSTITLES_TITLE, DataBaseWrapper.MOSTITLES_BRANCH};
 
-
-    public String[] MOS_TABLE_COLUMNS = { DataBaseWrapper.MOSTITLES_ID, DataBaseWrapper.MOSTITLES_TITLE, DataBaseWrapper.MOSTITLES_BRANCH};
-
-    public String[] MOS_TABLE_COLUMNS2 = { DataBaseWrapper.MOS_ID, DataBaseWrapper.MOS_NUMBER, DataBaseWrapper.MOS_NAME, DataBaseWrapper.MOS_TYPE, DataBaseWrapper.MOS_RANK, DataBaseWrapper.MOS_TITLE};
-
-
-
+    public String[] MOS_TABLE_COLUMNS2 = {DataBaseWrapper.MOS_ID, DataBaseWrapper.MOS_NUMBER, DataBaseWrapper.MOS_NAME, DataBaseWrapper.MOS_TYPE, DataBaseWrapper.MOS_RANK, DataBaseWrapper.MOS_TITLE, DataBaseWrapper.MOS_Link};
 
 
     public interface OnMosSelectedListener {
         /**
          * Called by ServiceFragment when a list item is selected
          */
-       // publigc void onRankSelected(int position);
+        // publigc void onRankSelected(int position);
     }
-
-
-
-
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        v= inflater.inflate(R.layout.rank_lst,
+        v = inflater.inflate(R.layout.rank_lst,
                 container, false);
 
 
-       // return v;
+        // return v;
 
-       // ViewPager mViewPager = (ViewPager) v.findViewById(R.id.pager);
+        // ViewPager mViewPager = (ViewPager) v.findViewById(R.id.pager);
         // Set the ViewPagerAdapter into ViewPager
         //mViewPager.setAdapter(new MyAdapter(getChildFragmentManager()));
-       return v;
+        return v;
     }
 
 
@@ -118,23 +108,23 @@ public class MOSFrag extends Fragment {
         }
 
 
-
-
     }
+
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
 
         // This makes sure that the container activity has implemented
         // the callback interface. If not, it throws an exception.
-       /** try {
-            mCallback = (OnMosSelectedListener) activity;
-        } catch (ClassCastException e) {
-            throw new ClassCastException(activity.toString()
-                    + " must implement OnHeadlineSelectedListener");
-        }**/
+        /** try {
+         mCallback = (OnMosSelectedListener) activity;
+         } catch (ClassCastException e) {
+         throw new ClassCastException(activity.toString()
+         + " must implement OnHeadlineSelectedListener");
+         }**/
 
     }
+
     @Override
     public void onStart() {
         super.onStart();
@@ -154,18 +144,15 @@ public class MOSFrag extends Fragment {
         }
 
 
+        /** else{
+         String[] listItems = {};
 
-       /** else{
-            String[] listItems = {};
-
-            setListAdapter(new ArrayAdapter(getActivity(),
-                    android.R.layout.simple_list_item_1, listItems));
-        }**/
+         setListAdapter(new ArrayAdapter(getActivity(),
+         android.R.layout.simple_list_item_1, listItems));
+         }**/
 
 
     }
-
-
 
 
     public List getMOSES(int mostitleid) {
@@ -189,10 +176,7 @@ public class MOSFrag extends Fragment {
     private MOS parseStudent1(Cursor cursor) {
 
 
-
         //DataBaseWrapper.MOS_NUMBER, DataBaseWrapper.MOS_TITLE, DataBaseWrapper.MOS_NAME,DataBaseWrapper.MOS_TYPE,DataBaseWrapper.MOS_RANK};
-
-
 
 
         MOS mos = new MOS();
@@ -202,14 +186,11 @@ public class MOSFrag extends Fragment {
         mos.setMOS_NAME(cursor.getString(2));
         mos.setMOS_TYPE(cursor.getString(3));
         mos.setMOS_RANK(cursor.getString(4));
-
-
+        mos.setMOS_LINK(cursor.getString(6));
 
 
         return mos;
     }
-
-
 
 
     public List getAllMOS(int branch) {
@@ -233,16 +214,10 @@ public class MOSFrag extends Fragment {
     private MTitles parseStudent(Cursor cursor) {
 
 
-
-
-
-
         MTitles mtitle = new MTitles();
         mtitle.setMOS_TITLES_ID(cursor.getInt(0));
         mtitle.setMOS_TITLES_BRANCH(cursor.getInt(2));
         mtitle.setMOS_TITLES_TITLE(cursor.getString(1));
-
-
 
 
         return mtitle;
@@ -258,14 +233,13 @@ public class MOSFrag extends Fragment {
         List values = getAllMOS(position);
 
         branchesDataCollection = new ArrayList<HashMap<String, String>>();
-        HashMap<String,String> map = null;
+        HashMap<String, String> map = null;
         _listDataHeader = new ArrayList<MTitles>();
 
         for (int k = 0; k < values.size(); k++) {
             MTitles mtitle = (MTitles) values.get(k);
 
             _listDataHeader.add(mtitle);
-
 
 
         }
@@ -277,7 +251,7 @@ public class MOSFrag extends Fragment {
             HashMap<String, String> top250 = new HashMap<String, String>();
             List<MOS> childGroupForFirstGroupRow;
 
-            List values1 = getMOSES( _listDataHeader.get(i).getMOS_TITLES_ID());
+            List values1 = getMOSES(_listDataHeader.get(i).getMOS_TITLES_ID());
 
 
             childGroupForFirstGroupRow = new ArrayList<MOS>();
@@ -299,6 +273,7 @@ public class MOSFrag extends Fragment {
                     map1.put("Name", mos.getMOS_NAME());
                     map1.put("Number", mos.getMOS_NUMBER());
                     map1.put("Ranks", mos.getMOS_RANK());
+                    map1.put("Link", mos.getMOS_LINK());
 
 
                     childGroupForFirstGroupRow.add(mos);
@@ -306,7 +281,7 @@ public class MOSFrag extends Fragment {
 
                 }
             }
-            if(childGroupForFirstGroupRow!=null && !childGroupForFirstGroupRow.isEmpty()){
+            if (childGroupForFirstGroupRow != null && !childGroupForFirstGroupRow.isEmpty()) {
 
                 _listDataChild.put(_listDataHeader.get(i).getMOS_TITLES_TITLE(), childGroupForFirstGroupRow);
             }
@@ -318,26 +293,38 @@ public class MOSFrag extends Fragment {
         ExpandableListView lv = (ExpandableListView) v.findViewById(R.id.expandable_list);
 
 
-        con=getActivity();
+        con = getActivity();
 
 
-        mAdapter=new ExpandabelListAdoptor3(con,_listDataHeader, _listDataChild) ; //here i didnt set list values to this adoptor
+        mAdapter = new ExpandabelListAdoptor3(con, _listDataHeader, _listDataChild); //here i didnt set list values to this adoptor
 
 
         lv.setAdapter(mAdapter);
+        lv.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+
+            @Override
+            public boolean onChildClick(ExpandableListView parent, View v,
+                                        int groupPosition, int childPosition, long id) {
 
 
+                final MOS mos = (MOS) mAdapter.getChild(groupPosition, childPosition);
 
+
+                try {
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(mos.getMOS_LINK()));
+                    startActivity(browserIntent);
+                } catch (ActivityNotFoundException e) {
+                    Toast.makeText(getActivity(), "No application can handle this request,"
+                            + " Please install a webbrowser", Toast.LENGTH_LONG).show();
+                    e.printStackTrace();
+                }
+
+                return false;
+            }
+        });
 
 
     }
-
-
-
-
-
-
-
 
 
 }

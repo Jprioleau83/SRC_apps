@@ -40,8 +40,8 @@ import java.util.TimerTask;
 
 
 public class MainActivity extends FragmentActivity
-        implements ActionFragment.OnServicesSelectedListener, ServiceFragment.OnServicesSelectedListener,  ServiceFragment.OnServicesSelectedListener2, RankFragment.OnRankCreated, RankFragment.OnRankCreatedListener1,HomeFragment.OnHomeCreatedListener, MilitaryTimeFragment.OnMilitaryTimeListener,
-        MOSFragment.OnServicesSelectedListener,  MOSFragment.OnServicesSelectedListener2, MOSFrag.OnMosSelectedListener, RankTypeFragment.OnRankTypeSelectedListener{
+        implements ActionFragment.OnServicesSelectedListener, ServiceFragment.OnServicesSelectedListener, ServiceFragment.OnServicesSelectedListener2, RankFragment.OnRankCreated, RankFragment.OnRankCreatedListener1, HomeFragment.OnHomeCreatedListener, MilitaryTimeFragment.OnMilitaryTimeListener,
+        MOSFragment.OnServicesSelectedListener, MOSFragment.OnServicesSelectedListener2, MOSFrag.OnMosSelectedListener, RankTypeFragment.OnRankTypeSelectedListener {
 
 
     private DrawerLayout mDrawerLayout;
@@ -137,10 +137,6 @@ public class MainActivity extends FragmentActivity
     }
 
 
-
-
-
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main, menu);
@@ -201,7 +197,7 @@ public class MainActivity extends FragmentActivity
 
     /**
      * Diplaying fragment view for selected nav drawer list item
-     * */
+     */
     private void displayView(int position) {
         // update the main content by replacing fragments
         Fragment fragment = null;
@@ -236,12 +232,12 @@ public class MainActivity extends FragmentActivity
         if (fragment != null) {
             FragmentManager fragmentManager = getSupportFragmentManager();
 
-            if(casenum == 0){
+            if (casenum == 0) {
 
 
                 if (findViewById(R.id.fragment_container) != null) {
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, hfragment).addToBackStack(null).commit();
-                }else {
+                } else {
 
 
                     getSupportFragmentManager().beginTransaction().replace(R.id.service_fragment, fragment).addToBackStack(null)
@@ -252,7 +248,7 @@ public class MainActivity extends FragmentActivity
             }
 
             if (casenum == 1) {
-               // RankFragment rankFrag = new RankFragment();
+                // RankFragment rankFrag = new RankFragment();
 
                 //if two columns
                 if (findViewById(R.id.fragment_container) != null) {
@@ -261,14 +257,13 @@ public class MainActivity extends FragmentActivity
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).addToBackStack(null).commit();
 
 
-                }else {
-                //TODO:  add blank fragment
+                } else {
+                    //TODO:  add blank fragment
                     getSupportFragmentManager().beginTransaction().replace(R.id.service_fragment, fragment).addToBackStack(null).addToBackStack(null).commit();
-                            //.replace(R.id.rank_fragment, rankFrag).addToBackStack(null).commit();
+                    //.replace(R.id.rank_fragment, rankFrag).addToBackStack(null).commit();
 
 
                 }
-
 
 
             }
@@ -276,7 +271,7 @@ public class MainActivity extends FragmentActivity
 
 
                 MilitaryTimeFragment Mfragment = null;
-                 Mfragment = new MilitaryTimeFragment();
+                Mfragment = new MilitaryTimeFragment();
 
                 //if two columns
                 if (findViewById(R.id.fragment_container) != null) {
@@ -285,7 +280,7 @@ public class MainActivity extends FragmentActivity
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, Mfragment).addToBackStack(null).commit();
 
 
-                }else {
+                } else {
                     getSupportFragmentManager().beginTransaction().replace(R.id.service_fragment, fragment).addToBackStack(null)
                             .replace(R.id.rank_fragment, Mfragment).addToBackStack(null).commit();
 
@@ -293,22 +288,21 @@ public class MainActivity extends FragmentActivity
                 }
 
 
-
             }
 
-            if(casenum == 3){
+            if (casenum == 3) {
 
 
                 if (findViewById(R.id.fragment_container) != null) {
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commit();
-                }else {
+                } else {
 
 
                     /**PageviewerFragment Pageview = new PageviewerFragment();
-                    getSupportFragmentManager().beginTransaction().replace(R.id.service_fragment, fragment).addToBackStack(null)
-                            .replace(R.id.rank_fragment, Pageview).commit();
-                    onRankCreated();
-                    **/
+                     getSupportFragmentManager().beginTransaction().replace(R.id.service_fragment, fragment).addToBackStack(null)
+                     .replace(R.id.rank_fragment, Pageview).commit();
+                     onRankCreated();
+                     **/
                     MOSFrag mosFragview = new MOSFrag();
                     getSupportFragmentManager().beginTransaction().replace(R.id.service_fragment, fragment).addToBackStack(null)
                             .replace(R.id.rank_fragment, mosFragview).commit();
@@ -316,17 +310,14 @@ public class MainActivity extends FragmentActivity
 
 
                     /**setContentView(R.layout.activity_main2);
-                    mAdapter = new MyAdapter(getSupportFragmentManager());
+                     mAdapter = new MyAdapter(getSupportFragmentManager());
 
-                    mPager = (ViewPager) findViewById(R.id.pager);
-                    mPager.setAdapter(mAdapter);**/
-
-
+                     mPager = (ViewPager) findViewById(R.id.pager);
+                     mPager.setAdapter(mAdapter);**/
 
 
                 }
             }
-
 
 
             // update selected item and title, then close the drawer
@@ -341,16 +332,10 @@ public class MainActivity extends FragmentActivity
     }
 
 
-    public void onActionSelected(int position){
+    public void onActionSelected(int position) {
 
 
         displayView(position);
-
-
-
-
-
-
 
 
     }
@@ -361,13 +346,12 @@ public class MainActivity extends FragmentActivity
         if (findViewById(R.id.fragment_container) != null) {
             RankTypeFragment rt = new RankTypeFragment(position);
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, rt).addToBackStack(null).commit();
-        }else {
+        } else {
             //two columns view
             RankTypeFragment rt = new RankTypeFragment(position);
             getSupportFragmentManager().beginTransaction().replace(R.id.rank_fragment, rt).addToBackStack(null).commit();
 
         }
-
 
 
     }
@@ -391,42 +375,35 @@ public class MainActivity extends FragmentActivity
             args.putInt(ServiceFragment.ARG_POSITION, position);
             mosFragment.setArguments(args);
 
-           /** FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            /** FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
-            transaction.replace(R.id.fragment_container, mosFragment);
-            transaction.addToBackStack(null);
-            transaction.commit();**/
-            PageviewerSmallFragment Pageview = new PageviewerSmallFragment(mosFragment);
+             transaction.replace(R.id.fragment_container, mosFragment);
+             transaction.addToBackStack(null);
+             transaction.commit();**/
+            PageviewerSmallFragment Pageview = new PageviewerSmallFragment(mosFragment, position);
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, Pageview).addToBackStack(null).commit();
 
 
-        }else {
+        } else {
 
-            MOSFrag mosFrag =  new MOSFrag();
+            MOSFrag mosFrag = new MOSFrag();
             Bundle args = new Bundle();
             args.putInt(ServiceFragment.ARG_POSITION, position);
             mosFrag.setArguments(args);
-           // MOSFrag mosFragview = new MOSFrag();
+            // MOSFrag mosFragview = new MOSFrag();
             //getSupportFragmentManager().beginTransaction().replace(R.id.service_fragment, mosFrag).addToBackStack(null)
-              //      .replace(R.id.rank_fragment, mosFragview).commit();
+            //      .replace(R.id.rank_fragment, mosFragview).commit();
 
             //PageviewerFragment Pageview = new PageviewerFragment();
-            PageviewerSmallFragment Pageview = new PageviewerSmallFragment(mosFrag);
+            PageviewerSmallFragment Pageview = new PageviewerSmallFragment(mosFrag, position);
             getSupportFragmentManager().beginTransaction().replace(R.id.rank_fragment, Pageview).addToBackStack(null).commit();
-
-
 
 
         }
 
 
-
-
-
-
-
-
     }
+
     public void onRankTypeSelected(String ranktype, int position) {
         if (findViewById(R.id.fragment_container) != null) {
 
@@ -440,8 +417,7 @@ public class MainActivity extends FragmentActivity
             transaction.commit();
 
 
-
-        }else {
+        } else {
             //two columns view
             RankFragment rt = new RankFragment(ranktype, position);
 
@@ -475,15 +451,12 @@ public class MainActivity extends FragmentActivity
             transaction.addToBackStack(null);
             transaction.commit();
 
-        }else{
-            PageviewerFragment Pageview =  (PageviewerFragment) getSupportFragmentManager().findFragmentById(R.id.rank_fragment);
+        } else {
+            PageviewerFragment Pageview = (PageviewerFragment) getSupportFragmentManager().findFragmentById(R.id.rank_fragment);
             List frags = Pageview.getChildFragmentManager().getFragments();
             MOSFrag mosFrag = (MOSFrag) frags.get(1);
 
             // MOSFrag mosFrag = (MOSFrag) getSupportFragmentManager().findFragmentById(R.id.rank_fragment);
-
-
-
 
 
             if (mosFrag != null) {
@@ -496,60 +469,53 @@ public class MainActivity extends FragmentActivity
         }
 
 
-
-
-
-
-
-
     }
 
 
-
-
-/**
-    public void onRankSelected(int position) {
-        RankFragbak2 rankFrag = (RankFragbak2)
-                getSupportFragmentManager().findFragmentById(R.id.rank_fragment);
-
-        if (rankFrag != null) {
-            // If article frag is available, we're in two-pane layout...
-
-            // Call a method in the ArticleFragment to update its content
-            //rankFrag.updateRankView(position);
-
-        } else {
-
-
-            if (findViewById(R.id.fragment_container) != null) {
-
-                // However, if we're being restored from a previous state,
-                // then we don't need to do anything and should return or else
-                // we could end up with overlapping fragments.
-
-
-                // Create an instance of ExampleFragment
-                RankFragbak2 rankFragment = new RankFragbak2();
-                Bundle args = new Bundle();
-                args.putInt(ServiceFragment.ARG_POSITION, position);
-                rankFragment.setArguments(args);
-                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-
-                transaction.replace(R.id.fragment_container, rankFragment);
-                transaction.addToBackStack(null);
-                transaction.commit();
-
-            }
-
-        }
-
-
-    }**/
+    /**
+     * public void onRankSelected(int position) {
+     * RankFragbak2 rankFrag = (RankFragbak2)
+     * getSupportFragmentManager().findFragmentById(R.id.rank_fragment);
+     * <p/>
+     * if (rankFrag != null) {
+     * // If article frag is available, we're in two-pane layout...
+     * <p/>
+     * // Call a method in the ArticleFragment to update its content
+     * //rankFrag.updateRankView(position);
+     * <p/>
+     * } else {
+     * <p/>
+     * <p/>
+     * if (findViewById(R.id.fragment_container) != null) {
+     * <p/>
+     * // However, if we're being restored from a previous state,
+     * // then we don't need to do anything and should return or else
+     * // we could end up with overlapping fragments.
+     * <p/>
+     * <p/>
+     * // Create an instance of ExampleFragment
+     * RankFragbak2 rankFragment = new RankFragbak2();
+     * Bundle args = new Bundle();
+     * args.putInt(ServiceFragment.ARG_POSITION, position);
+     * rankFragment.setArguments(args);
+     * FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+     * <p/>
+     * transaction.replace(R.id.fragment_container, rankFragment);
+     * transaction.addToBackStack(null);
+     * transaction.commit();
+     * <p/>
+     * }
+     * <p/>
+     * }
+     * <p/>
+     * <p/>
+     * }*
+     */
 
     @Override
     public void onRankSelected(List Ranks) {
-       List tRanks = Ranks;
-        RankviewerFragment rv = new RankviewerFragment(tRanks);
+        List tRanks = Ranks;
+        RankviewerFragment rv = new RankviewerFragment(tRanks, getSupportFragmentManager());
 
 
         if (findViewById(R.id.fragment_container) != null) {
@@ -563,17 +529,13 @@ public class MainActivity extends FragmentActivity
             // Create an instance of ExampleFragment
 
 
-
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, rv).addToBackStack(null).commit();
 
 
-        }else {
-
-
+        } else {
 
 
             getSupportFragmentManager().beginTransaction().replace(R.id.rank_fragment, rv).addToBackStack(null).commit();
-
 
 
         }
@@ -583,7 +545,7 @@ public class MainActivity extends FragmentActivity
 
     /**
      * Slide menu item click listener
-     * */
+     */
     private class SlideMenuClickListener implements ListView.OnItemClickListener {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position,
@@ -593,7 +555,7 @@ public class MainActivity extends FragmentActivity
         }
     }
 
-    public void onRankCreated(){
+    public void onRankCreated() {
         if (findViewById(R.id.fragment_container) == null) {
             View cv = findViewById(R.id.service_fragment);
             LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT);
@@ -615,7 +577,7 @@ public class MainActivity extends FragmentActivity
 
     }
 
-    public void onHomeCreated(){
+    public void onHomeCreated() {
         //if two columns
 
         View t = findViewById(R.id.fragment_container);
@@ -629,12 +591,11 @@ public class MainActivity extends FragmentActivity
             cv.setLayoutParams(params);
 
             int sdk = android.os.Build.VERSION.SDK_INT;
-            if(sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
+            if (sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
                 cv.setBackgroundDrawable(this.getResources().getDrawable(R.drawable.list_background));
             } else {
                 cv.setBackground(this.getResources().getDrawable(R.drawable.list_background));
             }
-
 
 
             View cv1 = findViewById(R.id.rank_fragment);
@@ -647,30 +608,26 @@ public class MainActivity extends FragmentActivity
     }
 
 
-
-
-
     public void onTimeCreated() {
         String currentDateTimeString = "";
-        currentDateTimeString = DateFormat.getDateTimeInstance().format(new Date( ));
+        currentDateTimeString = DateFormat.getDateTimeInstance().format(new Date());
 
 
         //TextView t = (TextView) findViewById(R.id.textView);
 
 
-    // textView is the TextView view that should display it
+        // textView is the TextView view that should display it
         //t.setText(currentDateTimeString);
 
 
+        final TextView txtHour = (TextView) findViewById(R.id.hour);
+        final TextView txtMin = (TextView) findViewById(R.id.min);
+        final TextView txtSec = (TextView) findViewById(R.id.sec);
 
-        final TextView txtHour = (TextView)findViewById(R.id.hour);
-        final TextView txtMin = (TextView)findViewById(R.id.min);
-        final TextView txtSec = (TextView)findViewById(R.id.sec);
-
-        final TextView curtxtHour = (TextView)findViewById(R.id.curhour);
-        final TextView curtxtMin = (TextView)findViewById(R.id.curmin);
-        final TextView curtxtSec = (TextView)findViewById(R.id.cursec);
-        final TextView curtxtampm = (TextView)findViewById(R.id.curampm);
+        final TextView curtxtHour = (TextView) findViewById(R.id.curhour);
+        final TextView curtxtMin = (TextView) findViewById(R.id.curmin);
+        final TextView curtxtSec = (TextView) findViewById(R.id.cursec);
+        final TextView curtxtampm = (TextView) findViewById(R.id.curampm);
         Typeface custom_font = Typeface.createFromAsset(getAssets(),
                 "fonts/digital.ttf");
         txtHour.setTypeface(custom_font);
@@ -695,7 +652,7 @@ public class MainActivity extends FragmentActivity
                 int month = cal.get(Calendar.MINUTE); // month...
                 int day = cal.get(Calendar.SECOND); // current day in the month
 
-               final Integer test = new Integer(calendar.get(Calendar.HOUR_OF_DAY));
+                final Integer test = new Integer(calendar.get(Calendar.HOUR_OF_DAY));
 
                 final Integer hora = new Integer(Calendar.getInstance().get(Calendar.HOUR_OF_DAY));
                 final Integer minutes = new Integer(Calendar.getInstance().get(Calendar.MINUTE));
@@ -709,7 +666,7 @@ public class MainActivity extends FragmentActivity
 
                 String amorpm = " AM";
 
-                if(curampm == 1){
+                if (curampm == 1) {
 
 
                     amorpm = " PM";
@@ -717,8 +674,7 @@ public class MainActivity extends FragmentActivity
                 }
 
 
-
-                if(curhour == 0){
+                if (curhour == 0) {
                     curhour = 12;
                 }
 
@@ -751,12 +707,11 @@ public class MainActivity extends FragmentActivity
             cv.setLayoutParams(params);
 
             int sdk = android.os.Build.VERSION.SDK_INT;
-            if(sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
+            if (sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
                 cv.setBackgroundDrawable(this.getResources().getDrawable(R.drawable.list_background));
             } else {
                 cv.setBackground(this.getResources().getDrawable(R.drawable.list_background));
             }
-
 
 
             View cv1 = findViewById(R.id.rank_fragment);
@@ -766,12 +721,7 @@ public class MainActivity extends FragmentActivity
         }
 
 
-
-
-
-
-
-}
+    }
 
 
 }
