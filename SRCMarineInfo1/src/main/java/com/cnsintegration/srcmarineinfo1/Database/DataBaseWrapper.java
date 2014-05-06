@@ -6841,6 +6841,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_TYPE, "Enlisted");
 
         values1.put(MOS_RANK, "Pvt-MGySgt ");
+        db.insert(MOS, null, values1);
 
         values1 = new ContentValues();
         values1.put(MOS_NUMBER, "7314");
@@ -6850,6 +6851,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_TYPE, "Enlisted");
 
         values1.put(MOS_RANK, "Pvt-MGySgt ");
+        db.insert(MOS, null, values1);
 
         values1 = new ContentValues();
         values1.put(MOS_NUMBER, "7371");
@@ -6859,6 +6861,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_TYPE, "Enlisted");
 
         values1.put(MOS_RANK, "N/A ");
+        db.insert(MOS, null, values1);
 
         values1 = new ContentValues();
         values1.put(MOS_NUMBER, "7372");
@@ -6867,6 +6870,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_TYPE, "Enlisted");
 
         values1.put(MOS_RANK, "N/A ");
+        db.insert(MOS, null, values1);
 
         values1 = new ContentValues();
         values1.put(MOS_NUMBER, "7382");
@@ -6876,6 +6880,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_TYPE, "Enlisted");
 
         values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
 
         values1 = new ContentValues();
         values1.put(MOS_NUMBER, "7315");
@@ -6899,6 +6904,1629 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
 
         db.insert(MOS, null, values1);
 
+
+
+        values.put(MOSTITLES_TITLE, "75 Pilots/Naval Flight Officers");
+        values.put(MOSTITLES_BRANCH, Branch_USMC);
+        mostitleId = db.insert(MOSTITLES, null, values);
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7500");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, " Pilot VMA, FRS Basic A-4M");
+        values1.put(MOS_TYPE, "Officers");
+        values1.put(MOS_RANK, "N/A ");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7501");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Pilot VMA, A-4 Qualified");
+        values1.put(MOS_TYPE, "Warrant Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7502");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Forward Air Controller/Air Officer");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/7502.htm");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "N/A");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7380");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Tactical Systems Officer/Mission Specialist");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/7380.htm ");
+        values1.put(MOS_TYPE, "Warrant Officer");
+
+        values1.put(MOS_RANK, "WO-CWO5");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7508");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Pilot VMA, AV-8A/C Qualified");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/7508.htm ");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "2ndLt-LtCol");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7509");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Pilot VMA, AV-8B Qualified");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/7509.htm ");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "2ndLt-LtCol");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7510");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Pilot VMA (AW), A-6E FRS Basic");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "N/A");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7511");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "7511 Pilot VMA (AW), A-6E Qualified");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "N/A");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7513");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Pilot HMH/M/L/A, Pilot Helicopter");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/7513.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "All");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7518");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Pilot VMFA, F-35 Qualified");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "All");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7521");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Pilot VMFA, F/A-18 FRS Basic");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/7521.htm ");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "2ndLt-LtCol");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7522");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Pilot VMFA, F-4S Qualified");
+
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "2ndLt-LtCol");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7523");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Pilot VMFA, F/A-18 Qualified");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/7523.htm ");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "2ndLt-LtCol");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7524");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Weapons Systems Officer (WSO), F/A-18D FRS Basic");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/7524.htm ");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "2ndLt-LtCol");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7525");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Weapons Systems Officer (WSO), F/A-18D Qualified");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/7525.htm ");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "2ndLt-LtCol");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7527");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Pilot VMFA, F/A-18D Qualified");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/7527.htm ");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "2ndLt-LtCol");
+
+        db.insert(MOS, null, values1);
+
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7527");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Pilot VMFA, F/A-18D Qualified");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/7527.htm ");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "2ndLt-LtCol");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7527");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Pilot VMM, V-22 Qualified");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/7532.htm ");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "2ndLt-LtCol");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7541");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, " Pilot VMAQ/VMFP, EA-6B FRS Basic ");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/7541.htm ");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "2ndLt-LtCol");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7542");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Pilot VMAQ/VMFP, EA-6A Qualified");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/7542.htm ");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "2ndLt-LtCol");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7543");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Pilot VMAQ/VMFP, EA-6B Qualified");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/7543.htm ");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "2ndLt-LtCol");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7545");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Pilot VMAQ/VMFP, RF-4B Qualified");
+
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "N/A");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7550");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Pilot VMGR, Maritime Advance (NATC)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/7550.htm ");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "2ndLt-LtCol");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7551");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Pilot VMGR, C-9 Qualified");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/7551.htm ");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "2ndLt-LtCol");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7552");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Pilot VMGR, TC-4C Qualified");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/7552.htm ");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "2ndLt-LtCol");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7553");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Pilot, C-20 Qualified");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/7553.htm ");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "2ndLt-LtCol");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7554");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Pilot VMGR, UC-35 Qualified");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/7554.htm ");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "2ndLt-LtCol");
+
+        db.insert(MOS, null, values1);
+
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7555");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Pilot VMGR, UC-12B Qualified");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/7555.htm ");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "2ndLt-LtCol");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7556");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Pilot VMGR, KC-130 Co-Pilot (T2P/T3P)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/7556.htm ");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "2ndLt-LtCol");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7557");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Pilot VMGR, KC-130 Aircraft Commander");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/7557.htm ");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "2ndLt-LtCol");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7558");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Pilot HMH/M/L/A, CH-53D FRS Basic");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/7558.htm ");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "2ndLt-LtCol");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7559");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Pilot VMGR, CT-39 Qualified");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/7559.htm ");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "2ndLt-LtCol");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7559");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Pilot HMH/M/L/A, CH-53E FRS Basic");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/7560.htm ");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "2ndLt-LtCol");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7561");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Pilot HMH/M/L/A, CH-46 FRS Basic");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/7561.htm ");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "2ndLt-LtCol");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7562");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Pilot HMH/M/L/A, CH-46 Qualified");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/7562.htm ");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "2ndLt-LtCol");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7563");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Pilot HMH/M/L/A, UH-1 Qualified");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/7563.htm ");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "2ndLt-LtCol");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7564");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Pilot HMH/M/L/A, CH-53 A/D Qualified");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/7564.htm ");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "2ndLt-LtCol");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7565");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Pilot HMH/M/L/A, AH-1 Qualified");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/7565.htm ");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "2ndLt-LtCol");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7566");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Pilot HMH/M/L/A, CH-53E Qualified");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/7566.htm ");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "2ndLt-LtCol");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7567");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Pilot HMH/M/L/A, UH-1N FRS Basic");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/7567.htm ");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "2ndLt-LtCol");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7568");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Pilot HMH/M/L/A, AH-1 FRS Basic");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/7568.htm ");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "2ndLt-LtCol");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7574");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Qualified Supporting Arms Coordinator (Airborne)");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "N/A");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7576");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Pilot VMO");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7577");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Weapons and Tactics Instructor");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/7577.htm ");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "N/A");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7578");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Student, Naval Flight Officer (NFO)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/7578.htm ");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "2ndLt-LtCol");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7580");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Student, Tactical Navigator Flight");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/7580.htm ");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "2ndLt-LtCol");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7582");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Electronic Warfare Officer (EWO), EA-6B FRS Basic)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/7582.htm ");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "2ndLt-LtCol");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7583");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Bombardier/Navigator, A-6E Qualified");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "N/A");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7584");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Electronic Warfare Officer (EWO), EA-6A Qualified");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "N/A");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7585");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Airborne Reconnaissance Officer (ARO) Qualified RF-4B)");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "N/A");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7587");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Radar Intercept Officer (RIO), F-4S");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "N/A");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7588");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Electronic Warfare Officer (EWO), EA-6B Qualified");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/7588.htm ");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "N/A");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7589");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "V/STOL Landing Signal Officer (LSO)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/7589.htm ");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "N/A");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7590");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Landing Signal Officer Trainee");
+
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "N/A");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7591");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Naval Flight Officer (VMAW)");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "N/A");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7592");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Pilot VMAW");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "N/A");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7593");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Landing Signal Officer, Phase I/II Qualified");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "N/A");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7594");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Landing Signal Officer, Phase III Qualified");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/7594.htm ");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "N/A");
+
+        db.insert(MOS, null, values1);
+
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7595");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Test Pilot/Flight Test Project Officer");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/7595.htm ");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "N/A");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7596");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Aviation Safety Officer (ASO)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/7596.htm ");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "N/A");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7597");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Pilot, Rotary Wing, Basic");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/7597.htm ");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "N/A");
+
+        db.insert(MOS, null, values1);
+
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7598");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Pilot, Fixed Wing, Basic");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "N/A");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7599");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Student Naval Aviator");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/7599.htm ");
+        values1.put(MOS_TYPE, "Officer");
+
+        values1.put(MOS_RANK, "N/A");
+
+        db.insert(MOS, null, values1);
+
+
+
+
+
+
+        values.put(MOSTITLES_TITLE, "80 Miscellaneous MOS's (Category II)");
+        values.put(MOSTITLES_BRANCH, Branch_USMC);
+
+
+        mostitleId = db.insert(MOSTITLES, null, values);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8001");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Basic Officer");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8001.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8002");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Joint Terminal Attack Controller (EMOS)");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8002.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8003");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "General Officer (PMOS)");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "BGEN-GEN");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8005");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Special Assignment Officer (FMOS)");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8005.htm");
+        db.insert(MOS, null, values1);
+
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8006");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, " Billet Designator—Unrestricted Officer");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8007");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Billet Designator—Unrestricted Ground Officer (FMOS)");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8009");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, " Billet Designator—Air Control/Antiair Warfare Officer (FMOS)");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8005.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8012");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Ground Safety Officer (FMOS)");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8012.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8016");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Special Technical Operations (Officer) (FMOS)");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8016.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8023");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Parachute Officer (NMOS)");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8023.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8024");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Combatant Diver Officer (NMOS)");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8024.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8026");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Parachute/Combatant Diver Officer (NMOS)");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8040");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Colonel, Logistician (PMOS)");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "Col");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8041");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Colonel, Ground (PMOS)");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "Col");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8042");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, " Colonel, Naval Aviator/Naval Flight Officer (PMOS)");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "Col");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8051");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Operations Research Specialist (FMOS)");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8051.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8055");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Information Management Officer (FMOS)");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8056");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, " Hazardous Material/Hazardous Waste (Officer) (FMOS)");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8056.htm");
+        db.insert(MOS, null, values1);
+
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8057");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Acquisition Professional Candidate (FMOS)");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8057.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8058");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Acquisition Manager (Acquisition Core Member) (FMOS)");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8058.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8059");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Aviation Acquisition Management Professional (PMOS)");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "Maj-MajGen");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8059.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8060");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Acquisition Specialist (FMOS)");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8060.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8061");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Acquisition Management Professional (PMOS)");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "Maj-MajGen");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8220");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Billet Designator—Political Military Officer (FMOS*)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8220.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8221");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, " Regional Affairs Officer, Latin America (FMOS)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8221.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8222");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Regional Affairs Officer, Former Soviet Union (FMOS)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8222.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8223");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Regional Affairs Officer, Northeast Asia (FMOS)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8223.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8224");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Regional Affairs Officer, Middle East/North Africa (FMOS)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8224.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8225");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Regional Affairs Officer, Sub-Saharan Africa (FMOS)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8225.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8226");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, " Regional Affairs Officer, Southwest Asia (FMOS)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8226.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8227");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Regional Affairs Officer, Western Europe (FMOS)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8227.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8228");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Regional Affairs Officer, Eastern Asia (Excluding Peoples' Republic of China) (FMOS)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8228.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8229");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, " Regional Affairs Officer, Eastern Europe (Excluding Former Soviet Union) (FMOS)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8229.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8240");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Basic Foreign area officer (FAO) (FMOS)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8240.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8241");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Foreign Area Officer, Latin America (FMOS)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8241.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8242");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Foreign Area Officer, Latin America (FMOS)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8242.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8243");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Foreign Area Officer, People's Republic of China (PRC) (FMOS)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8243.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8244");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Foreign Area Officer, Middle East/North Africa (FMOS)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8244.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8245");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Foreign Area Officer, Sub-Saharan Africa (FMOS)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8245.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8246");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Foreign Area Officer, Southwest Asia (FMOS)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8246.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8247");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, " Foreign Area Officer, Western Europe (FMOS)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8247.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8248");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Foreign Area Officer, East Asia (Excluding PRC) (FMOS)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8248.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8249");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, " Foreign Area Officer, Eastern Europe (Excluding Former Soviet Union) (FMOS)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8249.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+
+                values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8802");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Education Officer (FMOS)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8802.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8803");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Leadership Development Specialist (FMOS)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8802.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8820");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Aeronautical Engineer (FMOS)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8820.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8824");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Electronics Engineer (FMOS)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8824.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8825");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Modeling and Simulation Officer (FMOS)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8825.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8826");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Ordnance Systems Engineer (FMOS)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8826.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8831");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Environmental Engineering Management Officer (FMOS)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8831.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8832");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Nuclear Engineer (FMOS)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8832.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+
+                values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8834");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Technical Information Operation Officer (FMOS)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8834.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8840");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Manpower Management Officer (FMOS)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8840.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8844");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Financial Management Specialist (FMOS)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8844.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8846");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Data Systems Specialist (FMOS)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8846.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8848");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Data Systems Specialist (FMOS)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8848.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8850");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Operations Analyst (FMOS)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8850.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8852");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Defense Systems Analyst (FMOS)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8852.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8858");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Command, Control, Communications, Computers and Intelligence (C41) (FMOS)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8858.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8862");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Material Management Officer (FMOS)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8862.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8866");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Space Operations Officer (FMOS)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8866.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8878");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Historian (FMOS)");
+                values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8878.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8000");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Basic Officer");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "Pvt-MGySgt");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/enlistedjo2/a/8000.htm");
+        db.insert(MOS, null, values1);
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8002");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Joint Terminal Attack Controller (FMOS)");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "SSgt-MGySgt");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/enlistedjo2/a/8000.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8011");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Basic Marine with Enlistment Guarantee (BASIC MOS)");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "Pvt-MGySgt");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/enlistedjo2/a/8011.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8012");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Ground Safety Specialist (Enlisted) (FMOS)");        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "Pvt-GySgt");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/enlistedjo2/a/8012.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8013");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Special Assignment—Enlisted (FMOS)");        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "Pvt-GySgt");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/enlistedjo2/a/8013.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8014");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Billet Designator—Enlisted (FMOS*)");        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "Pvt-MGySgt");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/enlistedjo2/a/8014.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8015");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "College Degree—Enlisted (EMOS)");        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "Pvt-MGySgt");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/enlistedjo2/a/8015.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8016");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Special Technical Operations (Enlisted) (FMOS)");        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "Pvt-MGySgt");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/enlistedjo2/a/8016.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8023");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Parachutist (Enlisted) (NMOS)");        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "Pvt-MGySgt/SgtMaj");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/enlistedjo2/a/8023.htm");
+        db.insert(MOS, null, values1);
+        
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8024");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Combatant Diver Marine (Enlisted) (NMOS)");        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "Pvt-MGySgt/SgtMaj");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/enlistedjo2/a/8024.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8026");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Parachutist/Combatant Diver Marine (NMOS)");        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "Pvt-MGySgt/SgtMaj");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/enlistedjo2/a/8026.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8028");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "MECEP Participant (FMOS)");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "Pvt-MGySgt ");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/enlistedjo2/a/8028.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8056");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Hazardous Material/Hazardous Waste Staff NCO/NCO (FMOS)");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "Lcpl-MGySgt ");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/enlistedjo2/a/8056.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8060");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Acquisition Specialist (Enlisted) (FMOS)");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "SSgt-MGySgt ");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/enlistedjo2/a/8060.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8071");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Acquisition Specialist (Enlisted) (FMOS)");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A ");
+
+        db.insert(MOS, null, values1);
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8151");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Guard (FMOS*)");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "Pvt-GySgt ");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/enlistedjo2/a/8151.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8152");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Marine Corps Security Force (MCSF) Guard (EMOS)");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "Pvt-GySgt ");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/enlistedjo2/a/8152.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8153");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Marine Corps Security Force (MCSF) Cadre Trainer (EMOS)");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "Cpl-GySgt ");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/enlistedjo2/a/8153.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8154");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Marine Corps Security Force Close Quarters Battle Team Member (FMOS*) ");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "LCpl-SSgt ");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/enlistedjo2/a/8154.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8156");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Marine Security Guard (MSG) (FMOS)");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "Pfc-MGySgt ");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/enlistedjo2/a/8156.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8411");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Recruiter (EMOS)");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "Sgt-SSgt ");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/enlistedjo2/a/8411.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8412");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Career Recruiter (PMOS)");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "GySgt- MGySgt ");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/enlistedjo2/a/8412.htm");
+        db.insert(MOS, null, values1);
+
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8621");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Surveillance Sensor Operator (NMOS)");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "Pvt- MSgt ");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/enlistedjo2/a/8621.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8641");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Microminiature Repairer (NMOS)");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "LCpl- GySgt ");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/enlistedjo2/a/8641.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8711");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Ground Operations Specialist (EMOS)");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "Cpl- MGySgt ");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/enlistedjo2/a/8711.htm");
+        db.insert(MOS, null, values1);
+
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8911");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Barracks and Grounds Marine (FMO5*)");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "Pvt- GySgt ");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/enlistedjo2/a/8911.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8972");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Aircrew Trainee (PMOS)");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "Pvt- GySgt ");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/enlistedjo2/a/8972.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8991");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Sergeant Major of the Marine Corps (PMOS)");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "SgtMaj ");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/enlistedjo2/a/8991.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "8999");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Sergeant Major/First Sergeant (PMOS)");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "SgtMaj/1stSgt ");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/enlistedjo2/a/8999.htm");
+        db.insert(MOS, null, values1);
+
+
+        values.put(MOSTITLES_TITLE, "90 Reporting MOS's (Category III)");
+        values.put(MOSTITLES_BRANCH, Branch_USMC);
+
+
+        mostitleId = db.insert(MOSTITLES, null, values);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "9701");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Joint Specialty Officer Nominee (FMOS)");
+
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "9702");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Joint Specialty Officer (JSO) (FMOS)");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
 
 
 
