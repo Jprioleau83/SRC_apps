@@ -1085,6 +1085,688 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
     }
 
 
+    public void populateusnavyranks(SQLiteDatabase db){
+
+
+        ContentValues values = new ContentValues();
+
+        values.put(Rank_PAY,"0-1");
+        values.put(Rank_SHORT, "ENS");
+        values.put(Rank_NAME, "Ensign");
+        values.put(Rank_ICON, "ens_usnavy");
+        values.put(Rank_TYPE, "Officer");
+        values.put(Rank_DETAILS, "In the United States Navy, the rank of 'ensign' superseded 'passed midshipman' in 1862. Ensign is the junior commissioned officer rank in the United States Navy, the United States Coast Guard, the National Oceanic and Atmospheric Administration Commissioned Officer Corps, and the PHS Commissioned Corps. This rank is also used in the U.S. Maritime Service and the U.S. Naval Sea Cadet Corps. Ensign ranks below lieutenant junior grade, and it is equivalent to a second lieutenant in the U.S. Army, the Marine Corps, and the Air Force.");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Ensign_(rank)#United_States");
+
+        values.put(Rank_Branch, Branch_USNAVY);
+        db.insert(Ranks, null, values);
+
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"0-2");
+        values.put(Rank_SHORT, "LTJG");
+        values.put(Rank_NAME, "lieutenant(junior grade)");
+        values.put(Rank_ICON, "ltjg_usnavy");
+        values.put(Rank_TYPE, "Officer");
+        values.put(Rank_DETAILS, "Lieutenant (junior grade) (LTJG) is a junior commissioned officer rank in the United States Navy.  Lieutenant, junior grade ranks above ensign and below lieutenant and is equivalent to a first lieutenant in the other uniformed services (the Army, Marine Corps and Air Force).  Lieutenant, junior grade is often referred to colloquially as JG ('Jay-Gee'). Prior to March 3, 1883, this rank was known in the Navy as master.  ");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Lieutenant_(junior_grade)");
+        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"0-3");
+        values.put(Rank_SHORT, "LT");
+        values.put(Rank_NAME, "lieutenant");
+        values.put(Rank_ICON, "lt_usnavy");
+        values.put(Rank_TYPE, "Officer");
+        values.put(Rank_DETAILS, "Lieutenant[nb 1] (abbreviated Lt, LT, LT(N), Lieut and LEUT, depending on nation) is a commissioned officer rank in many nations' navies. It is typically the most senior of junior officer ranks. The rank's insignia usually consists of two medium gold braid stripes and often the uppermost stripe features a loop or executive curl.  ");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Lieutenant_(navy)");
+        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"0-4");
+        values.put(Rank_SHORT, "LCDR");
+        values.put(Rank_NAME, "lieutenant Commander");
+        values.put(Rank_ICON, "lcdr_usnavy");
+        values.put(Rank_TYPE, "Officer");
+        values.put(Rank_DETAILS, "Lieutenant commander (LCDR) is a mid-ranking officer rank in the United States Navy, the United States Coast Guard, the United States Public Health Service Commissioned Corps, and the National Oceanic and Atmospheric Administration Commissioned Officer Corps, with the pay grade of O-4. Lieutenant commanders rank above lieutenants and below commanders. The rank is also used in the United States Maritime Service and the United States Naval Sea Cadet Corps, and is equivalent to a major in the other uniformed services.  DOPMA guidelines suggest 80% of lieutenants should be promoted to lieutenant commander after serving a minimum of three years at their present rank and after attaining nine to eleven years of cumulative commissioned service.  ");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Lieutenant_commander_(United_States))");
+        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"0-5");
+        values.put(Rank_SHORT, "CDR");
+        values.put(Rank_NAME, "Commander");
+        values.put(Rank_ICON, "cdr_usnavy");
+        values.put(Rank_TYPE, "Officer");
+        values.put(Rank_DETAILS, "In the United States Navy, the United States Coast Guard, the United States Public Health Service Commissioned Corps, and the National Oceanic and Atmospheric Administration Commissioned Officer Corps, commander (abbreviated 'CDR') is a senior officer rank, with the pay grade of O-5. Commander ranks above lieutenant commander and below captain. Commander is equivalent to the rank of lieutenant colonel in the other uniformed services.  DOPMA guidelines suggest 70% of lieutenant commanders should be promoted to commander after serving a minimum of three years at their present rank and after attaining 15-17 years of cumulative commissioned service.");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Commander_(United_States)#Naval_rank");
+        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"0-6");
+        values.put(Rank_SHORT, "CAPT");
+        values.put(Rank_NAME, "Captain");
+        values.put(Rank_ICON, "capt_usnavy");
+        values.put(Rank_TYPE, "Officer");
+        values.put(Rank_DETAILS, "In the United States Navy, captain (abbreviated CAPT) is a senior officer rank, with the pay grade of O-6. It ranks above commander and below rear admiral (lower half). It is equivalent to the rank of colonel in the other uniformed services.  DOPMA guidelines suggest that no more than 50% of eligible commanders should be promoted to captain after serving a minimum of three years at their present rank and after attaining 21–23 years of cumulative commissioned service. Navy captains with sea commands in the surface warfare officer community generally command ships of cruiser size or larger. ");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Captain_(United_States_O-6)");
+        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"0-7");
+        values.put(Rank_SHORT, "RDML");
+        values.put(Rank_NAME, "Rear Admiral(lower half)");
+        values.put(Rank_ICON, "rdml_usnavy");
+        values.put(Rank_TYPE, "Officer");
+        values.put(Rank_DETAILS, "In the United States Navy, rear admiral (lower half) is a one-star flag officer, with the pay grade of O-7.  Rear admiral (lower half) ranks above captain and below rear admiral. Rear admiral (lower half) is equivalent to the rank of brigadier general in the other uniformed services.   ");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Rear_admiral_(United_States)#Rear_admiral_.28lower_half.29");
+        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"0-8");
+        values.put(Rank_SHORT, "RADM");
+        values.put(Rank_NAME, "Rear Admiral");
+        values.put(Rank_ICON, "radm_usnavy");
+        values.put(Rank_TYPE, "Officer");
+        values.put(Rank_DETAILS, "In the United States Navy, the United States Coast Guard,rear admiral(RADM), also sometimes referred to as rear admiral (upper half), is a two-star flag officer, with the pay grade of O-8. Rear admiral ranks above rear admiral (lower half) and below vice admiral. Rear admiral is equivalent to the rank of major general in the other uniformed services. It is the highest permanent rank during peacetime in the uniformed services; all higher ranks are temporary ranks linked to specific commands or office.");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Rear_admiral_(United_States)#Rear_admiral");
+        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"0-9");
+        values.put(Rank_SHORT, "VADM");
+        values.put(Rank_NAME, "Rear Admiral");
+        values.put(Rank_ICON, "vadm_usnavy");
+        values.put(Rank_TYPE, "Officer");
+        values.put(Rank_DETAILS, "In the United States Navy, vice admiral (VADM) is a three-star flag officer, with the pay grade of O-9. For the Navy, no more than 16.7% of the service's active-duty flag officers may have more than two stars. Vice admiral ranks above rear admiral and below admiral. Vice admiral is equivalent to the rank of lieutenant general in the other uniformed services.");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Vice_admiral_(United_States)");
+        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"0-9");
+        values.put(Rank_SHORT, "ADM");
+        values.put(Rank_NAME, "Admiral");
+        values.put(Rank_ICON, "adm_usnavy");
+        values.put(Rank_TYPE, "Officer");
+        values.put(Rank_DETAILS, "In the United States Navy, admiral (ADM) is a four-star flag officer rank, with the pay grade of O-10. Admiral ranks above vice admiral and below fleet admiral in the navy. Admiral is equivalent to the rank of general in the other uniformed services.  Since the five-star grade of fleet admiral is reserved for wartime use only, the grade of admiral is considered to be the highest appointment an officer can achieve in the United States Navy.  ");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Admiral_(United_States)");
+        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"0-10");
+        values.put(Rank_SHORT, "ADM");
+        values.put(Rank_NAME, "Fleet Admiral");
+        values.put(Rank_ICON, "fadm_usnavy");
+        values.put(Rank_TYPE, "Officer");
+        values.put(Rank_DETAILS, "Fleet admiral (FADM)[1] was a five-star flag officer rank in the United States Navy, and was in its time the highest rank attainable in the service. Fleet admiral ranked immediately above admiral and was equivalent to general of the Army and general of the Air Force. The United States rank of fleet admiral was created by an Act of Congress for four officers to hold on a temporary basis under Pub.L. 78-482 on December 14, 1944,.[2] The rank was made permanent for the four individual holders only by Pub.L. 79–333 on March 23, 1946, but that law made no provisions to establish the rank itself permanently. ");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Fleet_Admiral_(United_States)");
+        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"special grade");
+        values.put(Rank_SHORT, "ADM");
+        values.put(Rank_NAME, "Admiral Of The Navy");
+        values.put(Rank_ICON, "adm_usnavy");
+        values.put(Rank_TYPE, "Officer");
+        values.put(Rank_DETAILS, "Admiral of the Navy is a rank in the United States Navy that has only been held once in history, by George Dewey. In recognition of his victory at Manila Bay in 1898.  The rank Admiral of the Navy was seen as a six-star rank during World War II,[2] with the establishment of the rank of five-star fleet admiral. It was during this time that the Department of the Navy specified that the new 1944 version of the rank of fleet admiral was to be junior to Dewey's rank of Admiral of the Navy.    ");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Admiral_of_the_Navy_(United_States)");
+        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"W-2");
+        values.put(Rank_SHORT, "CWO-2");
+        values.put(Rank_NAME, "Chief Warrant Officer Two");
+        values.put(Rank_ICON, "cwo2_usnavy");
+        values.put(Rank_TYPE, "Warrant Officer");
+        values.put(Rank_DETAILS, "In the United States Navy, the chief warrant officer (CWO) rank is a technical specialist who directs specific activities essential to the proper operation of the ship, which also require commissioned officer authority.[1] Navy CWOs serve in 30 specialties covering five categories. CWO should not be confused with the limited duty officer in the Navy.");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Warrant_Officer_(United_States)");
+        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"W-3");
+        values.put(Rank_SHORT, "CWO-3");
+        values.put(Rank_NAME, "Chief Warrant Officer Three");
+        values.put(Rank_ICON, "cwo3_usnavy");
+        values.put(Rank_TYPE, "Warrant Officer");
+        values.put(Rank_DETAILS, "In the United States Navy, the chief warrant officer (CWO) rank is a technical specialist who directs specific activities essential to the proper operation of the ship, which also require commissioned officer authority.[1] Navy CWOs serve in 30 specialties covering five categories. CWO should not be confused with the limited duty officer in the Navy.");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Warrant_Officer_(United_States)");
+        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"W-4");
+        values.put(Rank_SHORT, "CWO-4");
+        values.put(Rank_NAME, "Chief Warrant Officer Four");
+        values.put(Rank_ICON, "cwo4_usnavy");
+        values.put(Rank_TYPE, "Warrant Officer");
+        values.put(Rank_DETAILS, "In the United States Navy, the chief warrant officer (CWO) rank is a technical specialist who directs specific activities essential to the proper operation of the ship, which also require commissioned officer authority.[1] Navy CWOs serve in 30 specialties covering five categories. CWO should not be confused with the limited duty officer in the Navy.");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Warrant_Officer_(United_States)");
+        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"W-5");
+        values.put(Rank_SHORT, "CWO-5");
+        values.put(Rank_NAME, "Chief Warrant Officer Five");
+        values.put(Rank_ICON, "cwo5_usnavy");
+        values.put(Rank_TYPE, "Warrant Officer");
+        values.put(Rank_DETAILS, "In the United States Navy, the chief warrant officer (CWO) rank is a technical specialist who directs specific activities essential to the proper operation of the ship, which also require commissioned officer authority.[1] Navy CWOs serve in 30 specialties covering five categories. CWO should not be confused with the limited duty officer in the Navy.");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Warrant_Officer_(United_States)");
+        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"E-1");
+        values.put(Rank_SHORT, "SR");
+        values.put(Rank_NAME, "Seaman Recruit ");
+        values.put(Rank_ICON, "sunny");
+        values.put(Rank_TYPE, "Enlisted");
+        values.put(Rank_DETAILS, "Seaman recruit (SR) is the lowest enlisted rank in the U.S. Navy, U.S. Coast Guard, and the U.S. Naval Sea Cadet Corps just below seaman apprentice; this rank was formerly known as seaman third class. / A Hospital Corpsman (HM) is an enlisted medical specialist of the United States Navy who serves with the U.S. Navy and the United States Marine Corps. / Fireman recruit (FR) are Navy E-1s in the engineering and hull community./ Navy E-1s in the aviation community are called airman recruits./Navy Seabees are called constructionman recruits.  A Seabee is a member of the United States Navy Construction Battalion (CB).   ");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/List_of_United_States_Navy_enlisted_rates#References");
+        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"E-1");
+        values.put(Rank_SHORT, "HR");
+        values.put(Rank_NAME, "Hospitalman Recruit ");
+        values.put(Rank_ICON, "sunny");
+        values.put(Rank_TYPE, "Enlisted");
+        values.put(Rank_DETAILS, "Hospitalman recruit (HR) is the lowest enlisted rank in the U.S. Navy,just below seaman apprentice; this rank was formerly known as seaman third class.  A Hospital Corpsman (HM) is an enlisted medical specialist of the United States Navy who serves with the U.S. Navy and the United States Marine Corps. ");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/List_of_United_States_Navy_enlisted_rates#References");
+        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"E-1");
+        values.put(Rank_SHORT, "FR");
+        values.put(Rank_NAME, "Fireman Recruit ");
+        values.put(Rank_ICON, "sunny");
+        values.put(Rank_TYPE, "Enlisted");
+        values.put(Rank_DETAILS, "Fireman recruit (FR) is the lowest enlisted rank in the U.S. Navy, just below seaman apprentice; this rank was formerly known as seaman third class. Fireman recruit (FR) are Navy E-1s in the engineering and hull community.");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/List_of_United_States_Navy_enlisted_rates#References");
+        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"E-1");
+        values.put(Rank_SHORT, "AR");
+        values.put(Rank_NAME, " Airman Recruit ");
+        values.put(Rank_ICON, "sunny");
+        values.put(Rank_TYPE, "Enlisted");
+        values.put(Rank_DETAILS, "Airman recruit (AR) is the lowest enlisted rank in the U.S. Navy, just below seaman apprentice; this rank was formerly known as seaman third class. / A Hospital Corpsman (HM) is an enlisted medical specialist of the United States Navy who serves with the U.S. Navy and the United States Marine Corps. Navy E-1s in the aviation community are called airman recruits.   ");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/List_of_United_States_Navy_enlisted_rates#References");
+        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"E-1");
+        values.put(Rank_SHORT, "CR");
+        values.put(Rank_NAME, " Constructionman Recruit ");
+        values.put(Rank_ICON, "sunny");
+        values.put(Rank_TYPE, "Enlisted");
+        values.put(Rank_DETAILS, "Constructionman recruit (CR) is the lowest enlisted rank in the U.S. Navy, just below seaman apprentice; this rank was formerly known as seaman third class. Navy Seabees are called constructionman recruits.  A Seabee is a member of the United States Navy Construction Battalion (CB).   ");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/List_of_United_States_Navy_enlisted_rates#References");
+        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"E-2");
+        values.put(Rank_SHORT, "SA");
+        values.put(Rank_NAME, "Seaman Apprentice ");
+        values.put(Rank_ICON, "sa_usnavy");
+        values.put(Rank_TYPE, "Enlisted");
+        values.put(Rank_DETAILS, "Seaman apprentice is the second lowest enlisted rank in the U.S. Navy, just above seaman recruit and below seaman. This rank was formerly known as seaman second class.  The actual title for an E-2 in the U.S. Navy varies based on the community to which the sailor belongs. Likewise, the color of their group rate marks also depends on their community.  Those in the general deck and administrative community are seamen apprentice. They wear white stripes on navy blue uniforms, and navy blue (black) stripes on white uniforms. ");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Seaman_Apprentice");
+        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"E-2");
+        values.put(Rank_SHORT, "HA");
+        values.put(Rank_NAME, " Hospitalman Apprentice");
+        values.put(Rank_ICON, "sa_usnavy");
+        values.put(Rank_TYPE, "Enlisted");
+        values.put(Rank_DETAILS, "Hospitalman apprentice is the second lowest enlisted rank in the U.S. Navy, just above seaman recruit and below seaman. This rank was formerly known as seaman second class.  The actual title for an E-2 in the U.S. Navy varies based on the community to which the sailor belongs. Likewise, the color of their group rate marks also depends on their community.  Hospital corpsmen are hospitalmen apprentice. They are the only rate in this community. They wear white stripes on navy blue uniforms, and navy blue stripes on white uniforms. ");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Seaman_Apprentice");
+        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"E-2");
+        values.put(Rank_SHORT, "FA");
+        values.put(Rank_NAME, "Fireman Apprentice");
+        values.put(Rank_ICON, "fa_usnavy");
+        values.put(Rank_TYPE, "Enlisted");
+        values.put(Rank_DETAILS, "Fireman apprentice is the second lowest enlisted rank in the U.S. Navy, just above seaman recruit and below seaman. This rank was formerly known as seaman second class.  The actual title for an E-2 in the U.S. Navy varies based on the community to which the sailor belongs. Likewise, the color of their group rate marks also depends on their community. Those in the engineering and hull community are called firemen apprentice and wear red stripes on both navy blue and white uniforms. ");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Seaman_Apprentice");
+        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"E-2");
+        values.put(Rank_SHORT, "AA");
+        values.put(Rank_NAME, "Airman Apprentice");
+        values.put(Rank_ICON, "aa_usnavy");
+        values.put(Rank_TYPE, "Enlisted");
+        values.put(Rank_DETAILS, "Airman apprentice is the second lowest enlisted rank in the U.S. Navy, just above seaman recruit and below seaman. This rank was formerly known as seaman second class.  The actual title for an E-2 in the U.S. Navy varies based on the community to which the sailor belongs. Likewise, the color of their group rate marks also depends on their community.  Those in the aviation community are called airmen apprentice and wear green stripes on both navy blue and white uniforms.");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Seaman_Apprentice");
+        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"E-2");
+        values.put(Rank_SHORT, "CA");
+        values.put(Rank_NAME, "Constructionman Apprentice ");
+        values.put(Rank_ICON, "ca_usnavy");
+        values.put(Rank_TYPE, "Enlisted");
+        values.put(Rank_DETAILS, "Constructionman apprentice is the second lowest enlisted rank in the U.S. Navy, just above seaman recruit and below seaman. This rank was formerly known as seaman second class.  The actual title for an E-2 in the U.S. Navy varies based on the community to which the sailor belongs. Likewise, the color of their group rate marks also depends on their community.  Seabees are called constructionmen apprentice and wear light blue stripes on both navy blue and white uniforms.");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Seaman_Apprentice");
+        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"E-3");
+        values.put(Rank_SHORT, "SN");
+        values.put(Rank_NAME, "Seaman");
+        values.put(Rank_ICON, "sn_usnavy");
+        values.put(Rank_TYPE, "Enlisted");
+        values.put(Rank_DETAILS, "Seaman is the third enlisted rank from the bottom in the U.S. Navy, U.S. Coast Guard, ranking above Seaman Apprentice and below Petty Officer Third Class. This naval rank was formerly called 'seaman first class'.  Those in the General Deck, Technical, Weapons and Administrative Group are called 'seamen' and they represent the largest group of Navy and Coast Guard personnel in pay grades E-3 and below. They wear white stripes on their blue uniforms (USN + USCG), and navy blue (black) stripes on their white uniforms (USN only).");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Seaman");
+        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"E-3");
+        values.put(Rank_SHORT, "HN");
+        values.put(Rank_NAME, "Hospitalman");
+        values.put(Rank_ICON, "sn_usnavy");
+        values.put(Rank_TYPE, "Enlisted");
+        values.put(Rank_DETAILS, "Hospitalman is the third enlisted rank from the bottom in the U.S. Navy, U.S. Coast Guard, ranking above Seaman Apprentice and below Petty Officer Third Class. This naval rank was formerly called 'seaman first class'. Those in the Medical Group are now called 'hospitalmen'. In October 2005, the USN Dental Technician (DT) rating was merged into the Hospital Corpsman (HM) rating, eliminating the 'dentalman' title for E-3 and below. Those who once held the rank of 'dentalman' have instead become 'hospitalmen'. With this merger, these personnel possess the only rating in this area of duty. They wear white stripes on their blue uniforms, and navy blue stripes on their white uniforms. This rating was previously called Pharmacist's Mate (PHM) and HMs are still colloquially referred to as 'corpsman' in the naval service.[3] Hospitalmen exist only in the U.S. Navy; their equivalent in the U.S. Coast Guard is the Health Services Technician (HS), which is sourced from seamen in that service's Administrative and Scientific Group.");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Seaman");
+        values.put(Rank_Branch, Branch_USNAVY);
+        db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"E-3");
+        values.put(Rank_SHORT, "FN");
+        values.put(Rank_NAME, "Fireman");
+        values.put(Rank_ICON, "fn_usnavy");
+        values.put(Rank_TYPE, "Enlisted");
+        values.put(Rank_DETAILS, "Fireman is the third enlisted rank from the bottom in the U.S. Navy, U.S. Coast Guard, ranking above Seaman Apprentice and below Petty Officer Third Class. This naval rank was formerly called 'seaman first class'.  Those in the shipboard Engineering and Hull Group, comprising conventional (USN + USCG) and nuclear (USN only) powerplants and propulsion, as well as the hull maintenance area, are called 'firemen'. They wear red stripes on both their USN and USCG blue uniforms and, in the case of the Navy, white uniforms.");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Seaman");
+        values.put(Rank_Branch, Branch_USNAVY);
+        db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"E-3");
+        values.put(Rank_SHORT, "AN");
+        values.put(Rank_NAME, "Airman  ");
+        values.put(Rank_ICON, "an_usnavy");
+        values.put(Rank_TYPE, "Enlisted");
+        values.put(Rank_DETAILS, "Airman is the third enlisted rank from the bottom in the U.S. Navy, U.S. Coast Guard, ranking above Seaman Apprentice and below Petty Officer Third Class. This naval rank was formerly called 'seaman first class'.  Those in the Aviation Group of the Navy and Coast Guard are called 'airmen', and they wear green stripes on blue uniforms (USN + USCG) and white uniforms (USN only).");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Seaman");
+        values.put(Rank_Branch, Branch_USNAVY);
+        db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"E-3");
+        values.put(Rank_SHORT, "CN");
+        values.put(Rank_NAME, " Constructionman  ");
+        values.put(Rank_ICON, "cn_usnavy");
+        values.put(Rank_TYPE, "Enlisted");
+        values.put(Rank_DETAILS, "Constructionman is the third enlisted rank from the bottom in the U.S. Navy, U.S. Coast Guard, ranking above Seaman Apprentice and below Petty Officer Third Class. This naval rank was formerly called 'seaman first class'.  Enlisted personnel in the Construction Group, which primarily populates the U.S. Navy's civil engineering construction battalions (i.e., Seabees), are called 'constructionmen' and they wear light blue stripes on both their blue and white uniforms. Constructionmen are unique to the U.S. Navy; there is no U.S. Coast Guard equivalent.");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Seaman");
+        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"E-4");
+        values.put(Rank_SHORT, "PO3");
+        values.put(Rank_NAME, "Petty Officer Third Class");
+        values.put(Rank_ICON, "po3_usnavy");
+        values.put(Rank_TYPE, "Enlisted");
+        values.put(Rank_DETAILS, "Petty officer third class is the fourth enlisted rank in the U.S. Navy, U.S. Coast Guard, and the United States Naval Sea Cadet Corps, just above seaman and below petty officer second class, and is the lowest rank of non-commissioned officer, equivalent to a corporal in the U.S. Army and Marines. Petty officer third class shares the same pay grade as senior airman in the Air Force, which no longer has an NCO rank corresponding with E-4.");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Petty_Officer_Third_Class");
+        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"E-5");
+        values.put(Rank_SHORT, "PO2");
+        values.put(Rank_NAME, "Petty Officer Second Class");
+        values.put(Rank_ICON, "po2_usnavy");
+        values.put(Rank_TYPE, "Enlisted");
+        values.put(Rank_DETAILS, "Petty officer, second class is the fifth enlisted rate in the U.S. Navy,[1] U.S. Coast Guard, and the United States Naval Sea Cadet Corps, just above petty officer third class and below petty officer first class, and is a non-commissioned officer. It is equivalent to the rate of sergeant in the Army, Marine Corps and Staff Sergeant in the Air Force.  Similar to petty officer third class, advancement to petty officer second class is dependent on time in service, performance evaluations by superiors, and rate (technical specialty) examinations. The advancement cycle is currently every 6 months.");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Petty_Officer_Second_Class");
+        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"E-6");
+        values.put(Rank_SHORT, "PO1");
+        values.put(Rank_NAME, "Petty Officer First Class");
+        values.put(Rank_ICON, "po1_usnavy");
+        values.put(Rank_TYPE, "Enlisted");
+        values.put(Rank_DETAILS, "Petty officer, first class is the sixth enlisted rate in the United States Navy and the United States Coast Guard, just above petty officer, second class and below that of chief petty officer. A non-commissioned officer rate, petty officer, first class is also the sixth enlisted rate in the United States Naval Sea Cadet Corps. . A first-class petty officer may be generically referred to as PO1 when the sailor's rating is not known, although some prefer to be called simply 'Petty Officer (last name)'. ");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Petty_Officer_First_Class");
+        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"E-7");
+        values.put(Rank_SHORT, "CPO");
+        values.put(Rank_NAME, "Chief Petty Officer");
+        values.put(Rank_ICON, "cpo_usnavy");
+        values.put(Rank_TYPE, "Enlisted");
+        values.put(Rank_DETAILS, "Chief petty officer is the seventh enlisted rate in the U.S. Navy and U.S. Coast Guard, just above petty officer first class and below senior chief petty officer, and is a senior non-commissioned officer. The grade of chief petty officer was established on April 1, 1893 for the Navy. Unlike petty officer first class and lower rates, advancement to chief petty officer not only carries requirements of time in service, superior evaluation scores, and speciality examinations, but also carries an added requirement of peer review. A chief petty officer can only advance after review by a selection board of serving master chief petty officers, in effect 'choosing their own' and conversely not choosing others.");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Chief_Petty_Officer#United_States_of_America");
+        values.put(Rank_Branch, Branch_USNAVY);
+
+        db.insert(Ranks, null, values);
+
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"E-8");
+        values.put(Rank_SHORT, "SCPO");
+        values.put(Rank_NAME, "Senior Chief Petty Officer");
+        values.put(Rank_ICON, "scpo_usnavy");
+        values.put(Rank_TYPE, "Enlisted");
+        values.put(Rank_DETAILS, "Senior chief petty officer is the eighth of nine enlisted ranks in the U.S. Navy and U.S. Coast Guard, just above chief petty officer and below master chief petty officer, and is a noncommissioned officer. They are addressed as 'Senior Chief' in most circumstances, or sometimes, less formally, as 'Senior'.  Advancement to senior chief petty officer is similar to that of chief petty officer. It carries requirements of time in service, superior evaluation scores, and peer review. ");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Senior_Chief_Petty_Officer");
+        values.put(Rank_Branch, Branch_USNAVY);
+
+        db.insert(Ranks, null, values);
+
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"E-9");
+        values.put(Rank_SHORT, "MCPO");
+        values.put(Rank_NAME, "Master Chief Petty Officer");
+        values.put(Rank_ICON, "mcpo_usnavy");
+        values.put(Rank_TYPE, "Enlisted");
+        values.put(Rank_DETAILS, "Master Chief Petty Officer is the ninth, and highest, enlisted rate (paygrade E-9) in the U.S. Navy and U.S. Coast Guard, just above senior chief petty officer. Master chief petty officers are addressed as 'Master Chief (last name)'. They constitute the top 1.25% of the enlisted members of the maritime forces.  In the Navy, advancement to master chief petty officer is similar to that of chief petty officer and senior chief petty officer. It carries requirements of time in service, superior evaluation scores, and selection by a board of master chiefs.");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Master_Chief_Petty_Officer");
+        values.put(Rank_Branch, Branch_USNAVY);
+
+        db.insert(Ranks, null, values);
+
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"E-9");
+        values.put(Rank_SHORT, "CMDCM");
+        values.put(Rank_NAME, "Command Master Chief Petty Officer");
+        values.put(Rank_ICON, "cmdcm_usnavy");
+        values.put(Rank_TYPE, "Enlisted");
+        values.put(Rank_DETAILS, "A command master chief petty officer is the most senior enlisted sailor in a United States Navy unit. Being the primary liaison between commissioned officers and enlisted sailors, he or she is an important resource for the commanding officer as his or her senior enlisted advisor, and is often called upon to gauge morale and battle readiness. In smaller units, this position may be filled by a command senior chief petty officer, a command chief petty officer, or a master chief petty officer who is not yet a command master chief. The rates force master chief petty officer and fleet master chief petty officer are used for larger units such as U.S. Fleet Forces Command, Navy Expeditionary Combat Command, U.S. Pacific Fleet, and Submarine Force U.S. Atlantic Fleet.");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Command_Master_Chief_Petty_Officer");
+        values.put(Rank_Branch, Branch_USNAVY);
+
+        db.insert(Ranks, null, values);
+
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"E-9");
+        values.put(Rank_SHORT, "FLTCM/FORCM");
+        values.put(Rank_NAME, ">Fleet/Force Master Chief Petty Officer");
+        values.put(Rank_ICON, "fltcm_usnavy");
+        values.put(Rank_TYPE, "Enlisted");
+        values.put(Rank_DETAILS, "These two ranks are equivalent and their insignia is also the same—a master chief rating badge with two gold stars above the eagle and a gold star for the rating insignia. Force Master Chief Petty Officer are master chiefs who have virtually the same responsibility as command master Chiefs, but force master chief petty officers (FORCM) are responsible for larger force commands, such as Submarine Force U.S. Atlantic Fleet. There are 16 force master chief positions in the Navy./ Fleet Master Chief Petty Officer are master chiefs who have virtually the same responsibility as command master chiefs, but fleet master chief petty officers (FLTCM) are responsible for larger fleet commands, such as the U.S. Pacific Fleet. There are four fleet master chief positions in the Navy.");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Force_Master_Chief_Petty_Officer#Fleet_and_Force_Master_Chief_Petty_Officer");
+        values.put(Rank_Branch, Branch_USNAVY);
+
+        db.insert(Ranks, null, values);
+
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"E-9");
+        values.put(Rank_SHORT, "MCPON");
+        values.put(Rank_NAME, ">Master Chief Petty Officer of the Navy");
+        values.put(Rank_ICON, "mcpon_usnavy");
+        values.put(Rank_TYPE, "Enlisted");
+        values.put(Rank_DETAILS, "The Master Chief Petty Officer of the Navy (MCPON, pronounced 'MIK-pon') is a unique non-commissioned rate of the United States Navy, which has with it the paygrade of E-9. The holder of this rank and post is the most senior enlisted member of the U.S. Navy, equivalent to the Sergeant Major of the Army, Chief Master Sergeant of the Air Force, Sergeant Major of the Marine Corps, Master Chief Petty Officer of the Coast Guard, and Senior Enlisted Advisor to the Chairman of the Joint Chiefs of Staff. He is appointed by the Chief of Naval Operations to serve as a spokesman to address the issues of enlisted personnel to the highest positions in the Navy. As such, he is the senior enlisted advisor to the Chief of Naval Operations as well as the Chief of Naval Personnel. His exact duties vary, depending on the CNO, though he generally devotes much of his time to traveling throughout the Navy observing training and talking to sailors and their families.");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Master_Chief_Petty_Officer_of_the_Navy");
+        values.put(Rank_Branch, Branch_USNAVY);
+
+        db.insert(Ranks, null, values);
+
+
+
+    }
+
+    public void populateuscgranks(SQLiteDatabase db){
+
+
+        ContentValues values = new ContentValues();
+
+        values.put(Rank_PAY,"0-1");
+        values.put(Rank_SHORT, "ENS");
+        values.put(Rank_NAME, "Ensign");
+        values.put(Rank_ICON, "ensign_uscg");
+        values.put(Rank_TYPE, "Officer");
+        values.put(Rank_DETAILS, "Ensign is the junior commissioned officer rank in the the United States Coast Guard. This rank is also used in the U.S. Maritime Service and the U.S. Naval Sea Cadet Corps. Ensign ranks below lieutenant junior grade, and it is equivalent to a second lieutenant in the U.S. Army, the Marine Corps, and the Air Force. Depending upon the warfare community, an ensign may go directly to a warship after being commissioned to serve as a division officer, or he or she may serve up one to two years of specialty training before reporting to a combat unit (e.g. flight school, weapons systems school, navigator school, submarine school, amphibious warfare school, radar school).");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Ensign_(rank)#United_States");
+        values.put(Rank_Branch, Branch_USCG);         db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"O-2");
+        values.put(Rank_SHORT, "LTJG");
+        values.put(Rank_NAME, "Lieutenant (Junior Grade)");
+        values.put(Rank_ICON, "ltjg_uscg");
+        values.put(Rank_TYPE, "Officer");
+        values.put(Rank_DETAILS, "Lieutenant (junior grade) is a junior commissioned officer rank in the United States Coast Guard, with the pay grade of O-2. The rank is also used in the United States Maritime Service and the United States Naval Sea Cadet Corps. Lieutenant, junior grade ranks above ensign and below lieutenant and is equivalent to a first lieutenant in the other uniformed services (the Army, Marine Corps and Air Force). Promotion to LTJG is governed by Department of Defense policies derived from the Defense Officer Personnel Management Act of 1980. DOPMA guidelines suggest all 'fully qualified' ensigns should be promoted to LTJG. The time for promotion to LTJG is a minimum of 18 months after commissioning in the Coast Guard. Lieutenants, junior grade typically lead petty officers and non-rated personnel, unless assigned to small aircraft or on staff duty. A LTJG's usual shipboard billet is as a Division Officer.");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Lieutenant_(junior_grade)");
+        values.put(Rank_Branch, Branch_USCG);
+        db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"O-3");
+        values.put(Rank_SHORT, "LT");
+        values.put(Rank_NAME, "Lieutenant");
+        values.put(Rank_ICON, "lieutenant_uscg");
+        values.put(Rank_TYPE, "Officer");
+        values.put(Rank_DETAILS, "Lieutenant is the third commissioned officer rank in the United States Coast Guard and is comparable to the rank of Captain in the other branches of the Armed Service. Lieutenants serve as Division Officers aboard Coast Guard ships and command groups of sailors and petty officers in various divisions including the deck department, engineering, and others.");
+        values.put(Rank_LINK, "http://www.military-ranks.org/coast-guard/lieutenant");
+        values.put(Rank_Branch, Branch_USCG);
+        db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+
+        values.put(Rank_PAY,"O-4");
+        values.put(Rank_SHORT, "LCDR");
+        values.put(Rank_NAME, "Lieutenant Commander");
+        values.put(Rank_ICON, "lcdr_uscg");
+        values.put(Rank_TYPE, "Officer");
+        values.put(Rank_DETAILS, "In the United States Army, Air Force, and Marine Corps, major is a field grade military officer rank above the rank of captain and below the rank of lieutenant colonel. It is equivalent to the naval rank of lieutenant commander in the other uniformed services.   DOPMA guidelines suggest 80% of captains should be promoted to major after serving a minimum of three years at their present rank and after attaining nine to eleven years of cumulative commissioned service. ");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Major_(United_States)");
+        values.put(Rank_Branch, Branch_USCG);         db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"O-5");
+        values.put(Rank_SHORT, "CDR");
+        values.put(Rank_NAME, "Commander");
+        values.put(Rank_ICON, "commander_uscg");
+        values.put(Rank_TYPE, "Officer");
+        values.put(Rank_DETAILS, "In the United States Coast Guard, commander (abbreviated 'CDR') is a senior officer rank, with the pay grade of O-5. Commander ranks above lieutenant commander and below captain. Commander is equivalent to the rank of lieutenant colonel in the other uniformed services. Notably, it is the first rank at which the holder wears an embellished cap, whereas officers of the other services are entitled to embellishment at O-4 rank. Promotion to commander in the US Coast Guard is governed by Department of Defense policies derived from the Defense Officer Personnel Management Act of 1980. DOPMA guidelines suggest 70% of lieutenant commanders should be promoted to commander after serving a minimum of three years at their present rank and after attaining 15-17 years of cumulative commissioned service. Commanders often serve as the captain of a small Coast Guard vessel, such as a cutter, frigate, destroyer, or submarine. Commanders may also lead squadrons of aircraft, be placed in charge of a small shore mission, or serve on the staff of a senior officer aboard a larger Coast Guard vessel.");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Commander_(United_States)");
+        values.put(Rank_Branch, Branch_USCG);         db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"O-6");
+        values.put(Rank_SHORT, "CAPT");
+        values.put(Rank_NAME, "Captain");
+        values.put(Rank_ICON, "captain_uscg");
+        values.put(Rank_TYPE, "Officer");
+        values.put(Rank_DETAILS, "In the United States Coast Guard,, captain is the senior-most commissioned officer rank below that of flag officer (i.e., admirals). Reflecting its nautical heritage, it also sometimes used as a military 'title' by more junior officers who are serving as the commanding officer (CO) of a commissioned vessel of the Navy or Coast Guard of patrol boat size or greater. Coast Guard captains follow career paths very similar to their Navy counterparts, with seagoing officers typically commanding large maritime security cutters or high endurance cutters and aviators commanding coast guard air stations. Coast Guard captains will also command all types of major Coast Guard shore installations and activities, as well as serve as chiefs of staff for Coast Guard flag officers.");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Captain_(United_States_O-6)");
+        values.put(Rank_Branch, Branch_USCG);         db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"O-7");
+        values.put(Rank_SHORT, "RDML");
+        values.put(Rank_NAME, "Rear Admiral (Lower Half)");
+        values.put(Rank_ICON, "rdml_uscg");
+        values.put(Rank_TYPE, "Officer");
+        values.put(Rank_DETAILS, "In the United States Coast Guard, rear admiral (lower half) is a one-star flag officer, with the pay grade of O-7. The abbreviation for personnel from the USN, USCG, and NOAA is RDML. Rear admiral (lower half) ranks above captain and below rear admiral. Rear admiral (lower half) is equivalent to the rank of brigadier general in the other uniformed services, and equivalent to the rank of commodore in most other navies.[2] In the United States uniformed services, rear admiral (lower half) replaced the rank of commodore in 1985.");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Rear_admiral_(United_States)");
+        values.put(Rank_Branch, Branch_USCG);         db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"O-8");
+        values.put(Rank_SHORT, "RADM");
+        values.put(Rank_NAME, "Rear Admiral");
+        values.put(Rank_ICON, "rear_admiral_uscg");
+        values.put(Rank_TYPE, "Officer");
+        values.put(Rank_DETAILS, "In the United States Coast Guard, rear admiral (RADM), also sometimes referred to as rear admiral (upper half), is a two-star flag officer, with the pay grade of O-8. Rear admiral ranks above rear admiral (lower half) and below vice admiral. Rear admiral is equivalent to the rank of major general in the other uniformed services. It is the highest permanent rank during peacetime in the uniformed services; all higher ranks are temporary ranks linked to specific commands or office. A Rear Admiral generally commands a fleet of Coast Guard ships and air wings. As a flag officer, a Real Admiral may fly the Rear Admiral's pennant over any ship or base on which he is serving - two white stars on a navy-blue background.");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Rear_admiral_(United_States)");
+        values.put(Rank_Branch, Branch_USCG);         db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"O-9");
+        values.put(Rank_SHORT, "VADM");
+        values.put(Rank_NAME, "Vice Admiral");
+        values.put(Rank_ICON, "vice_admiral_uscg");
+        values.put(Rank_TYPE, "Officer");
+        values.put(Rank_DETAILS, "In the United States Coast Guard, vice admiral (VADM) is a three-star flag officer, with the pay grade of O-9. Vice admiral ranks above rear admiral and below admiral. Vice admiral is equivalent to the rank of lieutenant general in the other uniformed services. A Vice Admiral commands regional Coast Guard operations during an operation or war and answers directly to the Fleet Admiral and the President of the United States. As a three-star flag officer a Vice Admiral may fly the Vice Admiral's pennant over any ship or station on which he is serving, which is three white stars on a navy blue background.");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Vice_Admiral_(United_States)");
+        values.put(Rank_Branch, Branch_USCG);         db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"O-10");
+        values.put(Rank_SHORT, "ADM");
+        values.put(Rank_NAME, "Admiral");
+        values.put(Rank_ICON, "admiral_uscg");
+        values.put(Rank_TYPE, "Officer");
+        values.put(Rank_DETAILS, "In the United States Coast Guard, admiral (ADM) is a four-star flag officer rank, with the pay grade of O-10. Admiral ranks above vice admiral. The Coast Guard does not have an established grade above admiral. Admiral is equivalent to the rank of general in the other uniformed services. An Admiral commands regional Coast Guard operations and answers directly President of the United States. As a four-star flag officer, an Admiral may fly the Admiral's pennant over any ship or station on which he is serving, which is four white stars on a navy blue background.");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Admiral_(United_States)");
+        values.put(Rank_Branch, Branch_USCG);         db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"W-2");
+        values.put(Rank_SHORT, "CWO2");
+        values.put(Rank_NAME, "Chief Warrant Officer 2");
+        values.put(Rank_ICON, "wo2_uscg");
+        values.put(Rank_TYPE, "Warrant Officer");
+        values.put(Rank_DETAILS, "Chief Warrant Officer 2 is the United States Coast Guard's entry-level billeted warrant officer rank. Warrant officers serve as technical specialists with command authority within their field of expertise and hold a variety of positions essential to the smooth operation of the Coast Guard. Coast Guard Warrant Officers usually belong to one of 30 specialties including boatswain, master mate, surgeon, chaplain, and carpenter, which are specialized and skilled positions that often require specialists with command authority and leadership skills.");
+        values.put(Rank_LINK, "http://www.military-ranks.org/coast-guard/chief-warrant-officer-2");
+        values.put(Rank_Branch, Branch_USCG);         db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"W-3");
+        values.put(Rank_SHORT, "CWO3");
+        values.put(Rank_NAME, "Chief Warrant Officer 3");
+        values.put(Rank_ICON, "wo3_uscg");
+        values.put(Rank_TYPE, "Warrant Officer");
+        values.put(Rank_DETAILS, "Chief Warrant Officer 3 is the United States Coast Guard's second billeted warrant officer rank. Warrant officers serve as technical specialists with command authority within their field of expertise, and hold a variety of positions essential to the smooth operations of the Coast Guard. Coast Guard Warrant Officers usually belong to one of 30 specialties including boatswain, master mate, surgeon, chaplain, and carpenter, which are specialized and skilled positions that often require specialists with command authority and leadership skills. Sailors are generally promoted to Chief Warrant Officer 3 from Chief Warrant Officer 2; they are chosen for promotion when they show exceptional service and experience.");
+        values.put(Rank_LINK, "http://www.military-ranks.org/coast-guard/chief-warrant-officer-3");
+        values.put(Rank_Branch, Branch_USCG);         db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"W-4");
+        values.put(Rank_SHORT, "CWO4");
+        values.put(Rank_NAME, "Chief Warrant Officer 4");
+        values.put(Rank_ICON, "wo4_uscg");
+        values.put(Rank_TYPE, "Warrant Officer");
+        values.put(Rank_DETAILS, "Chief Warrant Officer 4 is the Unites States Coast Guard's fourth and highest billeted warrant officer rank. Warrant officers serve as technical specialists with command authority within their field of expertise, and hold a variety of positions essential to the smooth operations of the Coast Guard. Coast Guard Warrant Officers usually belong to one of 30 specialties including boatswain, master mate, surgeon, chaplain, and carpenter, which are specialized and skilled positions that often require specialists with command authority and leadership skills. Sailors are generally promoted to Chief Warrant Officer 4 from Chief Warrant Officer 3; they are chosen for promotion after showing exceptional service and and experience.");
+        values.put(Rank_LINK, "http://www.military-ranks.org/coast-guard/chief-warrant-officer-4");
+        values.put(Rank_Branch, Branch_USCG);         db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"E-1");
+        values.put(Rank_SHORT, "SR");
+        values.put(Rank_NAME, "Seaman Recruit");
+        values.put(Rank_ICON, "sr_uscg");
+        values.put(Rank_TYPE, "Enlisted");
+        values.put(Rank_DETAILS, "Seaman recruit (SR) is the lowest enlisted rank in the U.S. Coast Guard,  just below seaman apprentice; this rank was formerly known as seaman third class. Two separate pay grades exist within this rank (and the corresponding ranks in the other branches of the United States military structure) — one for those with service of less than four months, with a higher pay scale for those in service for more than four months, even if they have not yet advanced to seaman apprentice.");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Seaman_Recruit");
+        values.put(Rank_Branch, Branch_USCG);         db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"E-2");
+        values.put(Rank_SHORT, "SA");
+        values.put(Rank_NAME, "Seaman Apprentice");
+        values.put(Rank_ICON, "sa_uscg");
+        values.put(Rank_TYPE, "Enlisted");
+        values.put(Rank_DETAILS, "Seaman apprentice is the second lowest enlisted rank in the U.S. Navy, U.S. Coast Guard, and the U.S. Naval Sea Cadet Corps just above seaman recruit and below seaman; this rank was formerly known as seaman second class. There are several titles and color-coded rank insignias assigned to sailors receiving this grade, determined by their operational specialty.");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Seaman_Apprentice");
+        values.put(Rank_Branch, Branch_USCG);         db.insert(Ranks, null, values);
+
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"E-3");
+        values.put(Rank_SHORT, "SN");
+        values.put(Rank_NAME, "Seaman");
+        values.put(Rank_ICON, "sn_uscg");
+        values.put(Rank_TYPE, "Enlisted");
+        values.put(Rank_DETAILS, "Seaman is the third enlisted rank from the bottom in the U.S. Navy, U.S. Coast Guard, ranking above Seaman Apprentice and below Petty Officer Third Class.  Several title and rank variations exist for sailors working in different specialties, though all share the same pay and rank grade. Sailors at this grade do not wear their stripe insignia on their working uniforms, although they are permitted to wear a silver collar device signifying their rank.");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Seaman#United_States");
+        values.put(Rank_Branch, Branch_USCG);         db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"E-4");
+        values.put(Rank_SHORT, "PO3");
+        values.put(Rank_NAME, "Petty Officer Third Class");
+        values.put(Rank_ICON, "potc_uscg");
+        values.put(Rank_TYPE, "Enlisted");
+        values.put(Rank_DETAILS, "Petty officer third class is the fourth enlisted rank in the U.S. Coast Guard, just above seaman and below petty officer second class, and is the lowest rank of non-commissioned officer, equivalent to a corporal in the U.S. Army and Marines. Petty officer third class shares the same pay grade as senior airman in the Air Force, which no longer has an NCO rank corresponding with E-4. A Petty Officer Third Class serves both as a leader and as a technical expert, and all Petty Officers have a specified rating, or job. The exact title with which a petty officer is addressed depends on their specialty - a Petty Officer Third Class serving as a Machinist's Mate, for example, would have the full title of Machinist's Mate Third Class.");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Petty_Officer_Third_Class");
+        values.put(Rank_Branch, Branch_USCG);         db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"E-5");
+        values.put(Rank_SHORT, "PO2");
+        values.put(Rank_NAME, "Petty Officer Second Class");
+        values.put(Rank_ICON, "posc_uscg");
+        values.put(Rank_TYPE, "Enlisted");
+        values.put(Rank_DETAILS, " Petty officer, second class is the fifth enlisted rate in the U.S. Coast Guard, just above petty officer third class and below petty officer first class, and is a non-commissioned officer. It is equivalent to the rate of sergeant in the Army, Marine Corps and Staff Sergeant in the Air Force. Similar to petty officer third class, advancement to petty officer second class is dependent on time in service, performance evaluations by superiors, and rate (technical specialty) examinations. The advancement cycle is currently every 6 months. Only a certain number of billets (job openings for this rate) open up biannually and all petty officers third class compete. The top scorers are chosen for advancement, but only in sufficient quantities to fill the billets available.");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Petty_Officer_Second_Class");
+        values.put(Rank_Branch, Branch_USCG);         db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"E-6");
+        values.put(Rank_SHORT, "PO1");
+        values.put(Rank_NAME, "Petty Officer First Class");
+        values.put(Rank_ICON, "pofc_uscg");
+        values.put(Rank_TYPE, "Enlisted");
+        values.put(Rank_DETAILS, "Petty officer, first class is the sixth enlisted rate in the United States Navy and the United States Coast Guard, just above petty officer, second class and below that of chief petty officer. A Petty Officer First Class serves both as a leader and as a technical expert, and all Petty Officers have a specified rating, or job. The exact title with which a petty officer is addressed depends on their specialty; a Petty Officer First Class serving as an Electronics Technician, for example, would have the full title of Electronics Technician First Class.");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Petty_Officer_First_Class");
+        values.put(Rank_Branch, Branch_USCG);         db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"E-7");
+        values.put(Rank_SHORT, "CPO");
+        values.put(Rank_NAME, "Chief Petty Officer");
+        values.put(Rank_ICON, "cpo_uscg");
+        values.put(Rank_TYPE, "Enlisted");
+        values.put(Rank_DETAILS, "Chief Petty Officer is the seventh enlisted rate (E-7) in the United States Coast Guard, just above Petty Officer First Class and below Senior Chief Petty Officer. Chief Petty Officer is the first Coast Guard rank that comes with vastly expanded powers and responsibilities over those of that below it. In addition to their rating's duties, a Chief Petty Officer is responsible for training junior officers and leading his division of sailors and petty officers.");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Chief_Petty_Officer_(United_States)");
+        values.put(Rank_Branch, Branch_USCG);         db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"E-8");
+        values.put(Rank_SHORT, "SCPO");
+        values.put(Rank_NAME, "Senior Chief Petty Officer");
+        values.put(Rank_ICON, "scpo_uscg");
+        values.put(Rank_TYPE, "Enlisted");
+        values.put(Rank_DETAILS, "Senior chief petty officer is the eighth of nine enlisted ranks in the U.S. Coast Guard, just above chief petty officer and below master chief petty officer, and is a noncommissioned officer. They are addressed as 'Senior Chief' in most circumstances, or sometimes, less formally, as 'Senior'. Like Chief Petty Officers, a Senior Chief Petty Officer is responsible for a variety of administrative and leadership responsibilities in his specialized area, also known as his rating. Also similar to other Coast Guard sailors, the full rank for a Senior Chief Petty Officer includes his rating; a SCPO specializing as a Quartermaster, for example, would be referred to by his full title of Senior Chief Quartermaster.");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Senior_Chief_Petty_Officer");
+        values.put(Rank_Branch, Branch_USCG);         db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"E-9");
+        values.put(Rank_SHORT, "MCPO");
+        values.put(Rank_NAME, "Master Chief Petty Officer");
+        values.put(Rank_ICON, "mcpo_uscg");
+        values.put(Rank_TYPE, "Enlisted");
+        values.put(Rank_DETAILS, "Master Chief Petty Officer is the ninth, and highest, enlisted rate (paygrade E-9) in the U.S. Navy and U.S. Coast Guard, just above senior chief petty officer. Master chief petty officers are addressed as 'Master Chief (last name)'. Less then 1% of the Coast Guard's personnel make it to the rank of Master Chief, and those who do are considered to be among the best and the brightest in their respective specialties. Like the other Coast Guard ranks, all MCPOs have a rating, or job specialty, which is included in their full title. A Master Chief Petty Officer who specializes as a Gunner's Mate, for example, would have a full title of Master Chief Gunner's Mate. Most MCPOs, however, are simply referred to as Master Chief by their subordinates.");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Master_Chief_Petty_Officer");
+        values.put(Rank_Branch, Branch_USCG);         db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"E-9");
+        values.put(Rank_SHORT, "CMC");
+        values.put(Rank_NAME, "Command Master Chief Petty Officer");
+        values.put(Rank_ICON, "cmc_uscg");
+        values.put(Rank_TYPE, "Enlisted");
+        values.put(Rank_DETAILS, "Command Master Chief Petty Officer is the most senior enlisted rank in the United States Coast Guard, and serves as a bridge between the enlisted sailors and petty officers and the commanding officers above them. Command Master Chiefs are chosen from the ranks of eligible Master Chief Petty Officers, or lower Chief Petty Officers if necessary, by the Command Master Chief Program, which was started in 1995. Candidates receive specialized leadership and communications training, which enables them to serve in a unique and independent role as both the chief enlisted officer of their force and as a direct liaison and adviser to the commanding officer.");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Command_Master_Chief_Petty_Officer");
+        values.put(Rank_Branch, Branch_USCG);         db.insert(Ranks, null, values);
+        values = new ContentValues();
+
+        values.put(Rank_PAY,"E-9");
+        values.put(Rank_SHORT, "MCPOCG");
+        values.put(Rank_NAME, "Master Chief Petty Officer of the Coast Guard");
+        values.put(Rank_ICON, "mcpocg_uscg");
+        values.put(Rank_TYPE, "Enlisted");
+        values.put(Rank_DETAILS, "Master Chief Petty Officer of the Coast Guard (MCPOCG) is a unique rank established to be held by only one sailor, who serves as the highest-ranking enlisted soldier in the Coast Guard. The MCPON is appointed personally by the Commandment of the Coast Guard and serves as the spokesman for the enlisted sailors as well as a Senior Enlisted Adviser to high-ranking officials including the Commandment of the Coast Guard.");
+        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Master_Chief_Petty_Officer_of_the_Coast_Guard");
+        values.put(Rank_Branch, Branch_USCG);         db.insert(Ranks, null, values);
+
+
+    }
+
     public void populateusmcmos(SQLiteDatabase db){
         ContentValues values = new ContentValues();
 
@@ -8302,7 +8984,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_RANK, "Pvt-MGySgt/SgtMaj");
         values1.put(MOS_Link, "http://usmilitary.about.com/od/enlistedjo2/a/8023.htm");
         db.insert(MOS, null, values1);
-        
+
         values1 = new ContentValues();
 
         values1.put(MOS_NUMBER, "8024");
@@ -8539,687 +9221,8 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
 
     }
 
-    public void populateusnavyranks(SQLiteDatabase db){
 
 
-        ContentValues values = new ContentValues();
-
-        values.put(Rank_PAY,"0-1");
-        values.put(Rank_SHORT, "ENS");
-        values.put(Rank_NAME, "Ensign");
-        values.put(Rank_ICON, "ens_usnavy");
-        values.put(Rank_TYPE, "Officer");
-        values.put(Rank_DETAILS, "In the United States Navy, the rank of 'ensign' superseded 'passed midshipman' in 1862. Ensign is the junior commissioned officer rank in the United States Navy, the United States Coast Guard, the National Oceanic and Atmospheric Administration Commissioned Officer Corps, and the PHS Commissioned Corps. This rank is also used in the U.S. Maritime Service and the U.S. Naval Sea Cadet Corps. Ensign ranks below lieutenant junior grade, and it is equivalent to a second lieutenant in the U.S. Army, the Marine Corps, and the Air Force.");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Ensign_(rank)#United_States");
-
-        values.put(Rank_Branch, Branch_USNAVY);
-        db.insert(Ranks, null, values);
-
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"0-2");
-        values.put(Rank_SHORT, "LTJG");
-        values.put(Rank_NAME, "lieutenant(junior grade)");
-        values.put(Rank_ICON, "ltjg_usnavy");
-        values.put(Rank_TYPE, "Officer");
-        values.put(Rank_DETAILS, "Lieutenant (junior grade) (LTJG) is a junior commissioned officer rank in the United States Navy.  Lieutenant, junior grade ranks above ensign and below lieutenant and is equivalent to a first lieutenant in the other uniformed services (the Army, Marine Corps and Air Force).  Lieutenant, junior grade is often referred to colloquially as JG ('Jay-Gee'). Prior to March 3, 1883, this rank was known in the Navy as master.  ");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Lieutenant_(junior_grade)");
-        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"0-3");
-        values.put(Rank_SHORT, "LT");
-        values.put(Rank_NAME, "lieutenant");
-        values.put(Rank_ICON, "lt_usnavy");
-        values.put(Rank_TYPE, "Officer");
-        values.put(Rank_DETAILS, "Lieutenant[nb 1] (abbreviated Lt, LT, LT(N), Lieut and LEUT, depending on nation) is a commissioned officer rank in many nations' navies. It is typically the most senior of junior officer ranks. The rank's insignia usually consists of two medium gold braid stripes and often the uppermost stripe features a loop or executive curl.  ");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Lieutenant_(navy)");
-        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"0-4");
-        values.put(Rank_SHORT, "LCDR");
-        values.put(Rank_NAME, "lieutenant Commander");
-        values.put(Rank_ICON, "lcdr_usnavy");
-        values.put(Rank_TYPE, "Officer");
-        values.put(Rank_DETAILS, "Lieutenant commander (LCDR) is a mid-ranking officer rank in the United States Navy, the United States Coast Guard, the United States Public Health Service Commissioned Corps, and the National Oceanic and Atmospheric Administration Commissioned Officer Corps, with the pay grade of O-4. Lieutenant commanders rank above lieutenants and below commanders. The rank is also used in the United States Maritime Service and the United States Naval Sea Cadet Corps, and is equivalent to a major in the other uniformed services.  DOPMA guidelines suggest 80% of lieutenants should be promoted to lieutenant commander after serving a minimum of three years at their present rank and after attaining nine to eleven years of cumulative commissioned service.  ");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Lieutenant_commander_(United_States))");
-        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"0-5");
-        values.put(Rank_SHORT, "CDR");
-        values.put(Rank_NAME, "Commander");
-        values.put(Rank_ICON, "cdr_usnavy");
-        values.put(Rank_TYPE, "Officer");
-        values.put(Rank_DETAILS, "In the United States Navy, the United States Coast Guard, the United States Public Health Service Commissioned Corps, and the National Oceanic and Atmospheric Administration Commissioned Officer Corps, commander (abbreviated 'CDR') is a senior officer rank, with the pay grade of O-5. Commander ranks above lieutenant commander and below captain. Commander is equivalent to the rank of lieutenant colonel in the other uniformed services.  DOPMA guidelines suggest 70% of lieutenant commanders should be promoted to commander after serving a minimum of three years at their present rank and after attaining 15-17 years of cumulative commissioned service.");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Commander_(United_States)#Naval_rank");
-        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"0-6");
-        values.put(Rank_SHORT, "CAPT");
-        values.put(Rank_NAME, "Captain");
-        values.put(Rank_ICON, "capt_usnavy");
-        values.put(Rank_TYPE, "Officer");
-        values.put(Rank_DETAILS, "In the United States Navy, captain (abbreviated CAPT) is a senior officer rank, with the pay grade of O-6. It ranks above commander and below rear admiral (lower half). It is equivalent to the rank of colonel in the other uniformed services.  DOPMA guidelines suggest that no more than 50% of eligible commanders should be promoted to captain after serving a minimum of three years at their present rank and after attaining 21–23 years of cumulative commissioned service. Navy captains with sea commands in the surface warfare officer community generally command ships of cruiser size or larger. ");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Captain_(United_States_O-6)");
-        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"0-7");
-        values.put(Rank_SHORT, "RDML");
-        values.put(Rank_NAME, "Rear Admiral(lower half)");
-        values.put(Rank_ICON, "rdml_usnavy");
-        values.put(Rank_TYPE, "Officer");
-        values.put(Rank_DETAILS, "In the United States Navy, rear admiral (lower half) is a one-star flag officer, with the pay grade of O-7.  Rear admiral (lower half) ranks above captain and below rear admiral. Rear admiral (lower half) is equivalent to the rank of brigadier general in the other uniformed services.   ");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Rear_admiral_(United_States)#Rear_admiral_.28lower_half.29");
-        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"0-8");
-        values.put(Rank_SHORT, "RADM");
-        values.put(Rank_NAME, "Rear Admiral");
-        values.put(Rank_ICON, "radm_usnavy");
-        values.put(Rank_TYPE, "Officer");
-        values.put(Rank_DETAILS, "In the United States Navy, the United States Coast Guard,rear admiral(RADM), also sometimes referred to as rear admiral (upper half), is a two-star flag officer, with the pay grade of O-8. Rear admiral ranks above rear admiral (lower half) and below vice admiral. Rear admiral is equivalent to the rank of major general in the other uniformed services. It is the highest permanent rank during peacetime in the uniformed services; all higher ranks are temporary ranks linked to specific commands or office.");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Rear_admiral_(United_States)#Rear_admiral");
-        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"0-9");
-        values.put(Rank_SHORT, "VADM");
-        values.put(Rank_NAME, "Rear Admiral");
-        values.put(Rank_ICON, "vadm_usnavy");
-        values.put(Rank_TYPE, "Officer");
-        values.put(Rank_DETAILS, "In the United States Navy, vice admiral (VADM) is a three-star flag officer, with the pay grade of O-9. For the Navy, no more than 16.7% of the service's active-duty flag officers may have more than two stars. Vice admiral ranks above rear admiral and below admiral. Vice admiral is equivalent to the rank of lieutenant general in the other uniformed services.");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Vice_admiral_(United_States)");
-        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"0-9");
-        values.put(Rank_SHORT, "ADM");
-        values.put(Rank_NAME, "Admiral");
-        values.put(Rank_ICON, "adm_usnavy");
-        values.put(Rank_TYPE, "Officer");
-        values.put(Rank_DETAILS, "In the United States Navy, admiral (ADM) is a four-star flag officer rank, with the pay grade of O-10. Admiral ranks above vice admiral and below fleet admiral in the navy. Admiral is equivalent to the rank of general in the other uniformed services.  Since the five-star grade of fleet admiral is reserved for wartime use only, the grade of admiral is considered to be the highest appointment an officer can achieve in the United States Navy.  ");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Admiral_(United_States)");
-        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"0-10");
-        values.put(Rank_SHORT, "ADM");
-        values.put(Rank_NAME, "Fleet Admiral");
-        values.put(Rank_ICON, "fadm_usnavy");
-        values.put(Rank_TYPE, "Officer");
-        values.put(Rank_DETAILS, "Fleet admiral (FADM)[1] was a five-star flag officer rank in the United States Navy, and was in its time the highest rank attainable in the service. Fleet admiral ranked immediately above admiral and was equivalent to general of the Army and general of the Air Force. The United States rank of fleet admiral was created by an Act of Congress for four officers to hold on a temporary basis under Pub.L. 78-482 on December 14, 1944,.[2] The rank was made permanent for the four individual holders only by Pub.L. 79–333 on March 23, 1946, but that law made no provisions to establish the rank itself permanently. ");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Fleet_Admiral_(United_States)");
-        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"special grade");
-        values.put(Rank_SHORT, "ADM");
-        values.put(Rank_NAME, "Admiral Of The Navy");
-        values.put(Rank_ICON, "adm_usnavy");
-        values.put(Rank_TYPE, "Officer");
-        values.put(Rank_DETAILS, "Admiral of the Navy is a rank in the United States Navy that has only been held once in history, by George Dewey. In recognition of his victory at Manila Bay in 1898.  The rank Admiral of the Navy was seen as a six-star rank during World War II,[2] with the establishment of the rank of five-star fleet admiral. It was during this time that the Department of the Navy specified that the new 1944 version of the rank of fleet admiral was to be junior to Dewey's rank of Admiral of the Navy.    ");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Admiral_of_the_Navy_(United_States)");
-        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"W-2");
-        values.put(Rank_SHORT, "CWO-2");
-        values.put(Rank_NAME, "Chief Warrant Officer Two");
-        values.put(Rank_ICON, "cwo2_usnavy");
-        values.put(Rank_TYPE, "Warrant Officer");
-        values.put(Rank_DETAILS, "In the United States Navy, the chief warrant officer (CWO) rank is a technical specialist who directs specific activities essential to the proper operation of the ship, which also require commissioned officer authority.[1] Navy CWOs serve in 30 specialties covering five categories. CWO should not be confused with the limited duty officer in the Navy.");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Warrant_Officer_(United_States)");
-        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"W-3");
-        values.put(Rank_SHORT, "CWO-3");
-        values.put(Rank_NAME, "Chief Warrant Officer Three");
-        values.put(Rank_ICON, "cwo3_usnavy");
-        values.put(Rank_TYPE, "Warrant Officer");
-        values.put(Rank_DETAILS, "In the United States Navy, the chief warrant officer (CWO) rank is a technical specialist who directs specific activities essential to the proper operation of the ship, which also require commissioned officer authority.[1] Navy CWOs serve in 30 specialties covering five categories. CWO should not be confused with the limited duty officer in the Navy.");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Warrant_Officer_(United_States)");
-        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"W-4");
-        values.put(Rank_SHORT, "CWO-4");
-        values.put(Rank_NAME, "Chief Warrant Officer Four");
-        values.put(Rank_ICON, "cwo4_usnavy");
-        values.put(Rank_TYPE, "Warrant Officer");
-        values.put(Rank_DETAILS, "In the United States Navy, the chief warrant officer (CWO) rank is a technical specialist who directs specific activities essential to the proper operation of the ship, which also require commissioned officer authority.[1] Navy CWOs serve in 30 specialties covering five categories. CWO should not be confused with the limited duty officer in the Navy.");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Warrant_Officer_(United_States)");
-        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"W-5");
-        values.put(Rank_SHORT, "CWO-5");
-        values.put(Rank_NAME, "Chief Warrant Officer Five");
-        values.put(Rank_ICON, "cwo5_usnavy");
-        values.put(Rank_TYPE, "Warrant Officer");
-        values.put(Rank_DETAILS, "In the United States Navy, the chief warrant officer (CWO) rank is a technical specialist who directs specific activities essential to the proper operation of the ship, which also require commissioned officer authority.[1] Navy CWOs serve in 30 specialties covering five categories. CWO should not be confused with the limited duty officer in the Navy.");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Warrant_Officer_(United_States)");
-        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"E-1");
-        values.put(Rank_SHORT, "SR");
-        values.put(Rank_NAME, "Seaman Recruit ");
-        values.put(Rank_ICON, "sunny");
-        values.put(Rank_TYPE, "Enlisted");
-        values.put(Rank_DETAILS, "Seaman recruit (SR) is the lowest enlisted rank in the U.S. Navy, U.S. Coast Guard, and the U.S. Naval Sea Cadet Corps just below seaman apprentice; this rank was formerly known as seaman third class. / A Hospital Corpsman (HM) is an enlisted medical specialist of the United States Navy who serves with the U.S. Navy and the United States Marine Corps. / Fireman recruit (FR) are Navy E-1s in the engineering and hull community./ Navy E-1s in the aviation community are called airman recruits./Navy Seabees are called constructionman recruits.  A Seabee is a member of the United States Navy Construction Battalion (CB).   ");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/List_of_United_States_Navy_enlisted_rates#References");
-        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"E-1");
-        values.put(Rank_SHORT, "HR");
-        values.put(Rank_NAME, "Hospitalman Recruit ");
-        values.put(Rank_ICON, "sunny");
-        values.put(Rank_TYPE, "Enlisted");
-        values.put(Rank_DETAILS, "Hospitalman recruit (HR) is the lowest enlisted rank in the U.S. Navy,just below seaman apprentice; this rank was formerly known as seaman third class.  A Hospital Corpsman (HM) is an enlisted medical specialist of the United States Navy who serves with the U.S. Navy and the United States Marine Corps. ");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/List_of_United_States_Navy_enlisted_rates#References");
-        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"E-1");
-        values.put(Rank_SHORT, "FR");
-        values.put(Rank_NAME, "Fireman Recruit ");
-        values.put(Rank_ICON, "sunny");
-        values.put(Rank_TYPE, "Enlisted");
-        values.put(Rank_DETAILS, "Fireman recruit (FR) is the lowest enlisted rank in the U.S. Navy, just below seaman apprentice; this rank was formerly known as seaman third class. Fireman recruit (FR) are Navy E-1s in the engineering and hull community.");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/List_of_United_States_Navy_enlisted_rates#References");
-        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"E-1");
-        values.put(Rank_SHORT, "AR");
-        values.put(Rank_NAME, " Airman Recruit ");
-        values.put(Rank_ICON, "sunny");
-        values.put(Rank_TYPE, "Enlisted");
-        values.put(Rank_DETAILS, "Airman recruit (AR) is the lowest enlisted rank in the U.S. Navy, just below seaman apprentice; this rank was formerly known as seaman third class. / A Hospital Corpsman (HM) is an enlisted medical specialist of the United States Navy who serves with the U.S. Navy and the United States Marine Corps. Navy E-1s in the aviation community are called airman recruits.   ");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/List_of_United_States_Navy_enlisted_rates#References");
-        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"E-1");
-        values.put(Rank_SHORT, "CR");
-        values.put(Rank_NAME, " Constructionman Recruit ");
-        values.put(Rank_ICON, "sunny");
-        values.put(Rank_TYPE, "Enlisted");
-        values.put(Rank_DETAILS, "Constructionman recruit (CR) is the lowest enlisted rank in the U.S. Navy, just below seaman apprentice; this rank was formerly known as seaman third class. Navy Seabees are called constructionman recruits.  A Seabee is a member of the United States Navy Construction Battalion (CB).   ");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/List_of_United_States_Navy_enlisted_rates#References");
-        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"E-2");
-        values.put(Rank_SHORT, "SA");
-        values.put(Rank_NAME, "Seaman Apprentice ");
-        values.put(Rank_ICON, "sa_usnavy");
-        values.put(Rank_TYPE, "Enlisted");
-        values.put(Rank_DETAILS, "Seaman apprentice is the second lowest enlisted rank in the U.S. Navy, just above seaman recruit and below seaman. This rank was formerly known as seaman second class.  The actual title for an E-2 in the U.S. Navy varies based on the community to which the sailor belongs. Likewise, the color of their group rate marks also depends on their community.  Those in the general deck and administrative community are seamen apprentice. They wear white stripes on navy blue uniforms, and navy blue (black) stripes on white uniforms. ");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Seaman_Apprentice");
-        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"E-2");
-        values.put(Rank_SHORT, "HA");
-        values.put(Rank_NAME, " Hospitalman Apprentice");
-        values.put(Rank_ICON, "sa_usnavy");
-        values.put(Rank_TYPE, "Enlisted");
-        values.put(Rank_DETAILS, "Hospitalman apprentice is the second lowest enlisted rank in the U.S. Navy, just above seaman recruit and below seaman. This rank was formerly known as seaman second class.  The actual title for an E-2 in the U.S. Navy varies based on the community to which the sailor belongs. Likewise, the color of their group rate marks also depends on their community.  Hospital corpsmen are hospitalmen apprentice. They are the only rate in this community. They wear white stripes on navy blue uniforms, and navy blue stripes on white uniforms. ");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Seaman_Apprentice");
-        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"E-2");
-        values.put(Rank_SHORT, "FA");
-        values.put(Rank_NAME, "Fireman Apprentice");
-        values.put(Rank_ICON, "fa_usnavy");
-        values.put(Rank_TYPE, "Enlisted");
-        values.put(Rank_DETAILS, "Fireman apprentice is the second lowest enlisted rank in the U.S. Navy, just above seaman recruit and below seaman. This rank was formerly known as seaman second class.  The actual title for an E-2 in the U.S. Navy varies based on the community to which the sailor belongs. Likewise, the color of their group rate marks also depends on their community. Those in the engineering and hull community are called firemen apprentice and wear red stripes on both navy blue and white uniforms. ");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Seaman_Apprentice");
-        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"E-2");
-        values.put(Rank_SHORT, "AA");
-        values.put(Rank_NAME, "Airman Apprentice");
-        values.put(Rank_ICON, "aa_usnavy");
-        values.put(Rank_TYPE, "Enlisted");
-        values.put(Rank_DETAILS, "Airman apprentice is the second lowest enlisted rank in the U.S. Navy, just above seaman recruit and below seaman. This rank was formerly known as seaman second class.  The actual title for an E-2 in the U.S. Navy varies based on the community to which the sailor belongs. Likewise, the color of their group rate marks also depends on their community.  Those in the aviation community are called airmen apprentice and wear green stripes on both navy blue and white uniforms.");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Seaman_Apprentice");
-        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"E-2");
-        values.put(Rank_SHORT, "CA");
-        values.put(Rank_NAME, "Constructionman Apprentice ");
-        values.put(Rank_ICON, "ca_usnavy");
-        values.put(Rank_TYPE, "Enlisted");
-        values.put(Rank_DETAILS, "Constructionman apprentice is the second lowest enlisted rank in the U.S. Navy, just above seaman recruit and below seaman. This rank was formerly known as seaman second class.  The actual title for an E-2 in the U.S. Navy varies based on the community to which the sailor belongs. Likewise, the color of their group rate marks also depends on their community.  Seabees are called constructionmen apprentice and wear light blue stripes on both navy blue and white uniforms.");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Seaman_Apprentice");
-        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"E-3");
-        values.put(Rank_SHORT, "SN");
-        values.put(Rank_NAME, "Seaman");
-        values.put(Rank_ICON, "sn_usnavy");
-        values.put(Rank_TYPE, "Enlisted");
-        values.put(Rank_DETAILS, "Seaman is the third enlisted rank from the bottom in the U.S. Navy, U.S. Coast Guard, ranking above Seaman Apprentice and below Petty Officer Third Class. This naval rank was formerly called 'seaman first class'.  Those in the General Deck, Technical, Weapons and Administrative Group are called 'seamen' and they represent the largest group of Navy and Coast Guard personnel in pay grades E-3 and below. They wear white stripes on their blue uniforms (USN + USCG), and navy blue (black) stripes on their white uniforms (USN only).");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Seaman");
-        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"E-3");
-        values.put(Rank_SHORT, "HN");
-        values.put(Rank_NAME, "Hospitalman");
-        values.put(Rank_ICON, "sn_usnavy");
-        values.put(Rank_TYPE, "Enlisted");
-        values.put(Rank_DETAILS, "Hospitalman is the third enlisted rank from the bottom in the U.S. Navy, U.S. Coast Guard, ranking above Seaman Apprentice and below Petty Officer Third Class. This naval rank was formerly called 'seaman first class'. Those in the Medical Group are now called 'hospitalmen'. In October 2005, the USN Dental Technician (DT) rating was merged into the Hospital Corpsman (HM) rating, eliminating the 'dentalman' title for E-3 and below. Those who once held the rank of 'dentalman' have instead become 'hospitalmen'. With this merger, these personnel possess the only rating in this area of duty. They wear white stripes on their blue uniforms, and navy blue stripes on their white uniforms. This rating was previously called Pharmacist's Mate (PHM) and HMs are still colloquially referred to as 'corpsman' in the naval service.[3] Hospitalmen exist only in the U.S. Navy; their equivalent in the U.S. Coast Guard is the Health Services Technician (HS), which is sourced from seamen in that service's Administrative and Scientific Group.");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Seaman");
-        values.put(Rank_Branch, Branch_USNAVY);
-        db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"E-3");
-        values.put(Rank_SHORT, "FN");
-        values.put(Rank_NAME, "Fireman");
-        values.put(Rank_ICON, "fn_usnavy");
-        values.put(Rank_TYPE, "Enlisted");
-        values.put(Rank_DETAILS, "Fireman is the third enlisted rank from the bottom in the U.S. Navy, U.S. Coast Guard, ranking above Seaman Apprentice and below Petty Officer Third Class. This naval rank was formerly called 'seaman first class'.  Those in the shipboard Engineering and Hull Group, comprising conventional (USN + USCG) and nuclear (USN only) powerplants and propulsion, as well as the hull maintenance area, are called 'firemen'. They wear red stripes on both their USN and USCG blue uniforms and, in the case of the Navy, white uniforms.");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Seaman");
-        values.put(Rank_Branch, Branch_USNAVY);
-        db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"E-3");
-        values.put(Rank_SHORT, "AN");
-        values.put(Rank_NAME, "Airman  ");
-        values.put(Rank_ICON, "an_usnavy");
-        values.put(Rank_TYPE, "Enlisted");
-        values.put(Rank_DETAILS, "Airman is the third enlisted rank from the bottom in the U.S. Navy, U.S. Coast Guard, ranking above Seaman Apprentice and below Petty Officer Third Class. This naval rank was formerly called 'seaman first class'.  Those in the Aviation Group of the Navy and Coast Guard are called 'airmen', and they wear green stripes on blue uniforms (USN + USCG) and white uniforms (USN only).");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Seaman");
-        values.put(Rank_Branch, Branch_USNAVY);
-        db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"E-3");
-        values.put(Rank_SHORT, "CN");
-        values.put(Rank_NAME, " Constructionman  ");
-        values.put(Rank_ICON, "cn_usnavy");
-        values.put(Rank_TYPE, "Enlisted");
-        values.put(Rank_DETAILS, "Constructionman is the third enlisted rank from the bottom in the U.S. Navy, U.S. Coast Guard, ranking above Seaman Apprentice and below Petty Officer Third Class. This naval rank was formerly called 'seaman first class'.  Enlisted personnel in the Construction Group, which primarily populates the U.S. Navy's civil engineering construction battalions (i.e., Seabees), are called 'constructionmen' and they wear light blue stripes on both their blue and white uniforms. Constructionmen are unique to the U.S. Navy; there is no U.S. Coast Guard equivalent.");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Seaman");
-        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"E-4");
-        values.put(Rank_SHORT, "PO3");
-        values.put(Rank_NAME, "Petty Officer Third Class");
-        values.put(Rank_ICON, "po3_usnavy");
-        values.put(Rank_TYPE, "Enlisted");
-        values.put(Rank_DETAILS, "Petty officer third class is the fourth enlisted rank in the U.S. Navy, U.S. Coast Guard, and the United States Naval Sea Cadet Corps, just above seaman and below petty officer second class, and is the lowest rank of non-commissioned officer, equivalent to a corporal in the U.S. Army and Marines. Petty officer third class shares the same pay grade as senior airman in the Air Force, which no longer has an NCO rank corresponding with E-4.");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Petty_Officer_Third_Class");
-        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"E-5");
-        values.put(Rank_SHORT, "PO2");
-        values.put(Rank_NAME, "Petty Officer Second Class");
-        values.put(Rank_ICON, "po2_usnavy");
-        values.put(Rank_TYPE, "Enlisted");
-        values.put(Rank_DETAILS, "Petty officer, second class is the fifth enlisted rate in the U.S. Navy,[1] U.S. Coast Guard, and the United States Naval Sea Cadet Corps, just above petty officer third class and below petty officer first class, and is a non-commissioned officer. It is equivalent to the rate of sergeant in the Army, Marine Corps and Staff Sergeant in the Air Force.  Similar to petty officer third class, advancement to petty officer second class is dependent on time in service, performance evaluations by superiors, and rate (technical specialty) examinations. The advancement cycle is currently every 6 months.");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Petty_Officer_Second_Class");
-        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"E-6");
-        values.put(Rank_SHORT, "PO1");
-        values.put(Rank_NAME, "Petty Officer First Class");
-        values.put(Rank_ICON, "po1_usnavy");
-        values.put(Rank_TYPE, "Enlisted");
-        values.put(Rank_DETAILS, "Petty officer, first class is the sixth enlisted rate in the United States Navy and the United States Coast Guard, just above petty officer, second class and below that of chief petty officer. A non-commissioned officer rate, petty officer, first class is also the sixth enlisted rate in the United States Naval Sea Cadet Corps. . A first-class petty officer may be generically referred to as PO1 when the sailor's rating is not known, although some prefer to be called simply 'Petty Officer (last name)'. ");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Petty_Officer_First_Class");
-        values.put(Rank_Branch, Branch_USNAVY);          db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-        values.put(Rank_PAY,"E-7");
-        values.put(Rank_SHORT, "CPO");
-        values.put(Rank_NAME, "Chief Petty Officer");
-        values.put(Rank_ICON, "cpo_usnavy");
-        values.put(Rank_TYPE, "Enlisted");
-        values.put(Rank_DETAILS, "Chief petty officer is the seventh enlisted rate in the U.S. Navy and U.S. Coast Guard, just above petty officer first class and below senior chief petty officer, and is a senior non-commissioned officer. The grade of chief petty officer was established on April 1, 1893 for the Navy. Unlike petty officer first class and lower rates, advancement to chief petty officer not only carries requirements of time in service, superior evaluation scores, and speciality examinations, but also carries an added requirement of peer review. A chief petty officer can only advance after review by a selection board of serving master chief petty officers, in effect 'choosing their own' and conversely not choosing others.");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Chief_Petty_Officer#United_States_of_America");
-        values.put(Rank_Branch, Branch_USNAVY);
-
-        db.insert(Ranks, null, values);
-
-        values = new ContentValues();
-
-        values.put(Rank_PAY,"E-8");
-        values.put(Rank_SHORT, "SCPO");
-        values.put(Rank_NAME, "Senior Chief Petty Officer");
-        values.put(Rank_ICON, "scpo_usnavy");
-        values.put(Rank_TYPE, "Enlisted");
-        values.put(Rank_DETAILS, "Senior chief petty officer is the eighth of nine enlisted ranks in the U.S. Navy and U.S. Coast Guard, just above chief petty officer and below master chief petty officer, and is a noncommissioned officer. They are addressed as 'Senior Chief' in most circumstances, or sometimes, less formally, as 'Senior'.  Advancement to senior chief petty officer is similar to that of chief petty officer. It carries requirements of time in service, superior evaluation scores, and peer review. ");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Senior_Chief_Petty_Officer");
-        values.put(Rank_Branch, Branch_USNAVY);
-
-        db.insert(Ranks, null, values);
-
-        values = new ContentValues();
-
-        values.put(Rank_PAY,"E-9");
-        values.put(Rank_SHORT, "MCPO");
-        values.put(Rank_NAME, "Master Chief Petty Officer");
-        values.put(Rank_ICON, "mcpo_usnavy");
-        values.put(Rank_TYPE, "Enlisted");
-        values.put(Rank_DETAILS, "Master Chief Petty Officer is the ninth, and highest, enlisted rate (paygrade E-9) in the U.S. Navy and U.S. Coast Guard, just above senior chief petty officer. Master chief petty officers are addressed as 'Master Chief (last name)'. They constitute the top 1.25% of the enlisted members of the maritime forces.  In the Navy, advancement to master chief petty officer is similar to that of chief petty officer and senior chief petty officer. It carries requirements of time in service, superior evaluation scores, and selection by a board of master chiefs.");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Master_Chief_Petty_Officer");
-        values.put(Rank_Branch, Branch_USNAVY);
-
-        db.insert(Ranks, null, values);
-
-        values = new ContentValues();
-
-         values.put(Rank_PAY,"E-9");
-        values.put(Rank_SHORT, "CMDCM");
-        values.put(Rank_NAME, "Command Master Chief Petty Officer");
-        values.put(Rank_ICON, "cmdcm_usnavy");
-        values.put(Rank_TYPE, "Enlisted");
-        values.put(Rank_DETAILS, "A command master chief petty officer is the most senior enlisted sailor in a United States Navy unit. Being the primary liaison between commissioned officers and enlisted sailors, he or she is an important resource for the commanding officer as his or her senior enlisted advisor, and is often called upon to gauge morale and battle readiness. In smaller units, this position may be filled by a command senior chief petty officer, a command chief petty officer, or a master chief petty officer who is not yet a command master chief. The rates force master chief petty officer and fleet master chief petty officer are used for larger units such as U.S. Fleet Forces Command, Navy Expeditionary Combat Command, U.S. Pacific Fleet, and Submarine Force U.S. Atlantic Fleet.");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Command_Master_Chief_Petty_Officer");
-        values.put(Rank_Branch, Branch_USNAVY);
-
-        db.insert(Ranks, null, values);
-
-        values = new ContentValues();
-
-        values.put(Rank_PAY,"E-9");
-        values.put(Rank_SHORT, "FLTCM/FORCM");
-        values.put(Rank_NAME, ">Fleet/Force Master Chief Petty Officer");
-        values.put(Rank_ICON, "fltcm_usnavy");
-        values.put(Rank_TYPE, "Enlisted");
-        values.put(Rank_DETAILS, "These two ranks are equivalent and their insignia is also the same—a master chief rating badge with two gold stars above the eagle and a gold star for the rating insignia. Force Master Chief Petty Officer are master chiefs who have virtually the same responsibility as command master Chiefs, but force master chief petty officers (FORCM) are responsible for larger force commands, such as Submarine Force U.S. Atlantic Fleet. There are 16 force master chief positions in the Navy./ Fleet Master Chief Petty Officer are master chiefs who have virtually the same responsibility as command master chiefs, but fleet master chief petty officers (FLTCM) are responsible for larger fleet commands, such as the U.S. Pacific Fleet. There are four fleet master chief positions in the Navy.");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Force_Master_Chief_Petty_Officer#Fleet_and_Force_Master_Chief_Petty_Officer");
-        values.put(Rank_Branch, Branch_USNAVY);
-
-        db.insert(Ranks, null, values);
-
-        values = new ContentValues();
-
-        values.put(Rank_PAY,"E-9");
-        values.put(Rank_SHORT, "MCPON");
-        values.put(Rank_NAME, ">Master Chief Petty Officer of the Navy");
-        values.put(Rank_ICON, "mcpon_usnavy");
-        values.put(Rank_TYPE, "Enlisted");
-        values.put(Rank_DETAILS, "The Master Chief Petty Officer of the Navy (MCPON, pronounced 'MIK-pon') is a unique non-commissioned rate of the United States Navy, which has with it the paygrade of E-9. The holder of this rank and post is the most senior enlisted member of the U.S. Navy, equivalent to the Sergeant Major of the Army, Chief Master Sergeant of the Air Force, Sergeant Major of the Marine Corps, Master Chief Petty Officer of the Coast Guard, and Senior Enlisted Advisor to the Chairman of the Joint Chiefs of Staff. He is appointed by the Chief of Naval Operations to serve as a spokesman to address the issues of enlisted personnel to the highest positions in the Navy. As such, he is the senior enlisted advisor to the Chief of Naval Operations as well as the Chief of Naval Personnel. His exact duties vary, depending on the CNO, though he generally devotes much of his time to traveling throughout the Navy observing training and talking to sailors and their families.");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Master_Chief_Petty_Officer_of_the_Navy");
-        values.put(Rank_Branch, Branch_USNAVY);
-
-        db.insert(Ranks, null, values);
-
-
-
-    }
-
-    public void populateuscgranks(SQLiteDatabase db){
-
-
-        ContentValues values = new ContentValues();
-
-        values.put(Rank_PAY,"0-1");
-        values.put(Rank_SHORT, "ENS");
-        values.put(Rank_NAME, "Ensign");
-        values.put(Rank_ICON, "ensign_uscg");
-        values.put(Rank_TYPE, "Officer");
-        values.put(Rank_DETAILS, "Ensign is the junior commissioned officer rank in the the United States Coast Guard. This rank is also used in the U.S. Maritime Service and the U.S. Naval Sea Cadet Corps. Ensign ranks below lieutenant junior grade, and it is equivalent to a second lieutenant in the U.S. Army, the Marine Corps, and the Air Force. Depending upon the warfare community, an ensign may go directly to a warship after being commissioned to serve as a division officer, or he or she may serve up one to two years of specialty training before reporting to a combat unit (e.g. flight school, weapons systems school, navigator school, submarine school, amphibious warfare school, radar school).");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Ensign_(rank)#United_States");
-        values.put(Rank_Branch, Branch_USCG);         db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-        values.put(Rank_PAY,"O-2");
-        values.put(Rank_SHORT, "LTJG");
-        values.put(Rank_NAME, "Lieutenant (Junior Grade)");
-        values.put(Rank_ICON, "ltjg_uscg");
-        values.put(Rank_TYPE, "Officer");
-        values.put(Rank_DETAILS, "Lieutenant (junior grade) is a junior commissioned officer rank in the United States Coast Guard, with the pay grade of O-2. The rank is also used in the United States Maritime Service and the United States Naval Sea Cadet Corps. Lieutenant, junior grade ranks above ensign and below lieutenant and is equivalent to a first lieutenant in the other uniformed services (the Army, Marine Corps and Air Force). Promotion to LTJG is governed by Department of Defense policies derived from the Defense Officer Personnel Management Act of 1980. DOPMA guidelines suggest all 'fully qualified' ensigns should be promoted to LTJG. The time for promotion to LTJG is a minimum of 18 months after commissioning in the Coast Guard. Lieutenants, junior grade typically lead petty officers and non-rated personnel, unless assigned to small aircraft or on staff duty. A LTJG's usual shipboard billet is as a Division Officer.");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Lieutenant_(junior_grade)");
-        values.put(Rank_Branch, Branch_USCG);
-        db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"O-3");
-        values.put(Rank_SHORT, "LT");
-        values.put(Rank_NAME, "Lieutenant");
-        values.put(Rank_ICON, "lieutenant_uscg");
-        values.put(Rank_TYPE, "Officer");
-        values.put(Rank_DETAILS, "Lieutenant is the third commissioned officer rank in the United States Coast Guard and is comparable to the rank of Captain in the other branches of the Armed Service. Lieutenants serve as Division Officers aboard Coast Guard ships and command groups of sailors and petty officers in various divisions including the deck department, engineering, and others.");
-        values.put(Rank_LINK, "http://www.military-ranks.org/coast-guard/lieutenant");
-        values.put(Rank_Branch, Branch_USCG);
-        db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-
-        values.put(Rank_PAY,"O-4");
-        values.put(Rank_SHORT, "LCDR");
-        values.put(Rank_NAME, "Lieutenant Commander");
-        values.put(Rank_ICON, "lcdr_uscg");
-        values.put(Rank_TYPE, "Officer");
-        values.put(Rank_DETAILS, "In the United States Army, Air Force, and Marine Corps, major is a field grade military officer rank above the rank of captain and below the rank of lieutenant colonel. It is equivalent to the naval rank of lieutenant commander in the other uniformed services.   DOPMA guidelines suggest 80% of captains should be promoted to major after serving a minimum of three years at their present rank and after attaining nine to eleven years of cumulative commissioned service. ");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Major_(United_States)");
-        values.put(Rank_Branch, Branch_USCG);         db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"O-5");
-        values.put(Rank_SHORT, "CDR");
-        values.put(Rank_NAME, "Commander");
-        values.put(Rank_ICON, "commander_uscg");
-        values.put(Rank_TYPE, "Officer");
-        values.put(Rank_DETAILS, "In the United States Coast Guard, commander (abbreviated 'CDR') is a senior officer rank, with the pay grade of O-5. Commander ranks above lieutenant commander and below captain. Commander is equivalent to the rank of lieutenant colonel in the other uniformed services. Notably, it is the first rank at which the holder wears an embellished cap, whereas officers of the other services are entitled to embellishment at O-4 rank. Promotion to commander in the US Coast Guard is governed by Department of Defense policies derived from the Defense Officer Personnel Management Act of 1980. DOPMA guidelines suggest 70% of lieutenant commanders should be promoted to commander after serving a minimum of three years at their present rank and after attaining 15-17 years of cumulative commissioned service. Commanders often serve as the captain of a small Coast Guard vessel, such as a cutter, frigate, destroyer, or submarine. Commanders may also lead squadrons of aircraft, be placed in charge of a small shore mission, or serve on the staff of a senior officer aboard a larger Coast Guard vessel.");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Commander_(United_States)");
-        values.put(Rank_Branch, Branch_USCG);         db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"O-6");
-        values.put(Rank_SHORT, "CAPT");
-        values.put(Rank_NAME, "Captain");
-        values.put(Rank_ICON, "captain_uscg");
-        values.put(Rank_TYPE, "Officer");
-        values.put(Rank_DETAILS, "In the United States Coast Guard,, captain is the senior-most commissioned officer rank below that of flag officer (i.e., admirals). Reflecting its nautical heritage, it also sometimes used as a military 'title' by more junior officers who are serving as the commanding officer (CO) of a commissioned vessel of the Navy or Coast Guard of patrol boat size or greater. Coast Guard captains follow career paths very similar to their Navy counterparts, with seagoing officers typically commanding large maritime security cutters or high endurance cutters and aviators commanding coast guard air stations. Coast Guard captains will also command all types of major Coast Guard shore installations and activities, as well as serve as chiefs of staff for Coast Guard flag officers.");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Captain_(United_States_O-6)");
-        values.put(Rank_Branch, Branch_USCG);         db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"O-7");
-        values.put(Rank_SHORT, "RDML");
-        values.put(Rank_NAME, "Rear Admiral (Lower Half)");
-        values.put(Rank_ICON, "rdml_uscg");
-        values.put(Rank_TYPE, "Officer");
-        values.put(Rank_DETAILS, "In the United States Coast Guard, rear admiral (lower half) is a one-star flag officer, with the pay grade of O-7. The abbreviation for personnel from the USN, USCG, and NOAA is RDML. Rear admiral (lower half) ranks above captain and below rear admiral. Rear admiral (lower half) is equivalent to the rank of brigadier general in the other uniformed services, and equivalent to the rank of commodore in most other navies.[2] In the United States uniformed services, rear admiral (lower half) replaced the rank of commodore in 1985.");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Rear_admiral_(United_States)");
-        values.put(Rank_Branch, Branch_USCG);         db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"O-8");
-        values.put(Rank_SHORT, "RADM");
-        values.put(Rank_NAME, "Rear Admiral");
-        values.put(Rank_ICON, "rear_admiral_uscg");
-        values.put(Rank_TYPE, "Officer");
-        values.put(Rank_DETAILS, "In the United States Coast Guard, rear admiral (RADM), also sometimes referred to as rear admiral (upper half), is a two-star flag officer, with the pay grade of O-8. Rear admiral ranks above rear admiral (lower half) and below vice admiral. Rear admiral is equivalent to the rank of major general in the other uniformed services. It is the highest permanent rank during peacetime in the uniformed services; all higher ranks are temporary ranks linked to specific commands or office. A Rear Admiral generally commands a fleet of Coast Guard ships and air wings. As a flag officer, a Real Admiral may fly the Rear Admiral's pennant over any ship or base on which he is serving - two white stars on a navy-blue background.");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Rear_admiral_(United_States)");
-        values.put(Rank_Branch, Branch_USCG);         db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"O-9");
-        values.put(Rank_SHORT, "VADM");
-        values.put(Rank_NAME, "Vice Admiral");
-        values.put(Rank_ICON, "vice_admiral_uscg");
-        values.put(Rank_TYPE, "Officer");
-        values.put(Rank_DETAILS, "In the United States Coast Guard, vice admiral (VADM) is a three-star flag officer, with the pay grade of O-9. Vice admiral ranks above rear admiral and below admiral. Vice admiral is equivalent to the rank of lieutenant general in the other uniformed services. A Vice Admiral commands regional Coast Guard operations during an operation or war and answers directly to the Fleet Admiral and the President of the United States. As a three-star flag officer a Vice Admiral may fly the Vice Admiral's pennant over any ship or station on which he is serving, which is three white stars on a navy blue background.");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Vice_Admiral_(United_States)");
-        values.put(Rank_Branch, Branch_USCG);         db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"O-10");
-        values.put(Rank_SHORT, "ADM");
-        values.put(Rank_NAME, "Admiral");
-        values.put(Rank_ICON, "admiral_uscg");
-        values.put(Rank_TYPE, "Officer");
-        values.put(Rank_DETAILS, "In the United States Coast Guard, admiral (ADM) is a four-star flag officer rank, with the pay grade of O-10. Admiral ranks above vice admiral. The Coast Guard does not have an established grade above admiral. Admiral is equivalent to the rank of general in the other uniformed services. An Admiral commands regional Coast Guard operations and answers directly President of the United States. As a four-star flag officer, an Admiral may fly the Admiral's pennant over any ship or station on which he is serving, which is four white stars on a navy blue background.");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Admiral_(United_States)");
-        values.put(Rank_Branch, Branch_USCG);         db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"W-2");
-        values.put(Rank_SHORT, "CWO2");
-        values.put(Rank_NAME, "Chief Warrant Officer 2");
-        values.put(Rank_ICON, "wo2_uscg");
-        values.put(Rank_TYPE, "Warrant Officer");
-        values.put(Rank_DETAILS, "Chief Warrant Officer 2 is the United States Coast Guard's entry-level billeted warrant officer rank. Warrant officers serve as technical specialists with command authority within their field of expertise and hold a variety of positions essential to the smooth operation of the Coast Guard. Coast Guard Warrant Officers usually belong to one of 30 specialties including boatswain, master mate, surgeon, chaplain, and carpenter, which are specialized and skilled positions that often require specialists with command authority and leadership skills.");
-        values.put(Rank_LINK, "http://www.military-ranks.org/coast-guard/chief-warrant-officer-2");
-        values.put(Rank_Branch, Branch_USCG);         db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"W-3");
-        values.put(Rank_SHORT, "CWO3");
-        values.put(Rank_NAME, "Chief Warrant Officer 3");
-        values.put(Rank_ICON, "wo3_uscg");
-        values.put(Rank_TYPE, "Warrant Officer");
-        values.put(Rank_DETAILS, "Chief Warrant Officer 3 is the United States Coast Guard's second billeted warrant officer rank. Warrant officers serve as technical specialists with command authority within their field of expertise, and hold a variety of positions essential to the smooth operations of the Coast Guard. Coast Guard Warrant Officers usually belong to one of 30 specialties including boatswain, master mate, surgeon, chaplain, and carpenter, which are specialized and skilled positions that often require specialists with command authority and leadership skills. Sailors are generally promoted to Chief Warrant Officer 3 from Chief Warrant Officer 2; they are chosen for promotion when they show exceptional service and experience.");
-        values.put(Rank_LINK, "http://www.military-ranks.org/coast-guard/chief-warrant-officer-3");
-        values.put(Rank_Branch, Branch_USCG);         db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"W-4");
-        values.put(Rank_SHORT, "CWO4");
-        values.put(Rank_NAME, "Chief Warrant Officer 4");
-        values.put(Rank_ICON, "wo4_uscg");
-        values.put(Rank_TYPE, "Warrant Officer");
-        values.put(Rank_DETAILS, "Chief Warrant Officer 4 is the Unites States Coast Guard's fourth and highest billeted warrant officer rank. Warrant officers serve as technical specialists with command authority within their field of expertise, and hold a variety of positions essential to the smooth operations of the Coast Guard. Coast Guard Warrant Officers usually belong to one of 30 specialties including boatswain, master mate, surgeon, chaplain, and carpenter, which are specialized and skilled positions that often require specialists with command authority and leadership skills. Sailors are generally promoted to Chief Warrant Officer 4 from Chief Warrant Officer 3; they are chosen for promotion after showing exceptional service and and experience.");
-        values.put(Rank_LINK, "http://www.military-ranks.org/coast-guard/chief-warrant-officer-4");
-        values.put(Rank_Branch, Branch_USCG);         db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"E-1");
-        values.put(Rank_SHORT, "SR");
-        values.put(Rank_NAME, "Seaman Recruit");
-        values.put(Rank_ICON, "sr_uscg");
-        values.put(Rank_TYPE, "Enlisted");
-        values.put(Rank_DETAILS, "Seaman recruit (SR) is the lowest enlisted rank in the U.S. Coast Guard,  just below seaman apprentice; this rank was formerly known as seaman third class. Two separate pay grades exist within this rank (and the corresponding ranks in the other branches of the United States military structure) — one for those with service of less than four months, with a higher pay scale for those in service for more than four months, even if they have not yet advanced to seaman apprentice.");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Seaman_Recruit");
-        values.put(Rank_Branch, Branch_USCG);         db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"E-2");
-        values.put(Rank_SHORT, "SA");
-        values.put(Rank_NAME, "Seaman Apprentice");
-        values.put(Rank_ICON, "sa_uscg");
-        values.put(Rank_TYPE, "Enlisted");
-        values.put(Rank_DETAILS, "Seaman apprentice is the second lowest enlisted rank in the U.S. Navy, U.S. Coast Guard, and the U.S. Naval Sea Cadet Corps just above seaman recruit and below seaman; this rank was formerly known as seaman second class. There are several titles and color-coded rank insignias assigned to sailors receiving this grade, determined by their operational specialty.");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Seaman_Apprentice");
-        values.put(Rank_Branch, Branch_USCG);         db.insert(Ranks, null, values);
-
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"E-3");
-        values.put(Rank_SHORT, "SN");
-        values.put(Rank_NAME, "Seaman");
-        values.put(Rank_ICON, "sn_uscg");
-        values.put(Rank_TYPE, "Enlisted");
-        values.put(Rank_DETAILS, "Seaman is the third enlisted rank from the bottom in the U.S. Navy, U.S. Coast Guard, ranking above Seaman Apprentice and below Petty Officer Third Class.  Several title and rank variations exist for sailors working in different specialties, though all share the same pay and rank grade. Sailors at this grade do not wear their stripe insignia on their working uniforms, although they are permitted to wear a silver collar device signifying their rank.");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Seaman#United_States");
-        values.put(Rank_Branch, Branch_USCG);         db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"E-4");
-        values.put(Rank_SHORT, "PO3");
-        values.put(Rank_NAME, "Petty Officer Third Class");
-        values.put(Rank_ICON, "potc_uscg");
-        values.put(Rank_TYPE, "Enlisted");
-        values.put(Rank_DETAILS, "Petty officer third class is the fourth enlisted rank in the U.S. Coast Guard, just above seaman and below petty officer second class, and is the lowest rank of non-commissioned officer, equivalent to a corporal in the U.S. Army and Marines. Petty officer third class shares the same pay grade as senior airman in the Air Force, which no longer has an NCO rank corresponding with E-4. A Petty Officer Third Class serves both as a leader and as a technical expert, and all Petty Officers have a specified rating, or job. The exact title with which a petty officer is addressed depends on their specialty - a Petty Officer Third Class serving as a Machinist's Mate, for example, would have the full title of Machinist's Mate Third Class.");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Petty_Officer_Third_Class");
-        values.put(Rank_Branch, Branch_USCG);         db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"E-5");
-        values.put(Rank_SHORT, "PO2");
-        values.put(Rank_NAME, "Petty Officer Second Class");
-        values.put(Rank_ICON, "posc_uscg");
-        values.put(Rank_TYPE, "Enlisted");
-        values.put(Rank_DETAILS, " Petty officer, second class is the fifth enlisted rate in the U.S. Coast Guard, just above petty officer third class and below petty officer first class, and is a non-commissioned officer. It is equivalent to the rate of sergeant in the Army, Marine Corps and Staff Sergeant in the Air Force. Similar to petty officer third class, advancement to petty officer second class is dependent on time in service, performance evaluations by superiors, and rate (technical specialty) examinations. The advancement cycle is currently every 6 months. Only a certain number of billets (job openings for this rate) open up biannually and all petty officers third class compete. The top scorers are chosen for advancement, but only in sufficient quantities to fill the billets available.");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Petty_Officer_Second_Class");
-        values.put(Rank_Branch, Branch_USCG);         db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"E-6");
-        values.put(Rank_SHORT, "PO1");
-        values.put(Rank_NAME, "Petty Officer First Class");
-        values.put(Rank_ICON, "pofc_uscg");
-        values.put(Rank_TYPE, "Enlisted");
-        values.put(Rank_DETAILS, "Petty officer, first class is the sixth enlisted rate in the United States Navy and the United States Coast Guard, just above petty officer, second class and below that of chief petty officer. A Petty Officer First Class serves both as a leader and as a technical expert, and all Petty Officers have a specified rating, or job. The exact title with which a petty officer is addressed depends on their specialty; a Petty Officer First Class serving as an Electronics Technician, for example, would have the full title of Electronics Technician First Class.");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Petty_Officer_First_Class");
-        values.put(Rank_Branch, Branch_USCG);         db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"E-7");
-        values.put(Rank_SHORT, "CPO");
-        values.put(Rank_NAME, "Chief Petty Officer");
-        values.put(Rank_ICON, "cpo_uscg");
-        values.put(Rank_TYPE, "Enlisted");
-        values.put(Rank_DETAILS, "Chief Petty Officer is the seventh enlisted rate (E-7) in the United States Coast Guard, just above Petty Officer First Class and below Senior Chief Petty Officer. Chief Petty Officer is the first Coast Guard rank that comes with vastly expanded powers and responsibilities over those of that below it. In addition to their rating's duties, a Chief Petty Officer is responsible for training junior officers and leading his division of sailors and petty officers.");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Chief_Petty_Officer_(United_States)");
-        values.put(Rank_Branch, Branch_USCG);         db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"E-8");
-        values.put(Rank_SHORT, "SCPO");
-        values.put(Rank_NAME, "Senior Chief Petty Officer");
-        values.put(Rank_ICON, "scpo_uscg");
-        values.put(Rank_TYPE, "Enlisted");
-        values.put(Rank_DETAILS, "Senior chief petty officer is the eighth of nine enlisted ranks in the U.S. Coast Guard, just above chief petty officer and below master chief petty officer, and is a noncommissioned officer. They are addressed as 'Senior Chief' in most circumstances, or sometimes, less formally, as 'Senior'. Like Chief Petty Officers, a Senior Chief Petty Officer is responsible for a variety of administrative and leadership responsibilities in his specialized area, also known as his rating. Also similar to other Coast Guard sailors, the full rank for a Senior Chief Petty Officer includes his rating; a SCPO specializing as a Quartermaster, for example, would be referred to by his full title of Senior Chief Quartermaster.");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Senior_Chief_Petty_Officer");
-        values.put(Rank_Branch, Branch_USCG);         db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"E-9");
-        values.put(Rank_SHORT, "MCPO");
-        values.put(Rank_NAME, "Master Chief Petty Officer");
-        values.put(Rank_ICON, "mcpo_uscg");
-        values.put(Rank_TYPE, "Enlisted");
-        values.put(Rank_DETAILS, "Master Chief Petty Officer is the ninth, and highest, enlisted rate (paygrade E-9) in the U.S. Navy and U.S. Coast Guard, just above senior chief petty officer. Master chief petty officers are addressed as 'Master Chief (last name)'. Less then 1% of the Coast Guard's personnel make it to the rank of Master Chief, and those who do are considered to be among the best and the brightest in their respective specialties. Like the other Coast Guard ranks, all MCPOs have a rating, or job specialty, which is included in their full title. A Master Chief Petty Officer who specializes as a Gunner's Mate, for example, would have a full title of Master Chief Gunner's Mate. Most MCPOs, however, are simply referred to as Master Chief by their subordinates.");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Master_Chief_Petty_Officer");
-        values.put(Rank_Branch, Branch_USCG);         db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"E-9");
-        values.put(Rank_SHORT, "CMC");
-        values.put(Rank_NAME, "Command Master Chief Petty Officer");
-        values.put(Rank_ICON, "cmc_uscg");
-        values.put(Rank_TYPE, "Enlisted");
-        values.put(Rank_DETAILS, "Command Master Chief Petty Officer is the most senior enlisted rank in the United States Coast Guard, and serves as a bridge between the enlisted sailors and petty officers and the commanding officers above them. Command Master Chiefs are chosen from the ranks of eligible Master Chief Petty Officers, or lower Chief Petty Officers if necessary, by the Command Master Chief Program, which was started in 1995. Candidates receive specialized leadership and communications training, which enables them to serve in a unique and independent role as both the chief enlisted officer of their force and as a direct liaison and adviser to the commanding officer.");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Command_Master_Chief_Petty_Officer");
-        values.put(Rank_Branch, Branch_USCG);         db.insert(Ranks, null, values);
-        values = new ContentValues();
-
-                values.put(Rank_PAY,"E-9");
-        values.put(Rank_SHORT, "MCPOCG");
-        values.put(Rank_NAME, "Master Chief Petty Officer of the Coast Guard");
-        values.put(Rank_ICON, "mcpocg_uscg");
-        values.put(Rank_TYPE, "Enlisted");
-        values.put(Rank_DETAILS, "Master Chief Petty Officer of the Coast Guard (MCPOCG) is a unique rank established to be held by only one sailor, who serves as the highest-ranking enlisted soldier in the Coast Guard. The MCPON is appointed personally by the Commandment of the Coast Guard and serves as the spokesman for the enlisted sailors as well as a Senior Enlisted Adviser to high-ranking officials including the Commandment of the Coast Guard.");
-        values.put(Rank_LINK, "http://en.wikipedia.org/wiki/Master_Chief_Petty_Officer_of_the_Coast_Guard");
-        values.put(Rank_Branch, Branch_USCG);         db.insert(Ranks, null, values);
-
-
-    }
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(DATABASE_CREATE);

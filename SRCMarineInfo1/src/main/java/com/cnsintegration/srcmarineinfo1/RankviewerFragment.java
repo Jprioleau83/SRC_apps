@@ -50,7 +50,7 @@ public class RankviewerFragment extends Fragment {
             mPagerAdapter.addTab(rt, rank.getName());
 
         }
-
+        mViewPager.setPageTransformer(true, new DepthPageTransformer());
         mViewPager.setAdapter(this.mPagerAdapter);
 
 

@@ -22,8 +22,16 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/welcome"
+            android:text="Welcome"
+            android:textAlignment="center"
+            android:layout_gravity="center_horizontal" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/text"
-            android:text="USMC lskdjf sdjflkdjfs skdjflsdj skjdfljlj"/>
+            android:text="The Expeditionary C4I Engineering team consist of a group of skill Engineers working to provide the USMC with Quality C4I services.  As many of the emerging engineers hired by SRC are out of college, knowledge of how the us military architecture is oftern forien to them.  This app was designed to help bridge that gap and explain the US Military Ranks structure, military time, Militay ocupational specialty(MOS), Alpha Numeric, Common acronym, and SPAWAR Org Structure. To get started select the menu button in the upper Left Corner of the screen. "/>
     </LinearLayout>
 
 

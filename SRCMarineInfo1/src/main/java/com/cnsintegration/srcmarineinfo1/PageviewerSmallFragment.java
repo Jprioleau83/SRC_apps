@@ -34,6 +34,9 @@ public class PageviewerSmallFragment extends Fragment {
         ViewPager mViewPager = (ViewPager) view.findViewById(R.id.pager);
 
         // Set the ViewPagerAdapter into ViewPager
+
+
+        mViewPager.setPageTransformer(true, new DepthPageTransformer());
         mViewPager.setAdapter(new MyAdapter2(getChildFragmentManager(), passedfrag, Branch));
 
         return view;
