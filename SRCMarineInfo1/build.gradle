@@ -12,7 +12,6 @@ def getVersionCode = { ->
         return -1;
     }
 }
-
 def getVersionName = { ->
     try {
         def stdout = new ByteArrayOutputStream()
@@ -26,10 +25,9 @@ def getVersionName = { ->
         return null;
     }
 }
-
 android {
     compileSdkVersion 19
-    buildToolsVersion "19.0.3"
+    buildToolsVersion '19.0.3'
 
     defaultConfig {
         minSdkVersion 14
@@ -44,9 +42,16 @@ android {
         }
     }
 }
-
 dependencies {
     compile 'com.android.support:appcompat-v7:19.+'
     compile 'com.android.support:support-v4:19.+'
+    compile 'com.github.amlcurran.showcaseview:library:5.0.0-SNAPSHOT'
     compile fileTree(dir: 'libs', include: ['*.jar'])
+
+}
+
+repositories {
+    maven {
+        url 'https://oss.sonatype.org/content/repositories/snapshots'
+    }
 }

@@ -13,6 +13,10 @@ import android.content.res.Configuration;
 import com.cnsintegration.srcmarineinfo1.adapter.MyAdapter;
 import com.cnsintegration.srcmarineinfo1.model.NavDrawerItem;
 import com.cnsintegration.srcmarineinfo1.adapter.NavDrawerListAdapter;
+import com.github.amlcurran.showcaseview.ShowcaseView;
+import com.github.amlcurran.showcaseview.targets.ActionViewTarget;
+import com.github.amlcurran.showcaseview.targets.Target;
+import com.github.amlcurran.showcaseview.targets.ViewTarget;
 
 import android.content.res.TypedArray;
 import android.os.Bundle;
@@ -236,6 +240,24 @@ public class MainActivity extends FragmentActivity
 
 
                 if (findViewById(R.id.fragment_container) != null) {
+                   // ViewTarget target = new ViewTarget(R.id.buttonBlocked, this);
+                    /**new ShowcaseView.Builder(this)
+                            .setTarget(new ActionViewTarget(this, ActionViewTarget.Type.HOME))
+                            .setContentTitle("ShowcaseView")
+                            .setContentText("This is highlighting the Home button")
+                            .hideOnTouchOutside()
+                            .build();**/
+
+                    new ShowcaseView.Builder(this)
+                            .setTarget(Target.NONE)
+                            .setContentTitle("ShowcaseView")
+                            .setContentText("This is highlighting the Home button")
+                            .hideOnTouchOutside()
+                            .build();
+
+
+
+
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, hfragment).addToBackStack(null).commit();
                 } else {
 
@@ -330,6 +352,13 @@ public class MainActivity extends FragmentActivity
             Log.e("MainActivity", "Error in creating fragment");
         }
     }
+
+
+
+
+
+
+
 
 
     public void onActionSelected(int position) {
