@@ -431,7 +431,6 @@ public class MainActivity extends FragmentActivity
             Pageview = new PageviewerSmallFragment(mosFragment, position);
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, Pageview).addToBackStack(null).commit();
 
-            ShowcaseView.ConfigOptions options = new ShowcaseView.ConfigOptions();
 
             ShowcaseView sv = new ShowcaseView.Builder(this)
                     .setTarget(Target.NONE)

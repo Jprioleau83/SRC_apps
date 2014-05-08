@@ -1,2 +1,2 @@
-include ':SRCMarineInfo1'
+include ':SRCMarineInfo1', ':libraries:showcase'
 

@@ -45,13 +45,9 @@ android {
 dependencies {
     compile 'com.android.support:appcompat-v7:19.+'
     compile 'com.android.support:support-v4:19.+'
-    compile 'com.github.amlcurran.showcaseview:library:5.0.0-SNAPSHOT'
+    compile project(':libraries:showcase')
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
 }
 
-repositories {
-    maven {
-        url 'https://oss.sonatype.org/content/repositories/snapshots'
-    }
-}
+
