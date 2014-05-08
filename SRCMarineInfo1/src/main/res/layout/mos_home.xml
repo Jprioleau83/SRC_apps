@@ -1,4 +1,4 @@
-<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -7,46 +7,43 @@
     android:layout_alignParentStart="true"
     android:weightSum="100">
 
-<RelativeLayout
-    android:layout_width="fill_parent"
-    android:layout_height="0dp"
-    android:orientation="horizontal"
-    android:layout_weight="90"
-    android:padding="0dip">
-
-    <!-- TODO: Update blank fragment layout -->
-
-    <!--  ListRow Left sied Thumbnail image -->
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/homeimage"
-        android:src="@drawable/usmc" />
-
-    <ScrollView
+    <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/homeimage"
-        android:id="@+id/scrollView"
-        android:background="@drawable/imagebackground">
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="90"
+        android:padding="0dip">
 
-        <TextView
+        <!-- TODO: Update blank fragment layout -->
+
+        <!--  ListRow Left sied Thumbnail image -->
+
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/homeimage"
+            android:src="@drawable/usmc" />
 
-            android:id="@+id/text"
-            android:text="The United States Marine Corps's Military Occupational Specialty (MOS) is a system of categorizing career fields. All enlisted and officer Marines are assigned a four digit code denoting their occupational field and specialty.
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/homeimage"
+            android:id="@+id/scrollView"
+            android:background="@drawable/imagebackground">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:id="@+id/text"
+                android:text="The United States Marine Corps's Military Occupational Specialty (MOS) is a system of categorizing career fields. All enlisted and officer Marines are assigned a four digit code denoting their occupational field and specialty.
             Occupational Fields (OccFlds) are identified in the first two digits and represent a grouping of related MOSs. Job codes are identified in the last two digits and represent a specific job within that OccFld. An MOS can be awarded as a Primary MOS (PMOS), an Additional MOS (AMOS), a Skill Designator,[1] or Category II MOS (which denote special skills assignments or simply to account for structure when required).
             Below are listed the current authorized Marine Corps MOSs, organized by OccFld, then by specific MOS. Most MOSs have specific rank/pay grade requirements and are listed to the right of the MOS title, if applicable (see United States Marine Corps rank insignia), abbreviated from the highest allowed rank to the lowest. Officer ranks are noted as Unrestricted Line Officers[2] (ULOs), Limited Duty Officers[3] (LDOs), and Warrant Officers[4] (WOs). Those MOSs which are no longer being awarded[5] are kept active to allow Marines to earn a new MOS." />
 
-    </ScrollView>
+        </ScrollView>
 
 
-
-
-
-</RelativeLayout>
+    </RelativeLayout>
 
     <LinearLayout
         android:orientation="vertical"
@@ -54,11 +51,11 @@
         android:layout_height="0dp"
         android:layout_weight="10">
 
-    <ImageView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/scrollimage"
-        android:layout_below="@+id/scrollView"
-        android:src="@drawable/ico_swipel" />
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrollimage"
+            android:layout_below="@+id/scrollView"
+            android:src="@drawable/ico_swipel" />
     </LinearLayout>
-    </LinearLayout>
+</LinearLayout>

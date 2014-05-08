@@ -7,6 +7,9 @@
     <string name="strBranch">USMC</string>
     <string name="MOSTitle"> <u>MOS Title</u>.</string>
     <string name="MOSRank"> <u>MOS Ranks</u>.</string>
+    <string name="anim_first">First we showcase this…</string>
+    <string name="anim_second">Then this…</string>
+    <string name="anim_third">Finally this!</string>
 
     <string-array name="actions_array">
         <item>Ranks</item>

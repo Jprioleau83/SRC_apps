@@ -1,7 +1,13 @@
 package com.cnsintegration.srcmarineinfo1;
 
 
+import android.annotation.TargetApi;
+import android.app.Dialog;
+import android.graphics.Color;
+import android.graphics.Point;
 import android.graphics.Typeface;
+import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.Fragment;
@@ -13,6 +19,7 @@ import android.content.res.Configuration;
 import com.cnsintegration.srcmarineinfo1.adapter.MyAdapter;
 import com.cnsintegration.srcmarineinfo1.model.NavDrawerItem;
 import com.cnsintegration.srcmarineinfo1.adapter.NavDrawerListAdapter;
+import com.github.amlcurran.showcaseview.ApiUtils;
 import com.github.amlcurran.showcaseview.ShowcaseView;
 import com.github.amlcurran.showcaseview.targets.ActionViewTarget;
 import com.github.amlcurran.showcaseview.targets.Target;
@@ -24,12 +31,16 @@ import android.support.v4.app.ActionBarDrawerToggle;
 
 
 import android.util.Log;
+import android.view.Display;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -67,6 +78,11 @@ public class MainActivity extends FragmentActivity
 
     private MyAdapter mAdapter;
     private ViewPager mPager;
+
+    private ImageView mOverLayImage;
+    private static final float ALPHA_DIM_VALUE = 0.1f;
+    private final ApiUtils apiUtils = new ApiUtils();
+    PageviewerSmallFragment Pageview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -241,21 +257,14 @@ public class MainActivity extends FragmentActivity
 
                 if (findViewById(R.id.fragment_container) != null) {
                    // ViewTarget target = new ViewTarget(R.id.buttonBlocked, this);
-                    /**new ShowcaseView.Builder(this)
+                    ShowcaseView sv;
+
+                    sv = new ShowcaseView.Builder(this)
                             .setTarget(new ActionViewTarget(this, ActionViewTarget.Type.HOME))
                             .setContentTitle("ShowcaseView")
                             .setContentText("This is highlighting the Home button")
                             .hideOnTouchOutside()
-                            .build();**/
-
-                    new ShowcaseView.Builder(this)
-                            .setTarget(Target.NONE)
-                            .setContentTitle("ShowcaseView")
-                            .setContentText("This is highlighting the Home button")
-                            .hideOnTouchOutside()
                             .build();
-
-
 
 
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, hfragment).addToBackStack(null).commit();
@@ -267,7 +276,10 @@ public class MainActivity extends FragmentActivity
 
                 }
                 onHomeCreated();
+
+
             }
+
 
             if (casenum == 1) {
                 // RankFragment rankFrag = new RankFragment();
@@ -369,6 +381,13 @@ public class MainActivity extends FragmentActivity
 
     }
 
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+    private void dimView(View view) {
+        if (apiUtils.isCompatWithHoneycomb()) {
+            view.setAlpha(ALPHA_DIM_VALUE);
+        }
+    }
+
 
     public void onServiceSelected(int position) {
 
@@ -409,8 +428,20 @@ public class MainActivity extends FragmentActivity
              transaction.replace(R.id.fragment_container, mosFragment);
              transaction.addToBackStack(null);
              transaction.commit();**/
-            PageviewerSmallFragment Pageview = new PageviewerSmallFragment(mosFragment, position);
+            Pageview = new PageviewerSmallFragment(mosFragment, position);
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, Pageview).addToBackStack(null).commit();
+
+            ShowcaseView.ConfigOptions options = new ShowcaseView.ConfigOptions();
+
+            ShowcaseView sv = new ShowcaseView.Builder(this)
+                    .setTarget(Target.NONE)
+                    .setContentTitle("ShowcaseView")
+                    .setStyle(R.style.CustomShowcaseTheme2)
+                    .setContentText("Swipe Left to see all MOS ")
+
+                    .hideOnTouchOutside()
+                    .build();
+
 
 
         } else {
@@ -426,7 +457,12 @@ public class MainActivity extends FragmentActivity
             //PageviewerFragment Pageview = new PageviewerFragment();
             PageviewerSmallFragment Pageview = new PageviewerSmallFragment(mosFrag, position);
             getSupportFragmentManager().beginTransaction().replace(R.id.rank_fragment, Pageview).addToBackStack(null).commit();
-
+            new ShowcaseView.Builder(this)
+                    .setTarget(Target.NONE)
+                    .setContentTitle("ShowcaseView")
+                    .setContentText("This is highlighting the Home button")
+                    .hideOnTouchOutside()
+                    .build();
 
         }
 
