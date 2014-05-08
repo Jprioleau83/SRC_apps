@@ -10,8 +10,6 @@ import android.view.ViewGroup;
 import com.cnsintegration.srcmarineinfo1.R;
 import com.cnsintegration.srcmarineinfo1.adapter.MyAdapter;
 import com.cnsintegration.srcmarineinfo1.adapter.MyAdapter2;
-import com.github.amlcurran.showcaseview.ShowcaseView;
-import com.github.amlcurran.showcaseview.targets.Target;
 
 import java.lang.reflect.Field;
 

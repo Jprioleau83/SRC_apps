@@ -14,6 +14,7 @@
     <item name="darkred" type="color">#FFCC0000</item>
     <item name="list_divider" type="color">#666</item>
     <item name="list_background" type="color">#242424</item>
+    <color name="showcase_background">#88000000</color>
 
 
 

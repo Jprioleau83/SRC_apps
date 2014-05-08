@@ -13,6 +13,7 @@ import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.Region.Op;
 import android.os.Build;
+import android.os.CountDownTimer;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -444,12 +445,40 @@ public class ShowcaseView extends RelativeLayout
         mHandy = ((LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE))
                 .inflate(R.layout.handy, null);
         addView(mHandy);
-        moveHand(startX, startY, endX, endY, absoluteCoordinates, new AnimationEndListener() {
+        final float  tempstartX = startX;
+        final float tempstartY = startY;
+        final float tempendX = endX;
+        final float tempendY = endY;
+        final boolean tempabsoluteCoordinates = absoluteCoordinates;
+       /** moveHand(startX, startY, endX, endY, absoluteCoordinates, new AnimationEndListener() {
             @Override
             public void onAnimationEnd() {
                 removeView(mHandy);
             }
-        });
+        });**/
+        moveHand(startX, startY, endX, endY, absoluteCoordinates,
+
+                new AnimationEndListener() {
+
+                    @Override
+                    public void onAnimationEnd() {
+                        // PAUSE BETWEEN GESTURES
+                        new CountDownTimer(5000, 1000) {
+
+                            @Override
+                            public void onTick(long miliseconds) {
+                            }
+
+                            @Override
+                            public void onFinish() {
+                                removeView(mHandy);
+                                animateGesture(tempstartX, tempstartY,
+                                        tempendX, tempendY);
+                            }
+                        }.start();
+
+                    }
+                });
     }
 
     private void moveHand(float startX, float startY, float endX,
@@ -681,6 +710,7 @@ public class ShowcaseView extends RelativeLayout
         }
         sv.setShowcaseView(viewToShowcase);
         sv.setText(title, detailText);
+
         return sv;
     }
 

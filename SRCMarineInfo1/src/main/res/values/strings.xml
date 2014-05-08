@@ -10,6 +10,11 @@
     <string name="anim_first">First we showcase this…</string>
     <string name="anim_second">Then this…</string>
     <string name="anim_third">Finally this!</string>
+    <string name="showcase_main_spinner_title">Navigation Spinner</string>
+    <string name="showcase_main_spinner_message">Click this to navigate to the main areas of the app</string>
+    <string name="showcase_main_rank_title">Swipe Left or Right</string>
+    <string name="showcase_main_rank_message">The App is now displaying a set of screen in which you could view by swiping left or right.</string>
+    <string name="showcase_button_ok">I understand</string>
 
     <string-array name="actions_array">
         <item>Ranks</item>

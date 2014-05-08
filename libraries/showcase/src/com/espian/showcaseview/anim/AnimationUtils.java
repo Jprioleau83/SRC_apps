@@ -93,27 +93,39 @@ public class AnimationUtils {
         return oa;
     }
 
-    public static AnimatorSet createMovementAnimation(View view, float canvasX, float canvasY,
-                                                      float offsetStartX, float offsetStartY,
+    public static AnimatorSet createMovementAnimation(View view, float canvasX,
+                                                      float canvasY, float offsetStartX, float offsetStartY,
                                                       float offsetEndX, float offsetEndY,
                                                       final AnimationEndListener listener) {
+
+        // BECAUSE IN EVERY GESTURE THE CANVAS CHANGE POSITION
+        canvasX = -1;
+        canvasY = -1;
+
         ViewHelper.setAlpha(view, INVISIBLE);
 
-        ObjectAnimator alphaIn = ObjectAnimator.ofFloat(view, ALPHA, INVISIBLE, VISIBLE).setDuration(500);
+        ObjectAnimator alphaIn = ObjectAnimator.ofFloat(view, ALPHA, INVISIBLE,
+                VISIBLE).setDuration(500);
 
-        ObjectAnimator setUpX = ObjectAnimator.ofFloat(view, COORD_X, canvasX + offsetStartX).setDuration(INSTANT);
-        ObjectAnimator setUpY = ObjectAnimator.ofFloat(view, COORD_Y, canvasY + offsetStartY).setDuration(INSTANT);
+        ObjectAnimator setUpX = ObjectAnimator.ofFloat(view, COORD_X,
+                canvasX + offsetStartX).setDuration(INSTANT);
+        ObjectAnimator setUpY = ObjectAnimator.ofFloat(view, COORD_Y,
+                canvasY + offsetStartY).setDuration(INSTANT);
 
-        ObjectAnimator moveX = ObjectAnimator.ofFloat(view, COORD_X, canvasX + offsetEndX).setDuration(1000);
-        ObjectAnimator moveY = ObjectAnimator.ofFloat(view, COORD_Y, canvasY + offsetEndY).setDuration(1000);
+        ObjectAnimator moveX = ObjectAnimator.ofFloat(view, COORD_X,
+                canvasX + offsetEndX).setDuration(1000);
+        ObjectAnimator moveY = ObjectAnimator.ofFloat(view, COORD_Y,
+                canvasY + offsetEndY).setDuration(1000);
         moveX.setStartDelay(1000);
         moveY.setStartDelay(1000);
 
-        ObjectAnimator alphaOut = ObjectAnimator.ofFloat(view, ALPHA, INVISIBLE).setDuration(500);
+        ObjectAnimator alphaOut = ObjectAnimator
+                .ofFloat(view, ALPHA, INVISIBLE).setDuration(500);
         alphaOut.setStartDelay(2500);
 
         AnimatorSet as = new AnimatorSet();
-        as.play(setUpX).with(setUpY).before(alphaIn).before(moveX).with(moveY).before(alphaOut);
+        as.play(setUpX).with(setUpY).before(alphaIn).before(moveX).with(moveY)
+                .before(alphaOut);
 
         Handler handler = new Handler();
         Runnable runnable = new Runnable() {

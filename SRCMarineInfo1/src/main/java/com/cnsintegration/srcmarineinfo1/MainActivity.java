@@ -19,11 +19,6 @@ import android.content.res.Configuration;
 import com.cnsintegration.srcmarineinfo1.adapter.MyAdapter;
 import com.cnsintegration.srcmarineinfo1.model.NavDrawerItem;
 import com.cnsintegration.srcmarineinfo1.adapter.NavDrawerListAdapter;
-import com.github.amlcurran.showcaseview.ApiUtils;
-import com.github.amlcurran.showcaseview.ShowcaseView;
-import com.github.amlcurran.showcaseview.targets.ActionViewTarget;
-import com.github.amlcurran.showcaseview.targets.Target;
-import com.github.amlcurran.showcaseview.targets.ViewTarget;
 
 import android.content.res.TypedArray;
 import android.os.Bundle;
@@ -53,10 +48,14 @@ import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import com.espian.showcaseview.OnShowcaseEventListener;
+import com.espian.showcaseview.ShowcaseView;
+import com.espian.showcaseview.targets.ActionViewTarget;
+import com.espian.showcaseview.targets.ViewTarget;
 
 public class MainActivity extends FragmentActivity
         implements ActionFragment.OnServicesSelectedListener, ServiceFragment.OnServicesSelectedListener, ServiceFragment.OnServicesSelectedListener2, RankFragment.OnRankCreated, RankFragment.OnRankCreatedListener1, HomeFragment.OnHomeCreatedListener, MilitaryTimeFragment.OnMilitaryTimeListener,
-        MOSFragment.OnServicesSelectedListener, MOSFragment.OnServicesSelectedListener2, MOSFrag.OnMosSelectedListener, RankTypeFragment.OnRankTypeSelectedListener {
+        MOSFragment.OnServicesSelectedListener, MOSFragment.OnServicesSelectedListener2, MOSFrag.OnMosSelectedListener, RankTypeFragment.OnRankTypeSelectedListener, OnShowcaseEventListener {
 
 
     private DrawerLayout mDrawerLayout;
@@ -81,9 +80,9 @@ public class MainActivity extends FragmentActivity
 
     private ImageView mOverLayImage;
     private static final float ALPHA_DIM_VALUE = 0.1f;
-    private final ApiUtils apiUtils = new ApiUtils();
-    PageviewerSmallFragment Pageview;
 
+    PageviewerSmallFragment Pageview;
+    ShowcaseView sv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -154,6 +153,34 @@ public class MainActivity extends FragmentActivity
             // on first time display view for first nav item
             displayView(0);
         }
+        ShowcaseView.ConfigOptions co = new ShowcaseView.ConfigOptions();
+
+        co.hideOnClickOutside = true;
+        co.fadeInDuration = 700;
+        co.fadeOutDuration = 700;
+
+
+        ActionViewTarget tg = new ActionViewTarget(this, ActionViewTarget.Type.HOME);
+        //ViewTarget target = new ViewTarget(R.id.buttonBlocked, this);
+        sv = ShowcaseView.insertShowcaseView(tg, this, R.string.showcase_main_spinner_title, R.string.showcase_main_spinner_message, co);
+       // sv.animateGesture(200, 500, 200, 0);
+        sv.setOnShowcaseEventListener(this);
+    }
+
+
+    @Override
+    public void onShowcaseViewHide(ShowcaseView showcaseView) {
+
+    }
+
+    @Override
+    public void onShowcaseViewDidHide(ShowcaseView showcaseView) {
+
+    }
+
+    @Override
+    public void onShowcaseViewShow(ShowcaseView showcaseView) {
+
     }
 
 
@@ -257,14 +284,20 @@ public class MainActivity extends FragmentActivity
 
                 if (findViewById(R.id.fragment_container) != null) {
                    // ViewTarget target = new ViewTarget(R.id.buttonBlocked, this);
-                    ShowcaseView sv;
 
-                    sv = new ShowcaseView.Builder(this)
-                            .setTarget(new ActionViewTarget(this, ActionViewTarget.Type.HOME))
-                            .setContentTitle("ShowcaseView")
-                            .setContentText("This is highlighting the Home button")
-                            .hideOnTouchOutside()
-                            .build();
+
+                    ShowcaseView.ConfigOptions co = new ShowcaseView.ConfigOptions();
+                    co.hideOnClickOutside = true;
+
+                    // The following code will reposition the OK button to the left.
+//        RelativeLayout.LayoutParams lps = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+//        lps.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+//        lps.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
+//        int margin = ((Number) (getResources().getDisplayMetrics().density * 12)).intValue();
+//        lps.setMargins(margin, margin, margin, margin);
+//        co.buttonLayoutParams = lps;
+
+
 
 
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, hfragment).addToBackStack(null).commit();
@@ -381,12 +414,7 @@ public class MainActivity extends FragmentActivity
 
     }
 
-    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-    private void dimView(View view) {
-        if (apiUtils.isCompatWithHoneycomb()) {
-            view.setAlpha(ALPHA_DIM_VALUE);
-        }
-    }
+
 
 
     public void onServiceSelected(int position) {
@@ -428,18 +456,26 @@ public class MainActivity extends FragmentActivity
              transaction.replace(R.id.fragment_container, mosFragment);
              transaction.addToBackStack(null);
              transaction.commit();**/
+
+
+
             Pageview = new PageviewerSmallFragment(mosFragment, position);
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, Pageview).addToBackStack(null).commit();
+            ShowcaseView.ConfigOptions co = new ShowcaseView.ConfigOptions();
+
+            co.hideOnClickOutside = true;
+            co.fadeInDuration = 700;
+            co.fadeOutDuration = 700;
 
 
-            ShowcaseView sv = new ShowcaseView.Builder(this)
-                    .setTarget(Target.NONE)
-                    .setContentTitle("ShowcaseView")
-                    .setStyle(R.style.CustomShowcaseTheme2)
-                    .setContentText("Swipe Left to see all MOS ")
 
-                    .hideOnTouchOutside()
-                    .build();
+            //ViewTarget target = new ViewTarget(R.id.buttonBlocked, this);
+            sv = ShowcaseView.insertShowcaseView(ShowcaseView.NONE, this, R.string.showcase_main_rank_title, R.string.showcase_main_rank_message, co);
+            sv.animateGesture(500, 500, 0, 500);
+
+            sv.setOnShowcaseEventListener(this);
+
+
 
 
 
@@ -454,14 +490,27 @@ public class MainActivity extends FragmentActivity
             //      .replace(R.id.rank_fragment, mosFragview).commit();
 
             //PageviewerFragment Pageview = new PageviewerFragment();
+
+
+
             PageviewerSmallFragment Pageview = new PageviewerSmallFragment(mosFrag, position);
             getSupportFragmentManager().beginTransaction().replace(R.id.rank_fragment, Pageview).addToBackStack(null).commit();
-            new ShowcaseView.Builder(this)
-                    .setTarget(Target.NONE)
-                    .setContentTitle("ShowcaseView")
-                    .setContentText("This is highlighting the Home button")
-                    .hideOnTouchOutside()
-                    .build();
+
+            ShowcaseView.ConfigOptions co = new ShowcaseView.ConfigOptions();
+
+            co.hideOnClickOutside = true;
+            co.fadeInDuration = 700;
+            co.fadeOutDuration = 700;
+
+
+
+            //ViewTarget target = new ViewTarget(R.id.buttonBlocked, this);
+            sv = ShowcaseView.insertShowcaseView(ShowcaseView.NONE, this, R.string.showcase_main_rank_title, R.string.showcase_main_rank_message, co);
+            sv.animateGesture(500, 500, 0, 500);
+
+            sv.setOnShowcaseEventListener(this);
+
+
 
         }
 
@@ -594,17 +643,43 @@ public class MainActivity extends FragmentActivity
 
 
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, rv).addToBackStack(null).commit();
+            ShowcaseView.ConfigOptions co = new ShowcaseView.ConfigOptions();
 
+            co.hideOnClickOutside = true;
+            co.fadeInDuration = 700;
+            co.fadeOutDuration = 700;
+
+
+
+            //ViewTarget target = new ViewTarget(R.id.buttonBlocked, this);
+            sv = ShowcaseView.insertShowcaseView(ShowcaseView.NONE, this, R.string.showcase_main_rank_title, R.string.showcase_main_rank_message, co);
+            sv.animateGesture(500, 500, 0, 500);
+
+            sv.setOnShowcaseEventListener(this);
 
         } else {
 
 
             getSupportFragmentManager().beginTransaction().replace(R.id.rank_fragment, rv).addToBackStack(null).commit();
+            ShowcaseView.ConfigOptions co = new ShowcaseView.ConfigOptions();
 
+            co.hideOnClickOutside = true;
+            co.fadeInDuration = 700;
+            co.fadeOutDuration = 700;
+
+
+
+            //ViewTarget target = new ViewTarget(R.id.buttonBlocked, this);
+            sv = ShowcaseView.insertShowcaseView(ShowcaseView.NONE, this, R.string.showcase_main_rank_title, R.string.showcase_main_rank_message, co);
+            sv.animateGesture(500, 500, 0, 500);
+
+            sv.setOnShowcaseEventListener(this);
 
         }
 
     }
+
+
 
 
     /**
