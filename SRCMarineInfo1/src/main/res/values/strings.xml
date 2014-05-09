@@ -19,7 +19,7 @@
     <string-array name="actions_array">
         <item>Ranks</item>
         <item>Military Time</item>
-        <item>MOS</item>
+        <item>MOS/AFSC</item>
         <item>Alpha Numeric</item>
         <item>Org structure</item>
         <item>Acks</item>
@@ -30,7 +30,7 @@
         <item>Home</item>
         <item>Ranks</item>
         <item>Military Time</item>
-        <item>MOS</item>
+        <item>MOS/AFSC</item>
         <item>Alpha Numeric</item>
         <item>Org structure</item>
         <item>Acks</item>

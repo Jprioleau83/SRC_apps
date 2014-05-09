@@ -34,7 +34,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#000"
+                android:textColor="#fff"
                 android:id="@+id/text"
                 android:text="The United States Marine Corps's Military Occupational Specialty (MOS) is a system of categorizing career fields. All enlisted and officer Marines are assigned a four digit code denoting their occupational field and specialty.
             Occupational Fields (OccFlds) are identified in the first two digits and represent a grouping of related MOSs. Job codes are identified in the last two digits and represent a specific job within that OccFld. An MOS can be awarded as a Primary MOS (PMOS), an Additional MOS (AMOS), a Skill Designator,[1] or Category II MOS (which denote special skills assignments or simply to account for structure when required).

@@ -9221,7 +9221,41 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
 
     }
 
+    public void populateusafafsc(SQLiteDatabase db) {
 
+        ContentValues values = new ContentValues();
+
+
+        values.put(MOSTITLES_TITLE, "1A - Aircrew Operations");
+        values.put(MOSTITLES_BRANCH, Branch_USAF);
+
+
+        long mostitleId = db.insert(MOSTITLES, null, values);
+
+
+        ContentValues values1 = new ContentValues();
+
+
+        values1.put(MOS_NUMBER, "1A0X1");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "In-Flight Refueling");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/airforceenlistedjobs/a/afjob1a0x1.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(MOS_NUMBER, "1A1X1");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Flight Engineer");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/airforceenlistedjobs/a/afjob1a0x1.htm");
+        db.insert(MOS, null, values1);
+
+
+    }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
@@ -9239,6 +9273,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
 
 
         populateusmcmos(db);
+        populateusafafsc(db);
 
 
 

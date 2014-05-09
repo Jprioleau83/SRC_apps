@@ -3,11 +3,13 @@ package com.cnsintegration.srcmarineinfo1;
 
 import android.annotation.TargetApi;
 import android.app.Dialog;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.Point;
 import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
+import android.preference.PreferenceManager;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.Fragment;
@@ -51,6 +53,7 @@ import java.util.TimerTask;
 import com.espian.showcaseview.OnShowcaseEventListener;
 import com.espian.showcaseview.ShowcaseView;
 import com.espian.showcaseview.targets.ActionViewTarget;
+import com.espian.showcaseview.targets.PointTarget;
 import com.espian.showcaseview.targets.ViewTarget;
 
 public class MainActivity extends FragmentActivity
@@ -153,18 +156,31 @@ public class MainActivity extends FragmentActivity
             // on first time display view for first nav item
             displayView(0);
         }
-        ShowcaseView.ConfigOptions co = new ShowcaseView.ConfigOptions();
-
-        co.hideOnClickOutside = true;
-        co.fadeInDuration = 700;
-        co.fadeOutDuration = 700;
 
 
-        ActionViewTarget tg = new ActionViewTarget(this, ActionViewTarget.Type.HOME);
-        //ViewTarget target = new ViewTarget(R.id.buttonBlocked, this);
-        sv = ShowcaseView.insertShowcaseView(tg, this, R.string.showcase_main_spinner_title, R.string.showcase_main_spinner_message, co);
-       // sv.animateGesture(200, 500, 200, 0);
-        sv.setOnShowcaseEventListener(this);
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        if (!prefs.getBoolean("firstTime", false)) {
+            // run your one time code
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putBoolean("firstTime", true);
+            editor.commit();
+            ShowcaseView.ConfigOptions co = new ShowcaseView.ConfigOptions();
+
+            co.hideOnClickOutside = true;
+            co.fadeInDuration = 700;
+            co.fadeOutDuration = 700;
+
+
+            ActionViewTarget tg = new ActionViewTarget(this, ActionViewTarget.Type.HOME);
+
+
+            //ViewTarget target = new ViewTarget(R.id.buttonBlocked, this);
+            sv = ShowcaseView.insertShowcaseView(tg, this, R.string.showcase_main_spinner_title, R.string.showcase_main_spinner_message, co);
+            // sv.animateGesture(200, 500, 200, 0);
+            sv.setOnShowcaseEventListener(this);
+
+        }
+
     }
 
 
@@ -286,16 +302,7 @@ public class MainActivity extends FragmentActivity
                    // ViewTarget target = new ViewTarget(R.id.buttonBlocked, this);
 
 
-                    ShowcaseView.ConfigOptions co = new ShowcaseView.ConfigOptions();
-                    co.hideOnClickOutside = true;
 
-                    // The following code will reposition the OK button to the left.
-//        RelativeLayout.LayoutParams lps = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-//        lps.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
-//        lps.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
-//        int margin = ((Number) (getResources().getDisplayMetrics().density * 12)).intValue();
-//        lps.setMargins(margin, margin, margin, margin);
-//        co.buttonLayoutParams = lps;
 
 
 
@@ -361,7 +368,7 @@ public class MainActivity extends FragmentActivity
 
 
                 if (findViewById(R.id.fragment_container) != null) {
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commit();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).addToBackStack(null).commit();
                 } else {
 
 
@@ -461,22 +468,35 @@ public class MainActivity extends FragmentActivity
 
             Pageview = new PageviewerSmallFragment(mosFragment, position);
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, Pageview).addToBackStack(null).commit();
-            ShowcaseView.ConfigOptions co = new ShowcaseView.ConfigOptions();
-
-            co.hideOnClickOutside = true;
-            co.fadeInDuration = 700;
-            co.fadeOutDuration = 700;
 
 
+            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+            if (!prefs.getBoolean("firstTimeMos", false)) {
+                // run your one time code
+                SharedPreferences.Editor editor = prefs.edit();
+                editor.putBoolean("firstTimeMos", true);
+                editor.commit();
 
-            //ViewTarget target = new ViewTarget(R.id.buttonBlocked, this);
-            sv = ShowcaseView.insertShowcaseView(ShowcaseView.NONE, this, R.string.showcase_main_rank_title, R.string.showcase_main_rank_message, co);
-            sv.animateGesture(500, 500, 0, 500);
+                ShowcaseView.ConfigOptions co = new ShowcaseView.ConfigOptions();
 
-            sv.setOnShowcaseEventListener(this);
+                co.hideOnClickOutside = true;
+                co.fadeInDuration = 700;
+                co.fadeOutDuration = 700;
 
 
+                Display display = getWindowManager().getDefaultDisplay();
+                final Point size = new Point();
+                display.getSize(size);
+                int height = size.y;
+                int width = size.x;
+                float centerY = height / 2;
+                PointTarget pg = new PointTarget(500, (int) centerY);
 
+                sv = ShowcaseView.insertShowcaseView(pg, this, R.string.showcase_main_rank_title, R.string.showcase_main_rank_message, co);
+                sv.animateGesture(width - 15, (int) centerY, 0, (int) centerY);
+                sv.setOnShowcaseEventListener(this);
+
+            }
 
 
         } else {
@@ -496,21 +516,34 @@ public class MainActivity extends FragmentActivity
             PageviewerSmallFragment Pageview = new PageviewerSmallFragment(mosFrag, position);
             getSupportFragmentManager().beginTransaction().replace(R.id.rank_fragment, Pageview).addToBackStack(null).commit();
 
-            ShowcaseView.ConfigOptions co = new ShowcaseView.ConfigOptions();
-
-            co.hideOnClickOutside = true;
-            co.fadeInDuration = 700;
-            co.fadeOutDuration = 700;
-
-
-
-            //ViewTarget target = new ViewTarget(R.id.buttonBlocked, this);
-            sv = ShowcaseView.insertShowcaseView(ShowcaseView.NONE, this, R.string.showcase_main_rank_title, R.string.showcase_main_rank_message, co);
-            sv.animateGesture(500, 500, 0, 500);
-
-            sv.setOnShowcaseEventListener(this);
+            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+            if (!prefs.getBoolean("firstTimeMos", false)) {
+                // run your one time code
+                SharedPreferences.Editor editor = prefs.edit();
+                editor.putBoolean("firstTimeMos", true);
+                editor.commit();
 
 
+                ShowcaseView.ConfigOptions co = new ShowcaseView.ConfigOptions();
+
+                co.hideOnClickOutside = true;
+                co.fadeInDuration = 700;
+                co.fadeOutDuration = 700;
+
+
+                Display display = getWindowManager().getDefaultDisplay();
+                final Point size = new Point();
+                display.getSize(size);
+                int height = size.y;
+                int width = size.x;
+                float centerY = height / 2;
+                PointTarget pg = new PointTarget(500, (int) centerY);
+
+                sv = ShowcaseView.insertShowcaseView(pg, this, R.string.showcase_main_rank_title, R.string.showcase_main_rank_message, co);
+                sv.animateGesture(width - 15, (int) centerY, 0, (int) centerY);
+                sv.setOnShowcaseEventListener(this);
+
+            }
 
         }
 
@@ -585,46 +618,6 @@ public class MainActivity extends FragmentActivity
     }
 
 
-    /**
-     * public void onRankSelected(int position) {
-     * RankFragbak2 rankFrag = (RankFragbak2)
-     * getSupportFragmentManager().findFragmentById(R.id.rank_fragment);
-     * <p/>
-     * if (rankFrag != null) {
-     * // If article frag is available, we're in two-pane layout...
-     * <p/>
-     * // Call a method in the ArticleFragment to update its content
-     * //rankFrag.updateRankView(position);
-     * <p/>
-     * } else {
-     * <p/>
-     * <p/>
-     * if (findViewById(R.id.fragment_container) != null) {
-     * <p/>
-     * // However, if we're being restored from a previous state,
-     * // then we don't need to do anything and should return or else
-     * // we could end up with overlapping fragments.
-     * <p/>
-     * <p/>
-     * // Create an instance of ExampleFragment
-     * RankFragbak2 rankFragment = new RankFragbak2();
-     * Bundle args = new Bundle();
-     * args.putInt(ServiceFragment.ARG_POSITION, position);
-     * rankFragment.setArguments(args);
-     * FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-     * <p/>
-     * transaction.replace(R.id.fragment_container, rankFragment);
-     * transaction.addToBackStack(null);
-     * transaction.commit();
-     * <p/>
-     * }
-     * <p/>
-     * }
-     * <p/>
-     * <p/>
-     * }*
-     */
-
     @Override
     public void onRankSelected(List Ranks) {
         List tRanks = Ranks;
@@ -643,37 +636,73 @@ public class MainActivity extends FragmentActivity
 
 
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, rv).addToBackStack(null).commit();
-            ShowcaseView.ConfigOptions co = new ShowcaseView.ConfigOptions();
 
-            co.hideOnClickOutside = true;
-            co.fadeInDuration = 700;
-            co.fadeOutDuration = 700;
+            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+            if (!prefs.getBoolean("firstTimeRank", false)) {
+                // run your one time code
+                SharedPreferences.Editor editor = prefs.edit();
+                editor.putBoolean("firstTimeRank", true);
+                editor.commit();
 
 
+                ShowcaseView.ConfigOptions co = new ShowcaseView.ConfigOptions();
 
-            //ViewTarget target = new ViewTarget(R.id.buttonBlocked, this);
-            sv = ShowcaseView.insertShowcaseView(ShowcaseView.NONE, this, R.string.showcase_main_rank_title, R.string.showcase_main_rank_message, co);
-            sv.animateGesture(500, 500, 0, 500);
+                co.hideOnClickOutside = true;
+                co.fadeInDuration = 700;
+                co.fadeOutDuration = 700;
 
-            sv.setOnShowcaseEventListener(this);
+
+                //ViewTarget target = new ViewTarget(R.id.buttonBlocked, this);
+                //
+                //sv = ShowcaseView.insertShowcaseView(ShowcaseView.NONE, this, R.string.showcase_main_rank_title, R.string.showcase_main_rank_message, co);
+
+
+                //sv.setOnShowcaseEventListener(this);
+
+
+                Display display = getWindowManager().getDefaultDisplay();
+                final Point size = new Point();
+                display.getSize(size);
+                int height = size.y;
+                int width = size.x;
+                float centerY = height / 2;
+                PointTarget pg = new PointTarget(500, (int) centerY);
+
+                sv = ShowcaseView.insertShowcaseView(pg, this, R.string.showcase_main_rank_title, R.string.showcase_main_rank_message, co);
+                sv.animateGesture(width - 15, (int) centerY, 0, (int) centerY);
+                sv.setOnShowcaseEventListener(this);
+            }
+
 
         } else {
 
 
             getSupportFragmentManager().beginTransaction().replace(R.id.rank_fragment, rv).addToBackStack(null).commit();
-            ShowcaseView.ConfigOptions co = new ShowcaseView.ConfigOptions();
+            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+            if (!prefs.getBoolean("firstTimeRank", false)) {
+                // run your one time code
+                SharedPreferences.Editor editor = prefs.edit();
+                editor.putBoolean("firstTimeRank", true);
+                editor.commit();
+                ShowcaseView.ConfigOptions co = new ShowcaseView.ConfigOptions();
 
-            co.hideOnClickOutside = true;
-            co.fadeInDuration = 700;
-            co.fadeOutDuration = 700;
+                co.hideOnClickOutside = true;
+                co.fadeInDuration = 700;
+                co.fadeOutDuration = 700;
 
 
+                Display display = getWindowManager().getDefaultDisplay();
+                final Point size = new Point();
+                display.getSize(size);
+                int height = size.y;
+                int width = size.x;
+                float centerY = height / 2;
+                PointTarget pg = new PointTarget(500, (int) centerY);
 
-            //ViewTarget target = new ViewTarget(R.id.buttonBlocked, this);
-            sv = ShowcaseView.insertShowcaseView(ShowcaseView.NONE, this, R.string.showcase_main_rank_title, R.string.showcase_main_rank_message, co);
-            sv.animateGesture(500, 500, 0, 500);
-
-            sv.setOnShowcaseEventListener(this);
+                sv = ShowcaseView.insertShowcaseView(pg, this, R.string.showcase_main_rank_title, R.string.showcase_main_rank_message, co);
+                sv.animateGesture(width - 15, (int) centerY, 0, (int) centerY);
+                sv.setOnShowcaseEventListener(this);
+            }
 
         }
 

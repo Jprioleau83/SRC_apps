@@ -7,7 +7,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,9 +16,7 @@ import android.widget.ListView;
 
 import com.cnsintegration.srcmarineinfo1.Database.DataBaseWrapper;
 import com.cnsintegration.srcmarineinfo1.adapter.BinderData;
-import com.cnsintegration.srcmarineinfo1.adapter.ExpandabelListAdoptor2;
 import com.cnsintegration.srcmarineinfo1.adapter.ExpandabelListAdoptor3;
-import com.cnsintegration.srcmarineinfo1.adapter.MOSTitleData;
 import com.cnsintegration.srcmarineinfo1.model.MOS;
 import com.cnsintegration.srcmarineinfo1.model.MTitles;
 
@@ -273,7 +270,7 @@ public class MOSFragment extends Fragment {
         con=getActivity();
 
 
-        mAdapter=new ExpandabelListAdoptor3(con,_listDataHeader, _listDataChild) ; //here i didnt set list values to this adoptor
+        mAdapter = new ExpandabelListAdoptor3(con, _listDataHeader, _listDataChild, mActiontype); //here i didnt set list values to this adoptor
 
 
         lv.setAdapter(mAdapter);

@@ -34,13 +34,15 @@ public class ExpandabelListAdoptor3 extends BaseExpandableListAdapter {
     static final String KEY_DETAILS = "details";
     ViewHolder holder;
     LayoutInflater inflater;
+    static int position;
 
 
-    public ExpandabelListAdoptor3(Context con, List<MTitles> listDataHeader, HashMap<String, List<MOS>> listDataChild) {
+    public ExpandabelListAdoptor3(Context con, List<MTitles> listDataHeader, HashMap<String, List<MOS>> listDataChild, int position) {
         this._context = con;
         //branchesDataCollection = listDataChild;
         this._listDataChild = listDataChild;
         this._listDataHeader = listDataHeader;
+        this.position = position;
     }
 
     @Override
@@ -85,6 +87,11 @@ public class ExpandabelListAdoptor3 extends BaseExpandableListAdapter {
         }
 
         // Setting all values in listview
+
+        if (position == 2) {
+            holder.tvLabel = (TextView) vi.findViewById(R.id.mos_label);
+            holder.tvLabel.setText("AFSC");
+        }
 
 
         holder.tvRank.setText(mos.getMOS_NAME());
@@ -180,6 +187,7 @@ public class ExpandabelListAdoptor3 extends BaseExpandableListAdapter {
         TextView tvPay;
         TextView tvDetail;
         TextView tvLink;
+        TextView tvLabel;
 
     }
 }

@@ -296,7 +296,7 @@ public class MOSFrag extends Fragment {
         con = getActivity();
 
 
-        mAdapter = new ExpandabelListAdoptor3(con, _listDataHeader, _listDataChild); //here i didnt set list values to this adoptor
+        mAdapter = new ExpandabelListAdoptor3(con, _listDataHeader, _listDataChild, position); //here i didnt set list values to this adoptor
 
 
         lv.setAdapter(mAdapter);
