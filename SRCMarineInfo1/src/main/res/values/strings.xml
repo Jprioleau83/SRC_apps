@@ -51,5 +51,11 @@
     <!-- Content Description -->
     <string name="desc_list_item_icon">Item Icon</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="afsc_home_detail">The Army and Marine Corps call their enlisted jobs "MOS\'s," or "Military Occupation Specialties." The Navy and Coast Guard call their enlisted jobs "ratings." But, in the Air Force, enlisted jobs are known as "AFSCs," or "Air Force Specialty Codes." \n \n The Air Force divides their AFSCs (enlisted jobs) into the following overall categories: Operations, Maintenance &amp; Logistics, Support, Medical &amp; Dental, Legal &amp; Chaplain, Finance &amp; Contracting, and Special Investigations. Withing these categories, AFSCs are further assigned to "career fields." A career field may have one AFSC assigned to it, or it may have several. AFSCs with similar functions are grouped together in the same career field.</string>
+    <string name="mos_home_detail">The United States Marine Corps\'s Military Occupational Specialty (MOS) is a system of categorizing career fields. All enlisted and officer Marines are assigned a four digit code denoting their occupational field and specialty.
+            Occupational Fields (OccFlds) are identified in the first two digits and represent a grouping of related MOSs. Job codes are identified in the last two digits and represent a specific job within that OccFld. An MOS can be awarded as a Primary MOS (PMOS), an Additional MOS (AMOS), a Skill Designator, or Category II MOS (which denote special skills assignments or simply to account for structure when required).
+            Below are listed the current authorized Marine Corps MOSs, organized by OccFld, then by specific MOS. Most MOSs have specific rank/pay grade requirements and are listed to the right of the MOS title, if applicable (see United States Marine Corps rank insignia), abbreviated from the highest allowed rank to the lowest. Officer ranks are noted as Unrestricted Line Officers[2] (ULOs), Limited Duty Officers(LDOs), and Warrant Officers(WOs). Those MOSs which are no longer being awarded are kept active to allow Marines to earn a new MOS.
+            </string>
+
 
 </resources>

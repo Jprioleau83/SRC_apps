@@ -1,9 +1,11 @@
 package com.cnsintegration.srcmarineinfo1.adapter;
 
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import com.cnsintegration.srcmarineinfo1.AFSCHomeFragment;
 import com.cnsintegration.srcmarineinfo1.HomeFragment;
 import com.cnsintegration.srcmarineinfo1.MOSFrag;
 import com.cnsintegration.srcmarineinfo1.MOSFragment;
@@ -34,10 +36,17 @@ public class MyAdapter2 extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                if (passedfrag.mCurrentPosition == 1) {
+                Bundle args = passedfrag.getArguments();
+                int pos =  args.getInt("position");
+                if (pos == 1) {
+
+
                     return new MOSHomeFragment();
-                } else {
-                    return new MOSHomeFragment();
+                }else if(pos == 2){
+                    return new AFSCHomeFragment();
+                }
+                else {
+                    return new AFSCHomeFragment();
                 }
             case 1:
 
