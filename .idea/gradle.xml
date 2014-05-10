@@ -8,10 +8,10 @@
         <option name="gradleHome" value="$APPLICATION_HOME_DIR$/plugins/gradle" />
         <option name="modules">
           <set>
-            <option value="C:\Users\jprioleau\Github\SRC_apps" />
-            <option value="C:\Users\jprioleau\Github\SRC_apps\SRCMarineInfo1" />
-            <option value="C:\Users\jprioleau\Github\SRC_apps\libraries" />
-            <option value="C:\Users\jprioleau\Github\SRC_apps\libraries\showcase" />
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/SRCMarineInfo1" />
+            <option value="$PROJECT_DIR$/libraries" />
+            <option value="$PROJECT_DIR$/libraries/showcase" />
           </set>
         </option>
       </GradleProjectSettings>
