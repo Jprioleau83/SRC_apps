@@ -10354,8 +10354,660 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_NAME, "Visual Information");
         values1.put(MOS_TYPE, "Enlisted");
         values1.put(MOS_RANK, "N/A");
-        
+
         db.insert(MOS, null, values1);
+
+        values.put(MOSTITLES_TITLE, "4 - Medical");
+        values.put(MOSTITLES_BRANCH, Branch_USAF);
+
+
+        mostitleId = db.insert(MOSTITLES, null, values);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "4A0X1");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Health Services Management");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://www.airforce.com/careers/detail/health-services-management/");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "4A1X1");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Medical Material");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://www.airforce.com/careers/detail/medical-material-specialist/");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "4A2X1");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Biomedical Equipment");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://www.airforce.com/careers/detail/biomedical-equipment/");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "4B0X1");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Bioenvironmental Engineering");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://www.airforce.com/careers/detail/bioenvironmental-engineer/");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "4C0X1");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Mental Health Service");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://www.airforce.com/careers/detail/mental-health-service-specialist/");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "4D0X1");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Diet Therapy");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://www.airforce.com/careers/detail/mental-health-service-specialist/");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "4E0X1");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Public Health");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://www.airforce.com/careers/detail/public-health-specialist/");
+        db.insert(MOS, null, values1);
+
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "4E0X1");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Public Health");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://www.airforce.com/careers/detail/public-health-specialist/");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "4H0X1");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Cardiopulmonary Laboratory");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://www.airforce.com/careers/detail/cardiopulmonary-laboratory/");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "4j0X1");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Physical Medicine");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://www.airforce.com/careers/detail/physical-medicine-specialist/");
+        db.insert(MOS, null, values1);
+
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "4j0X1A");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Orthotics");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://www.airforce.com/careers/detail/orthodontist/");
+        db.insert(MOS, null, values1);
+
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "4M0X1");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Aerospace and Operational Physiology");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://www.airforce.com/careers/detail/aerospace-physiology/");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "4N0X1");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Aerospace Medical Service ");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://www.airforce.com/careers/detail/aerospace-medical-service/");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "4N0X1B");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Allergy and Immunizations Technician");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://www.airforce.com/careers/detail/allergist/");
+        db.insert(MOS, null, values1);
+
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "4N0X1C");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Independent Duty Medical Technician");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "4N0X1F");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Flight and Operational Medical Technian (New in 2014)");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "4N1X1");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Surgical Service");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://www.airforce.com/careers/detail/surgical-service-specialist/");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "4P0X1");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Pharmacy");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://www.airforce.com/careers/detail/pharmacy-specialist/");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "4R0X1");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Diagnostic Imaging");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://www.airforce.com/careers/detail/diagnostic-imaging/");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "4T0X1");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Medical Laboratory");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://www.airforce.com/careers/detail/medical-laboratory-specialist/");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "4V0X1");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Ophthalmic");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://www.airforce.com/careers/detail/ophthalmic-specialist/");
+        db.insert(MOS, null, values1);
+
+
+        values.put(MOSTITLES_TITLE, "5 - Professional");
+        values.put(MOSTITLES_BRANCH, Branch_USAF);
+
+
+        mostitleId = db.insert(MOSTITLES, null, values);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "5J0X1");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Paralegal");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://www.airforce.com/careers/detail/paralegal-specialist/");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "5R0X1");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Chaplain Assistant");
+
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+
+        db.insert(MOS, null, values1);
+
+
+        values.put(MOSTITLES_TITLE, "6 - Acquisition");
+        values.put(MOSTITLES_BRANCH, Branch_USAF);
+
+
+        mostitleId = db.insert(MOSTITLES, null, values);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "6C0X1");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Contracting");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://www.airforce.com/careers/detail/contracting/");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "6F0X1");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Financial Management & Comptroller");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://www.airforce.com/careers/detail/financial-management-comptroller/");
+        db.insert(MOS, null, values1);
+
+        values.put(MOSTITLES_TITLE, "7 - Special Investigation(OSI)");
+        values.put(MOSTITLES_BRANCH, Branch_USAF);
+
+
+        mostitleId = db.insert(MOSTITLES, null, values);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "7S0X1");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Special Investigations (OSI)");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://www.airforce.com/careers/detail/special-investigations-officer/");
+        db.insert(MOS, null, values1);
+
+        values.put(MOSTITLES_TITLE, "8 - Special Duty Identifiers");
+        values.put(MOSTITLES_BRANCH, Branch_USAF);
+
+
+        mostitleId = db.insert(MOSTITLES, null, values);
+
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "8A100");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Career Assistance Advisor");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "8A200");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Enlisted Aide");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "8B000");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Military Training Instructor");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "8B100");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, " Military Training Leader");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "8B200");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Academic Military Training NCO");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "8C000");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Airman & Family Readiness Center RNCO");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://www.airforce.com/careers/detail/special-investigations-officer/");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "8D000");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Linguist Debriefer");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "8F000");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "First Sergeant");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "8G000");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Honor Guard");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "8H000");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Airman Dorm Leader");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+
+        db.insert(MOS, null, values1);
+
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "8M000");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Postal service (will be absorbed by 3A1X1 in 2014)");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "8P000");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Defense Courier");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "8P100");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Defense Attaché");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "8R000");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, " Enlisted Accessions Recruiter");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "8R200");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Second-Tier Recruiter");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "8R300");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Third-Tier Recruiter");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "8S000");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Missile Facility Manager");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "8T000");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Professional Military Education Instruction");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+
+        db.insert(MOS, null, values1);
+
+
+        values.put(MOSTITLES_TITLE, "9 - Reporting Identifiers");
+        values.put(MOSTITLES_BRANCH, Branch_USAF);
+
+
+        mostitleId = db.insert(MOSTITLES, null, values);
+
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "9A000");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Awaiting Retraining-Reasons Beyond Control");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://usmilitary.about.com/library/milinfo/afjobs/bl9a000.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "9A100");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Airman Awaiting Retraining - Disqualification for Reasons Within Control");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://usmilitary.about.com/library/milinfo/afjobs/bla100.htm");
+        db.insert(MOS, null, values1);
+
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "9A200");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Awaiting Discharge, Separation, Retirement for Reasons Within Their Control");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://usmilitary.about.com/library/milinfo/afjobs/bl9a000.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "9A300");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Awaiting Discharge, Separation, Retirement for Reasons Beyond Their Control");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://usmilitary.about.com/library/milinfo/afjobs/bla100.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "9C000");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Chief Master Sergeant of the Air Force");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://usmilitary.about.com/library/milinfo/afjobs/bl9c000.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "9D000");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Dormitory Manager");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://usmilitary.about.com/library/milinfo/afjobs/bl9d000.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "9E000");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Command Chief Master Sergeant");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://usmilitary.about.com/library/milinfo/afjobs/bl9e000.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "9F000");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "First Term Airmen Center ");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://usmilitary.about.com/library/milinfo/afjobs/bl9e000.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "9G100");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Group Superintendent");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "9J000");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Prisoner");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://usmilitary.about.com/library/milinfo/afjobs/bl9j000.htm");
+        db.insert(MOS, null, values1);
+
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "9L000");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Interpreter/Translator ");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://usmilitary.about.com/library/milinfo/afjobs/bl9l000.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "9P000");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Patient");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://usmilitary.about.com/library/milinfo/afjobs/bl9p000.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "9R000");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Civil Air Patrol (CAP)-USAF Reserve Assistant NCOs");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://usmilitary.about.com/library/milinfo/afjobs/bl9R000.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "9S100");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Technical Applications Specialist");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/airforceenlistedjobs/a/afjob9s100.htm");
+        db.insert(MOS, null, values1);
+
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "9T000");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Basic Enlisted Airman");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://usmilitary.about.com/library/milinfo/afjobs/bl9t000.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "9T100");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Officer Trainee");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://usmilitary.about.com/library/milinfo/afjobs/bl9t100.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "9T200");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Precadet Assignee");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://usmilitary.about.com/library/milinfo/afjobs/bl9t200.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "9W000");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Wounded Warrior");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+
+        db.insert(MOS, null, values1);
+
+
+        values.put(MOSTITLES_TITLE, "10 -Operations");
+        values.put(MOSTITLES_BRANCH, Branch_USAF);
+
+
+        mostitleId = db.insert(MOSTITLES, null, values);
+
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "10C0");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Operations Commander");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+
+        db.insert(MOS, null, values1);
+
+        values.put(MOSTITLES_TITLE, "11 -Pilot Field");
+        values.put(MOSTITLES_BRANCH, Branch_USAF);
+
+
+        mostitleId = db.insert(MOSTITLES, null, values);
+
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "11Ax");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Airlift pilot");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://usmilitary.about.com/library/milinfo/afoffjobs/bl11ax.htm");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "11Bx");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Bomber pilot");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        values1.put(MOS_Link, "http://usmilitary.about.com/library/milinfo/afoffjobs/bl11bx.htm");
+        db.insert(MOS, null, values1);
+
+
 
 
 
