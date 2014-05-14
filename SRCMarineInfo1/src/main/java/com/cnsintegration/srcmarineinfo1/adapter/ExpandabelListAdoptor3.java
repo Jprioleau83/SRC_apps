@@ -120,6 +120,8 @@ public class ExpandabelListAdoptor3 extends BaseExpandableListAdapter {
     @Override
     public Object getGroup(int groupPosition) {
         // TODO Auto-generated method stub
+
+
         return this._listDataHeader.get(groupPosition).getMOS_TITLES_TITLE();
     }
 

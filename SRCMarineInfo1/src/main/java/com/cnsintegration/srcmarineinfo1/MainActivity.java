@@ -58,7 +58,7 @@ import com.espian.showcaseview.targets.ViewTarget;
 
 public class MainActivity extends FragmentActivity
         implements ActionFragment.OnServicesSelectedListener, ServiceFragment.OnServicesSelectedListener, ServiceFragment.OnServicesSelectedListener2, RankFragment.OnRankCreated, RankFragment.OnRankCreatedListener1, HomeFragment.OnHomeCreatedListener, MilitaryTimeFragment.OnMilitaryTimeListener,
-        MOSFragment.OnServicesSelectedListener, MOSFragment.OnServicesSelectedListener2, MOSFrag.OnMosSelectedListener, RankTypeFragment.OnRankTypeSelectedListener, OnShowcaseEventListener {
+        RankTypeFragment.OnRankTypeSelectedListener, OnShowcaseEventListener, MOSTypeFragment.OnMOSTypeSelectedListener {
 
 
     private DrawerLayout mDrawerLayout;
@@ -453,102 +453,44 @@ public class MainActivity extends FragmentActivity
             // Create an instance of MOSFrag
 
 
-            MOSFrag mosFragment = new MOSFrag();
+            MOSTypeFragment mostype = new MOSTypeFragment(position);
             Bundle args = new Bundle();
             args.putInt(ServiceFragment.ARG_POSITION, position);
-            mosFragment.setArguments(args);
+            mostype.setArguments(args);
 
-            /** FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
-             transaction.replace(R.id.fragment_container, mosFragment);
+             transaction.replace(R.id.fragment_container, mostype);
              transaction.addToBackStack(null);
-             transaction.commit();**/
+             transaction.commit();
 
 
 
-            Pageview = new PageviewerSmallFragment(mosFragment, position);
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, Pageview).addToBackStack(null).commit();
 
-
-            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-            if (!prefs.getBoolean("firstTimeMos", false)) {
-                // run your one time code
-                SharedPreferences.Editor editor = prefs.edit();
-                editor.putBoolean("firstTimeMos", true);
-                editor.commit();
-
-                ShowcaseView.ConfigOptions co = new ShowcaseView.ConfigOptions();
-
-                co.hideOnClickOutside = true;
-                co.fadeInDuration = 700;
-                co.fadeOutDuration = 700;
-
-
-                Display display = getWindowManager().getDefaultDisplay();
-                final Point size = new Point();
-                display.getSize(size);
-                int height = size.y;
-                int width = size.x;
-                float centerY = height / 2;
-                PointTarget pg = new PointTarget(500, (int) centerY);
-
-                sv = ShowcaseView.insertShowcaseView(pg, this, R.string.showcase_main_rank_title, R.string.showcase_main_rank_message, co);
-                sv.animateGesture(width - 15, (int) centerY, 0, (int) centerY);
-                sv.setOnShowcaseEventListener(this);
-
-            }
 
 
         } else {
 
-            MOSFrag mosFrag = new MOSFrag();
+            MOSTypeFragment mostype = new MOSTypeFragment(position);
             Bundle args = new Bundle();
             args.putInt(ServiceFragment.ARG_POSITION, position);
-            mosFrag.setArguments(args);
+            mostype.setArguments(args);
             // MOSFrag mosFragview = new MOSFrag();
-            //getSupportFragmentManager().beginTransaction().replace(R.id.service_fragment, mosFrag).addToBackStack(null)
+            getSupportFragmentManager().beginTransaction().replace(R.id.service_fragment, mostype).addToBackStack(null).commit();
             //      .replace(R.id.rank_fragment, mosFragview).commit();
 
             //PageviewerFragment Pageview = new PageviewerFragment();
 
 
 
-            PageviewerSmallFragment Pageview = new PageviewerSmallFragment(mosFrag, position);
-            getSupportFragmentManager().beginTransaction().replace(R.id.rank_fragment, Pageview).addToBackStack(null).commit();
 
-            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-            if (!prefs.getBoolean("firstTimeMos", false)) {
-                // run your one time code
-                SharedPreferences.Editor editor = prefs.edit();
-                editor.putBoolean("firstTimeMos", true);
-                editor.commit();
-
-
-                ShowcaseView.ConfigOptions co = new ShowcaseView.ConfigOptions();
-
-                co.hideOnClickOutside = true;
-                co.fadeInDuration = 700;
-                co.fadeOutDuration = 700;
-
-
-                Display display = getWindowManager().getDefaultDisplay();
-                final Point size = new Point();
-                display.getSize(size);
-                int height = size.y;
-                int width = size.x;
-                float centerY = height / 2;
-                PointTarget pg = new PointTarget(500, (int) centerY);
-
-                sv = ShowcaseView.insertShowcaseView(pg, this, R.string.showcase_main_rank_title, R.string.showcase_main_rank_message, co);
-                sv.animateGesture(width - 15, (int) centerY, 0, (int) centerY);
-                sv.setOnShowcaseEventListener(this);
-
-            }
 
         }
 
 
     }
+
+
 
     public void onRankTypeSelected(String ranktype, int position) {
         if (findViewById(R.id.fragment_container) != null) {
@@ -575,47 +517,7 @@ public class MainActivity extends FragmentActivity
     }
 
 
-    public void onMOSSelected(int grpposition) {
 
-        if (findViewById(R.id.fragment_container) != null) {
-
-            // However, if we're being restored from a previous state,
-            // then we don't need to do anything and should return or else
-            // we could end up with overlapping fragments.
-
-
-            // Create an instance of ExampleFragment
-
-
-            MOSFrag mosFragment = new MOSFrag();
-            Bundle args = new Bundle();
-            args.putInt(MOSFrag.ARG_POSITION, grpposition);
-            mosFragment.setArguments(args);
-            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-
-            transaction.replace(R.id.fragment_container, mosFragment);
-            transaction.addToBackStack(null);
-            transaction.commit();
-
-        } else {
-            PageviewerFragment Pageview = (PageviewerFragment) getSupportFragmentManager().findFragmentById(R.id.rank_fragment);
-            List frags = Pageview.getChildFragmentManager().getFragments();
-            MOSFrag mosFrag = (MOSFrag) frags.get(1);
-
-            // MOSFrag mosFrag = (MOSFrag) getSupportFragmentManager().findFragmentById(R.id.rank_fragment);
-
-
-            if (mosFrag != null) {
-                // If article frag is available, we're in two-pane layout...
-
-                // Call a method in the ArticleFragment to update its content
-                mosFrag.updateMOSView(grpposition);
-
-            }
-        }
-
-
-    }
 
 
     @Override
@@ -708,7 +610,115 @@ public class MainActivity extends FragmentActivity
 
     }
 
+    @Override
+    public void onMOSTypeelected(String mostype, int position) {
+        if (findViewById(R.id.fragment_container) != null) {
 
+
+            // However, if we're being restored from a previous state,
+            // then we don't need to do anything and should return or else
+            // we could end up with overlapping fragments.
+
+
+            // Create an instance of MOSFrag
+
+
+            MOSFrag mosFragment = new MOSFrag();
+            Bundle args = new Bundle();
+            args.putInt(ServiceFragment.ARG_POSITION, position);
+            args.putString("Type",mostype );
+            mosFragment.setArguments(args);
+
+            /** FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+
+             transaction.replace(R.id.fragment_container, mosFragment);
+             transaction.addToBackStack(null);
+             transaction.commit();**/
+
+
+
+            Pageview = new PageviewerSmallFragment(mosFragment, position);
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, Pageview).addToBackStack(null).commit();
+
+
+            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+            if (!prefs.getBoolean("firstTimeMos", false)) {
+                // run your one time code
+                SharedPreferences.Editor editor = prefs.edit();
+                editor.putBoolean("firstTimeMos", true);
+                editor.commit();
+
+                ShowcaseView.ConfigOptions co = new ShowcaseView.ConfigOptions();
+
+                co.hideOnClickOutside = true;
+                co.fadeInDuration = 700;
+                co.fadeOutDuration = 700;
+
+
+                Display display = getWindowManager().getDefaultDisplay();
+                final Point size = new Point();
+                display.getSize(size);
+                int height = size.y;
+                int width = size.x;
+                float centerY = height / 2;
+                PointTarget pg = new PointTarget(500, (int) centerY);
+
+                sv = ShowcaseView.insertShowcaseView(pg, this, R.string.showcase_main_rank_title, R.string.showcase_main_rank_message, co);
+                sv.animateGesture(width - 15, (int) centerY, 0, (int) centerY);
+                sv.setOnShowcaseEventListener(this);
+
+            }
+
+
+        } else {
+
+            MOSFrag mosFrag = new MOSFrag();
+            Bundle args = new Bundle();
+            args.putInt(ServiceFragment.ARG_POSITION, position);
+            args.putString("Type",mostype );
+            mosFrag.setArguments(args);
+            // MOSFrag mosFragview = new MOSFrag();
+            //getSupportFragmentManager().beginTransaction().replace(R.id.service_fragment, mosFrag).addToBackStack(null)
+            //      .replace(R.id.rank_fragment, mosFragview).commit();
+
+            //PageviewerFragment Pageview = new PageviewerFragment();
+
+
+
+            PageviewerSmallFragment Pageview = new PageviewerSmallFragment(mosFrag, position);
+            getSupportFragmentManager().beginTransaction().replace(R.id.rank_fragment, Pageview).addToBackStack(null).commit();
+
+            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+            if (!prefs.getBoolean("firstTimeMos", false)) {
+                // run your one time code
+                SharedPreferences.Editor editor = prefs.edit();
+                editor.putBoolean("firstTimeMos", true);
+                editor.commit();
+
+
+                ShowcaseView.ConfigOptions co = new ShowcaseView.ConfigOptions();
+
+                co.hideOnClickOutside = true;
+                co.fadeInDuration = 700;
+                co.fadeOutDuration = 700;
+
+
+                Display display = getWindowManager().getDefaultDisplay();
+                final Point size = new Point();
+                display.getSize(size);
+                int height = size.y;
+                int width = size.x;
+                float centerY = height / 2;
+                PointTarget pg = new PointTarget(500, (int) centerY);
+
+                sv = ShowcaseView.insertShowcaseView(pg, this, R.string.showcase_main_rank_title, R.string.showcase_main_rank_message, co);
+                sv.animateGesture(width - 15, (int) centerY, 0, (int) centerY);
+                sv.setOnShowcaseEventListener(this);
+
+            }
+
+        }
+    }
 
 
     /**

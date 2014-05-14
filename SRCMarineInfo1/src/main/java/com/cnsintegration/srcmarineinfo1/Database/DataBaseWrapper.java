@@ -3174,7 +3174,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_TITLE, mostitleId);
         values1.put(MOS_NAME, "Martial Arts Instructor-Trainers (MAIT) (formerly 8552)");
         values1.put(MOS_Link, "http://usmilitary.about.com/od/enlistedjo2/a/0917.htm");
-        values1.put(MOS_TYPE, "Enlisted ");
+        values1.put(MOS_TYPE, "Enlisted");
         values1.put(MOS_RANK, "Sgt –MGySgt ");
         db.insert(MOS, null, values1);
 
@@ -3670,7 +3670,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_TITLE, mostitleId);
         values1.put(MOS_NAME, "Weapons Repair Officer ");
         values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/2120.htm");
-        values1.put(MOS_TYPE, "Warrant Officer ");
+        values1.put(MOS_TYPE, "Warrant Officer");
         values1.put(MOS_RANK, "WO - CW05");
         db.insert(MOS, null, values1);
 
@@ -5694,7 +5694,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_TITLE, mostitleId);
         values1.put(MOS_NAME, "Military Police");
         values1.put(MOS_Link, " http://usmilitary.about.com/od/enlistedjo2/a/5811.htm");
-        values1.put(MOS_TYPE, " Enlisted");
+        values1.put(MOS_TYPE, "Enlisted");
         values1.put(MOS_RANK, "Pvt-MGySgt");
         db.insert(MOS, null, values1);
 
@@ -5703,7 +5703,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_TITLE, mostitleId);
         values1.put(MOS_NAME, "Working Dog Handler ");
         values1.put(MOS_Link, " http://usmilitary.about.com/od/enlistedjo2/a/5812.htm");
-        values1.put(MOS_TYPE, " Enlisted");
+        values1.put(MOS_TYPE, "Enlisted");
         values1.put(MOS_RANK, "Pvt-SSgt");
         db.insert(MOS, null, values1);
 
@@ -5712,7 +5712,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_TITLE, mostitleId);
         values1.put(MOS_NAME, "Accident Investigator");
         values1.put(MOS_Link, " http://usmilitary.about.com/od/enlistedjo2/a/5813.htm");
-        values1.put(MOS_TYPE, " Enlisted");
+        values1.put(MOS_TYPE, "Enlisted");
         values1.put(MOS_RANK, "Cpl-GySgt");
         db.insert(MOS, null, values1);
 
@@ -5721,7 +5721,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_TITLE, mostitleId);
         values1.put(MOS_NAME, "Physical Security Specialist");
         values1.put(MOS_Link, " http://usmilitary.about.com/od/enlistedjo2/a/5814.htm");
-        values1.put(MOS_TYPE, " Enlisted");
+        values1.put(MOS_TYPE, "Enlisted");
         values1.put(MOS_RANK, "Cpl-GySgt");
         db.insert(MOS, null, values1);
 
@@ -5731,7 +5731,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_TITLE, mostitleId);
         values1.put(MOS_NAME, "Special Reaction Team (3RT) Member");
         values1.put(MOS_Link, " http://usmilitary.about.com/od/enlistedjo2/a/5816.htm");
-        values1.put(MOS_TYPE, " Enlisted");
+        values1.put(MOS_TYPE, "Enlisted");
         values1.put(MOS_RANK, "Cpl-GySgt");
         db.insert(MOS, null, values1);
 
@@ -5740,7 +5740,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_TITLE, mostitleId);
         values1.put(MOS_NAME, "Military Police Investigator");
         values1.put(MOS_Link, " http://usmilitary.about.com/od/enlistedjo2/a/5819.htm");
-        values1.put(MOS_TYPE, " Enlisted");
+        values1.put(MOS_TYPE, "Enlisted");
         values1.put(MOS_RANK, "Cpl-GySgt");
         db.insert(MOS, null, values1);
 
@@ -5750,7 +5750,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_TITLE, mostitleId);
         values1.put(MOS_NAME, "Criminal Investigator CID Agent ");
         values1.put(MOS_Link, " http://usmilitary.about.com/od/enlistedjo2/a/5821.htm");
-        values1.put(MOS_TYPE, " Enlisted");
+        values1.put(MOS_TYPE, "Enlisted");
         values1.put(MOS_RANK, "Sgt-MGySgt");
         db.insert(MOS, null, values1);
 
@@ -5759,7 +5759,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_TITLE, mostitleId);
         values1.put(MOS_NAME, "Forensic Psycho-physiologist (Polygraph Examiner)");
         values1.put(MOS_Link, " http://usmilitary.about.com/od/enlistedjo2/a/5822.htm");
-        values1.put(MOS_TYPE, " Enlisted");
+        values1.put(MOS_TYPE, "Enlisted");
         values1.put(MOS_RANK, "SSgt-MGySgt");
         db.insert(MOS, null, values1);
 
@@ -5768,7 +5768,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_TITLE, mostitleId);
         values1.put(MOS_NAME, "Correctional Specialist");
         values1.put(MOS_Link, " http://usmilitary.about.com/od/enlistedjo2/a/5831.htm");
-        values1.put(MOS_TYPE, " Enlisted");
+        values1.put(MOS_TYPE, "Enlisted");
         values1.put(MOS_RANK, "Pvt-MGySgt");
         db.insert(MOS, null, values1);
 
@@ -5777,7 +5777,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_TITLE, mostitleId);
         values1.put(MOS_NAME, "Correctional Counselor");
         values1.put(MOS_Link, " http://usmilitary.about.com/od/enlistedjo2/a/5832.htm");
-        values1.put(MOS_TYPE, " Enlisted");
+        values1.put(MOS_TYPE, "Enlisted");
         values1.put(MOS_RANK, "Sgt-MGySgt");
         db.insert(MOS, null, values1);
 
@@ -5865,7 +5865,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_NUMBER, "5952");
         values1.put(MOS_TITLE, mostitleId);
         values1.put(MOS_NAME, "Air Traffic Control Navigational Aids Technician");
-                values1.put(MOS_Link, " http://usmilitary.about.com/od/enlistedjo2/a/5952.htm");
+        values1.put(MOS_Link, " http://usmilitary.about.com/od/enlistedjo2/a/5952.htm");
         values1.put(MOS_TYPE, "Enlisted");
         values1.put(MOS_RANK, "Pvt-Gysgt");
         db.insert(MOS, null, values1);
@@ -5896,7 +5896,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_Link, " http://usmilitary.about.com/od/enlistedjo2/a/5959.htm");
         values1.put(MOS_TYPE, "Enlisted");
         values1.put(MOS_RANK, "Msgt-MGySgt");
-                db.insert(MOS, null, values1);
+        db.insert(MOS, null, values1);
 
         values1 = new ContentValues();
         values1.put(MOS_NUMBER, "5962");
@@ -6131,7 +6131,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_RANK, "Pvt-GySgt");
         db.insert(MOS, null, values1);
 
-                values1 = new ContentValues();
+        values1 = new ContentValues();
         values1.put(MOS_NUMBER, "6092");
         values1.put(MOS_TITLE, mostitleId);
         values1.put(MOS_NAME, "Aircraft Intermediate Level Structures Mechanic");
@@ -6604,7 +6604,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_TITLE, mostitleId);
         values1.put(MOS_NAME, "Aircraft Maintenance Engineer Officer");
         values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/6004.htm");
-                values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_TYPE, "Officer");
         values1.put(MOS_RANK, "Capt-LtCol");
         db.insert(MOS, null, values1);
 
@@ -7036,7 +7036,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_NAME, "Aviation Ordnance Technician, (Organizational/Squadron Level)");
         values1.put(MOS_TYPE, "Enlisted");
         values1.put(MOS_Link, " http://usmilitary.about.com/od/enlistedjo2/a/6531.htm");
-                values1.put(MOS_RANK, "Pvt - SSgt");
+        values1.put(MOS_RANK, "Pvt - SSgt");
 
         db.insert(MOS, null, values1);
 
@@ -7595,7 +7595,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_NUMBER, "7500");
         values1.put(MOS_TITLE, mostitleId);
         values1.put(MOS_NAME, " Pilot VMA, FRS Basic A-4M");
-        values1.put(MOS_TYPE, "Officers");
+        values1.put(MOS_TYPE, "Officer");
         values1.put(MOS_RANK, "N/A ");
         db.insert(MOS, null, values1);
 
@@ -8705,7 +8705,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         db.insert(MOS, null, values1);
 
 
-                values1 = new ContentValues();
+        values1 = new ContentValues();
 
         values1.put(MOS_NUMBER, "8802");
         values1.put(MOS_TITLE, mostitleId);
@@ -8790,7 +8790,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         db.insert(MOS, null, values1);
 
 
-                values1 = new ContentValues();
+        values1 = new ContentValues();
 
         values1.put(MOS_NUMBER, "8834");
         values1.put(MOS_TITLE, mostitleId);
@@ -8897,7 +8897,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_NUMBER, "8878");
         values1.put(MOS_TITLE, mostitleId);
         values1.put(MOS_NAME, "Historian (FMOS)");
-                values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8878.htm");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerj3/a/8878.htm");
         values1.put(MOS_TYPE, "Officer");
         values1.put(MOS_RANK, "N/A");
         db.insert(MOS, null, values1);
@@ -11109,7 +11109,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
 
 
 
-                values1 = new ContentValues();
+        values1 = new ContentValues();
         values1.put(MOS_NUMBER, "12Ax");
         values1.put(MOS_TITLE, mostitleId);
         values1.put(MOS_NAME, "Airlift Navigator");
@@ -11148,7 +11148,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
 
 
 
-                values1 = new ContentValues();
+        values1 = new ContentValues();
         values1.put(MOS_NUMBER, "12Gx");
         values1.put(MOS_TITLE, mostitleId);
         values1.put(MOS_NAME, "Generalist Combat Systems Officer");
@@ -12677,106 +12677,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
 
         mostitleId = db.insert(MOSTITLES, null, values);
 
-        values1 = new ContentValues();
-        values1.put(MOS_NUMBER, "90GX");
-        values1.put(MOS_TITLE, mostitleId);
-        values1.put(MOS_NAME, "General Officer");
-        values1.put(MOS_Link, "http://usmilitary.about.com/library/milinfo/afoffjobs/bl80c0.htm");
-        values1.put(MOS_TYPE, "Officer");
-        values1.put(MOS_RANK, "N/A");
 
-        db.insert(MOS, null, values1);
-
-        values1 = new ContentValues();
-        values1.put(MOS_NUMBER, "91CX");
-        values1.put(MOS_TITLE, mostitleId);
-        values1.put(MOS_NAME, "Commander");
-
-        values1.put(MOS_TYPE, "Officer");
-        values1.put(MOS_RANK, "N/A");
-
-        db.insert(MOS, null, values1);
-
-        values1 = new ContentValues();
-        values1.put(MOS_NUMBER, "91WX");
-        values1.put(MOS_TITLE, mostitleId);
-        values1.put(MOS_NAME, " Wing Commander");
-
-        values1.put(MOS_TYPE, "Officer");
-        values1.put(MOS_RANK, "N/A");
-
-        db.insert(MOS, null, values1);
-
-        values1 = new ContentValues();
-        values1.put(MOS_NUMBER, "92JX");
-        values1.put(MOS_TITLE, mostitleId);
-        values1.put(MOS_NAME, "Non-designated Lawyer");
-
-        values1.put(MOS_TYPE, "Officer");
-        values1.put(MOS_RANK, "N/A");
-
-        db.insert(MOS, null, values1);
-
-
-        values1 = new ContentValues();
-        values1.put(MOS_NUMBER, "92MX");
-        values1.put(MOS_TITLE, mostitleId);
-        values1.put(MOS_NAME, "Medical Student");
-
-        values1.put(MOS_TYPE, "Officer");
-        values1.put(MOS_RANK, "N/A");
-
-        db.insert(MOS, null, values1);
-
-        values1 = new ContentValues();
-        values1.put(MOS_NUMBER, "92SX");
-        values1.put(MOS_TITLE, mostitleId);
-        values1.put(MOS_NAME, "Student Officer Authorization");
-
-        values1.put(MOS_TYPE, "Officer");
-        values1.put(MOS_RANK, "N/A");
-
-        db.insert(MOS, null, values1);
-
-        values1 = new ContentValues();
-        values1.put(MOS_NUMBER, "92TX ");
-        values1.put(MOS_TITLE, mostitleId);
-        values1.put(MOS_NAME, "Pilot Trainee");
-        values1.put(MOS_TYPE, "Officer");
-        values1.put(MOS_RANK, "N/A");
-        db.insert(MOS, null, values1);
-
-        values1 = new ContentValues();
-        values1.put(MOS_NUMBER, "93PX ");
-        values1.put(MOS_TITLE, mostitleId);
-        values1.put(MOS_NAME, "Patient");
-        values1.put(MOS_TYPE, "Officer");
-        values1.put(MOS_RANK, "N/A");
-        db.insert(MOS, null, values1);
-
-        values1 = new ContentValues();
-        values1.put(MOS_NUMBER, "96DX ");
-        values1.put(MOS_TITLE, mostitleId);
-        values1.put(MOS_NAME, "Patient");
-        values1.put(MOS_TYPE, "Officer");
-        values1.put(MOS_RANK, "N/A");
-        db.insert(MOS, null, values1);
-
-        values1 = new ContentValues();
-        values1.put(MOS_NUMBER, "96UX ");
-        values1.put(MOS_TITLE, mostitleId);
-        values1.put(MOS_NAME, "Unclassified Officer");
-        values1.put(MOS_TYPE, "Officer");
-        values1.put(MOS_RANK, "N/A");
-        db.insert(MOS, null, values1);
-
-        values1 = new ContentValues();
-        values1.put(MOS_NUMBER, "97EX ");
-        values1.put(MOS_TITLE, mostitleId);
-        values1.put(MOS_NAME, "Executive Officer");
-        values1.put(MOS_TYPE, "Officer");
-        values1.put(MOS_RANK, "N/A");
-        db.insert(MOS, null, values1);
 
 
 
@@ -12793,7 +12694,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
 
 
         values.put(MOSTITLES_TITLE, "Native Language Speaker");
-        values.put(MOSTITLES_BRANCH, Branch_USAF);
+        values.put(MOSTITLES_BRANCH, Branch_USARMY);
 
 
         long mostitleId = db.insert(MOSTITLES, null, values);
@@ -12808,9 +12709,13 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_TYPE, "Enlisted");
         values1.put(MOS_RANK, "N/A");
         db.insert(MOS, null, values1);
+
+
         values.put(MOSTITLES_TITLE, "INFANTRY BRANCH");
-        values.put(MOSTITLES_BRANCH, Branch_USAF);
+        values.put(MOSTITLES_BRANCH, Branch_USARMY);
         mostitleId = db.insert(MOSTITLES, null, values);
+
+
         values1 = new ContentValues();
         values1.put(MOS_NUMBER, "11B");
         values1.put(MOS_TITLE, mostitleId);
@@ -12827,6 +12732,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_TYPE, "Enlisted");
         values1.put(MOS_RANK, "N/A");
         db.insert(MOS, null, values1);
+
         values1 = new ContentValues();
         values1.put(MOS_NUMBER, "11X");
         values1.put(MOS_TITLE, mostitleId);
@@ -12835,6 +12741,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_TYPE, "Enlisted");
         values1.put(MOS_RANK, "N/A");
         db.insert(MOS, null, values1);
+
         values1 = new ContentValues();
         values1.put(MOS_NUMBER, "11Z");
         values1.put(MOS_TITLE, mostitleId);
@@ -12852,6 +12759,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_TYPE, "Enlisted");
         values1.put(MOS_RANK, "N/A");
         db.insert(MOS, null, values1);
+
         values1 = new ContentValues();
         values1.put(MOS_NUMBER, "12B");
         values1.put(MOS_TITLE, mostitleId);
@@ -12981,6 +12889,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_RANK, "N/A");
         db.insert(MOS, null, values1);
         values1 = new ContentValues();
+
         values1.put(MOS_NUMBER, "12Z");
         values1.put(MOS_TITLE, mostitleId);
         values1.put(MOS_NAME, " COMBAT ENGINEERING SENIOR SERGEANT");
@@ -12988,8 +12897,20 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_TYPE, "Enlisted");
         values1.put(MOS_RANK, "N/A");
         db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "12Z");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, " COMBAT ENGINEERING SENIOR SERGEANT");
+        values1.put(MOS_Link, " http://usmilitary.about.com/od/enlistedjobs/a /12Z ");
+        values1.put(MOS_TYPE, "Enlisted");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+
+
+
         values.put(MOSTITLES_TITLE, "FIELD ARTILLERY");
-        values.put(MOSTITLES_BRANCH, Branch_USAF);
+        values.put(MOSTITLES_BRANCH, Branch_USARMY);
         mostitleId = db.insert(MOSTITLES, null, values);
         values1 = new ContentValues();
         values1.put(MOS_NUMBER, "13B");
@@ -13056,7 +12977,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_RANK, "N/A");
         db.insert(MOS, null, values1);
         values.put(MOSTITLES_TITLE, "AIR DEFENSE ARTILLERY");
-        values.put(MOSTITLES_BRANCH, Branch_USAF);
+        values.put(MOSTITLES_BRANCH, Branch_USARMY);
         mostitleId = db.insert(MOSTITLES, null, values);
         values1 = new ContentValues();
         values1.put(MOS_NUMBER, "14E");
@@ -13115,7 +13036,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_RANK, "N/A");
         db.insert(MOS, null, values1);
         values.put(MOSTITLES_TITLE, "AVIATION");
-        values.put(MOSTITLES_BRANCH, Branch_USAF);
+        values.put(MOSTITLES_BRANCH, Branch_USARMY);
         mostitleId = db.insert(MOSTITLES, null, values);
         values1 = new ContentValues();
         values1.put(MOS_NUMBER, "15B");
@@ -13286,7 +13207,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_RANK, "N/A");
         db.insert(MOS, null, values1);
         values.put(MOSTITLES_TITLE, "SPECIAL FORCES");
-        values.put(MOSTITLES_BRANCH, Branch_USAF);
+        values.put(MOSTITLES_BRANCH, Branch_USARMY);
         mostitleId = db.insert(MOSTITLES, null, values);
         values1 = new ContentValues();
         values1.put(MOS_NUMBER, "18B");
@@ -13345,7 +13266,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_RANK, "N/A");
         db.insert(MOS, null, values1);
         values.put(MOSTITLES_TITLE, "ARMOR");
-        values.put(MOSTITLES_BRANCH, Branch_USAF);
+        values.put(MOSTITLES_BRANCH, Branch_USARMY);
         mostitleId = db.insert(MOSTITLES, null, values);
         values1 = new ContentValues();
         values1.put(MOS_NUMBER, "19D");
@@ -13372,7 +13293,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_RANK, "N/A");
         db.insert(MOS, null, values1);
         values.put(MOSTITLES_TITLE, "SIGNAL CORPS");
-        values.put(MOSTITLES_BRANCH, Branch_USAF);
+        values.put(MOSTITLES_BRANCH, Branch_USARMY);
         mostitleId = db.insert(MOSTITLES, null, values);
         values1 = new ContentValues();
         values1.put(MOS_NUMBER, "25B");
@@ -13511,7 +13432,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_RANK, "N/A");
         db.insert(MOS, null, values1);
         values.put(MOSTITLES_TITLE, "JUDGE ADVOCATE GENERAL'S CORPS");
-        values.put(MOSTITLES_BRANCH, Branch_USAF);
+        values.put(MOSTITLES_BRANCH, Branch_USARMY);
         mostitleId = db.insert(MOSTITLES, null, values);
         values1 = new ContentValues();
         values1.put(MOS_NUMBER, "27D");
@@ -13522,7 +13443,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_RANK, "N/A");
         db.insert(MOS, null, values1);
         values.put(MOSTITLES_TITLE, "ELECTRONIC WARFARE");
-        values.put(MOSTITLES_BRANCH, Branch_USAF);
+        values.put(MOSTITLES_BRANCH, Branch_USARMY);
         mostitleId = db.insert(MOSTITLES, null, values);
         values1 = new ContentValues();
         values1.put(MOS_NUMBER, "29E");
@@ -13533,7 +13454,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_RANK, "N/A");
         db.insert(MOS, null, values1);
         values.put(MOSTITLES_TITLE, "MILITARY POLICE");
-        values.put(MOSTITLES_BRANCH, Branch_USAF);
+        values.put(MOSTITLES_BRANCH, Branch_USARMY);
         mostitleId = db.insert(MOSTITLES, null, values);
         values1 = new ContentValues();
         values1.put(MOS_NUMBER, "31B");
@@ -13568,7 +13489,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_RANK, "N/A");
         db.insert(MOS, null, values1);
         values.put(MOSTITLES_TITLE, "MILITARY INTELLIGENCE");
-        values.put(MOSTITLES_BRANCH, Branch_USAF);
+        values.put(MOSTITLES_BRANCH, Branch_USARMY);
         mostitleId = db.insert(MOSTITLES, null, values);
         values1 = new ContentValues();
         values1.put(MOS_NUMBER, "35F");
@@ -13675,7 +13596,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_RANK, "N/A");
         db.insert(MOS, null, values1);
         values.put(MOSTITLES_TITLE, "FINANCIAL MANAGEMENT");
-        values.put(MOSTITLES_BRANCH, Branch_USAF);
+        values.put(MOSTITLES_BRANCH, Branch_USARMY);
         mostitleId = db.insert(MOSTITLES, null, values);
         values1 = new ContentValues();
         values1.put(MOS_NUMBER, "36B");
@@ -13686,7 +13607,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_RANK, "N/A");
         db.insert(MOS, null, values1);
         values.put(MOSTITLES_TITLE, "PSYCHOLOGICAL OPERATIONS");
-        values.put(MOSTITLES_BRANCH, Branch_USAF);
+        values.put(MOSTITLES_BRANCH, Branch_USARMY);
         mostitleId = db.insert(MOSTITLES, null, values);
         values1 = new ContentValues();
         values1.put(MOS_NUMBER, "37F");
@@ -13697,7 +13618,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_RANK, "N/A");
         db.insert(MOS, null, values1);
         values.put(MOSTITLES_TITLE, "CIVIL AFFAIRS");
-        values.put(MOSTITLES_BRANCH, Branch_USAF);
+        values.put(MOSTITLES_BRANCH, Branch_USARMY);
         mostitleId = db.insert(MOSTITLES, null, values);
         values1 = new ContentValues();
         values1.put(MOS_NUMBER, "38B");
@@ -13708,7 +13629,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_RANK, "N/A");
         db.insert(MOS, null, values1);
         values.put(MOSTITLES_TITLE, "ADJUTANT GENERAL'S CORPS");
-        values.put(MOSTITLES_BRANCH, Branch_USAF);
+        values.put(MOSTITLES_BRANCH, Branch_USARMY);
         mostitleId = db.insert(MOSTITLES, null, values);
         values1 = new ContentValues();
         values1.put(MOS_NUMBER, "42A");
@@ -13735,7 +13656,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_RANK, "N/A");
         db.insert(MOS, null, values1);
         values.put(MOSTITLES_TITLE, "PUBLIC AFFAIRS");
-        values.put(MOSTITLES_BRANCH, Branch_USAF);
+        values.put(MOSTITLES_BRANCH, Branch_USARMY);
         mostitleId = db.insert(MOSTITLES, null, values);
         values1 = new ContentValues();
         values1.put(MOS_NUMBER, "46Q");
@@ -13762,7 +13683,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_RANK, "N/A");
         db.insert(MOS, null, values1);
         values.put(MOSTITLES_TITLE, "ARMY ACQUISITION CORPS");
-        values.put(MOSTITLES_BRANCH, Branch_USAF);
+        values.put(MOSTITLES_BRANCH, Branch_USARMY);
         mostitleId = db.insert(MOSTITLES, null, values);
         values1 = new ContentValues();
         values1.put(MOS_NUMBER, "51C");
@@ -13773,7 +13694,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_RANK, "N/A");
         db.insert(MOS, null, values1);
         values.put(MOSTITLES_TITLE, "CHAPLAIN");
-        values.put(MOSTITLES_BRANCH, Branch_USAF);
+        values.put(MOSTITLES_BRANCH, Branch_USARMY);
         mostitleId = db.insert(MOSTITLES, null, values);
         values1 = new ContentValues();
         values1.put(MOS_NUMBER, "56M");
@@ -13784,7 +13705,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_RANK, "N/A");
         db.insert(MOS, null, values1);
         values.put(MOSTITLES_TITLE, "MEDICAL CMF");
-        values.put(MOSTITLES_BRANCH, Branch_USAF);
+        values.put(MOSTITLES_BRANCH, Branch_USARMY);
         mostitleId = db.insert(MOSTITLES, null, values);
         values1 = new ContentValues();
         values1.put(MOS_NUMBER, "68A");
@@ -13979,7 +13900,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_RANK, "N/A");
         db.insert(MOS, null, values1);
         values.put(MOSTITLES_TITLE, "CHEMICAL");
-        values.put(MOSTITLES_BRANCH, Branch_USAF);
+        values.put(MOSTITLES_BRANCH, Branch_USARMY);
         mostitleId = db.insert(MOSTITLES, null, values);
         values1 = new ContentValues();
         values1.put(MOS_NUMBER, "74D");
@@ -13990,7 +13911,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_RANK, "N/A");
         db.insert(MOS, null, values1);
         values.put(MOSTITLES_TITLE, "RECRUITING AND RETENTION");
-        values.put(MOSTITLES_BRANCH, Branch_USAF);
+        values.put(MOSTITLES_BRANCH, Branch_USARMY);
         mostitleId = db.insert(MOSTITLES, null, values);
         values1 = new ContentValues();
         values1.put(MOS_NUMBER, "79R");
@@ -14025,7 +13946,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_RANK, "N/A");
         db.insert(MOS, null, values1);
         values.put(MOSTITLES_TITLE, "TRANSPORTATION");
-        values.put(MOSTITLES_BRANCH, Branch_USAF);
+        values.put(MOSTITLES_BRANCH, Branch_USARMY);
         mostitleId = db.insert(MOSTITLES, null, values);
         values1 = new ContentValues();
         values1.put(MOS_NUMBER, "88H");
@@ -14099,9 +14020,13 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_TYPE, "Enlisted");
         values1.put(MOS_RANK, "N/A");
         db.insert(MOS, null, values1);
+
+
         values.put(MOSTITLES_TITLE, "AMMUNITION,MECHANICAL MAINTAINANCE and ORDNANCE");
-        values.put(MOSTITLES_BRANCH, Branch_USAF);
+        values.put(MOSTITLES_BRANCH, Branch_USARMY);
         mostitleId = db.insert(MOSTITLES, null, values);
+
+
         values1 = new ContentValues();
         values1.put(MOS_NUMBER, "89A");
         values1.put(MOS_TITLE, mostitleId);
@@ -14391,7 +14316,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_RANK, "N/A");
         db.insert(MOS, null, values1);
         values.put(MOSTITLES_TITLE, "QUARTERMASTER CORPS");
-        values.put(MOSTITLES_BRANCH, Branch_USAF);
+        values.put(MOSTITLES_BRANCH, Branch_USARMY);
         mostitleId = db.insert(MOSTITLES, null, values);
         values1 = new ContentValues();
         values1.put(MOS_NUMBER, "92A");
@@ -14473,6 +14398,869 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1.put(MOS_TYPE, "Enlisted");
         values1.put(MOS_RANK, "N/A");
         db.insert(MOS, null, values1);
+
+        values.put(MOSTITLES_TITLE, "Infantry");	 values.put(MOSTITLES_BRANCH, Branch_USARMY);	 mostitleId = db.insert(MOSTITLES, null, values);
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "11A");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Infantry Officer");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/11.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+
+
+
+        values.put(MOSTITLES_TITLE, "CORPS OF ENGINEERS");	 values.put(MOSTITLES_BRANCH, Branch_USARMY);	 mostitleId = db.insert(MOSTITLES, null, values);
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "12A");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Engineer");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/12.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "12B");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Combat Engineer (del 1310 / 1110 - 14)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/12.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "12D");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Facilities/Contact Construction Managewment Engineer (FCCME) (del 1310 / 1110 - 14)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/12.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+
+
+        values.put(MOSTITLES_TITLE, "FIELD ARTILLERY");	 values.put(MOSTITLES_BRANCH, Branch_USARMY);	 mostitleId = db.insert(MOSTITLES, null, values);
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "13A");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Field Artillery Officer");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/13.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values.put(MOSTITLES_TITLE, "AIR DEFENSE ARTILLERY");	 values.put(MOSTITLES_BRANCH, Branch_USARMY);	 mostitleId = db.insert(MOSTITLES, null, values);
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "14A");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Air Defense Artillery Officer");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/14.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+        values.put(MOSTITLES_TITLE, "AVIATION");	 values.put(MOSTITLES_BRANCH, Branch_USARMY);	 mostitleId = db.insert(MOSTITLES, null, values);
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "15A");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Aviation, General");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/15.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "15B");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Aviation Combined Arms Operations");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/15.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "15C");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Aviation All-source Intelligence");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/15.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values.put(MOSTITLES_TITLE, "SPECIAL FORCES");	 values.put(MOSTITLES_BRANCH, Branch_USARMY);	 mostitleId = db.insert(MOSTITLES, null, values);
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "18A");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Special Forces Officer");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/18.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+
+        values.put(MOSTITLES_TITLE, "ARMOR");	 values.put(MOSTITLES_BRANCH, Branch_USARMY);	 mostitleId = db.insert(MOSTITLES, null, values);
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "19A");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Armor , General");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/19.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "19B");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Armor");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/19.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "19C");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Cavalry");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/19.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values.put(MOSTITLES_TITLE, "SIGNAL CORPS");	 values.put(MOSTITLES_BRANCH, Branch_USARMY);	 mostitleId = db.insert(MOSTITLES, null, values);
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "25A");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Signal, General");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/25.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values.put(MOSTITLES_TITLE, "JUDGE ADVOCATE GENERAL'S CORPS");	 values.put(MOSTITLES_BRANCH, Branch_USARMY);	 mostitleId = db.insert(MOSTITLES, null, values);
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "27A");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Judge Advocate General");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/27.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "27B");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Military Judge");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/27.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values.put(MOSTITLES_TITLE, "MILITARY POLICE");	 values.put(MOSTITLES_BRANCH, Branch_USARMY);	 mostitleId = db.insert(MOSTITLES, null, values);
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "31A");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Military Police Officer");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/31.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values.put(MOSTITLES_TITLE, "MILITARY INTELLIGENCE");	 values.put(MOSTITLES_BRANCH, Branch_USARMY);	 mostitleId = db.insert(MOSTITLES, null, values);
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "35D");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "All Source Intelligence");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/35.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "35E");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Counter Intelligence (CI)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/35.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(MOS_NUMBER, "35D");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Signals Intelligence/Electronic Warfare (SIGINT/EW)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/35.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values.put(MOSTITLES_TITLE, "FINANCIAL MANAGEMENT");	 values.put(MOSTITLES_BRANCH, Branch_USARMY);	 mostitleId = db.insert(MOSTITLES, null, values);
+        values1.put(MOS_NUMBER, "36A");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Financial Manager");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/36.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+
+        values.put(MOSTITLES_TITLE, "PSYCHOLOGICAL OPERATIONS");	 values.put(MOSTITLES_BRANCH, Branch_USARMY);	 mostitleId = db.insert(MOSTITLES, null, values);
+        values1.put(MOS_NUMBER, "37A");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Psychological Operations");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/usmilitary.about.com/od/officerjob1/a/37.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "37X");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Psychological Operations, Designated");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/usmilitary.about.com/od/officerjob1/a/37.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values.put(MOSTITLES_TITLE, "CIVIL AFFAIRS (AA AND USAR)");	 values.put(MOSTITLES_BRANCH, Branch_USARMY);	 mostitleId = db.insert(MOSTITLES, null, values);
+
+        values1.put(MOS_NUMBER, "38A");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Civil Affairs (AA and USAR)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/38.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "38X");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Civil Affairs, Designated");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/38.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+
+        values.put(MOSTITLES_TITLE, "ADJUTANT GENERAL CORPS");	 values.put(MOSTITLES_BRANCH, Branch_USARMY);	 mostitleId = db.insert(MOSTITLES, null, values);
+        values1.put(MOS_NUMBER, "42B");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Human Resources Officer");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/42.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "42C");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Army Bands");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/42.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+
+        values1.put(MOS_NUMBER, "42H");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Senior Human Resources Officer");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/42.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+
+
+        values.put(MOSTITLES_TITLE, "CHAPLAIN");	 values.put(MOSTITLES_BRANCH, Branch_USARMY);	 mostitleId = db.insert(MOSTITLES, null, values);
+        values1.put(MOS_NUMBER, "56A");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Chaplain");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/56.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "56D");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Clinical Pastoral Educator");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/56.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "56X");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Chaplain Candidate");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/56.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values.put(MOSTITLES_TITLE, "MEDICAL CORPS");	 values.put(MOSTITLES_BRANCH, Branch_USARMY);	 mostitleId = db.insert(MOSTITLES, null, values);
+        values1.put(MOS_NUMBER, "60A");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Operational Medicine");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/62.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "60B");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Nuclear Medicine Officer");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/62.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "60C");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Preventive Medicine Officer");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/62.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "60D");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Operational Medicine");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/62.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "60F");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Pulmonary Disease/Critical Care Officer");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/62.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "60G");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Gastroenterologist");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/62.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "60J");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Obstetrician and Gynecologist");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/62.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "60K");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Urologist");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/62.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "60L");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Dermatologist ");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/62.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "60M");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Allergist, Clinical Immunologist");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/62.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "60N");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Anesthesiologist ");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/62.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "60P");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Pediatrician");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/62.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "60Q");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Pediatric Sub-Specialist");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/62.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "60R");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Child Neurologist ");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/62.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "60R");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Diagnostic Radiologist ");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/62.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "60U");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Pathologist ");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/62.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "60W");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Peripheral Vascular Surgeon");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/62.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "60Z");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Neurosurgeon");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/62.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "62A");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Emergency Physician");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/62.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "62B");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Field Surgeon");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/62.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values.put(MOSTITLES_TITLE, "DENTAL CORPS");	 values.put(MOSTITLES_BRANCH, Branch_USARMY);	 mostitleId = db.insert(MOSTITLES, null, values);
+        values1.put(MOS_NUMBER, "63A");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "General Dentist");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/63.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+
+        values1.put(MOS_NUMBER, "63B");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "General Dentist");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/63.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "63D");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Periodontist");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/63.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "63E");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Endodontist");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/63.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "63F");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Prosthodonist");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/63.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "63H");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Public Health Dentist");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/63.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "63K");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Pediatric Dentist");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/63.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "63M");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Orthodontist");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/63.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "63N");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Oral and Maxillofacial Surgeon ");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/63.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "63P");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Oral Pathologist ");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/63.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "63R");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Executive Dentist");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/63.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+
+
+
+
+
+        values.put(MOSTITLES_TITLE, "VETERINARY CORPS");	 values.put(MOSTITLES_BRANCH, Branch_USARMY);	 mostitleId = db.insert(MOSTITLES, null, values);
+        values1.put(MOS_NUMBER, "64A");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Field Veterinary Service");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/64.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "64B");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Veterinary Preventive Medicine");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/64.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "64C");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Veterinary Laboratory Animal Medicine");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/64.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "64D");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Veterinary Pathology");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/64.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "64E");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Veterinary Comparative Medicine ");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/64.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "64F");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Veterinary Clinical Medicine");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/64.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "64Z");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Senior Veterinarian (IMMATERIAL)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/64.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+
+
+
+
+
+        values.put(MOSTITLES_TITLE, "ARMY MEDICAL SPECIALIST CORPS");	 values.put(MOSTITLES_BRANCH, Branch_USARMY);	 mostitleId = db.insert(MOSTITLES, null, values);
+        values1.put(MOS_NUMBER, "65A");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Occupational Therapy");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/65.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "65B");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Physical Therapy ");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/65.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "65C");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Dietitian");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/65.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "65D");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Physician Assistant");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/65.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "65X");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Specialist Allied Operations");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/65.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+
+
+
+
+        values.put(MOSTITLES_TITLE, "ARMY NURSE CORPS");	 values.put(MOSTITLES_BRANCH, Branch_USARMY);	 mostitleId = db.insert(MOSTITLES, null, values);
+        values1.put(MOS_NUMBER, "66B");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Army Public Health Nurse");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/66.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "66C");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Psychiatric/Behavioral Health Nurse");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/66.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "66E");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Perioperative Nurse");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/66.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "66F");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Nurse Anesthetist");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/66.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "66G");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Obstetrics and Gyneco");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/66.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "66H");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Medical-Surgical Nurse");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/66.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "66N");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Generalist Nurse");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/66.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "66P");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Family Nurse Practitioner");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/66.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "66R");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Psychiatric/Behavioral Health Nurse Practitioner (add 1304 / 1110 - 13)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/66.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+
+        values1.put(MOS_NUMBER, "66W");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Certified Nurse Midwife (add 1304 / 1110 - 12)");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/66.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values.put(MOSTITLES_TITLE, "MEDICAL SERVICE CORPS");	 values.put(MOSTITLES_BRANCH, Branch_USARMY);	 mostitleId = db.insert(MOSTITLES, null, values);
+        values1.put(MOS_NUMBER, "67A");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Health Services");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/67.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "67B");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Laboratory Sciences");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/67.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "67C");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Preventive Medicine Sciences ");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/67.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "67D");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Behavioral Sciences");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/67.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "67E");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Pharmacy");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/67.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "67F");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Optometry ");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/67.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "67G");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Podiatry");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/67.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values1.put(MOS_NUMBER, "67J");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Aeromedical Evacuation");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/67.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values.put(MOSTITLES_TITLE, "CHEMICAL, BIOLOGICAL, RADIOLOGICAL AND NUCLEAR (CBRN)");	 values.put(MOSTITLES_BRANCH, Branch_USARMY);	 mostitleId = db.insert(MOSTITLES, null, values);
+        values1.put(MOS_NUMBER, "74A");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Chemical, Biological, Radiological and Nuclear (CBRN) Officer");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/74.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+
+        values.put(MOSTITLES_TITLE, "TRANSPORTATION CORPS");	 values.put(MOSTITLES_BRANCH, Branch_USARMY);	 mostitleId = db.insert(MOSTITLES, null, values);
+        values1.put(MOS_NUMBER, "88A");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Transportation, General");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/88.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values.put(MOSTITLES_TITLE, "LOGISTICS");	 values.put(MOSTITLES_BRANCH, Branch_USARMY);	 mostitleId = db.insert(MOSTITLES, null, values);
+        values1.put(MOS_NUMBER, "90A");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Logistics");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/90.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+
+        values.put(MOSTITLES_TITLE, "ORDNANCE");	 values.put(MOSTITLES_BRANCH, Branch_USARMY);	 mostitleId = db.insert(MOSTITLES, null, values);
+        values1.put(MOS_NUMBER, "91A");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Maintenance & Munitions Materiel Officer");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/91.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+        values.put(MOSTITLES_TITLE, "QUARTERMASTER CORPS");	 values.put(MOSTITLES_BRANCH, Branch_USARMY);	 mostitleId = db.insert(MOSTITLES, null, values);
+        values1.put(MOS_NUMBER, "92A");
+        values1.put(MOS_TITLE, mostitleId);
+        values1.put(MOS_NAME, "Quartermaster, General");
+        values1.put(MOS_Link, "http://usmilitary.about.com/od/officerjob1/a/92.htm");
+        values1.put(MOS_TYPE, "Officer");
+        values1.put(MOS_RANK, "N/A");
+        db.insert(MOS, null, values1);
+
+
+
+
+
+
+
+
+
+
+
 
 
     }

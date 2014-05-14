@@ -137,10 +137,10 @@ public class MOSFrag extends Fragment {
         Bundle args = getArguments();
         if (args != null) {
             // Set article based on argument passed in
-            updateMOSView(args.getInt(ARG_POSITION));
+            updateMOSView(args.getInt(ARG_POSITION), args.getString("Type"));
         } else if (mCurrentPosition != -1) {
             // Set article based on saved instance state defined during onCreateView
-            updateMOSView(mCurrentPosition);
+            updateMOSView(mCurrentPosition, args.getString("Type") );
         }
 
 
@@ -155,12 +155,12 @@ public class MOSFrag extends Fragment {
     }
 
 
-    public List getMOSES(int mostitleid) {
+    public List getMOSES(int mostitleid, String mtype) {
         List moses = new ArrayList();
         String tempposition = Integer.toString(mostitleid);
 
 
-        Cursor cursor = database.query(DataBaseWrapper.MOS, MOS_TABLE_COLUMNS2, "most_id=" + tempposition, null, null, null, null);
+        Cursor cursor = database.query(DataBaseWrapper.MOS, MOS_TABLE_COLUMNS2, "most_id=" + tempposition + " AND mos_type LIKE '" + mtype + "'" , null, null, null, null);
 
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
@@ -223,7 +223,7 @@ public class MOSFrag extends Fragment {
         return mtitle;
     }
 
-    public void updateMOSView(int position) {
+    public void updateMOSView(int position, String mtype) {
         Activity act = getActivity();
 
         dbHelper = new DataBaseWrapper(act);
@@ -251,10 +251,18 @@ public class MOSFrag extends Fragment {
             HashMap<String, String> top250 = new HashMap<String, String>();
             List<MOS> childGroupForFirstGroupRow;
 
-            List values1 = getMOSES(_listDataHeader.get(i).getMOS_TITLES_ID());
+            List values1 = getMOSES(_listDataHeader.get(i).getMOS_TITLES_ID(), mtype);
 
 
             childGroupForFirstGroupRow = new ArrayList<MOS>();
+
+            if (values1.size() == 0) {
+
+                _listDataHeader.remove(i);
+                continue;
+            }
+
+
             for (int k = 0; k < values1.size(); k++) {
 
                 MOS mos = (MOS) values1.get(k);
@@ -285,6 +293,10 @@ public class MOSFrag extends Fragment {
 
                 _listDataChild.put(_listDataHeader.get(i).getMOS_TITLES_TITLE(), childGroupForFirstGroupRow);
             }
+
+
+
+
 
         }
         //   v= inflater.inflate(R.layout.rank_lst, container, false);
