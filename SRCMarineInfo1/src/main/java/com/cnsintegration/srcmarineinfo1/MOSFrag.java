@@ -160,9 +160,13 @@ public class MOSFrag extends Fragment {
     public List getMOSES(int mostitleid, String mtype) {
         List moses = new ArrayList();
         String tempposition = Integer.toString(mostitleid);
+        Cursor cursor;
+        if (mtype == "All") {
+            cursor = database.query(DataBaseWrapper.MOS, MOS_TABLE_COLUMNS2, "most_id=" + tempposition , null, null, null, null);
+        }else {
 
-
-        Cursor cursor = database.query(DataBaseWrapper.MOS, MOS_TABLE_COLUMNS2, "most_id=" + tempposition + " AND mos_type LIKE '" + mtype + "'" , null, null, null, null);
+            cursor = database.query(DataBaseWrapper.MOS, MOS_TABLE_COLUMNS2, "most_id=" + tempposition + " AND mos_type LIKE '" + mtype + "'", null, null, null, null);
+        }
 
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {

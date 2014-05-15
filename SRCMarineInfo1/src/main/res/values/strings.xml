@@ -57,5 +57,23 @@
             Below are listed the current authorized Marine Corps MOSs, organized by OccFld, then by specific MOS. Most MOSs have specific rank/pay grade requirements and are listed to the right of the MOS title, if applicable (see United States Marine Corps rank insignia), abbreviated from the highest allowed rank to the lowest. Officer ranks are noted as Unrestricted Line Officers[2] (ULOs), Limited Duty Officers(LDOs), and Warrant Officers(WOs). Those MOSs which are no longer being awarded are kept active to allow Marines to earn a new MOS.
             </string>
 
+    <string name="army_home_detail">The United States Army uses various personnel management systems to classify soldiers in different specialties. Enlisted soldiers are categorized by their assigned job called a military occupational specialty, or MOS. Each MOS are labeled with a short alphanumerical code called a military occupational specialty code (MOSC), which consists of a two-digit number appended by a Latin letter. Related MOSs are grouped together by Career Management Fields (CMF). For example, an enlisted soldier with MOSC 11B works as an infantryman (his MOS), and is part of CMF 11 (the CMF for infantry).\n
+
+Commissioned officers are classified by their area of concentration, or AOC. Just like enlisted MOSCs, AOCs are two digits plus a letter. Related AOCs are grouped together by specific branch of the Army or by broader in scope functional areas (FA). Typically, an officer will start in an AOC of a specific branch and move up to an FA AOC.\n
+
+Warrant officers are classified by warrant officer military occupational specialty, or WOMOS. Codes consists of three digits plus a letter. Related WOMOS are grouped together by Army branch.
+
+\n The Army is currently restructuring its personnel management systems. Changes took place in 2004 and will continue into 2013. Changes already taken place include deleting obsolete jobs, merging redundant jobs, and using common numbers for both enlisted CMFs and officer AOCs (e.g. "35" is military intelligence for both officers and enlisted).</string>
+
+
+    <string name="navy_home_detail">The Navy Enlisted Classification (NEC) system supplements the rating designators for enlisted members of the United States Navy. A naval rating and NEC designator are similar to the Military Occupational Specialty (MOS) designators used in the U.S. Army and U.S. Marine Corps and the Air Force Specialty Code (AFSC) used in the U.S. Air Force.
+
+The U.S. Navy has several ratings or job specialties for its enlisted members. An enlisted member is known by the enlisted rating, for example, a Machinist's Mate (or MM), and/or by the enlisted rate, for example Petty Officer First Class (or PO1). Often Navy enlisted members are addressed by a combination of rating and rate. In this example, this machinist's mate petty officer first class may be addressed as Machinist's Mate 1st Class (or MM1).</string>
+
+
+
+    <string name="cg_home_detail">The Navy Enlisted Classification (NEC) system supplements the rating designators for enlisted members of the United States Navy. A naval rating and NEC designator are similar to the Military Occupational Specialty (MOS) designators used in the U.S. Army and U.S. Marine Corps and the Air Force Specialty Code (AFSC) used in the U.S. Air Force.
+
+The U.S. Navy has several ratings or job specialties for its enlisted members. An enlisted member is known by the enlisted rating, for example, a Machinist's Mate (or MM), and/or by the enlisted rate, for example Petty Officer First Class (or PO1). Often Navy enlisted members are addressed by a combination of rating and rate. In this example, this machinist's mate petty officer first class may be addressed as Machinist's Mate 1st Class (or MM1).</string>
 
 </resources>

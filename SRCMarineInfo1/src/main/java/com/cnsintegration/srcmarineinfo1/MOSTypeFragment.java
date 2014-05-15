@@ -219,7 +219,7 @@ public class MOSTypeFragment extends ListFragment {
 
 
 
-
+            branchesDataCollection.add("All");
 
             setListAdapter(new ETypeData(getActivity(),branchesDataCollection));
 

@@ -5,10 +5,9 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 
 
-public class AFSCHomeFragment extends Fragment {
+public class NavyHomeFragment extends Fragment {
 
     public int serviceid = 1;
     // TODO: Rename parameter arguments, choose names that match
@@ -41,20 +40,20 @@ public class AFSCHomeFragment extends Fragment {
      * @return A new instance of fragment HomeFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static AFSCHomeFragment newInstance(String param1, String param2) {
-        AFSCHomeFragment fragment = new AFSCHomeFragment();
+    public static NavyHomeFragment newInstance(String param1, String param2) {
+        NavyHomeFragment fragment = new NavyHomeFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
     }
-    public AFSCHomeFragment() {
+    public NavyHomeFragment() {
         // Required empty public constructor
 
     }
 
-    public AFSCHomeFragment(int sid) {
+    public NavyHomeFragment(int sid) {
         // Required empty public constructor
         serviceid = sid;
     }
@@ -72,9 +71,7 @@ public class AFSCHomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.afsc_home, container, false);
-
-
+        return inflater.inflate(R.layout.navy_home, container, false);
 
 
 

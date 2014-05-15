@@ -6,10 +6,12 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import com.cnsintegration.srcmarineinfo1.AFSCHomeFragment;
+import com.cnsintegration.srcmarineinfo1.ArmyHomeFragment;
 import com.cnsintegration.srcmarineinfo1.HomeFragment;
 import com.cnsintegration.srcmarineinfo1.MOSFrag;
 import com.cnsintegration.srcmarineinfo1.MOSFragment;
 import com.cnsintegration.srcmarineinfo1.MOSHomeFragment;
+import com.cnsintegration.srcmarineinfo1.NavyHomeFragment;
 
 /**
  * Created by jprioleau on 4/26/2014.
@@ -44,6 +46,10 @@ public class MyAdapter2 extends FragmentPagerAdapter {
                     return new MOSHomeFragment();
                 }else if(pos == 2){
                     return new AFSCHomeFragment();
+                }else if(pos == 3){
+                    return new ArmyHomeFragment();
+                }else if(pos == 4){
+                    return new NavyHomeFragment();
                 }
                 else {
                     return new AFSCHomeFragment();
