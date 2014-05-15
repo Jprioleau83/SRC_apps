@@ -42,6 +42,8 @@ public class MOSFrag extends Fragment {
     View v;
     ExpandableListAdapter mAdapter;
     List<MTitles> _listDataHeader;
+    List<MTitles> _Headers;
+
     HashMap<String, List<MOS>> _listDataChild;
 
     ExpandableListView lv;
@@ -235,6 +237,7 @@ public class MOSFrag extends Fragment {
         branchesDataCollection = new ArrayList<HashMap<String, String>>();
         HashMap<String, String> map = null;
         _listDataHeader = new ArrayList<MTitles>();
+        _Headers = new ArrayList<MTitles>();
 
         for (int k = 0; k < values.size(); k++) {
             MTitles mtitle = (MTitles) values.get(k);
@@ -259,6 +262,7 @@ public class MOSFrag extends Fragment {
             if (values1.size() == 0) {
 
                 _listDataHeader.remove(i);
+
                 continue;
             }
 
@@ -286,6 +290,16 @@ public class MOSFrag extends Fragment {
 
                     childGroupForFirstGroupRow.add(mos);
 
+                    if (_Headers.contains(_listDataHeader.get(i))) {
+                        System.out.println("Account found");
+                    } else {
+                        // Map<String, String> map1 = new HashMap<String, String>();
+                        //map1.put(KEY_TYPE, branchesDataCollection.get(i).get(KEY_TYPE));
+                        //groupData.add(map1);
+                        _Headers.add(_listDataHeader.get(i));
+                        System.out.println("Account Added");
+                    }
+
 
                 }
             }
@@ -308,7 +322,7 @@ public class MOSFrag extends Fragment {
         con = getActivity();
 
 
-        mAdapter = new ExpandabelListAdoptor3(con, _listDataHeader, _listDataChild, position); //here i didnt set list values to this adoptor
+        mAdapter = new ExpandabelListAdoptor3(con, _Headers, _listDataChild, position); //here i didnt set list values to this adoptor
 
 
         lv.setAdapter(mAdapter);
