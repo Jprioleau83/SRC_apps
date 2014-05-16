@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import com.cnsintegration.srcmarineinfo1.AFSCHomeFragment;
 import com.cnsintegration.srcmarineinfo1.ArmyHomeFragment;
+import com.cnsintegration.srcmarineinfo1.CGHomeFragment;
 import com.cnsintegration.srcmarineinfo1.HomeFragment;
 import com.cnsintegration.srcmarineinfo1.MOSFrag;
 import com.cnsintegration.srcmarineinfo1.MOSFragment;
@@ -51,9 +52,10 @@ public class MyAdapter2 extends FragmentPagerAdapter {
                 }else if(pos == 4){
                     return new NavyHomeFragment();
                 }
-                else {
-                    return new AFSCHomeFragment();
+                else if(pos == 5){
+                    return new CGHomeFragment();
                 }
+
             case 1:
 
 

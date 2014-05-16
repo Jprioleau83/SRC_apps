@@ -68,12 +68,12 @@ Warrant officers are classified by warrant officer military occupational special
 
     <string name="navy_home_detail">The Navy Enlisted Classification (NEC) system supplements the rating designators for enlisted members of the United States Navy. A naval rating and NEC designator are similar to the Military Occupational Specialty (MOS) designators used in the U.S. Army and U.S. Marine Corps and the Air Force Specialty Code (AFSC) used in the U.S. Air Force.
 
-The U.S. Navy has several ratings or job specialties for its enlisted members. An enlisted member is known by the enlisted rating, for example, a Machinist's Mate (or MM), and/or by the enlisted rate, for example Petty Officer First Class (or PO1). Often Navy enlisted members are addressed by a combination of rating and rate. In this example, this machinist's mate petty officer first class may be addressed as Machinist's Mate 1st Class (or MM1).</string>
+The U.S. Navy has several ratings or job specialties for its enlisted members. An enlisted member is known by the enlisted rating, for example, a Machinist\'s Mate (or MM), and/or by the enlisted rate, for example Petty Officer First Class (or PO1). Often Navy enlisted members are addressed by a combination of rating and rate. In this example, this machinist\'s mate petty officer first class may be addressed as Machinist\'s Mate 1st Class (or MM1).</string>
 
 
 
-    <string name="cg_home_detail">The Navy Enlisted Classification (NEC) system supplements the rating designators for enlisted members of the United States Navy. A naval rating and NEC designator are similar to the Military Occupational Specialty (MOS) designators used in the U.S. Army and U.S. Marine Corps and the Air Force Specialty Code (AFSC) used in the U.S. Air Force.
+    <string name="cg_home_detail">United States Coast Guard ratings are general occupations that consist of specific skills and abilities. Each rating has its own specialty badge, which is typically worn on the left sleeve of their service dress uniform by all enlisted personnel in that particular field. On Operational Dress Uniforms, they wear generic rate designators that exclude the rating symbol. Commissioned Officers do not have ratings.
 
-The U.S. Navy has several ratings or job specialties for its enlisted members. An enlisted member is known by the enlisted rating, for example, a Machinist's Mate (or MM), and/or by the enlisted rate, for example Petty Officer First Class (or PO1). Often Navy enlisted members are addressed by a combination of rating and rate. In this example, this machinist's mate petty officer first class may be addressed as Machinist's Mate 1st Class (or MM1).</string>
+\n Ratings should not be confused with "rates", which describe the Navy\'s and Coast Guard\'s enlisted pay-grades. Enlisted Navy and Coast Guardsmen are referred to by their rating and rate. For example, if someone\'s rate is Petty Officer 2nd Class and his rating is Boatswain\'s Mate; when combined, Boatswain\'s Mate 2nd Class (BM2) defines both.</string>
 
 </resources>

@@ -288,6 +288,18 @@ public class MainActivity extends FragmentActivity
                 casenum = 3;
                 break;
 
+            case 4:
+                fragment = new AlphaFragment();
+
+                casenum = 4;
+                break;
+
+            case 5:
+                fragment = new OrgFragment();
+
+                casenum = 4;
+                break;
+
             default:
                 break;
         }
@@ -392,7 +404,47 @@ public class MainActivity extends FragmentActivity
 
                 }
             }
+            if (casenum == 4) {
+                // RankFragment rankFrag = new RankFragment();
 
+                //if two columns
+                if (findViewById(R.id.fragment_container) != null) {
+
+
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).addToBackStack(null).commit();
+
+
+                } else {
+                    //TODO:  add blank fragment
+                    getSupportFragmentManager().beginTransaction().replace(R.id.rank_fragment, fragment).addToBackStack(null).addToBackStack(null).commit();
+                    //.replace(R.id.rank_fragment, rankFrag).addToBackStack(null).commit();
+
+
+                }
+
+
+            }
+
+            if (casenum == 5) {
+                // RankFragment rankFrag = new RankFragment();
+
+                //if two columns
+                if (findViewById(R.id.fragment_container) != null) {
+
+
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).addToBackStack(null).commit();
+
+
+                } else {
+                    //TODO:  add blank fragment
+                    getSupportFragmentManager().beginTransaction().replace(R.id.rank_fragment, fragment).addToBackStack(null).addToBackStack(null).commit();
+                    //.replace(R.id.rank_fragment, rankFrag).addToBackStack(null).commit();
+
+
+                }
+
+
+            }
 
             // update selected item and title, then close the drawer
             mDrawerList.setItemChecked(position, true);
