@@ -43,8 +43,8 @@
         <item>@drawable/rank_icon</item>
         <item>@drawable/wallclock</item>
         <item>@drawable/patch</item>
-        <item>@drawable/sunny</item>
-        <item>@drawable/sunny</item>
+        <item>@drawable/alpha</item>
+        <item>@drawable/orgstructure</item>
         <item>@drawable/sunny</item>
     </array>
 

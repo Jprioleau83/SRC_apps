@@ -119,6 +119,8 @@ public class MainActivity extends FragmentActivity
         // What's hot, We  will add a counter here
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[5], navMenuIcons.getResourceId(5, -1), true, "50+"));
 
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[6], navMenuIcons.getResourceId(6, -1)));
+
 
         // Recycle the typed array
         navMenuIcons.recycle();
@@ -297,7 +299,13 @@ public class MainActivity extends FragmentActivity
             case 5:
                 fragment = new OrgFragment();
 
-                casenum = 4;
+                casenum = 5;
+                break;
+
+            case 6:
+                fragment = new AckFragment();
+
+                casenum = 6;
                 break;
 
             default:
@@ -426,6 +434,27 @@ public class MainActivity extends FragmentActivity
             }
 
             if (casenum == 5) {
+                // RankFragment rankFrag = new RankFragment();
+
+                //if two columns
+                if (findViewById(R.id.fragment_container) != null) {
+
+
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).addToBackStack(null).commit();
+
+
+                } else {
+                    //TODO:  add blank fragment
+                    getSupportFragmentManager().beginTransaction().replace(R.id.rank_fragment, fragment).addToBackStack(null).addToBackStack(null).commit();
+                    //.replace(R.id.rank_fragment, rankFrag).addToBackStack(null).commit();
+
+
+                }
+
+
+            }
+
+            if (casenum == 6) {
                 // RankFragment rankFrag = new RankFragment();
 
                 //if two columns

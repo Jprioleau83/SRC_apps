@@ -1,27 +1,14 @@
 package com.cnsintegration.srcmarineinfo1;
 
-import android.app.Activity;
-import android.content.ContentResolver;
 import android.content.Context;
-import android.content.res.Resources;
-import android.graphics.Bitmap;
+
 import android.graphics.Matrix;
-import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
-import com.cnsintegration.srcmarineinfo1.utils.DecodeUtils;
-
-import java.io.InputStream;
-
-import it.sephiroth.android.library.imagezoom.ImageViewTouch;
-import it.sephiroth.android.library.imagezoom.ImageViewTouchBase;
-import it.sephiroth.android.library.imagezoom.utils.*;
 
 public class OrgFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
@@ -29,7 +16,7 @@ public class OrgFragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    ImageViewTouch mImage;
+
     Context con;
     Matrix imageMatrix;
 
@@ -77,42 +64,16 @@ public class OrgFragment extends Fragment {
         // Inflate the layout for this fragment
         View V = inflater.inflate(R.layout.fragment_org, container, false);
 
-
-        mImage = (ImageViewTouch) V.findViewById(R.id.image);
-
-        // set the default image display type
-        mImage.setDisplayType( ImageViewTouchBase.DisplayType.FIT_IF_BIGGER );
-
         con = getActivity();
 
-        final int size = -1;
-        String imageUri = "drawable/spawarorgcht";
-
-        int imageResource = V.getContext().getApplicationContext().getResources().getIdentifier(imageUri, null, V.getContext().getApplicationContext().getPackageName());
-
-
-        //Uri uri = Uri.parse("android.resource://com.cnsintegration.srcmarineinfo1/R.drawable.spawarorgcht");
-        Resources resources = con.getResources();
-        Uri uri  = Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE + "://" + resources.getResourcePackageName(imageResource) + '/' + resources.getResourceTypeName(imageResource) + '/' + resources.getResourceEntryName(imageResource) );
+        TouchImageView img = new TouchImageView(con);
+        img.setImageResource(R.drawable.spawarorgcht);
+        img.setMaxZoom(4f);
 
 
-        Bitmap bitmap = DecodeUtils.decode(con, uri, size, size);
-        if( null != bitmap )
-        {
-            // calling this will force the image to fit the ImageView container width/height
 
-            if( null == imageMatrix ) {
-                imageMatrix = new Matrix();
-            } else {
-                // get the current image matrix, if we want restore the
-                // previous matrix once the bitmap is changed
-                // imageMatrix = mImage.getDisplayMatrix();
-            }
 
-            mImage.setImageBitmap( bitmap, imageMatrix.isIdentity() ? null : imageMatrix, ImageViewTouchBase.ZOOM_INVALID, ImageViewTouchBase.ZOOM_INVALID );
-
-        }
-        return V;
+        return img;
 
     }
 

@@ -55,6 +55,15 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
 
 
 
+    public static final String Ackdb = "acronym";
+    public static final String Ack = "ack";
+    public static final String Ack_Name = "ackname";
+    public static final String Ack_Details = "ackdetails";
+    public static final String Ack_Link = "acklink";
+    public static final String Ack_Icon = "ackicon";
+
+
+
 
 
 
@@ -83,6 +92,9 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
     private static final String DATABASE_CREATE4 = "create table "+  MOS
             + "(" + MOS_ID + " integer primary key autoincrement, " + MOS_NUMBER + " text not null, " + MOS_NAME + " text not null, "
             + MOS_TYPE + " text not null, " + MOS_RANK + " text not null, " + MOS_Link + " text, " + MOS_TITLE + " references " + MOSTITLES + ");";
+
+    private static final String DATABASE_CREATE5 = "create table " + Ackdb + "( id integer primary key autoincrement, " + Ack + " text not null, " + Ack_Name + " text not null, "
+            + Ack_Details + " text not null, " + Ack_Link + " text, " + Ack_Icon + " text not null); ";
 
     public DataBaseWrapper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -15362,7 +15374,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         values1 = new ContentValues();	values1.put(MOS_NUMBER, "IS");	 values1.put(MOS_TITLE, mostitleId);	values1.put(MOS_NAME, "IS - Intelligence Specialist");	values1.put(MOS_Link, "http://usmilitary.about.com/od/enlistedjob1/a/is.htm ");	  values1.put(MOS_TYPE, "Enlisted");	 values1.put(MOS_RANK, "N/A");	 db.insert(MOS, null, values1);
 
         values = new ContentValues();
-        values1.put(MOSTITLES_TITLE, " Medical/Dental Community ");	 values.put(MOSTITLES_BRANCH, Branch_USNAVY);	 mostitleId = db.insert(MOSTITLES, null, values);
+        values.put(MOSTITLES_TITLE, " Medical/Dental Community ");	 values.put(MOSTITLES_BRANCH, Branch_USNAVY);	 mostitleId = db.insert(MOSTITLES, null, values);
         values1 = new ContentValues();	values1.put(MOS_NUMBER, "HM");	 values1.put(MOS_TITLE, mostitleId);	values1.put(MOS_NAME, "HM - Hospital Corpsman");	values1.put(MOS_Link, "http://usmilitary.about.com/od/enlistedjob1/a/hm.htm ");	  values1.put(MOS_TYPE, "Enlisted");	 values1.put(MOS_RANK, "N/A");	 db.insert(MOS, null, values1);
 
         values = new ContentValues();
@@ -15658,13 +15670,28 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
 
     }
 
+public void populateack(SQLiteDatabase db){
 
+    ContentValues values1 = new ContentValues();
+   // values1 = new ContentValues();
+    values1.put(Ack, "EPLRS");
+    values1.put(Ack_Name, "Enhanced Position Location Relay System");
+    values1.put(Ack_Details, "The Enhanced Position Location Reporting System (EPLRS) is a secure, jam resistant, computer controlled communications network that distributes near real-time tactical information, generally integrated into radio sets, and coordinated by a Network Control Station.[1] It is primarily used for data distribution, and position location and reporting. It enhances command and control of tactical units by providing commanders with the location of friendly units.[2] It was first fielded by the US Army in 1987.");
+    values1.put(Ack_Link, "http://en.wikipedia.org/wiki/Enhanced_Position_Location_Reporting_System");
+    values1.put(Ack_Icon, "eplrs");
+
+    db.insert(Ackdb, null, values1);
+
+
+
+}
         @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(DATABASE_CREATE);
         db.execSQL(DATABASE_CREATE2);
         db.execSQL(DATABASE_CREATE3);
         db.execSQL(DATABASE_CREATE4);
+        db.execSQL(DATABASE_CREATE5);
 
         populateservice(db);
         populateusmcranks(db);
@@ -15679,7 +15706,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         populatearmymos(db);
         populatenavycommunities(db);
         populateCGcommunities(db);
-
+        populateack(db);
 
 
 

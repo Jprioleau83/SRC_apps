@@ -45,7 +45,7 @@ android {
 dependencies {
     compile 'com.android.support:appcompat-v7:19.+'
     compile 'com.android.support:support-v4:19.+'
-    compile 'it.sephiroth.android.library.imagezoom:library:+'
+
 
     compile project(':libraries:showcase')
     compile fileTree(dir: 'libs', include: ['*.jar'])
