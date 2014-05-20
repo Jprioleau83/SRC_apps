@@ -2,10 +2,12 @@ package com.cnsintegration.srcmarineinfo1.adapter;
 
 import android.content.Context;
 import android.graphics.Typeface;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.cnsintegration.srcmarineinfo1.R;
@@ -60,19 +62,19 @@ public class ExpandabelListAdoptor4 extends BaseExpandableListAdapter {
                              boolean isLastChild, View convertView, ViewGroup parent) {
 
 
-        final MOS mos = (MOS) getChild(groupPosition, childPosition);
+        final Ack ack = (Ack) getChild(groupPosition, childPosition);
 
 
         View vi = convertView;
         if (convertView == null) {
             inflater = (LayoutInflater) _context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            vi = inflater.inflate(R.layout.mos_view, null);
+            vi = inflater.inflate(R.layout.ack_view, null);
             holder = new ViewHolder();
 
-            holder.tvRank = (TextView) vi.findViewById(R.id.rank); // city name
-            holder.tvPay = (TextView) vi.findViewById(R.id.payscale); // city name
-            holder.tvDetail = (TextView) vi.findViewById(R.id.rank_details); // city name
-            holder.tvLink = (TextView) vi.findViewById(R.id.mos_link); // city name
+            holder.ack_tx = (TextView) vi.findViewById(R.id.ack); // city name
+            holder.ackname_tx = (TextView) vi.findViewById(R.id.ackname); // city name
+            holder.ackdetails_tx = (TextView) vi.findViewById(R.id.ackdetails); // city name
+            holder.ack_image_im = (ImageView) vi.findViewById(R.id.ack_image);
 
 
             vi.setTag(holder);
@@ -83,22 +85,24 @@ public class ExpandabelListAdoptor4 extends BaseExpandableListAdapter {
 
         // Setting all values in listview
 
-        if (position == 2) {
-            holder.tvLabel = (TextView) vi.findViewById(R.id.mos_label);
-            holder.tvLabel.setText("AFSC");
-        }
 
 
-        holder.tvRank.setText(mos.getMOS_NAME());
-        holder.tvPay.setText(mos.getMOS_NUMBER());
-        holder.tvDetail.setText(mos.getMOS_RANK());
-        if (mos.getMOS_LINK() != null) {
-            holder.tvLink.setText("Click here for more details");
 
-        }
+        holder.ack_tx.setText(ack.getAck());
+        holder.ackname_tx.setText(ack.getAck_name());
+        holder.ackdetails_tx.setText(ack.getAck_details());
+       // if (mos.getMOS_LINK() != null) {
+         //   holder.tvLink.setText("Click here for more details");
+
+        //}
         //holder.tvRank.setTextColor(Color.WHITE);
         //holder.tvPay.setTextColor(Color.WHITE);
 
+        //Setting an image
+        String uri = "drawable/"+ ack.getAck_icon();
+        int imageResource = vi.getContext().getApplicationContext().getResources().getIdentifier(uri, null, vi.getContext().getApplicationContext().getPackageName());
+        Drawable image = vi.getContext().getResources().getDrawable(imageResource);
+        holder.ack_image_im.setImageDrawable(image);
 
         return vi;
 
@@ -179,11 +183,11 @@ public class ExpandabelListAdoptor4 extends BaseExpandableListAdapter {
 
     public static class ViewHolder {
 
-        TextView tvRank;
-        TextView tvPay;
-        TextView tvDetail;
-        TextView tvLink;
-        TextView tvLabel;
+        TextView ack_tx;
+        TextView ackname_tx;
+        TextView ackdetails_tx;
+        ImageView ack_image_im;
+
 
     }
 }

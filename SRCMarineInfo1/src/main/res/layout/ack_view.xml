@@ -20,7 +20,7 @@ limitations under the License.
     android:layout_height="match_parent"
     android:orientation="vertical" >
     <ImageView
-        android:id="@+id/list_image"
+        android:id="@+id/ack_image"
         android:layout_width="60dip"
         android:layout_height="60dip"
         android:layout_gravity="top"

@@ -1,9 +1,12 @@
 package com.cnsintegration.srcmarineinfo1;
 
 import android.app.Activity;
+import android.content.ActivityNotFoundException;
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -14,12 +17,14 @@ import android.view.ViewGroup;
 import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.cnsintegration.srcmarineinfo1.Database.DataBaseWrapper;
 import com.cnsintegration.srcmarineinfo1.adapter.BinderData;
 import com.cnsintegration.srcmarineinfo1.adapter.ExpandabelListAdoptor3;
 import com.cnsintegration.srcmarineinfo1.adapter.ExpandabelListAdoptor4;
 import com.cnsintegration.srcmarineinfo1.model.Ack;
+import com.cnsintegration.srcmarineinfo1.model.MOS;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -89,10 +94,11 @@ public class AckFragment extends Fragment {
         Ack ack = new Ack();
 
         ack.setId(cursor.getInt(0));
-        ack.setAck_name(cursor.getString(1));
-        ack.setAck_details(cursor.getString(2));
-        ack.setAck_link(cursor.getString(3));
-        ack.setAck_icon(cursor.getString(4));
+        ack.setAck(cursor.getString(1));
+        ack.setAck_name(cursor.getString(2));
+        ack.setAck_details(cursor.getString(3));
+        ack.setAck_link(cursor.getString(4));
+        ack.setAck_icon(cursor.getString(5));
 
 
 
@@ -191,17 +197,17 @@ public class AckFragment extends Fragment {
 
                 branchesDataCollection.add(map);
 
-                if (_Headers.contains(ack.getAck_name())) {
+                if (_Headers.contains(ack.getAck())) {
                     System.out.println("Account found");
                 } else {
                     // Map<String, String> map1 = new HashMap<String, String>();
                     //map1.put(KEY_TYPE, branchesDataCollection.get(i).get(KEY_TYPE));
                     //groupData.add(map1);
-                    _Headers.add(ack.getAck_name());
+                    _Headers.add(ack.getAck());
                     System.out.println("Account Added");
                 }
 
-                _listDataChild.put(ack.getAck_name(), ack);
+                _listDataChild.put(ack.getAck(), ack);
             }
 
 
@@ -215,6 +221,30 @@ public class AckFragment extends Fragment {
 
 
             lv.setAdapter(mAdapter);
+        lv.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+
+            @Override
+            public boolean onChildClick(ExpandableListView parent, View v,
+                                        int groupPosition, int childPosition, long id) {
+
+
+                final Ack ack = (Ack) mAdapter.getChild(groupPosition, childPosition);
+
+
+                try {
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(ack.getAck_link()));
+                    startActivity(browserIntent);
+                } catch (ActivityNotFoundException e) {
+                    Toast.makeText(getActivity(), "No application can handle this request,"
+                            + " Please install a webbrowser", Toast.LENGTH_LONG).show();
+                    e.printStackTrace();
+                }
+
+                return false;
+            }
+        });
+
+
             dbHelper.close();
 
 

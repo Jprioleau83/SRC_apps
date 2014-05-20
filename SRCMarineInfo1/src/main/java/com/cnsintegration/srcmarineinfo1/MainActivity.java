@@ -117,7 +117,7 @@ public class MainActivity extends FragmentActivity
         // Pages
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[4], navMenuIcons.getResourceId(4, -1)));
         // What's hot, We  will add a counter here
-        navDrawerItems.add(new NavDrawerItem(navMenuTitles[5], navMenuIcons.getResourceId(5, -1), true, "50+"));
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[5], navMenuIcons.getResourceId(5, -1)));
 
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[6], navMenuIcons.getResourceId(6, -1)));
 
@@ -649,7 +649,7 @@ public class MainActivity extends FragmentActivity
                 int height = size.y;
                 int width = size.x;
                 float centerY = height / 2;
-                PointTarget pg = new PointTarget(500, (int) centerY);
+                PointTarget pg = new PointTarget(width / 2, (int) centerY);
 
                 sv = ShowcaseView.insertShowcaseView(pg, this, R.string.showcase_main_rank_title, R.string.showcase_main_rank_message, co);
                 sv.animateGesture(width - 15, (int) centerY, 0, (int) centerY);
@@ -680,10 +680,10 @@ public class MainActivity extends FragmentActivity
                 int height = size.y;
                 int width = size.x;
                 float centerY = height / 2;
-                PointTarget pg = new PointTarget(500, (int) centerY);
+                PointTarget pg = new PointTarget(width -20, (int) centerY);
 
                 sv = ShowcaseView.insertShowcaseView(pg, this, R.string.showcase_main_rank_title, R.string.showcase_main_rank_message, co);
-                sv.animateGesture(width - 15, (int) centerY, 0, (int) centerY);
+                sv.animateGesture(width - 15, (int) centerY, width / 2, (int) centerY);
                 sv.setOnShowcaseEventListener(this);
             }
 
@@ -742,10 +742,10 @@ public class MainActivity extends FragmentActivity
                 int height = size.y;
                 int width = size.x;
                 float centerY = height / 2;
-                PointTarget pg = new PointTarget(500, (int) centerY);
+                PointTarget pg = new PointTarget(width / 2, (int) centerY);
 
                 sv = ShowcaseView.insertShowcaseView(pg, this, R.string.showcase_main_rank_title, R.string.showcase_main_rank_message, co);
-                sv.animateGesture(width - 15, (int) centerY, 0, (int) centerY);
+                sv.animateGesture(width-15, (int) centerY, 0, (int) centerY);
                 sv.setOnShowcaseEventListener(this);
 
             }
@@ -790,10 +790,10 @@ public class MainActivity extends FragmentActivity
                 int height = size.y;
                 int width = size.x;
                 float centerY = height / 2;
-                PointTarget pg = new PointTarget(500, (int) centerY);
+                PointTarget pg = new PointTarget(width -20, (int) centerY);
 
                 sv = ShowcaseView.insertShowcaseView(pg, this, R.string.showcase_main_rank_title, R.string.showcase_main_rank_message, co);
-                sv.animateGesture(width - 15, (int) centerY, 0, (int) centerY);
+                sv.animateGesture(width - 15, (int) centerY, width / 2, (int) centerY);
                 sv.setOnShowcaseEventListener(this);
 
             }

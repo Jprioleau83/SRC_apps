@@ -91,25 +91,25 @@ public class ActionFragment extends ListFragment {
                     branchesDataCollection.add(map1);
                     map2.put(KEY_ID, "3");
                     map2.put(KEY_NAME, "MOS");
-                    map2.put(KEY_ICON, "usmc");
+                    map2.put(KEY_ICON, "patch");
 
 
                     branchesDataCollection.add(map2);
                     map3.put(KEY_ID, "4");
                     map3.put(KEY_NAME, "Alpha Numeric");
-                    map3.put(KEY_ICON, "usmc");
+                    map3.put(KEY_ICON, "alpha");
 
 
                     branchesDataCollection.add(map3);
                     map4.put(KEY_ID, "5");
                     map4.put(KEY_NAME, "Org structure");
-                    map4.put(KEY_ICON, "usmc");
+                    map4.put(KEY_ICON, "orgstructure");
 
 
                     branchesDataCollection.add(map4);
                     map5.put(KEY_ID, "6");
                     map5.put(KEY_NAME, "ACKs");
-                    map5.put(KEY_ICON, "usmc");
+                    map5.put(KEY_ICON, "sunny");
 
 
                     branchesDataCollection.add(map5);
