@@ -15,6 +15,10 @@
     <string name="showcase_main_rank_title">Swipe Left or Right</string>
     <string name="showcase_main_rank_message">The App is now displaying a set of screen in which you could view by swiping left or right.</string>
     <string name="showcase_button_ok">I understand</string>
+    <string name="search_hint">MOS Search</string>
+    <string name="app_label">Search label</string>
+
+
 
     <string-array name="actions_array">
         <item>Ranks</item>

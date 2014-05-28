@@ -3,12 +3,14 @@ package com.cnsintegration.srcmarineinfo1;
 
 import android.annotation.TargetApi;
 import android.app.Dialog;
+import android.app.SearchManager;
+import android.app.SearchableInfo;
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.Point;
 import android.graphics.Typeface;
-import android.graphics.drawable.ColorDrawable;
-import android.os.Build;
+
 import android.preference.PreferenceManager;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
@@ -27,6 +29,7 @@ import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 
 
+import android.widget.SearchView;
 import android.util.Log;
 import android.view.Display;
 import android.view.Menu;
@@ -34,12 +37,12 @@ import android.view.MenuItem;
 import android.view.View;
 
 import android.view.ViewGroup;
-import android.view.Window;
-import android.view.WindowManager;
+
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+
 import android.widget.TextView;
 
 import java.text.DateFormat;
@@ -56,9 +59,14 @@ import com.espian.showcaseview.targets.ActionViewTarget;
 import com.espian.showcaseview.targets.PointTarget;
 import com.espian.showcaseview.targets.ViewTarget;
 
+
+
+
+
+
 public class MainActivity extends FragmentActivity
         implements ActionFragment.OnServicesSelectedListener, ServiceFragment.OnServicesSelectedListener, ServiceFragment.OnServicesSelectedListener2, RankFragment.OnRankCreated, RankFragment.OnRankCreatedListener1, HomeFragment.OnHomeCreatedListener, MilitaryTimeFragment.OnMilitaryTimeListener,
-        RankTypeFragment.OnRankTypeSelectedListener, OnShowcaseEventListener, MOSTypeFragment.OnMOSTypeSelectedListener {
+        RankTypeFragment.OnRankTypeSelectedListener, OnShowcaseEventListener, MOSTypeFragment.OnMOSTypeSelectedListener{
 
 
     private DrawerLayout mDrawerLayout;
@@ -86,6 +94,10 @@ public class MainActivity extends FragmentActivity
 
     PageviewerSmallFragment Pageview;
     ShowcaseView sv;
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -205,8 +217,24 @@ public class MainActivity extends FragmentActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main, menu);
+
+        // Associate searchable configuration with the SearchView
+        SearchManager searchManager =
+                (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+        SearchView searchView =
+                (SearchView) menu.findItem(R.id.search).getActionView();
+        searchView.setSearchableInfo(
+                searchManager.getSearchableInfo(getComponentName()));
+
+
+
+
+
+
         return true;
     }
+
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -800,6 +828,8 @@ public class MainActivity extends FragmentActivity
 
         }
     }
+
+
 
 
     /**
