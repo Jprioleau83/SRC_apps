@@ -3,6 +3,7 @@ package com.cnsintegration.srcmarineinfo1.adapter;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.view.LayoutInflater;
@@ -86,11 +87,20 @@ public class MOSData extends BaseAdapter  {
 
 
         holder.tvRank.setText(thismos.getMOS_NAME());
+
+
+        holder.tvRank.setTextColor(Color.parseColor("#000000"));
+        holder.tvRank = (TextView) vi.findViewById(R.id.mos_label);
+        holder.tvRank.setTextColor(Color.parseColor("#000000"));
+
+
         holder.tvPay.setText(thismos.getMOS_NUMBER());
+        holder.tvPay.setTextColor(Color.parseColor("#000000"));
         holder.tvDetail.setText(thismos.getMOS_RANK());
+        holder.tvDetail.setTextColor(Color.parseColor("#000000"));
         if (thismos.getMOS_LINK() != null) {
             holder.tvLink.setText("Click here for more details");
-
+            holder.tvLink.setTextColor(Color.parseColor("#FF33B5E5"));
         }
         // Setting all values in listview
 

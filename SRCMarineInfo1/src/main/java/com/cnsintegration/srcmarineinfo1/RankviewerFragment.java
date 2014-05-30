@@ -31,6 +31,12 @@ public class RankviewerFragment extends Fragment {
 
         Ranks = tRanks;
     }
+    public RankviewerFragment(List tRanks) {
+
+
+
+        Ranks = tRanks;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -66,7 +72,9 @@ public class RankviewerFragment extends Fragment {
                     .getDeclaredField("mChildFragmentManager");
             childFragmentManager.setAccessible(true);
             childFragmentManager.set(this, null);
-            fm.popBackStack();
+            if(fm != null){
+                fm.popBackStack();
+            }
         } catch (NoSuchFieldException e) {
             throw new RuntimeException(e);
         } catch (IllegalAccessException e) {

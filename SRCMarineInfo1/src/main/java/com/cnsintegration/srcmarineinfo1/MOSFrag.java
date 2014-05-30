@@ -23,7 +23,6 @@ import android.widget.ExpandableListView;
 import android.widget.Toast;
 
 import com.cnsintegration.srcmarineinfo1.Database.DataBaseWrapper;
-import com.cnsintegration.srcmarineinfo1.adapter.ExpandabelListAdoptor2;
 import com.cnsintegration.srcmarineinfo1.adapter.ExpandabelListAdoptor3;
 import com.cnsintegration.srcmarineinfo1.adapter.MyAdapter;
 import com.cnsintegration.srcmarineinfo1.model.MOS;

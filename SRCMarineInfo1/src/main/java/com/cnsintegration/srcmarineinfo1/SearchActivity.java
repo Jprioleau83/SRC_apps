@@ -14,11 +14,13 @@ import android.widget.Toast;
 
 import com.cnsintegration.srcmarineinfo1.Database.DataBaseWrapper;
 import com.cnsintegration.srcmarineinfo1.adapter.MOSData;
+import com.cnsintegration.srcmarineinfo1.adapter.searchrankresult;
 import com.cnsintegration.srcmarineinfo1.model.MOS;
 import com.cnsintegration.srcmarineinfo1.model.Rank;
 
 import java.util.ArrayList;
 import java.util.List;
+import android.support.v4.app.FragmentManager;
 
 /**
  * Created by jprioleau on 5/27/2014.
@@ -34,6 +36,8 @@ public class SearchActivity extends ListActivity {
 
     public String[] Ranks_TABLE_COLUMNS = { DataBaseWrapper.rank_ID, DataBaseWrapper.Rank_PAY, DataBaseWrapper.Rank_SHORT, DataBaseWrapper.Rank_NAME,
             DataBaseWrapper.Rank_ICON, DataBaseWrapper.Rank_TYPE, DataBaseWrapper.Rank_DETAILS, DataBaseWrapper.Rank_LINK, DataBaseWrapper.Rank_Branch };
+
+
 
 
     public void onCreate(Bundle savedInstanceState) {
@@ -103,7 +107,7 @@ public class SearchActivity extends ListActivity {
         } else{
             // search rank
 
-            Cursor cursor = database.query(DataBaseWrapper.Ranks, Ranks_TABLE_COLUMNS , "_name LIKE '" + queryStr + "'", null, null, null, null);
+            Cursor cursor = database.query(DataBaseWrapper.Ranks, Ranks_TABLE_COLUMNS , "_name LIKE '" + queryStr + "' OR _short LIKE '" + queryStr + "'", null, null, null, null);
             List ranks = new ArrayList();
             cursor.moveToFirst();
 
@@ -115,6 +119,8 @@ public class SearchActivity extends ListActivity {
 
             cursor.close();
 
+
+            setListAdapter(new searchrankresult(this,ranks));
 
 
 
