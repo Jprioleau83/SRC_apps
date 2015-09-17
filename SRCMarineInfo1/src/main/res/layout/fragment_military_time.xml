@@ -41,6 +41,7 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="Military Time:"
+                        android:textColor="#FFF"
 
                         android:id="@+id/millabel" />
 
@@ -57,14 +58,16 @@
                             android:textAppearance="?android:attr/textAppearanceLarge"
                             android:text="Large Text"
                             android:textSize="40sp"
-                            android:id="@+id/hour" />
+                            android:id="@+id/hour"
+                            android:textColor="#FFF"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text=":"
                             android:textSize="40sp"
-                            android:id="@+id/textView4" />
+                            android:id="@+id/textView4"
+                            android:textColor="#FFF"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -72,14 +75,16 @@
                             android:layout_height="wrap_content"
                             android:textAppearance="?android:attr/textAppearanceLarge"
                             android:text="Large Text"
-                            android:id="@+id/min" />
+                            android:id="@+id/min"
+                            android:textColor="#FFF"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text=":"
                             android:textSize="40sp"
-                            android:id="@+id/textView5" />
+                            android:id="@+id/textView5"
+                            android:textColor="#FFF"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -87,7 +92,8 @@
                             android:textAppearance="?android:attr/textAppearanceLarge"
                             android:text="Large Text"
                             android:textSize="40sp"
-                            android:id="@+id/sec" />
+                            android:id="@+id/sec"
+                            android:textColor="#FFF"/>
 
 
                     </LinearLayout>
@@ -118,7 +124,8 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="Current Time:"
-                        android:id="@+id/curlabel" />
+                        android:id="@+id/curlabel"
+                        android:textColor="#FFF"/>
 
                     <LinearLayout
                         android:orientation="horizontal"
@@ -133,14 +140,16 @@
                             android:textAppearance="?android:attr/textAppearanceLarge"
                             android:text="Large Text"
                             android:textSize="40sp"
-                            android:id="@+id/curhour" />
+                            android:id="@+id/curhour"
+                            android:textColor="#FFF"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text=":"
                             android:textSize="40sp"
-                            android:id="@+id/curtextView4" />
+                            android:id="@+id/curtextView4"
+                            android:textColor="#FFF"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -148,14 +157,16 @@
                             android:textAppearance="?android:attr/textAppearanceLarge"
                             android:text="Large Text"
                             android:textSize="40sp"
-                            android:id="@+id/curmin" />
+                            android:id="@+id/curmin"
+                            android:textColor="#FFF"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text=":"
                             android:textSize="40sp"
-                            android:id="@+id/curtextView5" />
+                            android:id="@+id/curtextView5"
+                            android:textColor="#FFF"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -163,14 +174,16 @@
                             android:textAppearance="?android:attr/textAppearanceLarge"
                             android:text="Large Text"
                             android:textSize="40sp"
-                            android:id="@+id/cursec" />
+                            android:id="@+id/cursec"
+                            android:textColor="#FFF"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text=":"
                             android:textSize="30sp"
-                            android:id="@+id/curampm" />
+                            android:id="@+id/curampm"
+                            android:textColor="#FFF"/>
 
 
                     </LinearLayout>
@@ -194,8 +207,9 @@
                 android:id="@+id/RHE"
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
-
-                android:padding="15dp">
+                android:textColor="#FFF"
+                android:padding="15dp"
+                android:divider="#ffffff">
 
                 <TableRow android:layout_height="wrap_content">
 
@@ -203,13 +217,15 @@
                         android:id="@+id/runLabel"
                         android:text="24-hour clock"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF"/>
 
                     <TextView
                         android:id="@+id/hitLabel"
                         android:text="12-hour clock"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF"/>
 
                 </TableRow>
 
@@ -219,29 +235,33 @@
                         android:id="@+id/midnight24"
                         android:text="00:00"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF"/>
 
                     <TextView
                         android:id="@+id/midnight12"
                         android:text="12:00 a.m"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF"/>
 
                 </TableRow>
 
-                <TableRow android:layout_height="wrap_content">
+                <TableRow android:divider="#FFF" android:layout_height="wrap_content">
 
                     <TextView
                         android:id="@+id/one24"
                         android:text="01:00"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF"/>
 
                     <TextView
                         android:id="@+id/one12"
                         android:text="1:00 a.m"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF"/>
 
                 </TableRow>
 
@@ -251,13 +271,15 @@
                         android:id="@+id/two24"
                         android:text="02:00"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF"/>
 
                     <TextView
                         android:id="@+id/two12"
                         android:text="2:00 a.m"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF"/>
 
                 </TableRow>
 
@@ -267,13 +289,15 @@
                         android:id="@+id/three24"
                         android:text="03:00"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF"/>
 
                     <TextView
                         android:id="@+id/three12"
                         android:text="3:00 a.m"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF"/>
 
                 </TableRow>
 
@@ -283,13 +307,15 @@
                         android:id="@+id/four24"
                         android:text="04:00"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF"/>
 
                     <TextView
                         android:id="@+id/four12"
                         android:text="4:00 a.m"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF"/>
 
                 </TableRow>
 
@@ -299,13 +325,15 @@
                         android:id="@+id/five24"
                         android:text="05:00"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF"/>
 
                     <TextView
                         android:id="@+id/five12"
                         android:text="5:00 a.m"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF"/>
 
                 </TableRow>
 
@@ -315,13 +343,15 @@
                         android:id="@+id/six24"
                         android:text="06:00"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF"/>
 
                     <TextView
                         android:id="@+id/six12"
                         android:text="6:00 a.m"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF"/>
 
                 </TableRow>
 
@@ -331,13 +361,15 @@
                         android:id="@+id/seven24"
                         android:text="07:00"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF"/>
 
                     <TextView
                         android:id="@+id/seven12"
                         android:text="7:00 a.m"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF"/>
 
                 </TableRow>
 
@@ -347,13 +379,15 @@
                         android:id="@+id/eight24"
                         android:text="08:00"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF"/>
 
                     <TextView
                         android:id="@+id/eight12"
                         android:text="8:00 a.m"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF"/>
 
                 </TableRow>
 
@@ -363,13 +397,15 @@
                         android:id="@+id/nine24"
                         android:text="09:00"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF"/>
 
                     <TextView
                         android:id="@+id/nine12"
                         android:text="9:00 a.m"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF"/>
 
                 </TableRow>
 
@@ -379,13 +415,15 @@
                         android:id="@+id/ten24"
                         android:text="10:00"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF"/>
 
                     <TextView
                         android:id="@+id/ten12"
                         android:text="10:00 a.m"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF"/>
 
                 </TableRow>
 
@@ -395,13 +433,15 @@
                         android:id="@+id/eleven24"
                         android:text="11:00"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF"/>
 
                     <TextView
                         android:id="@+id/eleven12"
                         android:text="11:00 a.m"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF"/>
 
                 </TableRow>
 
@@ -409,15 +449,17 @@
 
                     <TextView
                         android:id="@+id/twelve24"
-                        android:text="01:00"
+                        android:text="12:00"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF"/>
 
                     <TextView
                         android:id="@+id/twelve12"
-                        android:text="1:00 a.m"
+                        android:text="12:00 p.m"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF"/>
 
                 </TableRow>
 
@@ -427,13 +469,15 @@
                         android:id="@+id/thirteen24"
                         android:text="13:00"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF"/>
 
                     <TextView
                         android:id="@+id/thirteen12"
                         android:text="1:00 p.m"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF"/>
 
                 </TableRow>
 
@@ -443,13 +487,15 @@
                         android:id="@+id/fourteen24"
                         android:text="14:00"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF"/>
 
                     <TextView
                         android:id="@+id/fourteen12"
                         android:text="2:00 p.m"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF"/>
 
                 </TableRow>
 
@@ -459,13 +505,15 @@
                         android:id="@+id/fifteen24"
                         android:text="15:00"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF"/>
 
                     <TextView
                         android:id="@+id/fifteen12"
                         android:text="3:00 p.m"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF"/>
 
                 </TableRow>
 
@@ -475,13 +523,15 @@
                         android:id="@+id/sixteen24"
                         android:text="16:00"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF"/>
 
                     <TextView
                         android:id="@+id/sixteen12"
                         android:text="4:00 p.m"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF"/>
 
                 </TableRow>
 
@@ -491,13 +541,15 @@
                         android:id="@+id/seventeen24"
                         android:text="17:00"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF"/>
 
                     <TextView
                         android:id="@+id/seventeen12"
                         android:text="5:00 p.m"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF"/>
 
                 </TableRow>
 
@@ -507,13 +559,15 @@
                         android:id="@+id/eighteen24"
                         android:text="18:00"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF"/>
 
                     <TextView
                         android:id="@+id/eighteen12"
                         android:text="6:00 p.m"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF"/>
 
                 </TableRow>
 
@@ -523,13 +577,15 @@
                         android:id="@+id/ninteen24"
                         android:text="19:00"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF"/>
 
                     <TextView
                         android:id="@+id/ninteen12"
                         android:text="7:00 p.m"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF"/>
 
                 </TableRow>
 
@@ -539,13 +595,15 @@
                         android:id="@+id/twenty24"
                         android:text="20:00"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF"/>
 
                     <TextView
                         android:id="@+id/twenty12"
                         android:text="8:00 p.m"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF"/>
 
                 </TableRow>
 
@@ -555,13 +613,15 @@
                         android:id="@+id/twentyone24"
                         android:text="21:00"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF" />
 
                     <TextView
                         android:id="@+id/twentyone12"
                         android:text="9:00 p.m"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF" />
 
                 </TableRow>
 
@@ -571,13 +631,16 @@
                         android:id="@+id/twentytwo24"
                         android:text="22:00"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF" />
 
                     <TextView
                         android:id="@+id/twentytwo12"
                         android:text="10:00 p.m"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF"
+                        />
 
                 </TableRow>
 
@@ -587,13 +650,15 @@
                         android:id="@+id/twentythree24"
                         android:text="23:00"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF"/>
 
                     <TextView
                         android:id="@+id/twentythree12"
                         android:text="11:00 p.m"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/cell_shape" />
+                        android:background="@drawable/cell_shape"
+                        android:textColor="#FFF"/>
 
                 </TableRow>
 

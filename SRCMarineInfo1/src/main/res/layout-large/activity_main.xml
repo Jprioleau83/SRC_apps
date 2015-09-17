@@ -38,7 +38,8 @@ limitations under the License.
             android:id="@+id/rank_fragment"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="50" >
+            android:layout_weight="50"
+            android:background="@drawable/gradient_bg">
         </FrameLayout>
 
     </LinearLayout>

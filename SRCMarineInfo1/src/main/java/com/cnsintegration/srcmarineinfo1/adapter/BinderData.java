@@ -3,9 +3,8 @@ package com.cnsintegration.srcmarineinfo1.adapter;
 import android.app.Activity;
 import android.content.Context;
 
-import android.graphics.Color;
+import android.content.res.Configuration;
 import android.graphics.drawable.Drawable;
-import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -67,13 +66,20 @@ public class BinderData extends BaseAdapter {
         View vi=convertView;
         if(convertView==null){
 
-            vi = inflater.inflate(R.layout.article_view, null);
-            holder = new ViewHolder();
 
-            holder.tvBranch = (TextView)vi.findViewById(R.id.article); // city name
-            holder.tvBranchImage =(ImageView)vi.findViewById(R.id.list_image); // thumb image
 
-            vi.setTag(holder);
+
+                vi = inflater.inflate(R.layout.article_view, null);
+                holder = new ViewHolder();
+
+                holder.tvBranch = (TextView)vi.findViewById(R.id.article); // city name
+                holder.tvBranchImage =(ImageView)vi.findViewById(R.id.list_image); // thumb image
+
+                vi.setTag(holder);
+
+
+
+
         }
         else{
 
@@ -87,11 +93,11 @@ public class BinderData extends BaseAdapter {
        // holder.tvBranch.setTextColor(Color.WHITE);
 
 
-        //Setting an image
-        String uri = "drawable/"+ branchDataCollection.get(position).get(KEY_ICON);
-        int imageResource = vi.getContext().getApplicationContext().getResources().getIdentifier(uri, null, vi.getContext().getApplicationContext().getPackageName());
-        Drawable image = vi.getContext().getResources().getDrawable(imageResource);
-        holder.tvBranchImage.setImageDrawable(image);
+            //Setting an image
+            String uri = "drawable/" + branchDataCollection.get(position).get(KEY_ICON);
+            int imageResource = vi.getContext().getApplicationContext().getResources().getIdentifier(uri, null, vi.getContext().getApplicationContext().getPackageName());
+            Drawable image = vi.getContext().getResources().getDrawable(imageResource);
+            holder.tvBranchImage.setImageDrawable(image);
 
         return vi;
 

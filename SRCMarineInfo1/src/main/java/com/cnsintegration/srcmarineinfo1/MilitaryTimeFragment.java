@@ -16,6 +16,8 @@ import java.util.Date;
 public class MilitaryTimeFragment extends Fragment {
 
 
+
+
     private OnMilitaryTimeListener mListener;
 
     /**
@@ -30,7 +32,7 @@ public class MilitaryTimeFragment extends Fragment {
      */
     public interface OnMilitaryTimeListener {
         // TODO: Update argument type and name
-        public void onTimeCreated();
+        void onTimeCreated();
     }
 
     @Override
@@ -70,6 +72,7 @@ public class MilitaryTimeFragment extends Fragment {
             throw new ClassCastException(activity.toString()
                     + " must implement OnFragmentInteractionListener");
         }
+
     }
 
     @Override

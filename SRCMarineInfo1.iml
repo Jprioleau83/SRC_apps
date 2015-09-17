@@ -64,13 +64,6 @@
       <sourceFolder url="file://$MODULE_DIR$/SRCMarineInfo1/src/androidTest/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/SRCMarineInfo1/src/androidTest/jni" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/SRCMarineInfo1/src/androidTest/rs" isTestSource="true" />
-      <excludeFolder url="file://$MODULE_DIR$/SRCMarineInfo1/build/apk" />
-      <excludeFolder url="file://$MODULE_DIR$/SRCMarineInfo1/build/assets" />
-      <excludeFolder url="file://$MODULE_DIR$/SRCMarineInfo1/build/classes" />
-      <excludeFolder url="file://$MODULE_DIR$/SRCMarineInfo1/build/dependency-cache" />
-      <excludeFolder url="file://$MODULE_DIR$/SRCMarineInfo1/build/dex" />
-      <excludeFolder url="file://$MODULE_DIR$/SRCMarineInfo1/build/exploded-aar" />
-      <excludeFolder url="file://$MODULE_DIR$/SRCMarineInfo1/build/incremental" />
       <excludeFolder url="file://$MODULE_DIR$/SRCMarineInfo1/build/intermediates/assets" />
       <excludeFolder url="file://$MODULE_DIR$/SRCMarineInfo1/build/intermediates/bundles" />
       <excludeFolder url="file://$MODULE_DIR$/SRCMarineInfo1/build/intermediates/classes" />
@@ -91,21 +84,13 @@
       <excludeFolder url="file://$MODULE_DIR$/SRCMarineInfo1/build/intermediates/res" />
       <excludeFolder url="file://$MODULE_DIR$/SRCMarineInfo1/build/intermediates/rs" />
       <excludeFolder url="file://$MODULE_DIR$/SRCMarineInfo1/build/intermediates/symbols" />
-      <excludeFolder url="file://$MODULE_DIR$/SRCMarineInfo1/build/libs" />
-      <excludeFolder url="file://$MODULE_DIR$/SRCMarineInfo1/build/manifests" />
-      <excludeFolder url="file://$MODULE_DIR$/SRCMarineInfo1/build/ndk" />
       <excludeFolder url="file://$MODULE_DIR$/SRCMarineInfo1/build/outputs" />
-      <excludeFolder url="file://$MODULE_DIR$/SRCMarineInfo1/build/pre-dexed" />
-      <excludeFolder url="file://$MODULE_DIR$/SRCMarineInfo1/build/res" />
-      <excludeFolder url="file://$MODULE_DIR$/SRCMarineInfo1/build/rs" />
-      <excludeFolder url="file://$MODULE_DIR$/SRCMarineInfo1/build/source" />
-      <excludeFolder url="file://$MODULE_DIR$/SRCMarineInfo1/build/symbols" />
       <excludeFolder url="file://$MODULE_DIR$/SRCMarineInfo1/build/tmp" />
     </content>
     <orderEntry type="jdk" jdkName="Android API 19 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="support-v4-19.1.0" level="project" />
     <orderEntry type="library" exported="" name="library-2.4.0" level="project" />
+    <orderEntry type="library" exported="" name="support-v4-19.1.0" level="project" />
     <orderEntry type="library" exported="" name="appcompat-v7-19.1.0" level="project" />
     <orderEntry type="module" module-name="showcase" exported="" />
   </component>
