@@ -7,6 +7,7 @@ def getVersionCode = { ->
             standardOutput = code
         }
         return code.toString().split("\n").size()
+        system.out.println(code.toString().split("\n").size())
     }
     catch (ignored) {
         return -1;
@@ -20,6 +21,7 @@ def getVersionName = { ->
             standardOutput = stdout
         }
         return stdout.toString().trim()
+        system.out.println(stdout.toString().trim())
     }
     catch (ignored) {
         return null;
