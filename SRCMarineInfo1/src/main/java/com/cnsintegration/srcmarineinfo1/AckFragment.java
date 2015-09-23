@@ -65,7 +65,11 @@ public class AckFragment extends Fragment {
     public String[] Ack_TABLE_COLUMNS = { "id", DataBaseWrapper.Ack, DataBaseWrapper.Ack_Name, DataBaseWrapper.Ack_Details, DataBaseWrapper.Ack_Link, DataBaseWrapper.Ack_Icon };
     final static String ARG_POSITION = "position";
 
+    public AckFragment() {
 
+
+
+    }
 
 
 

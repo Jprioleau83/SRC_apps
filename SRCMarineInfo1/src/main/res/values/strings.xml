@@ -4,6 +4,7 @@
     <string name="app_name">SRCMarineInfo1</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="help_string">Help</string>
     <string name="strBranch">USMC</string>
     <string name="MOSTitle"> <u>MOS Title</u>.</string>
     <string name="MOSRank"> <u>MOS Ranks</u>.</string>
@@ -75,5 +76,6 @@ The U.S. Navy has several ratings or job specialties for its enlisted members. A
     <string name="cg_home_detail">United States Coast Guard ratings are general occupations that consist of specific skills and abilities. Each rating has its own specialty badge, which is typically worn on the left sleeve of their service dress uniform by all enlisted personnel in that particular field. On Operational Dress Uniforms, they wear generic rate designators that exclude the rating symbol. Commissioned Officers do not have ratings.
 
 \n Ratings should not be confused with "rates", which describe the Navy\'s and Coast Guard\'s enlisted pay-grades. Enlisted Navy and Coast Guardsmen are referred to by their rating and rate. For example, if someone\'s rate is Petty Officer 2nd Class and his rating is Boatswain\'s Mate; when combined, Boatswain\'s Mate 2nd Class (BM2) defines both.</string>
+    <string name="title_activity_help">HelpActivity</string>
 
 </resources>

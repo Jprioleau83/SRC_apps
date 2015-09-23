@@ -58,13 +58,15 @@ public class RankTypeFragment extends ListFragment {
     public RankTypeFragment(int i) {
         mActiontype = i;
     }
+    public RankTypeFragment() {
+
+    }
 
     public interface OnRankTypeSelectedListener {
         /** Called by ServiceFragment when a list item is selected */
 
 
-
-            public void onRankTypeSelected(String rtype, int position);
+        void onRankTypeSelected(String rtype, int position);
 
 
 

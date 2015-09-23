@@ -1,6 +1,8 @@
 package com.cnsintegration.srcmarineinfo1;
 
 import android.app.Activity;
+import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Build;
@@ -64,12 +66,14 @@ public class ServiceFragment extends ListFragment {
         mActiontype = i;
     }
 
+    public ServiceFragment() {
+
+    }
     public interface OnServicesSelectedListener {
         /** Called by ServiceFragment when a list item is selected */
 
 
-
-            public void onServiceSelected ( int position);
+        void onServiceSelected(int position);
 
 
 
@@ -80,7 +84,7 @@ public class ServiceFragment extends ListFragment {
          */
 
 
-        public void onServiceSelected2(int position);
+        void onServiceSelected2(int position);
 
 
     }
@@ -118,10 +122,13 @@ public class ServiceFragment extends ListFragment {
     }
 
 
+
+
+
         @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+            setRetainInstance(true);
         // We need to use a different list item layout for devices older than Honeycomb
         int layout = Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB ?
                 android.R.layout.simple_list_item_activated_1 : android.R.layout.simple_list_item_1;
@@ -152,7 +159,7 @@ public class ServiceFragment extends ListFragment {
             }
 
 
-        setListAdapter(new BinderData(getActivity(),branchesDataCollection));
+        setListAdapter(new BinderData(getActivity(), branchesDataCollection));
             dbHelper.close();
 
 
@@ -177,6 +184,8 @@ public class ServiceFragment extends ListFragment {
 
     }
 
+
+
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
@@ -199,6 +208,7 @@ public class ServiceFragment extends ListFragment {
 
 
     }
+
 
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {

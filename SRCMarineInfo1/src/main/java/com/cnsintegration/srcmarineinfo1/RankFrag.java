@@ -55,7 +55,10 @@ public class RankFrag extends ListFragment {
 
 
     }
+    public RankFrag() {
 
+
+    }
 
 
 

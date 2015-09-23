@@ -3,6 +3,7 @@ package com.cnsintegration.srcmarineinfo1;
 
 import android.annotation.TargetApi;
 import android.app.Dialog;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.Point;
@@ -86,10 +87,15 @@ public class MainActivity extends FragmentActivity
 
     PageviewerSmallFragment Pageview;
     ShowcaseView sv;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
+        // Retain this fragment across configuration changes.
+
 
         mTitle = mDrawerTitle = getTitle();
 
@@ -217,10 +223,13 @@ public class MainActivity extends FragmentActivity
         // Handle action bar actions click
         switch (item.getItemId()) {
             case R.id.action_settings:
-                return true;
+                startActivity(new Intent(this, HelpActivity.class));
+                break;
+               // return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
+        return true;
     }
 
     /**
@@ -257,6 +266,7 @@ public class MainActivity extends FragmentActivity
         super.onConfigurationChanged(newConfig);
         // Pass any configuration change to the drawer toggls
         mDrawerToggle.onConfigurationChanged(newConfig);
+        setContentView(R.layout.activity_main);
     }
 
 

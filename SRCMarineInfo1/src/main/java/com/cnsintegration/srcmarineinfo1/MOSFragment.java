@@ -71,13 +71,15 @@ public class MOSFragment extends Fragment {
     public MOSFragment(int i) {
         mActiontype = i;
     }
+    public MOSFragment() {
+
+    }
 
     public interface OnServicesSelectedListener {
         /** Called by ServiceFragment when a list item is selected */
 
 
-
-            public void onRankCreated();
+        void onRankCreated();
 
 
 
@@ -88,7 +90,7 @@ public class MOSFragment extends Fragment {
          */
 
 
-        public void onMOSSelected(int groupposition);
+        void onMOSSelected(int groupposition);
 
 
     }
@@ -234,7 +236,7 @@ public class MOSFragment extends Fragment {
 
                 MOS mos = (MOS) values1.get(k);
 
-                String ty = (String) mos.getMOS_TYPE();
+                String ty = mos.getMOS_TYPE();
                 MTitles selectedtitle = _listDataHeader.get(i);
                 String t1 = selectedtitle.getMOS_TITLES_TITLE();
 

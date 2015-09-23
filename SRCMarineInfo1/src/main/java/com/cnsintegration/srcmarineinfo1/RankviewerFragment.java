@@ -32,6 +32,10 @@ public class RankviewerFragment extends Fragment {
         Ranks = tRanks;
     }
 
+    public RankviewerFragment() {
+
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

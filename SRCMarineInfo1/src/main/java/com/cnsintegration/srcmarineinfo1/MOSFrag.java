@@ -75,6 +75,12 @@ public class MOSFrag extends Fragment {
     }
 
 
+    public MOSFrag() {
+        // Required empty public constructor
+    }
+
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -275,7 +281,7 @@ public class MOSFrag extends Fragment {
 
                 MOS mos = (MOS) values1.get(k);
 
-                int ty = (int) mos.getMOS_TITLE();
+                int ty = mos.getMOS_TITLE();
                 MTitles selectedtitle = _listDataHeader.get(i);
                 int t1 = selectedtitle.getMOS_TITLES_ID();
 

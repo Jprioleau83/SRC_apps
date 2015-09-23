@@ -59,13 +59,16 @@ public class RankFragment extends ListFragment {
         rank_type = rtype;
 
     }
+    public RankFragment() {
+        // Required empty public constructor
+    }
 
     public interface OnRankCreated {
         /**
          * Called by ServiceFragment when a list item is selected
          */
         //
-        public void onRankCreated();
+        void onRankCreated();
     }
 
 
@@ -73,7 +76,7 @@ public class RankFragment extends ListFragment {
         /**
          * Called by ServiceFragment when a list item is selected
          */
-        public void onRankSelected(List Ranks);
+        void onRankSelected(List Ranks);
     }
 
 

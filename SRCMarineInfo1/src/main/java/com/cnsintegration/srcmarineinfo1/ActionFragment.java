@@ -35,7 +35,11 @@ public class ActionFragment extends ListFragment {
 
     public interface OnServicesSelectedListener {
         /** Called by ServiceFragment when a list item is selected */
-        public void onActionSelected(int position);
+        void onActionSelected(int position);
+    }
+
+    public ActionFragment() {
+        // Required empty public constructor
     }
 
 

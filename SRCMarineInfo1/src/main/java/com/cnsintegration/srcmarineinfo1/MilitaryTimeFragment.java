@@ -35,6 +35,11 @@ public class MilitaryTimeFragment extends Fragment {
         void onTimeCreated();
     }
 
+    public MilitaryTimeFragment() {
+        // Required empty public constructor
+    }
+
+
     @Override
     public void onStart() {
         super.onStart();

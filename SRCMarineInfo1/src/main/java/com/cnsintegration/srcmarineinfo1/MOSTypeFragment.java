@@ -64,6 +64,10 @@ public class MOSTypeFragment extends ListFragment {
         mActiontype = i;
     }
 
+    public MOSTypeFragment() {
+
+    }
+
     public List getMOSES(int mostitleid) {
         List moses = new ArrayList();
         String tempposition = Integer.toString(mostitleid);
@@ -288,8 +292,7 @@ public class MOSTypeFragment extends ListFragment {
         /** Called by ServiceFragment when a list item is selected */
 
 
-
-        public void onMOSTypeelected(String mostype, int postion);
+        void onMOSTypeelected(String mostype, int postion);
 
 
 
