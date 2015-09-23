@@ -67,7 +67,7 @@ dependencies {
 
 }
 
-task incrementVersionCode << {
+task incrementVersionCodeRel << {
     println(":incrementVersionCode - Incrementing Version Code...")
     def manifestFile = file("src/main/AndroidManifest.xml")
     def patternVersionCode = Pattern.compile("versionCode=\"(\\d+)\"")
@@ -82,7 +82,51 @@ task incrementVersionCode << {
     manifestFile.write(manifestContent)
 }
 
-task incrementVersionName << {
+
+
+
+task incrementVersionNameRel << {
+    println(":incrementVersionName - Incrementing Version Name...")
+    def manifestFile = file("src/main/AndroidManifest.xml")
+    def patternVersionNumber = Pattern.compile("versionName=\"(\\d+)\\.(\\d+)\\.(\\d+)\"")
+    def manifestText = manifestFile.getText()
+    def matcherVersionNumber = patternVersionNumber.matcher(manifestText)
+    matcherVersionNumber.find()
+    def majorVersion = Integer.parseInt(matcherVersionNumber.group(1))
+    def minorVersion = Integer.parseInt(matcherVersionNumber.group(2))
+    def pointVersion = Integer.parseInt(matcherVersionNumber.group(3))
+    def mVersionName = majorVersion + "." + minorVersion + "." + pointVersion
+    def mNextVersionName = (majorVersion + 1)+ "." + minorVersion + "." + (pointVersion + 1)
+    def manifestContent = matcherVersionNumber.replaceAll("versionName=\"" + mNextVersionName + "\"")
+    println(":incrementVersionName - current versionName=" + mVersionName);
+    println(":incrementVersionName - new versionName=" + mNextVersionName);
+    manifestFile.write(manifestContent)
+
+
+
+}
+task incrementHelpVersionNameRel << {
+    println(":incrementHelpVersionName - Incrementing Version Name...")
+    def manifestFile = file("src/main/res/layout/activity_help.xml")
+    def patternVersionNumber = Pattern.compile("Version (\\d+)\\.(\\d+)\\.(\\d+)")
+    def manifestText = manifestFile.getText()
+    def matcherVersionNumber = patternVersionNumber.matcher(manifestText)
+    matcherVersionNumber.find()
+    def majorVersion = Integer.parseInt(matcherVersionNumber.group(1))
+    def minorVersion = Integer.parseInt(matcherVersionNumber.group(2))
+    def pointVersion = Integer.parseInt(matcherVersionNumber.group(3))
+    def mVersionName = majorVersion + "." + minorVersion + "." + pointVersion
+    def mNextVersionName = (majorVersion + 1) + "." + minorVersion + "." + (pointVersion + 1)
+    def manifestContent = matcherVersionNumber.replaceAll("Version " + mNextVersionName)
+    println(":incrementHelpVersionName - current helpversionName=" + mVersionName);
+    println(":incrementHelpVersionName - new helpversionName=" + mNextVersionName);
+    manifestFile.write(manifestContent)
+
+
+
+}
+
+task incrementVersionNameDef << {
     println(":incrementVersionName - Incrementing Version Name...")
     def manifestFile = file("src/main/AndroidManifest.xml")
     def patternVersionNumber = Pattern.compile("versionName=\"(\\d+)\\.(\\d+)\\.(\\d+)\"")
@@ -98,17 +142,43 @@ task incrementVersionName << {
     println(":incrementVersionName - current versionName=" + mVersionName);
     println(":incrementVersionName - new versionName=" + mNextVersionName);
     manifestFile.write(manifestContent)
+
+
+
+}
+task incrementHelpVersionNameDef << {
+    println(":incrementHelpVersionName - Incrementing Version Name...")
+    def manifestFile = file("src/main/res/layout/activity_help.xml")
+    def patternVersionNumber = Pattern.compile("Version (\\d+)\\.(\\d+)\\.(\\d+)")
+    def manifestText = manifestFile.getText()
+    def matcherVersionNumber = patternVersionNumber.matcher(manifestText)
+    matcherVersionNumber.find()
+    def majorVersion = Integer.parseInt(matcherVersionNumber.group(1))
+    def minorVersion = Integer.parseInt(matcherVersionNumber.group(2))
+    def pointVersion = Integer.parseInt(matcherVersionNumber.group(3))
+    def mVersionName = majorVersion + "." + minorVersion + "." + pointVersion
+    def mNextVersionName = majorVersion + "." + minorVersion + "." + (pointVersion + 1)
+    def manifestContent = matcherVersionNumber.replaceAll("Version " + mNextVersionName)
+    println(":incrementHelpVersionName - current helpversionName=" + mVersionName);
+    println(":incrementHelpVersionName - new helpversionName=" + mNextVersionName);
+    manifestFile.write(manifestContent)
+
+
+
 }
 
 
 tasks.whenTaskAdded { task ->
     if (task.name == 'generateReleaseBuildConfig') {
-        task.dependsOn 'incrementVersionCode'
-        task.dependsOn 'incrementVersionName'
+        task.dependsOn 'incrementVersionCodeRel'
+        task.dependsOn 'incrementVersionNameRel'
+        task.dependsOn 'incrementHelpVersionNameRel'
     }
     if (task.name == 'generateDebugBuildConfig') {
-        task.dependsOn 'incrementVersionCode'
-        task.dependsOn 'incrementVersionName'
+
+        task.dependsOn 'incrementVersionNameDef'
+        task.dependsOn 'incrementHelpVersionNameDef'
+
     }
 }
 
