@@ -838,9 +838,9 @@ public class MainActivity extends FragmentActivity
 
             int sdk = android.os.Build.VERSION.SDK_INT;
             if (sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
-                cv.setBackgroundDrawable(this.getResources().getDrawable(R.drawable.white));
+                cv.setBackgroundDrawable(this.getResources().getDrawable(R.drawable.greyradial));
             } else {
-                cv.setBackground(this.getResources().getDrawable(R.drawable.white));
+                cv.setBackground(this.getResources().getDrawable(R.drawable.greyradial));
             }
         }
 
@@ -871,6 +871,12 @@ public class MainActivity extends FragmentActivity
             LinearLayout.LayoutParams params1 = new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT);
             params1.weight = 80;
             cv1.setLayoutParams(params1);
+
+            if (sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
+                cv1.setBackgroundDrawable(this.getResources().getDrawable(R.drawable.greyradial));
+            } else {
+                cv1.setBackground(this.getResources().getDrawable(R.drawable.greyradial));
+            }
         }
 
 
@@ -948,11 +954,24 @@ public class MainActivity extends FragmentActivity
                 }
 
                 txtHour.setText(hora.toString());
-                txtMin.setText(minutes.toString());
+                if(minutes < 10)
+                {
+                    txtMin.setText("0"+  minutes.toString());
+                }else{
+                    txtMin.setText(minutes.toString());
+                }
                 txtSec.setText(seconds.toString());
 
                 curtxtHour.setText(curhour.toString());
-                curtxtMin.setText(curminutes.toString());
+
+                if(curminutes < 10)
+                {
+                    curtxtMin.setText("0"+  curminutes.toString());
+                }else{
+                    curtxtMin.setText(curminutes.toString());
+                }
+
+
                 curtxtSec.setText(curseconds.toString());
                 curtxtampm.setText(amorpm);
 

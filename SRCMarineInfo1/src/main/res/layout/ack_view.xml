@@ -63,6 +63,7 @@ android:id="@+id/ack"
             android:text="The Enhanced Position Location Reporting System (EPLRS) is a secure, jam resistant, computer controlled communications network that distributes near real-time tactical information, generally integrated into radio sets, and coordinated by a Network Control Station.[1] It is primarily used for data distribution, and position location and reporting. It enhances command and control of tactical units by providing commanders with the location of friendly units.[2] It was first fielded by the US Army in 1987"
             android:layout_marginLeft="25dip"
             android:id="@+id/ackdetails"
+            android:textColor="#FFFFFF"
             android:textSize="20dip"
             android:typeface="sans"  />
 
