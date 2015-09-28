@@ -161,8 +161,8 @@
         <name>Private</name>
         <icon>sunny</icon>
         <type>Enlisted</type>
-        <details>In the United States Marine Corps, the rank of private first class is the second lowest, just under lance corporal and just above private, equivalent to NATO grade OR-2, being pay grade E-2. It was established on June 3, 1916 ] Enlistees that complete United States Marine Corps Recruit Training and had obtained the rank of Young Marine sergeant or above in the Young Marines, will graduate from USMC Recruit Training with the rank of PFC</details>
-        <link>http://www.google.com</link>
+        <details>In the U.S. Marine Corps, private (PVT) only refers to the lowest enlisted rank, just below private first class. A Marine Corps private wears no uniform insignia and is sometimes described as having a 'slick sleeve' for this reason. Most new, non-officer Marines begin their military career as a private. In the Marine Corps, privates first class are not referred to as 'privates'; it is more appropriate to use either 'private first class' or 'PFC'.</details>
+        <link>https://en.wikipedia.org/wiki/Private_(rank)#United_States_Marine_Corps</link>
     </ranksdata>
     <ranksdata>
         <id>17</id>
@@ -180,7 +180,8 @@
         <short>LCpl</short>
         <name>Lance Corporal</name>
         <icon>lcpl_usmc</icon>
-        <type>Enlisted</type><details>In the United States Marine Corps, the rank of private first class is the second lowest, just under lance corporal and just above private, equivalent to NATO grade OR-2, being pay grade E-2. It was established on June 3, 1916 ] Enlistees that complete United States Marine Corps Recruit Training and had obtained the rank of Young Marine sergeant or above in the Young Marines, will graduate from USMC Recruit Training with the rank of PFC</details>
+        <type>Enlisted</type>
+        <details>Lance corporal (LCpl) is the third enlisted rank in order of seniority in the U.S. Marine Corps, just above private first class and below corporal. It is not a non-commissioned officer rank.  The USMC is the only component of the U.S. Armed Forces to currently have lance corporals. Promotion to lance corporal is based on time in grade, time in service, and the conduct of the Marine. Further promotion to the NCO ranks (Corporal and above) is competitive and takes into account the individual service record of the Marine</details>
         <link>http://en.wikipedia.org/wiki/Lance_Corporal#United_States</link>
     </ranksdata>
     <ranksdata>
@@ -190,7 +191,7 @@
         <name>Corporal</name>
         <icon>cpl_usmc</icon>
         <type>Enlisted</type>
-        <details>In the United States Marine Corps, the rank of private first class is the second lowest, just under lance corporal and just above private, equivalent to NATO grade OR-2, being pay grade E-2. It was established on June 3, 1916 ] Enlistees that complete United States Marine Corps Recruit Training and had obtained the rank of Young Marine sergeant or above in the Young Marines, will graduate from USMC Recruit Training with the rank of PFC</details>
+        <details>Corporal is the fourth enlisted rank in the U.S. Marine Corps, ranking immediately above lance corporal and immediately below sergeant. The Marine Corps, unlike the Army, has no other rank at the pay grade of E-4. Corporal is the lowest grade of non-commissioned officer in the U.S. Marine Corps, though promotion to corporal traditionally confers a significant jump in authority and responsibility compared to promotion from private through lance corporal. Marine infantry corporals generally serve as 'fire-team leaders,' leading a 4-man team or weapons crew of similar size </details>
         <link>http://en.wikipedia.org/wiki/Corporal#United_States_Marine_Corps</link>
     </ranksdata>
     <ranksdata>
@@ -200,7 +201,7 @@
         <name>Sergeant</name>
         <icon>sgt_usmc</icon>
         <type>Enlisted</type>
-        <details>In the United States Marine Corps, the rank of private first class is the second lowest, just under lance corporal and just above private, equivalent to NATO grade OR-2, being pay grade E-2. It was established on June 3, 1916 ] Enlistees that complete United States Marine Corps Recruit Training and had obtained the rank of Young Marine sergeant or above in the Young Marines, will graduate from USMC Recruit Training with the rank of PFC</details>
+        <details>The Marine Sergeants are the fifth enlisted rank in the U.S. Marine Corps, above Corporal and below Staff Sergeant. Once a Marine reaches Sergeant, their promotions no longer derive from a composite score- and cutting score-based system; instead, they receive a FITREP, or fitness report. Sergeants serve as squad leaders or platoon guide in an infantry platoon, while Staff Sergeants serve in the billet of 'platoon sergeant' in rifle platoons and 'section leader' in weapons platoons (i.e., machine guns, mortars, anti-tank/assault weapons). In some units, Sergeants may serve in a '+1' billet, meaning that although a particular billet specifies a Staff Sergeant (E6), it is being filled by a Sergeant (E5 '+1'). In top-heavy units with a glut of NCOs, Sergeants may also serve in a '-1' billet, acting as a 'team leader' in the place of a Corporal (E4, effectively E5 '-1').</details>
         <link>http://en.wikipedia.org/wiki/Sergeant#Marine_Corps</link>
     </ranksdata>
     <ranksdata>
@@ -210,8 +211,8 @@
         <name>Staff Sergeant</name>
         <icon>ssgt_usmc</icon>
         <type>Enlisted</type>
-        <details>In the United States Marine Corps, the rank of private first class is the second lowest, just under lance corporal and just above private, equivalent to NATO grade OR-2, being pay grade E-2. It was established on June 3, 1916 ] Enlistees that complete United States Marine Corps Recruit Training and had obtained the rank of Young Marine sergeant or above in the Young Marines, will graduate from USMC Recruit Training with the rank of PFC</details>
-        <link>http://en.wikipedia.org/wiki/Staff_Sergeant#United_States</link>
+        <details>Staff Sergeant (SSgt) is E-6 rank in the U.S. Marine Corps (USMC), just above Sergeant and below Gunnery Sergeant. A Marine Staff Sergeant is a staff non-commissioned officer rank. Staff NCOs are career Marines serving in grades E-6 through E-9. Together they are responsible to the commanding officer for the welfare, morale, discipline, and efficiency of Marines in their charge. This grade is normally achieved after 7 to 10 years in service. The NATO code is OR-6. In the combat arms units, a Staff Sergeant usually is billeted as a platoon sergeant for 30+ Marines.</details>
+        <link>https://en.wikipedia.org/wiki/Staff_sergeant#U.S._Marine_Corps</link>
     </ranksdata>
     <ranksdata>
         <id>22</id>
@@ -220,7 +221,7 @@
         <name>Gunnery Sergeant</name>
         <icon>gysgt_usmc</icon>
         <type>Enlisted</type>
-        <details>In the United States Marine Corps, the rank of private first class is the second lowest, just under lance corporal and just above private, equivalent to NATO grade OR-2, being pay grade E-2. It was established on June 3, 1916 ] Enlistees that complete United States Marine Corps Recruit Training and had obtained the rank of Young Marine sergeant or above in the Young Marines, will graduate from USMC Recruit Training with the rank of PFC</details>
+        <details>Gunnery sergeant (GySgt) is the seventh enlisted rank in the United States Marine Corps, just above staff sergeant and below master sergeant and first sergeant, and is a staff non-commissioned officer (SNCO). It has a pay grade of E-7. Gunnery sergeants in infantry and combat support units (i.e., all other Ground Combat Element organizations) typically serve in the billet of 'company (or battery) gunnery sergeant' or as the platoon sergeant of a crew-served weapons platoon (i.e., machine guns, mortars, assault weapons/rockets, and anti-tank missiles) or platoon sergeant and/or section leader in tank/armored vehicle platoons (Assault Amphibian or Light Armored Reconnaissance). The company/battery 'gunny' serves as the unit's operations chief and works with the executive officer to plan and coordinate unit training and operations.</details>
         <link>http://en.wikipedia.org/wiki/Gunnery_Sergeant</link>
     </ranksdata>
     <ranksdata>
@@ -230,7 +231,7 @@
         <name>Master Sergeant</name>
         <icon>msgt_usmc</icon>
         <type>Enlisted</type>
-        <details>In the United States Marine Corps, the rank of private first class is the second lowest, just under lance corporal and just above private, equivalent to NATO grade OR-2, being pay grade E-2. It was established on June 3, 1916 ] Enlistees that complete United States Marine Corps Recruit Training and had obtained the rank of Young Marine sergeant or above in the Young Marines, will graduate from USMC Recruit Training with the rank of PFC</details>
+        <details>The eighth enlisted rank in the U.S. Army, just above sergeant first class, below sergeant major, command sergeant major, Sergeant Major of the Army and equal in grade but not authority to a first sergeant.  A master sergeant is typically assigned as a brigade-level section noncommissioned officer in charge and serves as the subject matter expert in his or her field, but may also hold other positions depending on the type of unit. The equivalent-grade first sergeant is the senior noncommissioned officer of a company-, battery- or troop-sized unit.</details>
         <link>http://en.wikipedia.org/wiki/Master_Sergeant#United_States</link>
     </ranksdata>
     <ranksdata>
@@ -240,7 +241,7 @@
         <name>First Sergeant</name>
         <icon>first_sgt_usmc</icon>
         <type>Enlisted</type>
-        <details>In the United States Marine Corps, the rank of private first class is the second lowest, just under lance corporal and just above private, equivalent to NATO grade OR-2, being pay grade E-2. It was established on June 3, 1916 ] Enlistees that complete United States Marine Corps Recruit Training and had obtained the rank of Young Marine sergeant or above in the Young Marines, will graduate from USMC Recruit Training with the rank of PFC</details>
+        <details>In the United States Marine Corps, first sergeant (abbreviated 1stSgt) is one rank above gunnery sergeant and one pay grade below sergeant major and master gunnery sergeant. It is equal in grade to master sergeant (E8), although the two ranks have different responsibilities. A first sergeant has command leadership responsibilities and serves as the senior enlisted advisor to the commander at the company, battery or detachment level, while master sergeants have technical responsibilities within their respective occupational fields, and serve important leadership roles within various company or battery sections. </details>
 
         <link>http://en.wikipedia.org/wiki/First_Sergeant#United_States_Marine_Corps</link>
     </ranksdata>
@@ -251,9 +252,10 @@
         <name>Master Gunnery Sergeant</name>
         <icon>mgysgt_usmc</icon>
         <type>Enlisted</type>
-        <details>In the United States Marine Corps, the rank of private first class is the second lowest, just under lance corporal and just above private, equivalent to NATO grade OR-2, being pay grade E-2. It was established on June 3, 1916 ] Enlistees that complete United States Marine Corps Recruit Training and had obtained the rank of Young Marine sergeant or above in the Young Marines, will graduate from USMC Recruit Training with the rank of PFC</details>
+        <details>Master Gunnery Sergeant (MGySgt) is the ninth and highest enlisted rank (along with the grade-equivalent ranks of Sergeant Major and Sergeant Major of the Marine Corps) in the United States Marine Corps. Master Gunnery Sergeants are senior staff non-commissioned officers (SNCOs), and are assigned a pay grade of E-9.  Master Gunnery Sergeants are sometimes referred to by the nicknames 'Master Guns' or 'Master Gunny'. </details>
 
-        <link>http://en.wikipedia.org/wiki/Master_Gunnery_Sergeant</link>     </ranksdata>
+        <link>http://en.wikipedia.org/wiki/Master_Gunnery_Sergeant</link>
+    </ranksdata>
     <ranksdata>
         <id>26</id>
         <payscale>E-9</payscale>
@@ -261,7 +263,7 @@
         <name>Sergeant Major</name>
         <icon>sgtmaj_usmc</icon>
         <type>Enlisted</type>
-        <details>In the United States Marine Corps, the rank of private first class is the second lowest, just under lance corporal and just above private, equivalent to NATO grade OR-2, being pay grade E-2. It was established on June 3, 1916 ] Enlistees that complete United States Marine Corps Recruit Training and had obtained the rank of Young Marine sergeant or above in the Young Marines, will graduate from USMC Recruit Training with the rank of PFC</details>
+        <details>In the United States Marine Corps, sergeant major is the ninth and highest enlisted rank, just above first sergeant, and equal in grade to master gunnery sergeant, although the two have different responsibilities. Sergeant major is both a rank and a military billet. Marine Corps sergeants major serve as the senior enlisted marine in the Corps' units of battalion, squadron or higher echelon, as the unit commander's senior enlisted advisor and to handle matters of discipline and morale among the enlisted marines.</details>
 
         <link>http://en.wikipedia.org/wiki/Sergeant_Major#United_States_Marine_Corps</link>     </ranksdata>
     <ranksdata>
@@ -271,7 +273,7 @@
         <name>Sergeant Major of the Marine Corps</name>
         <icon>smmc_usmc</icon>
         <type>Enlisted</type>
-        <details>In the United States Marine Corps, the rank of private first class is the second lowest, just under lance corporal and just above private, equivalent to NATO grade OR-2, being pay grade E-2. It was established on June 3, 1916 ] Enlistees that complete United States Marine Corps Recruit Training and had obtained the rank of Young Marine sergeant or above in the Young Marines, will graduate from USMC Recruit Training with the rank of PFC</details>
+        <details>Sergeant Major of the Marine Corps SgtMajMC  is a unique non-commissioned rank and billet in the United States Marine Corps.  In the U.S. Marine Corps sergeant major is the ninth and highest enlisted rank, just above first sergeant, and equal in grade to master gunnery sergeant, although the two have different responsibilities. Sergeant major is both a rank and a military billet, and serves as the unit commander's senior enlisted advisor and to handle matters of discipline and morale among the enlisted Marines. The Sergeant Major of the Marine Corps is chosen by the Commandant of the Marine Corps to serve as his advisor and is the preeminent and highest ranking enlisted Marine with a protocol equivalency of a lieutenant general.</details>
 
         <link>http://en.wikipedia.org/wiki/Sergeant_Major_of_the_Marine_Corps</link>     </ranksdata>
 

@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UsmcRanks>
+    <ranksdata
+        id="1"
+        payscale="0-1"
+        short="2ndLt"
+        name="Second Lieutenant"
+        icon="second_lieutenant_usmc"
+        type="Officer"
+        details="In the United States, second lieutenant is the normal entry-level rank for most commissioned officers in the Army, Air Force and Marine Corps and is equivalent to the rank of ensign in the Navy and Coast Guard. In the Army and Marine Corps, a second lieutenant typically leads a platoon-size element (16 to 44 soldiers or marines)."
+        link="http://http://en.wikipedia.org/wiki/Second_Lieutenant_(United_States)#United_States"
+     />
+    <ranksdata
+        id="2"
+        payscale="O-2"
+        short="1stLt"
+        name="First Lieutenant"
+        icon="first_lieutenant_usmc"
+        type="Officer"
+        details="In the United States Army, U.S. Air Force, and U.S. Marine Corps, a first lieutenant is a junior commissioned officer. It is just above the rank of second lieutenant and just below the rank of captain. It is equivalent to the rank of lieutenant (junior grade) in the other uniformed services.  A second lieutenant (grade O-1) is usually promoted to first lieutenant (grade O-2) after 18 months in the Army or 24 months in the Air Force[2] and Marine Corps. "
+    link="http://en.wikipedia.org/wiki/First_Lieutenant_(United_States)#United_States"
+    />
+    <ranksdata
+        id="3"
+        payscale="O-3"
+        short="Capt"
+        name="Captain"
+        icon="captain_usmc"
+        type="Officer"
+        details="In the United States Army, captain is a company grade officer rank, with the pay grade of O-3. It ranks above first lieutenant and below major. It is equivalent to the rank of lieutenant in the naval rank system.  DOPMA guidelines suggest 95% of first lieutenants should be promoted to captain after serving a minimum of two years at their present rank."
+    link="http://en.wikipedia.org/wiki/Captain_(United_States_O-3)"
+    />
+    <ranksdata
+        id="4"
+        payscale="O-4"
+        short="Maj"
+        name="Major "
+        icon="major_usmc"
+        type="Officer"
+        details="In the United States Army, Air Force, and Marine Corps, major is a field grade military officer rank above the rank of captain and below the rank of lieutenant colonel. It is equivalent to the naval rank of lieutenant commander in the other uniformed services.   DOPMA guidelines suggest 80% of captains should be promoted to major after serving a minimum of three years at their present rank and after attaining nine to eleven years of cumulative commissioned service. "
+    link="http://en.wikipedia.org/wiki/Major_(United_States)"
+    />
+    <ranksdata
+        id="5"
+        payscale="O-5"
+        short="LtCol"
+        name="Lieutenant Colonel"
+        icon="lieutenant_colonel_usmc"
+        type="Officer"
+        details="In the United States Army, United States Air Force, and United States Marine Corps, a lieutenant colonel is a field grade military officer rank just above the rank of major and just below the rank of colonel. It is equivalent to the naval rank of commander in the other uniformed services.  DOPMA guidelines suggest 70% of majors should be promoted to lieutenant colonel after serving a minimum of three years at their present rank and after attaining 15-17 years of cumulative commissioned service."
+    link="http://en.wikipedia.org/wiki/Lieutenant_colonel_(United_States)"
+    />
+    <ranksdata
+        id="6"
+        payscale="O-6"
+        short="COL"
+        name="Colonel"
+        icon="colonel_usmc"
+        type="Officer"
+        details="In the United States Army, Air Force, and Marine Corps, colonel is a senior field grade military officer rank immediately above the rank of lieutenant colonel and immediately below the rank of brigadier general. It is equivalent to the naval rank of captain in the other uniformed services, such as the United States Navy, United States Coast Guard.  DOPMA guidelines suggest 50% of lieutenant colonels should be promoted to colonel after serving a minimum of three years at their present rank and after attaining 21-23 years of cumulative commissioned service. "
+    link="http://en.wikipedia.org/wiki/Colonel_(United_States)"
+    />
+    <ranksdata
+        id="7"
+        payscale="O-7"
+        short="BGen"
+        name="Brigadier General"
+        icon="brigadier_general_usmc"
+        type="Officer"
+        details="A brigadier general (BG, Brig Gen, or BGen) is a one-star general officer with the pay grade of O-7 in the United States Army, Air Force, and Marine Corps. Brigadier general ranks above a colonel and below major general. The rank of brigadier general is equivalent to the rank of rear admiral (lower half) in the other United States Navy"
+    link="http://en.wikipedia.org/wiki/Brigadier_general_(United_States)"
+    />
+    <ranksdata
+        id="8"
+        payscale="O-8"
+        short="MajGen"
+        name="Major General"
+        icon="major_general"
+        type="Officer"
+        details="In the United States Army, United States Marine Corps, and United States Air Force, major general is a two-star general-officer rank, with the pay grade of O-8. Major general ranks above brigadier general and below lieutenant general. Major general is equivalent to the two-star rank of rear admiral in the other United States Navy, and is the highest permanent rank during peacetime in the uniformed services."
+    link="http://en.wikipedia.org/wiki/Major_general_(United_States)"
+    />
+    <ranksdata
+        id="9"
+        payscale="O-9"
+        short="LtGen"
+        name="Lieutenant Genera"
+        icon="lieutenant_general"
+        type="Officer"
+        details="In the United States Army, the United States Air Force and the United States Marine Corps, lieutenant general (abbreviated LTG in the Army, Lt Gen in the Air Force, and LtGen in the Marine Corps) is a three-star general officer rank, with the pay grade of O-9. Lieutenant general ranks above major general and below general. Lieutenant general is equivalent to the rank of vice admiral in the United States Navy and United States Coast Guard."
+    link="http://en.wikipedia.org/wiki/Lieutenant_general_(United_States)"
+    />
+    <ranksdata
+        id="10"
+        payscale="O-10"
+        short="Gen"
+        name="General "
+        icon="general_usmc"
+        type="Officer"
+        details="In the United States Army, U.S. Air Force, and U.S. Marine Corps, general is a four-star general officer rank, with the pay grade of O-10. General ranks above lieutenant general and below General of the Army or General of the Air Force; the Marine Corps does not have an established grade above general.  The Marine Corps has no five-star equivalent, the grade of general is currently considered to be the highest appointment an officer can achieve in these three services. "
+    link="http://en.wikipedia.org/wiki/General_(United_States)"
+    />
+    <ranksdata
+        id="11"
+        payscale="W-1"
+        short="WO"
+        name="Warrant Officer "
+        icon="warrantofficer1_usmc"
+        type="Warrant Officer"
+        details="In the United States Armed Forces, the rank of warrant officer (grade W-1 to CW-5) (NATO: WO1-WO5) is rated as an officer above the senior-most enlisted ranks, as well as officer cadets, midshipmen and candidates, but below the officer grade of O-1 (NATO: OF-1). Warrant officers are highly skilled, single-track specialty officers.  For appointment to warrant officer one (W-1), a warrant is approved by the secretary of the respective service."
+
+    link="http://www.google.com"     />
+    <ranksdata
+        id="12"
+        payscale="W-2"
+        short="CWO2"
+        name="Chief Warrant Officer 2"
+        icon="warrantofficer2_usmc"
+        type="Warrant Officer"
+        details="In the United States Armed Forces, the rank of warrant officer (grade W-1 to CW-5) (NATO: WO1-WO5) is rated as an officer above the senior-most enlisted ranks, as well as officer cadets, midshipmen and candidates, but below the officer grade of O-1 (NATO: OF-1). Warrant officers are highly skilled, single-track specialty officers. For chief warrant officer ranks (W-2 to W-5), warrant officers are commissioned by the President of the United States and take the same oath as regular commissioned officers (O-1 to O-10)."
+
+    link="http://en.wikipedia.org/wiki/Warrant_officer_(United_States)"
+    />
+    <ranksdata
+        id="13"
+        payscale="W-3"
+        short="CWO3"
+        name="Chief Warrant Officer 3"
+        icon="cheifwarrantoffice3_usmc"
+        type="Warrant Officer"
+        details="In the United States Armed Forces, the rank of warrant officer (grade W-1 to CW-5) (NATO: WO1-WO5) is rated as an officer above the senior-most enlisted ranks, as well as officer cadets, midshipmen and candidates, but below the officer grade of O-1 (NATO: OF-1). Warrant officers are highly skilled, single-track specialty officers.  For appointment to warrant officer one (W-1), a warrant is approved by the secretary of the respective service."
+
+    link="http://en.wikipedia.org/wiki/Warrant_officer_(United_States)#Marine_Corps"
+    />
+    <ranksdata
+        id="14"
+        payscale="W-2"
+        short="CWO4"
+        name="Chief Warrant Officer 4"
+        icon="cheifwarrantoffice4_usmc"
+        type="Warrant Officer"
+        details="In the United States Armed Forces, the rank of warrant officer (grade W-1 to CW-5) (NATO: WO1-WO5) is rated as an officer above the senior-most enlisted ranks, as well as officer cadets, midshipmen and candidates, but below the officer grade of O-1 (NATO: OF-1). Warrant officers are highly skilled, single-track specialty officers.  For appointment to warrant officer one (W-1), a warrant is approved by the secretary of the respective service."
+
+        link="http://en.wikipedia.org/wiki/Warrant_officer_(United_States)#Marine_Corps"
+    />
+    <ranksdata
+        id="15"
+        payscale="W-2"
+        short="CWO5"
+        name="Chief Warrant Officer 5"
+        icon="cheifwarrantoffice5_usmc"
+        type="Warrant Officer"
+        details="In the United States Armed Forces, the rank of warrant officer (grade W-1 to CW-5) (NATO: WO1-WO5) is rated as an officer above the senior-most enlisted ranks, as well as officer cadets, midshipmen and candidates, but below the officer grade of O-1 (NATO: OF-1). Warrant officers are highly skilled, single-track specialty officers.  For appointment to warrant officer one (W-1), a warrant is approved by the secretary of the respective service."
+
+        link="http://en.wikipedia.org/wiki/Warrant_officer_(United_States)#Marine_Corps"
+    />
+    <ranksdata
+        id="16"
+        payscale="E-1"
+        short="pvt"
+        name="Private"
+        icon="sunny"
+        type="Enlisted"
+        details="In the U.S. Marine Corps, private (PVT) only refers to the lowest enlisted rank, just below private first class. A Marine Corps private wears no uniform insignia and is sometimes described as having a 'slick sleeve' for this reason. Most new, non-officer Marines begin their military career as a private. In the Marine Corps, privates first class are not referred to as 'privates'; it is more appropriate to use either 'private first class' or 'PFC'."
+        link="https://en.wikipedia.org/wiki/Private_(rank)#United_States_Marine_Corps"
+    />
+    <ranksdata
+        id="17"
+        payscale="E-2"
+        short="PFC "
+        name="Private First Class"
+        icon="pfc_usmc"
+        type="Enlisted"
+        details="In the United States Marine Corps, the rank of private first class is the second lowest, just under lance corporal and just above private, equivalent to NATO grade OR-2, being pay grade E-2. It was established on June 3, 1916 ] Enlistees that complete United States Marine Corps Recruit Training and had obtained the rank of Young Marine sergeant or above in the Young Marines, will graduate from USMC Recruit Training with the rank of PFC"
+        link="http://en.wikipedia.org/wiki/Private_First_Class#United_States_Marine_Corps"
+    />
+    <ranksdata
+        id="18"
+        payscale="E-3"
+        short="LCpl"
+        name="Lance Corporal"
+        icon="lcpl_usmc"
+        type="Enlisted"
+        details="Lance corporal (LCpl) is the third enlisted rank in order of seniority in the U.S. Marine Corps, just above private first class and below corporal. It is not a non-commissioned officer rank.  The USMC is the only component of the U.S. Armed Forces to currently have lance corporals. Promotion to lance corporal is based on time in grade, time in service, and the conduct of the Marine. Further promotion to the NCO ranks (Corporal and above) is competitive and takes into account the individual service record of the Marine"
+        link="http://en.wikipedia.org/wiki/Lance_Corporal#United_States"
+    />
+    <ranksdata
+        id="19"
+        payscale="E-4"
+        short="Cpl"
+        name="Corporal"
+        icon="cpl_usmc"
+        type="Enlisted"
+        details="Corporal is the fourth enlisted rank in the U.S. Marine Corps, ranking immediately above lance corporal and immediately below sergeant. The Marine Corps, unlike the Army, has no other rank at the pay grade of E-4. Corporal is the lowest grade of non-commissioned officer in the U.S. Marine Corps, though promotion to corporal traditionally confers a significant jump in authority and responsibility compared to promotion from private through lance corporal. Marine infantry corporals generally serve as 'fire-team leaders,' leading a 4-man team or weapons crew of similar size "
+        link="http://en.wikipedia.org/wiki/Corporal#United_States_Marine_Corps"
+    />
+    <ranksdata
+        id="20"
+        payscale="E-5"
+        short="Sgt"
+        name="Sergeant"
+        icon="sgt_usmc"
+        type="Enlisted"
+        details="The Marine Sergeants are the fifth enlisted rank in the U.S. Marine Corps, above Corporal and below Staff Sergeant. Once a Marine reaches Sergeant, their promotions no longer derive from a composite score- and cutting score-based system; instead, they receive a FITREP, or fitness report. Sergeants serve as squad leaders or platoon guide in an infantry platoon, while Staff Sergeants serve in the billet of 'platoon sergeant' in rifle platoons and 'section leader' in weapons platoons (i.e., machine guns, mortars, anti-tank/assault weapons). In some units, Sergeants may serve in a '+1' billet, meaning that although a particular billet specifies a Staff Sergeant (E6), it is being filled by a Sergeant (E5 '+1'). In top-heavy units with a glut of NCOs, Sergeants may also serve in a '-1' billet, acting as a 'team leader' in the place of a Corporal (E4, effectively E5 '-1')."
+        link="http://en.wikipedia.org/wiki/Sergeant#Marine_Corps"
+    />
+    <ranksdata
+        id="21"
+        payscale="E-6"
+        short="SSgt"
+        name="Staff Sergeant"
+        icon="ssgt_usmc"
+        type="Enlisted"
+        details="Staff Sergeant (SSgt) is E-6 rank in the U.S. Marine Corps (USMC), just above Sergeant and below Gunnery Sergeant. A Marine Staff Sergeant is a staff non-commissioned officer rank. Staff NCOs are career Marines serving in grades E-6 through E-9. Together they are responsible to the commanding officer for the welfare, morale, discipline, and efficiency of Marines in their charge. This grade is normally achieved after 7 to 10 years in service. The NATO code is OR-6. In the combat arms units, a Staff Sergeant usually is billeted as a platoon sergeant for 30+ Marines."
+        link="https://en.wikipedia.org/wiki/Staff_sergeant#U.S._Marine_Corps"
+    />
+    <ranksdata
+        id="22"
+        payscale="E-7"
+        short="GySgt"
+        name="Gunnery Sergeant"
+        icon="gysgt_usmc"
+        type="Enlisted"
+        details="Gunnery sergeant (GySgt) is the seventh enlisted rank in the United States Marine Corps, just above staff sergeant and below master sergeant and first sergeant, and is a staff non-commissioned officer (SNCO). It has a pay grade of E-7. Gunnery sergeants in infantry and combat support units (i.e., all other Ground Combat Element organizations) typically serve in the billet of 'company (or battery) gunnery sergeant' or as the platoon sergeant of a crew-served weapons platoon (i.e., machine guns, mortars, assault weapons/rockets, and anti-tank missiles) or platoon sergeant and/or section leader in tank/armored vehicle platoons (Assault Amphibian or Light Armored Reconnaissance). The company/battery 'gunny' serves as the unit's operations chief and works with the executive officer to plan and coordinate unit training and operations."
+        link="http://en.wikipedia.org/wiki/Gunnery_Sergeant"
+    />
+    <ranksdata
+        id="23"
+        payscale="E-8"
+        short="MSgt"
+        name="Master Sergeant"
+        icon="msgt_usmc"
+        type="Enlisted"
+        details="The eighth enlisted rank in the U.S. Army, just above sergeant first class, below sergeant major, command sergeant major, Sergeant Major of the Army and equal in grade but not authority to a first sergeant.  A master sergeant is typically assigned as a brigade-level section noncommissioned officer in charge and serves as the subject matter expert in his or her field, but may also hold other positions depending on the type of unit. The equivalent-grade first sergeant is the senior noncommissioned officer of a company-, battery- or troop-sized unit."
+        link="http://en.wikipedia.org/wiki/Master_Sergeant#United_States"
+    />
+    <ranksdata
+        id="24"
+        payscale="E-8"
+        short="1st Sgt"
+        name="First Sergeant"
+        icon="first_sgt_usmc"
+        type="Enlisted"
+        details="In the United States Marine Corps, first sergeant (abbreviated 1stSgt) is one rank above gunnery sergeant and one pay grade below sergeant major and master gunnery sergeant. It is equal in grade to master sergeant (E8), although the two ranks have different responsibilities. A first sergeant has command leadership responsibilities and serves as the senior enlisted advisor to the commander at the company, battery or detachment level, while master sergeants have technical responsibilities within their respective occupational fields, and serve important leadership roles within various company or battery sections. "
+
+        link="http://en.wikipedia.org/wiki/First_Sergeant#United_States_Marine_Corps"
+    />
+    <ranksdata
+        id="25"
+        payscale="E-9"
+        short="MGySgt"
+        name="Master Gunnery Sergeant"
+        icon="mgysgt_usmc"
+        type="Enlisted"
+        details="Master Gunnery Sergeant (MGySgt) is the ninth and highest enlisted rank (along with the grade-equivalent ranks of Sergeant Major and Sergeant Major of the Marine Corps) in the United States Marine Corps. Master Gunnery Sergeants are senior staff non-commissioned officers (SNCOs), and are assigned a pay grade of E-9.  Master Gunnery Sergeants are sometimes referred to by the nicknames 'Master Guns' or 'Master Gunny'. "
+
+        link="http://en.wikipedia.org/wiki/Master_Gunnery_Sergeant"
+    />
+    <ranksdata
+        id="26"
+        payscale="E-9"
+        short="SgtMaj"
+        name="Sergeant Major"
+        icon="sgtmaj_usmc"
+        type="Enlisted"
+        details="In the United States Marine Corps, sergeant major is the ninth and highest enlisted rank, just above first sergeant, and equal in grade to master gunnery sergeant, although the two have different responsibilities. Sergeant major is both a rank and a military billet. Marine Corps sergeants major serve as the senior enlisted marine in the Corps' units of battalion, squadron or higher echelon, as the unit commander's senior enlisted advisor and to handle matters of discipline and morale among the enlisted marines."
+
+        link="http://en.wikipedia.org/wiki/Sergeant_Major#United_States_Marine_Corps"     />
+    <ranksdata
+        id="27"
+        payscale="E-9"
+        short="SMMC"
+        name="Sergeant Major of the Marine Corps"
+        icon="smmc_usmc"
+        type="Enlisted"
+        details="Sergeant Major of the Marine Corps SgtMajMC  is a unique non-commissioned rank and billet in the United States Marine Corps.  In the U.S. Marine Corps sergeant major is the ninth and highest enlisted rank, just above first sergeant, and equal in grade to master gunnery sergeant, although the two have different responsibilities. Sergeant major is both a rank and a military billet, and serves as the unit commander's senior enlisted advisor and to handle matters of discipline and morale among the enlisted Marines. The Sergeant Major of the Marine Corps is chosen by the Commandant of the Marine Corps to serve as his advisor and is the preeminent and highest ranking enlisted Marine with a protocol equivalency of a lieutenant general."
+
+        link="http://en.wikipedia.org/wiki/Sergeant_Major_of_the_Marine_Corps"     />
+
+
+</UsmcRanks>
+

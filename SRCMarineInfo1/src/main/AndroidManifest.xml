@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.cnsintegration.srcmarineinfo1"
     android:versionCode="5"
-    android:versionName="5.0.54" >
+    android:versionName="5.0.71" >
 
     <uses-sdk
         android:minSdkVersion="14"
@@ -26,10 +26,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".HelpActivity"
-            android:label="@string/title_activity_help" >
-        </activity>
+
     </application>
 
 </manifest>

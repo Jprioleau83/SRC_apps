@@ -223,7 +223,30 @@ public class MainActivity extends FragmentActivity
         // Handle action bar actions click
         switch (item.getItemId()) {
             case R.id.action_settings:
-                startActivity(new Intent(this, HelpActivity.class));
+                Fragment fragment = null;
+                AboutFragment afragment = null;
+
+                fragment = new ActionFragment();
+
+                afragment = new AboutFragment();
+
+                if (findViewById(R.id.fragment_container) != null) {
+                    // ViewTarget target = new ViewTarget(R.id.buttonBlocked, this);
+
+
+
+
+
+
+
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, afragment).addToBackStack(null).commit();
+                } else {
+
+
+                    getSupportFragmentManager().beginTransaction().replace(R.id.service_fragment, fragment).addToBackStack(null)
+                            .replace(R.id.rank_fragment, afragment).commit();
+
+                }
                 break;
                // return true;
             default:

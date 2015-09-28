@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UsmcRanks>
+    <ranksdata
+        id="1"
+        payscale="0-1"
+        short="2ndLt"
+        name="Second Lieutenant"
+        icon="second_lieutenant_usmc"
+        type="Officer"
+        details="In the United States, second lieutenant is the normal entry-level rank for most commissioned officers in the Army, Air Force and Marine Corps and is equivalent to the rank of ensign in the Navy and Coast Guard. In the Air Force, depending upon the career field, a second lieutenant (2d Lt) may supervise flights (of varying sizes) as a flight leader or deputy flight leader, or may work in a variety of administrative positions at the squadron, group, or wing level."
+        link="http://http://en.wikipedia.org/wiki/Second_Lieutenant_(United_States)#United_States"
+    />
+    <ranksdata
+        id="2"
+        payscale="O-2"
+        short="1stLt"
+        name="First Lieutenant"
+        icon="first_lieutenant_usmc"
+        type="Officer"
+        details="In the United States Army, U.S. Air Force, and U.S. Marine Corps, a first lieutenant is a junior commissioned officer. It is just above the rank of second lieutenant and just below the rank of captain. It is equivalent to the rank of lieutenant (junior grade) in the other uniformed services.  A second lieutenant (grade O-1) is usually promoted to first lieutenant (grade O-2) after 18 months in the Army or 24 months in the Air Force[2] and Marine Corps. "
+        link="http://en.wikipedia.org/wiki/First_Lieutenant_(United_States)#United_States"
+    />
+    <ranksdata
+        id="3"
+        payscale="O-3"
+        short="Capt"
+        name="Captain"
+        icon="captain_usmc"
+        type="Officer"
+        details="In the United States Army, captain is a company grade officer rank, with the pay grade of O-3. It ranks above first lieutenant and below major. It is equivalent to the rank of lieutenant in the naval rank system.  DOPMA guidelines suggest 95% of first lieutenants should be promoted to captain after serving a minimum of two years at their present rank."
+        link="http://en.wikipedia.org/wiki/Captain_(United_States_O-3)"
+    />
+    <ranksdata
+        id="4"
+        payscale="O-4"
+        short="Maj"
+        name="Major "
+        icon="major_usmc"
+        type="Officer"
+        details="In the United States Army, Air Force, and Marine Corps, major is a field grade military officer rank above the rank of captain and below the rank of lieutenant colonel. It is equivalent to the naval rank of lieutenant commander in the other uniformed services.   DOPMA guidelines suggest 80% of captains should be promoted to major after serving a minimum of three years at their present rank and after attaining nine to eleven years of cumulative commissioned service. "
+        link="http://en.wikipedia.org/wiki/Major_(United_States)"
+    />
+    <ranksdata
+        id="5"
+        payscale="O-5"
+        short="LtCol"
+        name="Lieutenant Colonel"
+        icon="lieutenant_colonel_usmc"
+        type="Officer"
+        details="In the United States Army, United States Air Force, and United States Marine Corps, a lieutenant colonel is a field grade military officer rank just above the rank of major and just below the rank of colonel. It is equivalent to the naval rank of commander in the other uniformed services.  DOPMA guidelines suggest 70% of majors should be promoted to lieutenant colonel after serving a minimum of three years at their present rank and after attaining 15-17 years of cumulative commissioned service."
+        link="http://en.wikipedia.org/wiki/Lieutenant_colonel_(United_States)"
+    />
+    <ranksdata
+        id="6"
+        payscale="O-6"
+        short="COL"
+        name="Colonel"
+        icon="colonel_usmc"
+        type="Officer"
+        details="In the United States Army, Air Force, and Marine Corps, colonel is a senior field grade military officer rank immediately above the rank of lieutenant colonel and immediately below the rank of brigadier general. It is equivalent to the naval rank of captain in the other uniformed services, such as the United States Navy, United States Coast Guard.  DOPMA guidelines suggest 50% of lieutenant colonels should be promoted to colonel after serving a minimum of three years at their present rank and after attaining 21-23 years of cumulative commissioned service. "
+        link="http://en.wikipedia.org/wiki/Colonel_(United_States)"
+    />
+    <ranksdata
+        id="7"
+        payscale="O-7"
+        short="BGen"
+        name="Brigadier General"
+        icon="brigadier_general_usmc"
+        type="Officer"
+        details="A brigadier general (BG, Brig Gen, or BGen) is a one-star general officer with the pay grade of O-7 in the United States Army, Air Force, and Marine Corps. Brigadier general ranks above a colonel and below major general. The rank of brigadier general is equivalent to the rank of rear admiral (lower half) in the other United States Navy"
+        link="http://en.wikipedia.org/wiki/Brigadier_general_(United_States)"
+    />
+    <ranksdata
+        id="8"
+        payscale="O-8"
+        short="MajGen"
+        name="Major General"
+        icon="major_general"
+        type="Officer"
+        details="In the United States Army, United States Marine Corps, and United States Air Force, major general is a two-star general-officer rank, with the pay grade of O-8. Major general ranks above brigadier general and below lieutenant general. Major general is equivalent to the two-star rank of rear admiral in the other United States Navy, and is the highest permanent rank during peacetime in the uniformed services."
+        link="http://en.wikipedia.org/wiki/Major_general_(United_States)"
+    />
+    <ranksdata
+        id="9"
+        payscale="O-9"
+        short="LtGen"
+        name="Lieutenant General"
+        icon="lieutenant_general"
+        type="Officer"
+        details="In the United States Army, the United States Air Force and the United States Marine Corps, lieutenant general (abbreviated LTG in the Army, Lt Gen in the Air Force, and LtGen in the Marine Corps) is a three-star general officer rank, with the pay grade of O-9. Lieutenant general ranks above major general and below general. Lieutenant general is equivalent to the rank of vice admiral in the United States Navy and United States Coast Guard."
+        link="http://en.wikipedia.org/wiki/Lieutenant_general_(United_States)"
+    />
+    <ranksdata
+        id="10"
+        payscale="O-10"
+        short="Gen"
+        name="General "
+        icon="general_usmc"
+        type="Officer"
+        details="In the United States Army, U.S. Air Force, and U.S. Marine Corps, general is a four-star general officer rank, with the pay grade of O-10. General ranks above lieutenant general and below General of the Army or General of the Air Force; the Marine Corps does not have an established grade above general.  The Marine Corps has no five-star equivalent, the grade of general is currently considered to be the highest appointment an officer can achieve in these three services. "
+        link="http://en.wikipedia.org/wiki/General_(United_States)"
+    />
+    <ranksdata
+        id="11"
+        payscale="special"
+        short="GAF"
+        name="General Of The AirForce "
+        icon="gaf_usaf"
+        type="Officer"
+        details="General of the Air Force (GAF) is a five-star general officer rank and is the highest possible rank in the United States Air Force. General of the Air Force ranks immediately above a general and is equivalent to General of the Army in the United States Army and Fleet Admiral in the United States Navy; there is no established equivalent five-star rank in the other four uniformed services (Marine Corps, Coast Guard, PHSCC, and NOAA Corps)."
+        link="http://en.wikipedia.org/wiki/General_of_the_Air_Force_(United_States)"
+    />
+    <ranksdata
+        id="12"
+        payscale="E-1"
+        short="AB"
+        name="Airman Basic"
+        icon="sunny"
+        type="Enlisted"
+        details="Airman basic (AB) is the lowest enlisted rank in the United States Air Force (USAF), immediately below airman. The pay grade for airman basic is E-1. As opposed to all other USAF enlisted and officer ranks, airman basic has no rank insignia affiliated.[1][2] The lack of uniform insignia for airmen basic is the reason for the nickname 'slick-sleeve'; all other enlisted Air Force ranks wear stripes and chevrons on their uniform sleeves."
+
+        link="http://en.wikipedia.org/wiki/Airman_Basic"
+    />
+    <ranksdata
+        id="13"
+        payscale="E-2"
+        short="Amn"
+        name="Airman"
+        icon="airman_usaf"
+        type="Enlisted"
+        details="An airman is a member of the United States Air Force. The rank of airman (abbreviated 'AMN') is the second enlisted rank from the bottom, just above the rank of airman basic, and just below that of airman first class. A person with the rank of airman basic is typically promoted to the rank of airman after six months of active duty service in the Air Force, if that member had signed up for an enlistment period of at least four years of active duty.  "
+
+        link="http://en.wikipedia.org/wiki/Airman"
+    />
+    <ranksdata
+        id="14"
+        payscale="E-3"
+        short="A1c"
+        name="Airman First Class"
+        icon="airman_first_class"
+        type="Enlisted"
+        details="Airman first class (A1C) is the third enlisted rank (E-3) in the United States Air Force, just above airman and below senior airman. The rank of airman first class is considered a junior enlisted rank, with the non-commissioned officers and senior non-commissioned officers above it. Airman first class is a rank that has also been used by the U.S. Navy and the U.S. Coast Guard, although it is not currently in use. In documents about the history of U.S. armed forces, you will frequently see this rank abbreviated as 'ARM1c'."
+
+        link="http://en.wikipedia.org/wiki/Airman_First_Class"
+    />
+    <ranksdata
+        id="15"
+        payscale="E-4"
+        short="SrA"
+        name="Senior Airman"
+        icon="sra_usaf"
+        type="Enlisted"
+        details="Senior airman (SrA) is the fourth enlisted rank in the United States Air Force, just above airman first class and below staff sergeant. It has a pay grade of E-4. The Air Force promotes an airman first class (A1C) to senior airman after 36 months time in service (TIS) and 20 months time in grade (TIG), or 28 months TIG, whichever occurs first. "
+
+        link="http://en.wikipedia.org/wiki/Senior_Airman"
+    />
+    <ranksdata
+        id="16"
+        payscale="E-5"
+        short="SSgt"
+        name="Staff Sergeant"
+        icon="staff_sergeant_usaf"
+        type="Enlisted"
+        details="Staff sergeant (SSgt) is E-5 in the U.S. Air Force. It ranks just above senior airman and below technical sergeant. It is the Air Force's first non-commissioned officer rank, as well as the first Air Force rank to which promotion is attained on a competitive basis. Sergeants, also known in Air Force jargon as 'buck sergeant', no longer exist, having been eliminated in the 1990s after sharing the same pay grade with that of the rank of senior airman (E-4). Staff sergeants are expected to be technically proficient and function as first-line supervisors within a 'work center'."
+        link="http://en.wikipedia.org/wiki/Staff_Sergeant#U.S._Air_Force"
+    />
+    <ranksdata
+        id="17"
+        payscale="E-6"
+        short="TSgt"
+        name="Technical Sergeant"
+        icon="technical_sergeant_usaf"
+        type="Enlisted"
+        details="Technical Sergeant, commonly shortened to 'Tech Sergeant' in a somewhat informal parlance, is the sixth enlisted rank (pay grade E-6) in the U.S. Air Force, just above staff sergeant and below master sergeant. A technical sergeant is a noncommissioned officer and abbreviated as TSgt (with no period in official USAF and other military correspondence). Official terms of address are 'Technical Sergeant' or 'Sergeant', although many use 'Tech Sergeant'.   It normally takes 10–12 total years of service to attain this pay grade  "
+        link="http://en.wikipedia.org/wiki/Technical_Sergeant"
+    />
+    <ranksdata
+        id="18"
+        payscale="E-7"
+        short="MSgt"
+        name="Master Sergeant"
+        icon="master_sergeant_usaf"
+        type="Enlisted"
+        details="The seventh enlisted rank in the U.S. Air Force, just above technical sergeant and below senior master sergeant. It is abbreviated as MSgt. Advancement to master sergeant is one of the most significant promotions within the enlisted Air Force. At the rank of master sergeant, the airman enters the senior non-commissioned tier and his or her duties begin to focus on leadership and management rather than technical performance."
+        link="http://en.wikipedia.org/wiki/Master_Sergeant#United_States"
+    />
+    <ranksdata
+        id="19"
+        payscale="E-7 through E-9"
+        short="First Sergeant"
+        name="Master Sergeant, Senior Master Sergeant and Chief Master Sergeant"
+        icon="first_sergeant_usaf"
+        type="Enlisted"
+        details="In the United States Air Force, First Sergeant is not a rank, but a special duty held by a senior enlisted member of a military unit who reports directly to the unit commander. This billet is held by individuals of pay grades E-7 through E-9 (Master Sergeant, Senior Master Sergeant and Chief Master Sergeant), and is denoted on the rank insignia by a lozenge (known colloquially as a 'diamond'). Often referred to as the 'first shirt', or 'shirt', the first sergeant is responsible for the morale, welfare, and conduct of all the enlisted members in a squadron and is the chief adviser to the squadron commander concerning the enlisted force."
+        link="http://en.wikipedia.org/wiki/First_sergeant#United_States_Air_Force"
+    />
+    <ranksdata
+        id="20"
+        payscale="E-8"
+        short="SMSgt"
+        name="Senior Master Sergeant"
+        icon="senior_master_sergeant_usaf"
+        type="Enlisted"
+        details="Senior master sergeant (SMSgt) is the eighth enlisted rank (pay grade E-8) in the U.S. Air Force, just above master sergeant and below chief master sergeant and is a senior noncommissioned officer (SNCO).  Promotion to senior master sergeant is the most difficult enlisted promotion to attain in the Air Force. It is the first enlisted grade to which results of a central promotion board are the primary factor in selection for promotion. Usually, less than ten percent of eligible master sergeants are selected for promotion to senior master sergeant in most years.  "
+        link="http://en.wikipedia.org/wiki/Senior_Master_Sergeant"
+    />
+    <ranksdata
+        id="21"
+        payscale="E-9"
+        short="CMSgt"
+        name="Chief Master Sergeant"
+        icon="chief_master_sergeant_usaf"
+        type="Enlisted"
+        details="Chief Master Sergeant (CMSgt) is the ninth, and highest, enlisted rank in the U.S. Air Force, just above Senior Master Sergeant, and is a senior non-commissioned officer rank. The official term is 'Chief Master Sergeant' or 'Chief'.  Attaining the rank of Chief Master Sergeant is the pinnacle of an Air Force enlisted person's career. Some Chief Master Sergeants manage the efforts of all enlisted personnel within their unit or major subsection while others run major staff functions at higher headquarters levels. By federal law, roughly one percent of the Air Force enlisted force may hold the rank of chief master sergeant. "
+        link="http://en.wikipedia.org/wiki/Chief_Master_Sergeant"
+    />
+
+    <ranksdata
+        id="22"
+        payscale="E-9"
+        short="CCMSgt"
+        name="Command Chief Master Sergeant"
+        icon="command_chief_master_sergeant_usaf"
+        type="Enlisted"
+        details="The position of Command Chief Master Sergeant (CCMSgt) was renamed in November 1998. Formerly titled senior enlisted advisor, Command Chief Master Sergeants serve as senior advisors to commanders at key levels of command; these include Wings, Numbered Air Forces, Field Operating Agencies, and Major Commands."
+        link="http://en.wikipedia.org/wiki/Command_Chief_Master_Sergeant#Command_Chief_Master_Sergeant"
+    />
+    <ranksdata
+        id="23"
+        payscale="E-9"
+        short="CMSAF"
+        name="Chief Master Sergeant of the Air Force"
+        icon="chief_master_sergeant_of_the_air_force"
+        type="Enlisted"
+        details="The Chief Master Sergeant of the Air Force (CMSAF) is a unique non-commissioned rank in the United States Air Force. The holder of this rank and post represents the highest enlisted level of leadership in the Air Force, and as such, provides direction for the enlisted corps and represents their interests, as appropriate, to the American public, and to those in all levels of government. The CMSAF is appointed by the Air Force Chief of Staff (AF/CC) and serves as the senior enlisted advisor to the Air Force Chief of Staff and the Secretary of the Air Force on all issues regarding the welfare, readiness, morale, and proper utilization and progress of the enlisted force. While the CMSAF is a non-commissioned officer, the billet is protocol equivalent to a lieutenant general."
+        link="http://en.wikipedia.org/wiki/Chief_Master_Sergeant_of_the_Air_Force"
+    />
+
+
+
+
+</UsmcRanks>
