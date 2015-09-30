@@ -25,6 +25,9 @@ public class PageviewerSmallFragment extends Fragment {
         passedfrag = mosFragment;
         Branch = position;
     }
+    public PageviewerSmallFragment() {
+
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UsmcMOS>
+    <mosdata>
+
+        <mostitle>01 Personnel and Administration
+            <mosdata
+                mos_number="0100"
+                mos_name="Basic Administrative Marine"
+                mos_type="Enlisted"
+                mos_rank="Pvt - GySgt"
+                mos_link="http://en.wikipedia.org/wiki/Military_administration"
+            />
+            <mosdata
+                mos_number="0111"
+                mos_name="Administrative Specialist"
+                mos_type="Enlisted"
+                mos_rank=" Pvt to MGySgt"
+            />
+            <mosdata
+                mos_number="0149"
+                mos_name="Substance Abuse Control Specialist"
+                mos_type="Enlisted"
+                mos_link="http://en.wikipedia.org/wiki/Substance_abuse"
+                mos_rank="SSgt - MGySgt"
+             />
+            <mosdata
+                mos_number="0161"
+                mos_name="Postal Clerk"
+                mos_type="Enlisted"
+                mos_rank="Pvt - MGySgt"
+            />
+            <mosdata
+                mos_number="0171"
+                mos_name="Manpower Information Systems (MIS) Analyst"
+                mos_type="Enlisted"
+                mos_rank="Cpl - MGySgt"
+            />
+            <mosdata
+                mos_number="0149"
+                mos_name="Substance Abuse Control Officer (SACO)"
+                mos_type="Officer"
+                mos_rank="officers"
+            />
+            <mosdata
+                mos_number="0160"
+                mos_name="Postal Officer"
+                mos_type="Officer"
+                mos_rank="WO-CWO5"
+            />
+            <mosdata
+                mos_number="0170"
+                mos_name="Personnel Officer"
+                mos_type="Officer"
+                mos_rank="WO-CWO5"
+            />
+            <mosdata
+                mos_number="0180"
+                mos_name="Adjutant"
+                mos_type="Officer"
+                mos_link="http://en.wikipedia.org/wiki/Adjutant"
+                mos_rank="2ndLt-LtCol"
+            />
+        </mostitle>
+        <mostitle>01 Personnel and Administration
+         <mosdata  mos_number= "0200"
+           
+             mos_name="Basic Intelligence Marine"
+             mos_type="Enlisted"
+             mos_link="http://en.wikipedia.org/wiki/Military_intelligence"
+             mos_rank="Pvt - GySgt"
+           
+
+           />
+
+         <mosdata  mos_number="0211"
+           
+             mos_name="Counterintelligence"
+             mos_type="Enlisted"
+             mos_link="http://en.wikipedia.org/wiki/Counter-intelligence"
+             mos_rank="CPL - MSGT"
+           
+
+           />
+
+         <mosdata  mos_number= "0211"
+           
+             mos_name="HUMINT Specialist"
+             mos_type="Enlisted"
+             mos_link="http://en.wikipedia.org/wiki/HUMINT"
+             mos_rank="CPL - MSGT"
+           
+
+           />
+
+         <mosdata  mos_number= "0212"
+           
+             mos_name="Technical Surveillance Countermeasures Specialist"
+             mos_type="Enlisted"
+             mos_link="http://en.wikipedia.org/wiki/Countersurveillance"
+             mos_rank="SGT - MSGT"
+           
+
+           />
+
+         <mosdata  mos_number= "0231"
+           
+             mos_name="Intelligence Specialist"
+             mos_type="Enlisted"
+             mos_rank="PVT - MSGT"
+           
+
+           />
+
+         <mosdata  mos_number= "0241"
+           
+             mos_name="Imagery Analysis Specialist"
+             mos_type="Enlisted"
+             mos_link="http://en.wikipedia.org/wiki/Imagery_analysis"
+             mos_rank="SGT - MSGT"
+           
+
+           />
+
+         <mosdata  mos_number= "0251"
+           
+             mos_name="Interrogator"
+             mos_type="Enlisted"
+             mos_link="http://en.wikipedia.org/wiki/Interrogation"
+             mos_rank="CPL - MSGT (No Longer Officered)"
+           
+
+           />
+
+         <mosdata  mos_number= "0251"
+           
+             mos_name="Debriefer"
+             mos_type="Enlisted"
+             mos_link="http://en.wikipedia.org/wiki/Imagery_analysis"
+             mos_rank="CPL - MSGT (No Longer Officered)"
+           
+
+           />
+
+         <mosdata  mos_number= "0261"
+           
+             mos_name="Geographic Intelligence Specialist"
+             mos_link="http://en.wikipedia.org/wiki/MOS_0261"
+             mos_type="Enlisted"
+             mos_rank="PVT - MSGT"
+           
+
+           />
+
+         <mosdata  mos_number= "0282"
+           
+             mos_name=" Tactical Debriefer (TD) (FMOS)"
+             mos_type="Enlisted"
+             mos_rank="N/A"
+           
+
+           />
+
+         <mosdata  mos_number= "0283"
+           
+             mos_name="Advanced Foreign Counterintelligence Specialist (AFCS)"
+             mos_type="Enlisted"
+             mos_rank="N/A"
+           
+
+           />
+
+         <mosdata  mos_number= "0287"
+           
+             mos_name="Military Source Operations Specialist (MSOS) (FMOS)"
+             mos_type="Enlisted"
+             mos_rank="N/A"
+           
+
+           />
+
+         <mosdata  mos_number= "0289"
+           
+             mos_name="Strategic Debriefing Specialist (SDS) (FMOS)"
+             mos_type="Enlisted"
+             mos_rank="N/A"
+           
+
+           />
+
+         <mosdata  mos_number= "0291"
+           
+             mos_name="Intelligence Chief (PMOS)"
+             mos_type="Enlisted"
+             mos_rank="N/A"
+           
+
+           />
+
+         <mosdata  mos_number= "0293"
+           
+             mos_name="Advanced Military Source Operations Specialist (AMSOS)"
+             mos_type="Enlisted"
+             mos_rank="SGT - MSGT"
+           
+
+
+           />
+
+         <mosdata  mos_number= "0202"
+           
+             mos_name="Marine Air-Ground Task Force (MAGTF) Intelligence Officer"
+             mos_link="http://en.wikipedia.org/wiki/Marine_Air-Ground_Task_Force"
+             mos_type="Officer"
+
+             mos_rank="1stLt - LtCol"
+           
+
+           />
+
+         <mosdata  mos_number= "0203"
+           
+             mos_name="Ground Intelligence Officer"
+             mos_link="http://en.wikipedia.org/wiki/Ground_Intelligence_Officer"
+             mos_type="Officer"
+             mos_rank="2ndLt - Capt"
+           
+
+           />
+
+         <mosdata  mos_number= "0204"
+           
+             mos_name="Counterintelligence (CI)/Human Source Intelligence (HUMINT) Officer"
+             mos_type="Officer"
+             mos_rank="2ndLt - Capt"
+           
+
+           />
+
+         <mosdata  mos_number= "0205"
+           
+             mos_name="Senior All-Source Intelligence Analysis Officer"
+             mos_type="Officer"
+             mos_rank="WO - CWO5"
+           
+           />
+
+         <mosdata  mos_number= "0206"
+           
+             mos_name="Signals Intelligence/Ground Electronic Warfare Officer"
+             mos_link="http://en.wikipedia.org/wiki/Signals_intelligence"
+             mos_type="Officer"
+             mos_rank="2ndLt - Capt"
+           
+
+           />
+
+         <mosdata  mos_number= "0206"
+           
+             mos_name="Ground Electronic Warfare Officer"
+             mos_link="http://en.wikipedia.org/wiki/Electronic_warfare"
+             mos_type="Officer"
+             mos_rank="2ndLt - Capt"
+           
+
+           />
+
+         <mosdata  mos_number= "0207"
+           
+             mos_name="Air Intelligence Officer"
+             mos_link="http://en.wikipedia.org/wiki/Air_Intelligence_Officer"
+             mos_type="Officer"
+             mos_rank="2ndLt - Capt"
+           
+
+           />
+
+         <mosdata  mos_number= "0210"
+           
+             mos_name="Counterintelligence/Human Source Intelligence (CI/HUMINT) Operations Officer"
+             mos_type="Officer"
+             mos_rank="WO - CWO5"
+           
+
+           />
+
+         <mosdata  mos_number= "0215"
+           
+             mos_name="Technical Surveillance Countermeasures Trained Counterintelligence/Human Source Intelligence Officer"
+             mos_type="Officer"
+             mos_rank="N/A"
+           
+
+           />
+
+         <mosdata  mos_number= "0220"
+           
+             mos_name="Surveillance Sensor Officer"
+             mos_type="Officer"
+             mos_rank="N/A"
+           
+
+           />
+
+         <mosdata  mos_number= "0277"
+           
+             mos_name="Weapons and Tactics Instructor-Intelligence Officer"
+             mos_type="Officer"
+             mos_rank="N/A"
+           
+
+           />
+
+         <mosdata  mos_number= "0281"
+           
+             mos_name="Tactical Debriefer (TD) Officer"
+             mos_type="Officer"
+             mos_rank="2ndLt - Capt"
+           
+
+           />
+
+         <mosdata  mos_number= "0284"
+           
+             mos_name="Advanced Foreign Counterintelligence Officer"
+             mos_type="Officer"
+             mos_rank="N/A"
+           
+
+
+           />
+
+         <mosdata  mos_number= "0286"
+           
+             mos_name="Advanced Military Source Operations Officer"
+             mos_type="Officer"
+             mos_rank="N/A"
+           
+
+           />
+
+         <mosdata  mos_number= "0288"
+           
+             mos_name="Military Source Operations Officer"
+             mos_type="Officer"
+             mos_rank="N/A"
+           
+
+           />
+
+         <mosdata  mos_number= "0290"
+           
+             mos_name="Strategic Debriefing Officer"
+             mos_type="Officer"
+             mos_rank="N/A"
+           
+
+          />
+
+        </mostitle>
+
+
+
+    </mosdata>
+</UsmcMOS>

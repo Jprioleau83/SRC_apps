@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.cnsintegration.srcmarineinfo1"
     android:versionCode="5"
-    android:versionName="5.0.71" >
+    android:versionName="5.0.182" >
 
     <uses-sdk
         android:minSdkVersion="14"
@@ -11,6 +11,7 @@
     <android:uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <android:uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
