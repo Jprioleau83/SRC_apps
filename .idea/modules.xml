@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/SRCMarineInfo1.iml" filepath="$PROJECT_DIR$/SRCMarineInfo1.iml" />
       <module fileurl="file://$PROJECT_DIR$/SRC_apps.iml" filepath="$PROJECT_DIR$/SRC_apps.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/libraries.iml" filepath="$PROJECT_DIR$/libraries/libraries.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraries/libraries.iml" filepath="$PROJECT_DIR$/libraries/libraries.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraries/showcase/showcase.iml" filepath="$PROJECT_DIR$/libraries/showcase/showcase.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraries/showcase/showcase.iml" filepath="$PROJECT_DIR$/libraries/showcase/showcase.iml" />
     </modules>
   </component>

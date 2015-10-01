@@ -14501,7 +14501,10 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
                         Document doc3 = Jsoup.connect(link2.attr("abs:href")).get();
 
                         Elements pele3 = doc3.select("#main > div > div.row.infinite-article-body > div.col.col-11.col-tablet-8.article-content > article > div.col-push-2.col-push-tablet-1.content-responsive > p:contains(Rank Range)");
-                        String parp3 = pele3.first().ownText();
+                        String parp3 = "N/A";
+                        if( !pele3.isEmpty() ){
+                            parp3 = pele3.first().text();
+                        }
 
                         values1.put(MOS_RANK, parp3);
 
@@ -14602,8 +14605,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
 
         @Override
     public void onCreate(SQLiteDatabase db) {
-            super.onCreate(savedInstanceState);
-            requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
+
         db.execSQL(DATABASE_CREATE);
         db.execSQL(DATABASE_CREATE2);
         db.execSQL(DATABASE_CREATE3);
