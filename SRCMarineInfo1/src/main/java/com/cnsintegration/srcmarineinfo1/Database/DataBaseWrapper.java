@@ -3,6 +3,8 @@ package com.cnsintegration.srcmarineinfo1.Database;
 /**
  * Created by jprioleau on 4/25/14.
  */
+import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.res.Resources;
@@ -11,8 +13,10 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.util.Log;
 
+import com.cnsintegration.srcmarineinfo1.MainActivity;
 import com.cnsintegration.srcmarineinfo1.R;
 import com.cnsintegration.srcmarineinfo1.model.Rank;
 
@@ -29,6 +33,8 @@ import org.jsoup.select.Elements;
 
 
 public class DataBaseWrapper extends SQLiteOpenHelper {
+
+
 
     public static final String Ranks = "Ranks";
     public static final String rank_ID = "_id";
@@ -119,9 +125,14 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
     private static final String DATABASE_CREATE5 = "create table " + Ackdb + "( id integer primary key autoincrement, " + Ack + " text not null, " + Ack_Name + " text not null, "
             + Ack_Details + " text not null, " + Ack_Link + " text, " + Ack_Icon + " text not null); ";
 
+
+    private ProgressDialog progressDialog;
+
     public DataBaseWrapper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
         fContext = context;
+
+
 
     }
 
@@ -14458,23 +14469,27 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
 
 
 
+
+
         @Override
         protected String doInBackground(DataBaseWrapper... params) {
             String title ="";
             ContentValues values = new ContentValues();
             ContentValues values1 = new ContentValues();
-            SQLiteDatabase database = params[0].getReadableDatabase();
+
+            SQLiteDatabase database = params[0].getWritableDatabase();
             try {
 
                 Document doc = Jsoup.connect("http://usmilitary.about.com/od/enlistedjo2/a/marinejobs.htm").get();
-                Document docoff = Jsoup.connect("http://usmilitary.about.com/od/officerj3/a/officerjobsmenu.htm").get();
+                //Document docoff = Jsoup.connect("http://usmilitary.about.com/od/officerj3/a/officerjobsmenu.htm").get();
 
                 Elements pele = doc.select("#main > div > div.row.infinite-article-body > div.col.col-11.col-tablet-8.article-content > article > div.col-push-2.col-push-tablet-1.content-responsive > ul > li > p ");
-                Elements peleoff = docoff.select("#main > div > div.row.infinite-article-body > div.col.col-11.col-tablet-8.article-content > article > div.col-push-2.col-push-tablet-1.content-responsive > p");
+               // Elements peleoff = docoff.select("#main > div > div.row.infinite-article-body > div.col.col-11.col-tablet-8.article-content > article > div.col-push-2.col-push-tablet-1.content-responsive > p");
 
+                for (int i=0; i < pele.size();i++) {
 
+                    Element link = pele.get(i);
 
-                for (Element link : pele) {
                     String mostitle = link.text();
                     Elements alink = link.select("b > a");
                     String url2 = alink.first().attr("href");
@@ -14490,7 +14505,10 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
 
                     long mostitleId =  database.insert(MOSTITLES, null, values);
 
-                    for (Element link2 : pele2) {
+                    for (int j = 0;j < pele2.size();j++) {
+                        Element link2 = pele2.get(j);
+
+
                         String mnum = link2.html();
                         values1.put(MOS_NUMBER, mnum);
                         values1.put(MOS_TITLE, mostitleId);
@@ -14502,14 +14520,21 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
 
                         Elements pele3 = doc3.select("#main > div > div.row.infinite-article-body > div.col.col-11.col-tablet-8.article-content > article > div.col-push-2.col-push-tablet-1.content-responsive > p:contains(Rank Range)");
                         String parp3 = "N/A";
-                        if( !pele3.isEmpty() ){
-                            parp3 = pele3.first().text();
-                        }
+                       // if( !pele3.isEmpty() ){
+                            //parp3 = pele3.first().text();
+                        //}
 
-                        values1.put(MOS_RANK, parp3);
+                        values1.put(MOS_RANK, "sgt");
 
                         values1.put(MOS_Link, link2.attr("abs:href"));
+                        try {
+                            // thread to sleep for 1000 milliseconds
+                            Thread.sleep(1000);
+                        } catch (Exception e) {
+                            System.out.println(e);
+                        }
                         database.insert(MOS, null, values1);
+
                         values1 = new ContentValues();
                     }
 
@@ -14595,6 +14620,8 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+
+            params[0].cancelprogressdialogbox();
             return title;
         }
 
@@ -14602,11 +14629,19 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
 
     }
 
+    public void cancelprogressdialogbox(){
+        progressDialog.dismiss();
+
+    }
 
         @Override
     public void onCreate(SQLiteDatabase db) {
+            progressDialog = ProgressDialog.show(fContext,"Loading...",
+                    "Loading application View, please wait...", false, false);
+            progressDialog.setCancelable(false);
 
-        db.execSQL(DATABASE_CREATE);
+
+            db.execSQL(DATABASE_CREATE);
         db.execSQL(DATABASE_CREATE2);
         db.execSQL(DATABASE_CREATE3);
         db.execSQL(DATABASE_CREATE4);
@@ -14623,11 +14658,11 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
             populatewebmos(db);
 
        // populateusmcmos(db);
-        populateusafafsc(db);
+       /* populateusafafsc(db);
         populatearmymos(db);
         populatenavycommunities(db);
         populateCGcommunities(db);
-        populateack(db);
+        populateack(db);*/
 
 
 
@@ -14638,6 +14673,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
 
 
     }
+
 
 
 

@@ -2,9 +2,11 @@ package com.cnsintegration.srcmarineinfo1;
 
 
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.graphics.Point;
 import android.graphics.Typeface;
@@ -19,6 +21,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.content.res.Configuration;
 
+import com.cnsintegration.srcmarineinfo1.Database.DataBaseWrapper;
 import com.cnsintegration.srcmarineinfo1.adapter.MyAdapter;
 import com.cnsintegration.srcmarineinfo1.model.NavDrawerItem;
 import com.cnsintegration.srcmarineinfo1.adapter.NavDrawerListAdapter;
@@ -87,6 +90,10 @@ public class MainActivity extends FragmentActivity
 
     PageviewerSmallFragment Pageview;
     ShowcaseView sv;
+    public DataBaseWrapper dbHelper;
+
+    public SQLiteDatabase database;
+
 
 
     @Override
@@ -282,6 +289,14 @@ public class MainActivity extends FragmentActivity
         super.onPostCreate(savedInstanceState);
         // Sync the toggle state after onRestoreInstanceState has occurred.
         mDrawerToggle.syncState();
+
+
+        dbHelper = new DataBaseWrapper(this);
+
+        database = dbHelper.getReadableDatabase();
+
+
+        dbHelper.close();
     }
 
     @Override
