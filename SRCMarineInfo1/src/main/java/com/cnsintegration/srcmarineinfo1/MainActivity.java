@@ -23,6 +23,7 @@ import android.content.res.Configuration;
 
 import com.cnsintegration.srcmarineinfo1.Database.DataBaseWrapper;
 import com.cnsintegration.srcmarineinfo1.adapter.MyAdapter;
+import com.cnsintegration.srcmarineinfo1.adapter.RankData;
 import com.cnsintegration.srcmarineinfo1.model.NavDrawerItem;
 import com.cnsintegration.srcmarineinfo1.adapter.NavDrawerListAdapter;
 
@@ -93,8 +94,6 @@ public class MainActivity extends FragmentActivity
     public DataBaseWrapper dbHelper;
 
     public SQLiteDatabase database;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -284,19 +283,24 @@ public class MainActivity extends FragmentActivity
      * onPostCreate() and onConfigurationChanged()...
      */
 
+
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
         // Sync the toggle state after onRestoreInstanceState has occurred.
         mDrawerToggle.syncState();
 
-
+        // Create an array adapter for the list view, using the Ipsum headlines array
         dbHelper = new DataBaseWrapper(this);
 
         database = dbHelper.getReadableDatabase();
 
 
+
+
+
         dbHelper.close();
+
     }
 
     @Override
