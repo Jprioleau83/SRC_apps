@@ -3,6 +3,7 @@ package com.cnsintegration.srcmarineinfo1.Database;
 /**
  * Created by jprioleau on 4/25/14.
  */
+import android.app.ProgressDialog;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.res.Resources;
@@ -87,7 +88,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "srcmarineinfo.db";
     private static final int DATABASE_VERSION = 2;
-
+    private ProgressDialog progressDialog;
 
 
 
@@ -122,6 +123,9 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
     public DataBaseWrapper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
         fContext = context;
+
+
+
 
     }
 
@@ -14463,34 +14467,45 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
             String title ="";
             ContentValues values = new ContentValues();
             ContentValues values1 = new ContentValues();
+
             SQLiteDatabase database = params[0].getReadableDatabase();
+
             try {
 
+
+
+
                 Document doc = Jsoup.connect("http://usmilitary.about.com/od/enlistedjo2/a/marinejobs.htm").get();
-                Document docoff = Jsoup.connect("http://usmilitary.about.com/od/officerj3/a/officerjobsmenu.htm").get();
+               // Document docoff = Jsoup.connect("http://usmilitary.about.com/od/officerj3/a/officerjobsmenu.htm").get();
 
                 Elements pele = doc.select("#main > div > div.row.infinite-article-body > div.col.col-11.col-tablet-8.article-content > article > div.col-push-2.col-push-tablet-1.content-responsive > ul > li > p ");
-                Elements peleoff = docoff.select("#main > div > div.row.infinite-article-body > div.col.col-11.col-tablet-8.article-content > article > div.col-push-2.col-push-tablet-1.content-responsive > p");
+               // Elements peleoff = docoff.select("#main > div > div.row.infinite-article-body > div.col.col-11.col-tablet-8.article-content > article > div.col-push-2.col-push-tablet-1.content-responsive > p");
 
-
-
-                for (Element link : pele) {
+                for(int i =0; i < pele.size(); i ++){
+                    Element link = pele.get(i);
                     String mostitle = link.text();
-                    Elements alink = link.select("b > a");
-                    String url2 = alink.first().attr("href");
-                    Document doc2 = Jsoup.connect(url2).get();
-                    Elements pele2 = doc2.select("#main > div > div.row.infinite-article-body > div.col.col-11.col-tablet-8.article-content > article > div.col-push-2.col-push-tablet-1.content-responsive > p > a[data-source=inlineLink]:matches(^.\\d+) ");
-
-
 
 
                     values.put("mos_name", mostitle);
-                    values.put("mos_branch",  params[0].Branch_USMC);
+                    values.put("mos_branch", params[0].Branch_USMC);
 
 
-                    long mostitleId =  database.insert(MOSTITLES, null, values);
+                    long mostitleId = database.insert(MOSTITLES, null, values);
+                   // System.out.println(" mos_name: " + mostitle);
 
-                    for (Element link2 : pele2) {
+                    Elements alink = link.select("b > a");
+                    String url2 = alink.first().attr("abs:href");
+                    Document doc2 = Jsoup.connect(url2).get();
+                    Elements pele2 = doc2.select("#main > div > div.row.infinite-article-body > div.col.col-11.col-tablet-8.article-content > article > div.col-push-2.col-push-tablet-1.content-responsive > p:contains(-- ) > a[data-source=inlineLink] ");
+                    Log.i("srcmarineinfo1", "mos_name" + mostitle);
+                    for(int j =0; j < pele2.size(); j ++) {
+                        Element link2 = pele2.get(j);
+                        String mnum = link2.html();
+                        Log.i("srcmarineinfo1", "mnum: " + mnum);
+                    }
+
+                    /*    Element link2 = pele2.get(j);
+
                         String mnum = link2.html();
                         values1.put(MOS_NUMBER, mnum);
                         values1.put(MOS_TITLE, mostitleId);
@@ -14502,16 +14517,17 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
 
                         Elements pele3 = doc3.select("#main > div > div.row.infinite-article-body > div.col.col-11.col-tablet-8.article-content > article > div.col-push-2.col-push-tablet-1.content-responsive > p:contains(Rank Range)");
                         String parp3 = "N/A";
-                        if( !pele3.isEmpty() ){
+                        if (!pele3.isEmpty()) {
                             parp3 = pele3.first().text();
                         }
 
-                        values1.put(MOS_RANK, parp3);
+                        values1.put(MOS_RANK, "sgt");
 
                         values1.put(MOS_Link, link2.attr("abs:href"));
                         database.insert(MOS, null, values1);
+                        Log.i("srcmarineinfo1", "mnum: " + mnum);
                         values1 = new ContentValues();
-                    }
+                    }*/
 
 
 
@@ -14522,7 +14538,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
                     dbs.insert(MOS, null, values1);*/
 
                     values = new ContentValues();
-                    }
+                }
 /*
                 for (Element link : peleoff) {
                     String mostitle = link.text();
@@ -14586,16 +14602,13 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
 
 
 
-
-
-
-
-
-
             } catch (IOException e) {
                 e.printStackTrace();
             }
+            params[0].cancelprogressBar();
             return title;
+
+
         }
 
 
@@ -14605,7 +14618,9 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
 
         @Override
     public void onCreate(SQLiteDatabase db) {
-
+            progressDialog = ProgressDialog.show(fContext,"Loading...",
+                    "Loading application View, please wait...", false, false);
+            progressDialog.show();
         db.execSQL(DATABASE_CREATE);
         db.execSQL(DATABASE_CREATE2);
         db.execSQL(DATABASE_CREATE3);
@@ -14620,16 +14635,16 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         populateuscgranks(db);
 
 
-            populatewebmos(db);
+
 
        // populateusmcmos(db);
-        populateusafafsc(db);
+       /* populateusafafsc(db);
         populatearmymos(db);
         populatenavycommunities(db);
         populateCGcommunities(db);
-        populateack(db);
+        populateack(db);*/
 
-
+            new MyTask().execute(this);
 
 
 
@@ -14639,7 +14654,10 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
 
     }
 
-
+    public void cancelprogressBar (){
+        progressDialog.cancel();
+        progressDialog.dismiss();
+    }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
