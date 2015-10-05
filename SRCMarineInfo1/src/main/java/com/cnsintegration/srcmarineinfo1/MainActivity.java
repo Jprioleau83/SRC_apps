@@ -4,6 +4,7 @@ package com.cnsintegration.srcmarineinfo1;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
@@ -289,6 +290,9 @@ public class MainActivity extends FragmentActivity
         super.onPostCreate(savedInstanceState);
         // Sync the toggle state after onRestoreInstanceState has occurred.
         mDrawerToggle.syncState();
+
+
+
 
         // Create an array adapter for the list view, using the Ipsum headlines array
         dbHelper = new DataBaseWrapper(this);

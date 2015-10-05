@@ -9,10 +9,13 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.XmlResourceParser;
 import android.database.Cursor;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.AsyncTask;
+import android.os.Looper;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.cnsintegration.srcmarineinfo1.R;
 import com.cnsintegration.srcmarineinfo1.model.Rank;
@@ -87,7 +90,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
 
 
     private static final String DATABASE_NAME = "srcmarineinfo.db";
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 3;
     private ProgressDialog progressDialog;
 
 
@@ -123,7 +126,9 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
     public DataBaseWrapper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
         fContext = context;
-
+        progressDialog = null;
+        //progressDialog = new ProgressDialog(fContext);
+        //progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
 
 
 
@@ -14438,10 +14443,35 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
 
     public void populatewebmos(SQLiteDatabase db){
 
-        new MyTask().execute(this);
+       // new MyTask(db).execute(this);
 
     }
-    private class MyTask extends AsyncTask<DataBaseWrapper, Void, String> {
+
+    private class progdiataks extends AsyncTask<Void, Void, String> {
+        public Context pcontext;
+        public progdiataks(Context fc) {
+            this.pcontext = fc;
+            ProgressDialog progressDialog = ProgressDialog.show(fc, "Loading...",
+                    "Loading application View, please wait...", false, false);
+            ContentValues values = new ContentValues();
+
+        }
+
+        @Override
+        protected String doInBackground(Void... params) {
+
+
+         return "test";
+        }
+
+
+
+    }
+
+
+
+
+    private class USMCMosTask extends AsyncTask<DataBaseWrapper, Void, String> {
         public static final String MOSTITLES = "MOSTitles";
         public static final String MOSTITLES_BRANCH = "mos_branch";
         public static final String MOSTITLES_ID = "mos_id";
@@ -14460,6 +14490,34 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
         public static final String MOS_RANK = "mos_rank";
         public static final String MOS_Link = "mos_link";
 
+        public SQLiteDatabase database = null;
+        public ProgressDialog dialog;
+        public Context pcontext;
+
+        public USMCMosTask(SQLiteDatabase db, Context pc) {
+            database = db;
+          //  database.beginTransaction();
+           // dialog = pc;
+           // dialog = new ProgressDialog(pc);
+            pcontext = pc;
+            //synchronized(progdiag) {
+            //dialog.show();
+           // }
+
+
+           //
+
+        }
+
+        @Override
+        protected void onPreExecute() {
+           // this.dialog.setMessage("Progress start");
+           // this.dialog.show();
+
+        }
+
+
+
 
 
         @Override
@@ -14468,44 +14526,303 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
             ContentValues values = new ContentValues();
             ContentValues values1 = new ContentValues();
 
-            SQLiteDatabase database = params[0].getReadableDatabase();
+           // SQLiteDatabase database = params[0].getWritableDatabase();
+            SQLiteOpenHelper dbhelper = new DataBaseWrapper(pcontext);
+            database = dbhelper.getWritableDatabase();
+
+
+
+                try {
+                  //  synchronized (database) {
+
+
+                        Document doc = Jsoup.connect("http://usmilitary.about.com/od/enlistedjo2/a/marinejobs.htm").get();
+                        Document docoff = Jsoup.connect("http://usmilitary.about.com/od/officerj3/a/officerjobsmenu.htm").get();
+
+                        Elements pele = doc.select("ul > li > p ");
+
+                        Elements peleoff = docoff.select("#main > div > div.row.infinite-article-body > div.col.col-11.col-tablet-8.article-content > article > div.col-push-2.col-push-tablet-1.content-responsive > p > a[data-source=inlineLink]:matches(^\\d\\d$)");
+
+                        for (int i = 0; i < pele.size(); i++) {
+                            Element link = pele.get(i);
+                            String mostitle = link.text().trim();
+
+
+                            values.put("mos_name", mostitle);
+                            values.put("mos_branch", params[0].Branch_USMC);
+                            long mostitleId = 0;
+
+                            mostitleId = database.insert(MOSTITLES, null, values);
+
+                            // System.out.println(" mos_name: " + mostitle);
+
+                            Elements alink = link.select("b > a");
+                            String url2 = alink.first().attr("abs:href");
+                            Document doc2 = Jsoup.connect(url2).get();
+
+                            Elements pele2 = doc2.select("#main > div > div.row.infinite-article-body > div.col.col-11.col-tablet-8.article-content > article > div.col-push-2.col-push-tablet-1.content-responsive > p > a[data-source=inlineLink]:matches(^\\d\\d\\d\\d$) ");
+
+                            if (pele2.size() == 0) {
+                                pele2 = doc2.select(" #content > article > p > a[data-source=inlineLink]:matches(^\\d\\d\\d\\d$) ");
+
+
+                            }
+                            if (pele2.size() == 0) {
+                                pele2 = doc2.select("#content > article > p > b > a[data-source=inlineLink]:matches(^\\d\\d\\d\\d$) ");
+
+
+                            }
+
+
+                            Log.i("srcmarineinfo1", "mos_name" + mostitle);
+                            for (int j = 0; j < pele2.size(); j++) {
+                                Element link2 = pele2.get(j);
+                                String mnum = link2.html();
+                                values1.put(MOS_NUMBER, mnum);
+                                values1.put(MOS_TITLE, mostitleId);
+
+                                String parp2 = link2.parent().ownText();
+                                values1.put(MOS_NAME, parp2);
+                                values1.put(MOS_TYPE, "Enlisted");
+                                Document doc3 = Jsoup.connect(link2.attr("abs:href")).get();
+
+                                Elements pele3 = doc3.select(" p:contains(Rank Range)");
+                                String parp3 = "N/A";
+                                if (!pele3.isEmpty()) {
+                                    parp3 = pele3.first().text();
+                                }
+
+                                values1.put(MOS_RANK, "sgt");
+
+                                values1.put(MOS_Link, link2.attr("abs:href"));
+
+                                database.insert(MOS, null, values1);
+
+                                values1 = new ContentValues();
+
+
+                                Log.i("srcmarineinfo1", "mnum: " + mnum);
+                            }
+
+                            values = new ContentValues();
+                        }
+
+                        for (int k = 0; k < peleoff.size(); k++) {
+                            Element link = peleoff.get(k).parent();
+
+                            String mostitle = link.text().trim();
+
+                            String url2 = peleoff.get(k).attr("abs:href");
+                            Document doc2 = Jsoup.connect(url2).get();
+                            Elements pele2off = doc2.select("a[data-source=inlineLink]:matches(^\\d\\d\\d\\d$)");
+
+
+                            Cursor cursor = database.query(params[0].MOSTITLES, null, "mos_name=\"" + mostitle + "\"", null, null, null, null);
+                            cursor.moveToFirst();
+
+                            long mostitleId = 0;
+
+                            if (cursor == null || cursor.getCount() == 0) {
+                                values.put("mos_name", mostitle);
+                                values.put("mos_branch", params[0].Branch_USMC);
+
+
+                                mostitleId = database.insert(MOSTITLES, null, values);
+
+                            } else {
+                                mostitleId = cursor.getInt(0);
+                            }
+                            Log.i("srcmarineinfo1", "mos_name" + mostitle);
+
+
+                            for (int l = 0; l < pele2off.size(); l++) {
+                                Element link2 = pele2off.get(l);
+                                String mnum = link2.ownText();
+                                values1.put(MOS_NUMBER, mnum);
+                                values1.put(MOS_TITLE, mostitleId);
+
+                                String parp2 = link2.parent().ownText();
+                                values1.put(MOS_NAME, parp2);
+                                Document doc3 = Jsoup.connect(link2.attr("abs:href")).get();
+
+                                Elements rtype = doc3.select("#main > div > div.row.infinite-article-body > div.col.col-11.col-tablet-8.article-content > article > div.col-push-2.col-push-tablet-1.content-responsive > p:contains(Type of Officer)");
+
+
+                                if (rtype.size() == 0) {
+                                    rtype = doc3.select(" #content > article > p:contains(Type of Officer) ");
+
+
+                                }
+
+
+                                String rtypestrg = "";
+
+
+                                if (rtype.size() > 0) {
+                                    rtypestrg = rtype.first().text();
+                                }
+
+                                if (rtypestrg.contains("Warrant")) {
+                                    values1.put(MOS_TYPE, "Warrant Officer");
+                                } else {
+                                    values1.put(MOS_TYPE, "Officer");
+                                }
+
+
+                                Elements pele3 = doc3.select(" p:contains(Rank Range)");
+                                String parp3 = "";
+
+                                if (pele3.size() == 0) {
+                                    parp3 = "N/A";
+                                } else {
+                                    parp3 = pele3.first().text();
+                                }
+
+
+                                values1.put(MOS_RANK, parp3);
+                                values1.put(MOS_Link, link2.attr("abs:href"));
+
+                                database.insert(MOS, null, values1);
+
+                                values1 = new ContentValues();
+                                Log.i("srcmarineinfo1", "mnum: " + mnum);
+
+                            }
+
+
+                        }
+
+                  //  }//
+                } catch (SQLException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    }
+                 catch (IOException e) {
+                    e.printStackTrace();
+                }
+                finally {
+                    if (database != null && database.isOpen()) {
+                        database.close();
+                    }
+                }
+
+           params[0].cancelprogressBar();
+            return title;
+
+
+        }
+
+
+
+    }
+
+
+    private class USArmyTask extends AsyncTask<DataBaseWrapper, Void, String> {
+        public static final String MOSTITLES = "MOSTitles";
+        public static final String MOSTITLES_BRANCH = "mos_branch";
+        public static final String MOSTITLES_ID = "mos_id";
+        public static final String MOSTITLES_TITLE = "mos_name";
+
+
+
+
+        public static final String MOS= "MOSES";
+        public static final String MOS_ID = "mos_id";
+        public static final String MOS_NUMBER = "mos_number";
+        public static final String MOS_TITLE= "most_id";
+
+        public static final String MOS_NAME = "mos_name";
+        public static final String MOS_TYPE = "mos_type";
+        public static final String MOS_RANK = "mos_rank";
+        public static final String MOS_Link = "mos_link";
+
+        public SQLiteDatabase database = null;
+        public ProgressDialog dialog;
+        public Context pcontext;
+
+        public USArmyTask(SQLiteDatabase db, Context pc) {
+            database = db;
+            //  database.beginTransaction();
+            // dialog = pc;
+            // dialog = new ProgressDialog(pc);
+            pcontext = pc;
+            //synchronized(progdiag) {
+            //dialog.show();
+            // }
+
+
+            //
+
+        }
+
+        @Override
+        protected void onPreExecute() {
+            // this.dialog.setMessage("Progress start");
+            // this.dialog.show();
+
+        }
+
+
+
+
+
+        @Override
+        protected String doInBackground(DataBaseWrapper... params) {
+            String title ="";
+            ContentValues values = new ContentValues();
+            ContentValues values1 = new ContentValues();
+
+            // SQLiteDatabase database = params[0].getWritableDatabase();
+            SQLiteOpenHelper dbhelper = new DataBaseWrapper(pcontext);
+            database = dbhelper.getWritableDatabase();
+
+
 
             try {
+                //  synchronized (database) {
 
 
+                Document doc = Jsoup.connect("http://usmilitary.about.com/od/enlistedjobs/tp/armyenlistedjobs.htm").get();
+                Document docoff = Jsoup.connect("http://usmilitary.about.com/od/officerj3/a/officerjobsmenu.htm").get();
 
+                Elements pele = doc.select("#content > article > section:nth-child(2) > div > h3 > a[data-source=outbound_list] ");
 
-                Document doc = Jsoup.connect("http://usmilitary.about.com/od/enlistedjo2/a/marinejobs.htm").get();
-               // Document docoff = Jsoup.connect("http://usmilitary.about.com/od/officerj3/a/officerjobsmenu.htm").get();
+                Elements peleoff = docoff.select("#content > article > section:nth-child(2) > div > h3 > a[data-source=outbound_list]");
 
-                Elements pele = doc.select("#main > div > div.row.infinite-article-body > div.col.col-11.col-tablet-8.article-content > article > div.col-push-2.col-push-tablet-1.content-responsive > ul > li > p ");
-               // Elements peleoff = docoff.select("#main > div > div.row.infinite-article-body > div.col.col-11.col-tablet-8.article-content > article > div.col-push-2.col-push-tablet-1.content-responsive > p");
-
-                for(int i =0; i < pele.size(); i ++){
+                for (int i = 0; i < pele.size(); i++) {
                     Element link = pele.get(i);
-                    String mostitle = link.text();
+                    String mostitle = link.text().trim();
 
 
                     values.put("mos_name", mostitle);
-                    values.put("mos_branch", params[0].Branch_USMC);
+                    values.put("mos_branch", params[0].Branch_USARMY);
+                    long mostitleId = 0;
 
+                    mostitleId = database.insert(MOSTITLES, null, values);
 
-                    long mostitleId = database.insert(MOSTITLES, null, values);
-                   // System.out.println(" mos_name: " + mostitle);
+                    // System.out.println(" mos_name: " + mostitle);
 
                     Elements alink = link.select("b > a");
                     String url2 = alink.first().attr("abs:href");
                     Document doc2 = Jsoup.connect(url2).get();
-                    Elements pele2 = doc2.select("#main > div > div.row.infinite-article-body > div.col.col-11.col-tablet-8.article-content > article > div.col-push-2.col-push-tablet-1.content-responsive > p:contains(-- ) > a[data-source=inlineLink] ");
-                    Log.i("srcmarineinfo1", "mos_name" + mostitle);
-                    for(int j =0; j < pele2.size(); j ++) {
-                        Element link2 = pele2.get(j);
-                        String mnum = link2.html();
-                        Log.i("srcmarineinfo1", "mnum: " + mnum);
+
+                    Elements pele2 = doc2.select("#main > div > div.row.infinite-article-body > div.col.col-11.col-tablet-8.article-content > article > div.col-push-2.col-push-tablet-1.content-responsive > p > a[data-source=inlineLink]:matches(^\\d\\d\\d\\d$) ");
+
+                    if (pele2.size() == 0) {
+                        pele2 = doc2.select(" #content > article > p > a[data-source=inlineLink]:matches(^\\d\\d\\d\\d$) ");
+
+
+                    }
+                    if (pele2.size() == 0) {
+                        pele2 = doc2.select("#content > article > p > b > a[data-source=inlineLink]:matches(^\\d\\d\\d\\d$) ");
+
+
                     }
 
-                    /*    Element link2 = pele2.get(j);
 
+                    Log.i("srcmarineinfo1", "mos_name" + mostitle);
+                  /*  for (int j = 0; j < pele2.size(); j++) {
+                        Element link2 = pele2.get(j);
                         String mnum = link2.html();
                         values1.put(MOS_NUMBER, mnum);
                         values1.put(MOS_TITLE, mostitleId);
@@ -14515,7 +14832,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
                         values1.put(MOS_TYPE, "Enlisted");
                         Document doc3 = Jsoup.connect(link2.attr("abs:href")).get();
 
-                        Elements pele3 = doc3.select("#main > div > div.row.infinite-article-body > div.col.col-11.col-tablet-8.article-content > article > div.col-push-2.col-push-tablet-1.content-responsive > p:contains(Rank Range)");
+                        Elements pele3 = doc3.select(" p:contains(Rank Range)");
                         String parp3 = "N/A";
                         if (!pele3.isEmpty()) {
                             parp3 = pele3.first().text();
@@ -14524,87 +14841,34 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
                         values1.put(MOS_RANK, "sgt");
 
                         values1.put(MOS_Link, link2.attr("abs:href"));
+
                         database.insert(MOS, null, values1);
-                        Log.i("srcmarineinfo1", "mnum: " + mnum);
+
                         values1 = new ContentValues();
+
+
+                        Log.i("srcmarineinfo1", "mnum: " + mnum);
                     }*/
-
-
-
-
-/*
-
-
-                    dbs.insert(MOS, null, values1);*/
 
                     values = new ContentValues();
                 }
-/*
-                for (Element link : peleoff) {
-                    String mostitle = link.text();
-                    Elements alink = link.select("b > a");
-                    String url2 = alink.attr("href");
-                    Document doc2 = Jsoup.connect(url2).get();
-                    Elements pele2off = doc2.select("#main > div > div.row.infinite-article-body > div.col.col-11.col-tablet-8.article-content > article > div.col-push-2.col-push-tablet-1.content-responsive > p > a[data-source=inlineLink]:matches(\\d+)");
-
-
-                    Cursor cursor = database.query(params[0].MOSTITLES, null, "mos_name=" + mostitle, null, null, null, null);
-                    cursor.moveToFirst();
-
-                    long mostitleId = 0;
-
-                    if(cursor == null ||  cursor.getCount() == 0){
-                        values.put("mos_name", mostitle);
-                        values.put("mos_branch",  params[0].Branch_USMC);
-
-
-                         mostitleId =  database.insert(MOSTITLES, null, values);
-                    }else{
-                         mostitleId = Long.valueOf(cursor.getString(1)).longValue();
-                    }
-
-                    for (Element link2 : pele2off) {
-                        String mnum = link2.parent().text();
-                        values1.put(MOS_NUMBER, mnum);
-                        values1.put(MOS_TITLE, mostitleId);
-
-                        String parp2 = link2.parent().text();
-                        values1.put(MOS_NAME, parp2);
-                        Document doc3 = Jsoup.connect(link2.attr("href")).get();
-
-                        Elements rtype = doc3.select("#main > div > div.row.infinite-article-body > div.col.col-11.col-tablet-8.article-content > article > div.col-push-2.col-push-tablet-1.content-responsive > p:contains(Type of Officer)");
-                        String rtypestrg = rtype.first().text();
-                        if(rtypestrg.contains("Warrant")){
-                            values1.put(MOS_TYPE, "Warrant Officer");
-                        }else{
-                            values1.put(MOS_TYPE, "Officer");
-                        }
 
 
 
-
-                        Elements pele3 = doc3.select("#main > div > div.row.infinite-article-body > div.col.col-11.col-tablet-8.article-content > article > div.col-push-2.col-push-tablet-1.content-responsive > p:contains(Rank Range)");
-                        String parp3 = pele3.first().text();
-                        values1.put(MOS_RANK, parp3);
-                        values1.put(MOS_Link, link2.attr("href"));
-                        database.insert(MOS, null, values1);
-                        values1 = new ContentValues();
-                    }
-
-
-
-                }
-
-
-*/
-
-
-
-
-
-            } catch (IOException e) {
+                //  }//
+            } catch (SQLException e) {
+                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
+            catch (IOException e) {
+                e.printStackTrace();
+            }
+            finally {
+                if (database != null && database.isOpen()) {
+                    database.close();
+                }
+            }
+
             params[0].cancelprogressBar();
             return title;
 
@@ -14616,11 +14880,19 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
     }
 
 
-        @Override
+    @Override
     public void onCreate(SQLiteDatabase db) {
-            progressDialog = ProgressDialog.show(fContext,"Loading...",
+
+         //  progressDialog.show();
+        //progressDialog.setMessage("Loading application View, please wait...");
+        //progressDialog.setTitle("Loading...");
+
+            progressDialog = ProgressDialog.show(fContext, "Loading...",
                     "Loading application View, please wait...", false, false);
-            progressDialog.show();
+
+
+
+
         db.execSQL(DATABASE_CREATE);
         db.execSQL(DATABASE_CREATE2);
         db.execSQL(DATABASE_CREATE3);
@@ -14636,15 +14908,18 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
 
 
 
-
        // populateusmcmos(db);
        /* populateusafafsc(db);
         populatearmymos(db);
         populatenavycommunities(db);
         populateCGcommunities(db);
         populateack(db);*/
+           // db.close();
 
-            new MyTask().execute(this);
+           // new progdiataks(fContext).execute();
+
+                new USMCMosTask(db, fContext).execute(this);
+
 
 
 
@@ -14656,7 +14931,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
 
     public void cancelprogressBar (){
         progressDialog.cancel();
-        progressDialog.dismiss();
+       // progressDialog.dismiss();
     }
 
     @Override
