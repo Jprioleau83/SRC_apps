@@ -21,10 +21,12 @@ import com.cnsintegration.srcmarineinfo1.R;
 import com.cnsintegration.srcmarineinfo1.model.Rank;
 
 import org.jsoup.nodes.Node;
+import org.jsoup.nodes.TextNode;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
+import java.util.List;
 
 import org.jsoup.Jsoup;
 import org.jsoup.helper.Validate;
@@ -14784,7 +14786,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
 
 
                 Document doc = Jsoup.connect("http://usmilitary.about.com/od/enlistedjobs/tp/armyenlistedjobs.htm").get();
-                //Document docoff = Jsoup.connect("http://usmilitary.about.com/od/officerjob1/tp/ArmyOffJobs.htm").get();
+               // Document docoff = Jsoup.connect("http://usmilitary.about.com/od/officerjob1/tp/ArmyOffJobs.htm").get();
                 Document docoff = Jsoup.connect("http://usmilitary.about.com/od/officerjob1/a/armyofjobscomplete.htm").get();
 
 
@@ -14792,7 +14794,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
                // Elements peleoff = docoff.select("#content > article > section:nth-child(2) > div > h3 > a[data-source=outbound_list]");
                 //get all the links for army enlisted jobs pages
                 Elements peleinterval = doc.select("div.interval > div");
-                Elements peleintervaloff = docoff.select("div.interval > div");
+                //Elements peleintervaloff = docoff.select("div.interval > div");
 
                 /*for (int i = 0; i < peleinterval.size(); i++) {
                     Element jobpage = peleinterval.get(i);
@@ -14871,22 +14873,100 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
 
                    // values = new ContentValues();
                 }*/
+
                 Elements peleoff = docoff.select("a:matches(^BRANCH.\\d\\d)");
 
                 for (int k = 0; k < peleoff.size(); k++) {
                     Element link = peleoff.get(k);
-                    String mnum = link.ownText().replace("BRANCH ", "").trim();
+                    String mostitle = link.parent().text();
 
-                    String plist = link.parent().parent().ownText();
-                    if(plist.matches( "(.*)" + mnum + "(.-- )" ) ){
-                        //children with in the same p elem
-                        String chldren = link.parent().parent().ownText();
+
+                    Cursor cursor = database.query(params[0].MOSTITLES, null, "mos_name=\"" + mostitle + "\"", null, null, null, null);
+                    cursor.moveToFirst();
+
+                    long mostitleId = 0;
+
+                    if (cursor == null || cursor.getCount() == 0) {
+                        values.put("mos_name", mostitle);
+                        values.put("mos_branch", params[0].Branch_USARMY);
+
+
+                        mostitleId = database.insert(MOSTITLES, null, values);
+
+                    } else {
+                        mostitleId = cursor.getInt(0);
                     }
 
-                   // Node nextp = link.parent().parent().nextSibling();
 
 
-                    String mostitle = link.text().replace("BRANCH ","").trim();
+
+
+
+
+
+                    String mnum = link.ownText().replace("BRANCH ", "").trim();
+                    mnum = mnum.replace("-", "");
+
+
+                    List<Node> plist = link.parent().parent().childNodes();
+                    Node thisparent = link.parent();
+                
+
+
+                    String parp2 = null;
+                    //if p elemts are in the next sibling
+
+
+                    for (int l = 0; l < plist.size(); l++){
+                        Node tempnode = plist.get(l);
+
+                        if(tempnode.nodeName().toLowerCase() != "strong" && tempnode.nodeName().toLowerCase() != "br" && tempnode.nodeName().toLowerCase() != "a" ){
+                            TextNode tn = (TextNode) tempnode;
+                            parp2 = tn.text();
+                            if(tempnode.nextSibling().nodeName().equalsIgnoreCase("a")){
+
+                               Element nt = (Element)tempnode.nextSibling();
+                                parp2 = parp2 + " " + nt.ownText();
+
+
+
+                                values1.put(MOS_Link, nt.attr("abs:href"));
+
+
+
+
+                            }
+                            values1.put(MOS_NAME, parp2);
+
+                            values1.put(MOS_TYPE, "Officer");
+                            values1.put(MOS_NUMBER, mnum);
+                            values1.put(MOS_TITLE, mostitleId);
+                            database.insert(MOS, null, values1);
+
+                            values1 = new ContentValues();
+
+
+
+                        }
+
+
+
+                    }
+
+
+
+
+
+
+                    /*if(plist.matches( "(.*)" + mnum + "(.-- )" ) ){
+                        //children with in the same p elem
+                        String chldren = link.parent().parent().text();
+                    }
+
+                    Node nextp = link.parent().parent().nextSibling();
+                    */
+
+
 
 
 
@@ -14911,6 +14991,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
                         String url2 = peleoff.get(k).attr("abs:href");
                         Document doc2 = Jsoup.connect(url2).get();
                         Elements pele2off = doc2.select("a[data-source=inlineLink]:matches(^\\d\\d.$)");
+
 
 
                         Cursor cursor = database.query(params[0].MOSTITLES, null, "mos_name=\"" + mostitle + "\"", null, null, null, null);
