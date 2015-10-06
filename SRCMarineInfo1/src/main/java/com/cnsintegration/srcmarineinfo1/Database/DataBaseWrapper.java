@@ -14881,7 +14881,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
                     String mostitle = link.parent().text();
 
 
-                    Cursor cursor = database.query(params[0].MOSTITLES, null, "mos_name=\"" + mostitle + "\"", null, null, null, null);
+                    Cursor cursor = database.query(DataBaseWrapper.MOSTITLES, null, "mos_name=\"" + mostitle + "\"", null, null, null, null);
                     cursor.moveToFirst();
 
                     long mostitleId = 0;
@@ -14905,39 +14905,61 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
 
 
                     String mnum = link.ownText().replace("BRANCH ", "").trim();
-                    mnum = mnum.replace("-", "");
+
+                    if(mnum.endsWith("-"))
+                    {
+                        mnum = mnum.substring(0,mnum.length() - 1);
+                    }
+                    //mnum = mnum.replace("-", "");
 
 
                     List<Node> plist = link.parent().parent().childNodes();
-                    Node thisparent = link.parent();
+
                 
 
 
                     String parp2 = null;
                     //if p elemts are in the next sibling
 
-
+                    Boolean found = false;
                     for (int l = 0; l < plist.size(); l++){
                         Node tempnode = plist.get(l);
 
-                        if(tempnode.nodeName().toLowerCase() != "strong" && tempnode.nodeName().toLowerCase() != "br" && tempnode.nodeName().toLowerCase() != "a" ){
+                        if(tempnode.nodeName().toLowerCase() != "strong" && tempnode.nodeName().toLowerCase() != "br" && tempnode.nodeName().toLowerCase() != "a" ) {
                             TextNode tn = (TextNode) tempnode;
                             parp2 = tn.text();
-                            if(tempnode.nextSibling().nodeName().equalsIgnoreCase("a")){
+                            found = true;
+                            if(mnum.contains("-")){
+                                String[] range = mnum.split("-");
+                                for(int r = Integer.parseInt(range[0]); r <  Integer.parseInt(range[1]); r++   ){
+                                    if(!tn.text().startsWith(String.valueOf(r)) ){
+                                        continue;
+                                    }
+                                }
 
-                               Element nt = (Element)tempnode.nextSibling();
+
+
+
+                            }else{
+                                if(!tn.text().startsWith(mnum) ){
+                                    continue;
+                                }
+                            }
+
+
+                            if (l < plist.size()-1 && tempnode.nextSibling().nodeName().equalsIgnoreCase("a")) {
+
+                                Element nt = (Element) tempnode.nextSibling();
                                 parp2 = parp2 + " " + nt.ownText();
-
 
 
                                 values1.put(MOS_Link, nt.attr("abs:href"));
 
 
-
-
                             }
-                            values1.put(MOS_NAME, parp2);
 
+                            values1.put(MOS_NAME, parp2);
+                            values1.put(MOS_RANK, "N/A" );
                             values1.put(MOS_TYPE, "Officer");
                             values1.put(MOS_NUMBER, mnum);
                             values1.put(MOS_TITLE, mostitleId);
@@ -14951,6 +14973,44 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
 
 
 
+                    }
+                    if(found == false){
+                        List<Node> plist1 = link.parent().parent().nextSibling().childNodes();
+                        for (int m = 0; m < plist1.size(); m++) {
+                            Node tempnode = plist1.get(m);
+
+                            if(tempnode.nodeName().toLowerCase() != "strong" && tempnode.nodeName().toLowerCase() != "br" && tempnode.nodeName().toLowerCase() != "a" ) {
+                                TextNode tn = (TextNode) tempnode;
+                                parp2 = tn.text();
+                                found = true;
+                                if(!tn.text().startsWith(mnum) ){
+                                    continue;
+                                }
+                                if (m < plist1.size()-1 && tempnode.nextSibling().nodeName().equalsIgnoreCase("a")) {
+
+                                    Element nt = (Element) tempnode.nextSibling();
+                                    parp2 = parp2 + " " + nt.ownText();
+
+
+                                    values1.put(MOS_Link, nt.attr("abs:href"));
+
+
+                                }
+
+                                values1.put(MOS_NAME, parp2);
+                                values1.put(MOS_RANK, "N/A" );
+                                values1.put(MOS_TYPE, "Officer");
+                                values1.put(MOS_NUMBER, mnum);
+                                values1.put(MOS_TITLE, mostitleId);
+                                database.insert(MOS, null, values1);
+
+                                values1 = new ContentValues();
+
+
+
+                            }
+                        }
+                            Log.i("srcmarineinfo1", "found was : false");
                     }
 
 
