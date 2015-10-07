@@ -15019,8 +15019,8 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
                 Document doc = Jsoup.connect("http://usmilitary.about.com/od/airforceenlistedjobs/a/afjobs.htm").get();
                 // Document docoff = Jsoup.connect("http://usmilitary.about.com/od/officerjob1/tp/ArmyOffJobs.htm").get();
                 Document docoff = Jsoup.connect("http://usmilitary.about.com/od/officerjobs/a/afoffjobs.htm").get();
-                Elements pele = doc.select("#content > article > p > a[data-source=inlineLink]:matches(^\\d.$)");
-                Elements peleoff = docoff.select("#content > article > p > a[data-source=inlineLink]:matches(^\\d.$)");
+                Elements pele = doc.select("a[data-source=inlineLink]:matches(^\\d..[-] )");
+                Elements peleoff = docoff.select("a[data-source=inlineLink]:matches(^\\d.[-]  )");
 
 
                 for (int i = 0; i < pele.size(); i++) {
@@ -15040,7 +15040,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
                     String url2 = link.attr("abs:href");
                     Document doc2 = Jsoup.connect(url2).get();
 
-                    Elements pele2 = doc2.select("#main > div > div.row.infinite-article-body > div.col.col-11.col-tablet-8.article-content > article > div.col-push-2.col-push-tablet-1.content-responsive > p > a[data-source=inlineLink]:matches(^\\d. ) ");
+                   /* Elements pele2 = doc2.select("#main > div > div.row.infinite-article-body > div.col.col-11.col-tablet-8.article-content > article > div.col-push-2.col-push-tablet-1.content-responsive > p > a[data-source=inlineLink]:matches(^\\d. ) ");
 
                     if (pele2.size() == 0) {
                         pele2 = doc2.select(" #content > article > p > a[data-source=inlineLink]:matches(^\\d. ) ");
@@ -15051,15 +15051,29 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
                         pele2 = doc2.select("#content > article > p > b > a[data-source=inlineLink]:matches(^\\d. ) ");
 
 
-                    }
+                    }*/
+                   // if (pele2.size() == 0) {
+                        Elements pele2 = doc2.select("a[data-source=inlineLink]:matches(^\\d..X.) ");
+
+
+                  //  }
                     for (int j = 0; j < pele2.size(); j++) {
                         Element link2 = pele2.get(j);
-                        String mnum = link2.html();
+                        String mnum = link2.text();
                         values1.put(MOS_NUMBER, mnum);
                         values1.put(MOS_TITLE, mostitleId);
 
-                        String parp2 = link2.parent().ownText();
-                        values1.put(MOS_NAME, parp2);
+                        String url3 = link2.attr("abs:href");
+                        String parp2 = "";
+                      
+                        if(link2.parent().nodeName() == "p"){
+                            List<Node> parnodes = link2.parent().childNodes();
+                            link2.
+                            parp2 = link2.parent().text();
+
+                        }
+                        //String parp2 = link2.parent().parent().text();
+                        values1.put(MOS_NAME, "N/A");
                         values1.put(MOS_TYPE, "Enlisted");
 
 
