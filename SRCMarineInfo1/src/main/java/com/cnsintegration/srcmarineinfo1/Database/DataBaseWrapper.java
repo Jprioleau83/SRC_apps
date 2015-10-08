@@ -14450,26 +14450,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
 
     }
 
-    private class progdiataks extends AsyncTask<Void, Void, String> {
-        public Context pcontext;
-        public progdiataks(Context fc) {
-            this.pcontext = fc;
-            ProgressDialog progressDialog = ProgressDialog.show(fc, "Loading...",
-                    "Loading application View, please wait...", false, false);
-            ContentValues values = new ContentValues();
 
-        }
-
-        @Override
-        protected String doInBackground(Void... params) {
-
-
-         return "test";
-        }
-
-
-
-    }
 
 
 
@@ -14711,7 +14692,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
 */
           // params[0].cancelprogressBar();
            // armyMos(params[0]);
-            usafafsc(params[0]);
+            navyCommunities(params[0]);
             return title;
 
 
@@ -15300,8 +15281,309 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
 
             }
 
+        protected String navyCommunities(DataBaseWrapper... params){
+            String title ="";
+            ContentValues values = new ContentValues();
+            ContentValues values1 = new ContentValues();
 
-    }
+            // SQLiteDatabase database = params[0].getWritableDatabase();
+            SQLiteOpenHelper dbhelper = new DataBaseWrapper(pcontext);
+            database = dbhelper.getWritableDatabase();
+
+
+
+            try {
+                Document doc = Jsoup.connect("http://usmilitary.about.com/od/enlistedjob1/a/navyjobs.htm").get();
+                // Document docoff = Jsoup.connect("http://usmilitary.about.com/od/officerjob1/tp/ArmyOffJobs.htm").get();
+                Document docoff = Jsoup.connect("https://en.wikipedia.org/wiki/List_of_Naval_Officer_Designators").get();
+                Elements pele = doc.select("a[data-source=inlineLink]:matches(Community$)");
+                Elements peleoff = docoff.select("#bodyContent > h2");
+
+
+                for (int i = 0; i < pele.size(); i++) {
+                    Element link = pele.get(i);
+                    String mostitle = link.text().trim();
+
+
+                    values.put("mos_name", mostitle);
+                    values.put("mos_branch", params[0].Branch_USNAVY);
+                    long mostitleId = 0;
+
+                    mostitleId = database.insert(MOSTITLES, null, values);
+                    Log.i("srcmarineinfo1", "mos_name" + mostitle);
+                    // System.out.println(" mos_name: " + mostitle);
+
+                    // Elements alink = link.select("b > a");
+                    String url2 = link.attr("abs:href");
+                    Document doc2 = Jsoup.connect(url2).get();
+
+
+                    Elements pele2 = doc2.select("a[data-source=inlineLink] ");
+
+
+
+
+                    for (int j = 0; j < pele2.size(); j++) {
+                        Element link2 = pele2.get(j);
+                        String mnum = link2.text();
+                        values1.put(MOS_NUMBER, mnum);
+                        values1.put(MOS_TITLE, mostitleId);
+
+                        String url3 = link2.attr("abs:href");
+                        String parp2 = "";
+
+                        if(link2.parent().nodeName() == "p"){
+                            List<Node> parnodes = link2.parent().childNodes();
+                            Boolean link2found = false;
+                            for (int f = 0; f < parnodes.size(); f++){
+
+                                if(parnodes.get(f).equals(link2)){
+                                    link2found = true;
+                                }
+                                if(parnodes.get(f) instanceof TextNode && link2found == true && parnodes.get(f).nodeName() != "strong" ){
+                                    parp2 = ((TextNode) parnodes.get(f)).text();
+                                    break;
+                                }
+
+                            }
+
+
+                        }
+                        if(link2.parent().nodeName() == "b"){
+                            List<Node> parnodes = link2.parent().parent().childNodes();
+                            Boolean link2found = false;
+                            for (int f = 0; f < parnodes.size(); f++){
+
+                                if(parnodes.get(f).equals(link2)){
+                                    link2found = true;
+                                }
+                                if(parnodes.get(f) instanceof TextNode && link2found == true && parnodes.get(f).nodeName() != "strong" ){
+                                    parp2 = ((TextNode) parnodes.get(f)).text();
+                                    break;
+                                }
+
+                            }
+
+
+                        }
+
+
+
+
+
+
+
+                        //String parp2 = link2.parent().parent().text();
+                        values1.put(MOS_NAME, parp2);
+                        values1.put(MOS_TYPE, "Enlisted");
+
+
+                        values1.put(MOS_RANK, "N/A");
+
+                        values1.put(MOS_Link, link2.attr("abs:href"));
+
+                        database.insert(MOS, null, values1);
+
+                        values1 = new ContentValues();
+
+
+                        Log.i("srcmarineinfo1", "mnum: " + mnum);
+                    }
+
+
+
+
+                }
+                for (int i = 0; i < peleoff.size(); i++) {
+                    Element link = peleoff.get(i);
+                    String mostitle = link.text().trim();
+
+
+                    Cursor cursor = database.query(DataBaseWrapper.MOSTITLES, null, "mos_name=\"" + mostitle + "\"", null, null, null, null);
+                    cursor.moveToFirst();
+
+                    long mostitleId = 0;
+
+                    if (cursor == null || cursor.getCount() == 0) {
+                        values.put("mos_name", mostitle);
+                        values.put("mos_branch", params[0].Branch_USAF);
+
+
+                        mostitleId = database.insert(MOSTITLES, null, values);
+
+                    } else {
+                        mostitleId = cursor.getInt(0);
+                    }
+
+
+                    // System.out.println(" mos_name: " + mostitle);
+
+                    // Elements alink = link.select("b > a");
+
+
+                    String childdivid = link.attr("aria-controls");
+                  //  String url2 = link.attr("abs:href");
+                   // Document doc2 = Jsoup.connect(url2).get();
+                    Elements pele2 = docoff.select("#" + childdivid );
+                    Log.i("srcmarineinfo1", "mos_name" + mostitle);
+
+                }
+
+               /* for (int i = 0; i < peleoff.size(); i++) {
+                    Element link = peleoff.get(i);
+                    String mostitle = link.text().trim();
+
+
+
+
+                    Cursor cursor = database.query(DataBaseWrapper.MOSTITLES, null, "mos_name=\"" + mostitle + "\"", null, null, null, null);
+                    cursor.moveToFirst();
+
+                    long mostitleId = 0;
+
+                    if (cursor == null || cursor.getCount() == 0) {
+                        values.put("mos_name", mostitle);
+                        values.put("mos_branch", params[0].Branch_USAF);
+
+
+                        mostitleId = database.insert(MOSTITLES, null, values);
+
+                    } else {
+                        mostitleId = cursor.getInt(0);
+                    }
+
+
+                    // System.out.println(" mos_name: " + mostitle);
+
+                    // Elements alink = link.select("b > a");
+                    Log.i("srcmarineinfo1", "mos_name" + mostitle);
+
+
+                    String url2 = link.attr("abs:href");
+                    Document doc2 = Jsoup.connect(url2).get();
+
+                    // Elements pele2 = doc2.select("#main > div > div.row.infinite-article-body > div.col.col-11.col-tablet-8.article-content > article > div.col-push-2.col-push-tablet-1.content-responsive > p > a[data-source=inlineLink]:matches(^\\d. ) ");
+
+                    Elements pele2 = doc2.select("a[data-source=inlineLink]:matches(\\d..X.) ");
+                    if(pele2.size() == 0){
+                        pele2 = doc2.select("strong > a:matches(\\d..X.) ");
+                    }
+
+                    //  }
+                    if (pele2.size() == 0) {
+
+                        String mnum = link.text();
+                        values1.put(MOS_NUMBER, mnum);
+                        values1.put(MOS_TITLE, mostitleId);
+                        values1.put(MOS_NAME, mnum);
+                        values1.put(MOS_TYPE, "Enlisted");
+
+
+                        values1.put(MOS_RANK, "N/A");
+
+                        values1.put(MOS_Link, link.attr("abs:href"));
+
+                        database.insert(MOS, null, values1);
+                        Log.i("srcmarineinfo1", "mnum: " + mnum);
+
+                        values1 = new ContentValues();
+
+                    }
+                    for (int j = 0; j < pele2.size(); j++) {
+                        Element link2 = pele2.get(j);
+                        String mnum = link2.text();
+                        values1.put(MOS_NUMBER, mnum);
+                        values1.put(MOS_TITLE, mostitleId);
+
+                        String url3 = link2.attr("abs:href");
+                        String parp2 = "";
+
+                        if(link2.parent().nodeName() == "p"){
+                            List<Node> parnodes = link2.parent().childNodes();
+                            Boolean link2found = false;
+                            for (int f = 0; f < parnodes.size(); f++){
+
+                                if(parnodes.get(f).equals(link2)){
+                                    link2found = true;
+                                }
+                                if(parnodes.get(f) instanceof TextNode && link2found == true && parnodes.get(f).nodeName() != "strong" ){
+                                    parp2 = ((TextNode) parnodes.get(f)).text();
+                                    break;
+                                }
+
+                            }
+
+
+                        }
+                        if(link2.parent().nodeName() == "b"){
+                            List<Node> parnodes = link2.parent().parent().childNodes();
+                            Boolean link2found = false;
+                            for (int f = 0; f < parnodes.size(); f++){
+
+                                if(parnodes.get(f).equals(link2)){
+                                    link2found = true;
+                                }
+                                if(parnodes.get(f) instanceof TextNode && link2found == true && parnodes.get(f).nodeName() != "strong" ){
+                                    parp2 = ((TextNode) parnodes.get(f)).text();
+                                    break;
+                                }
+
+                            }
+
+
+                        }
+
+
+
+
+
+
+
+                        //String parp2 = link2.parent().parent().text();
+                        values1.put(MOS_NAME, parp2);
+                        values1.put(MOS_TYPE, "Officer");
+
+
+                        values1.put(MOS_RANK, "N/A");
+
+                        values1.put(MOS_Link, link2.attr("abs:href"));
+
+                        database.insert(MOS, null, values1);
+
+                        values1 = new ContentValues();
+
+
+
+                        Log.i("srcmarineinfo1", "mnum: " + mnum);
+                    }
+
+
+
+
+                }*/
+
+
+
+            } catch (SQLException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+            catch (IOException e) {
+                e.printStackTrace();
+            }
+            finally {
+                if (database != null && database.isOpen()) {
+                    database.close();
+                }
+            }
+
+            params[0].cancelprogressBar();
+            return title;
+
+        }
+
+
+    }//endusmcmostask
 
 
     private class USArmyTask extends AsyncTask<DataBaseWrapper, Void, String> {
