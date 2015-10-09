@@ -272,6 +272,7 @@ public class MOSFrag extends Fragment {
             if (values1.size() == 0) {
 
                 _listDataHeader.remove(i);
+                i--;
 
                 continue;
             }
