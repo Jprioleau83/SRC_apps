@@ -15297,7 +15297,7 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
                 // Document docoff = Jsoup.connect("http://usmilitary.about.com/od/officerjob1/tp/ArmyOffJobs.htm").get();
                 Document docoff = Jsoup.connect("https://en.wikipedia.org/wiki/List_of_Naval_Officer_Designators").get();
                 Elements pele = doc.select("a[data-source=inlineLink]:matches(Community$)");
-                Elements peleoff = docoff.select("#bodyContent > h2");
+                Elements peleoff = docoff.select("#bodyContent > h2:matches(^.\\d)");
 
 
                 for (int i = 0; i < pele.size(); i++) {
@@ -15414,18 +15414,62 @@ public class DataBaseWrapper extends SQLiteOpenHelper {
                     } else {
                         mostitleId = cursor.getInt(0);
                     }
-
+                    Log.i("srcmarineinfo1", "mos_name" + mostitle);
 
                     // System.out.println(" mos_name: " + mostitle);
 
                     // Elements alink = link.select("b > a");
 
 
-                    String childdivid = link.attr("aria-controls");
+                   // String childdivid = link.attr("aria-controls");
                   //  String url2 = link.attr("abs:href");
                    // Document doc2 = Jsoup.connect(url2).get();
-                    Elements pele2 = docoff.select("#" + childdivid );
-                    Log.i("srcmarineinfo1", "mos_name" + mostitle);
+                    //if()
+                    Element pele2 = link.nextElementSibling();
+                    Elements pele2text = pele2.children();
+                    String officertype = "";
+                    for(int p = 0; p < pele2text.size(); p ++){
+                        if(pele2text.get(p).nodeName() == "h3"){
+                            officertype =  pele2text.get(p).select("span").first().ownText();
+                            Log.i("srcmarineinfo1", "found h3");
+
+                        }
+                        if(pele2text.get(p).nodeName() == "table"){
+                            Elements tableelements = pele2text.get(p).select("td");
+                            for(int q = 0; q < tableelements.size(); q++){
+                                if(tableelements.get(q).child(0).nodeName() == "b"){
+                                    //
+                                    String mnum = tableelements.get(q).child(0).ownText();
+                                    values1.put(MOS_NUMBER, mnum);
+                                    values1.put(MOS_TITLE, mostitleId);
+                                    String mosname = tableelements.get(q).nextElementSibling().text();
+                                    values1.put(MOS_NAME, mosname);
+                                    values1.put(MOS_TYPE, officertype);
+
+
+                                    values1.put(MOS_RANK, "N/A");
+
+                                    if(tableelements.get(q).nextElementSibling().select("a").size() > 0 ){
+
+                                        values1.put(MOS_Link, tableelements.get(q).nextElementSibling().select("a").first().attr("abs:href"));
+                                    }
+
+
+
+                                    database.insert(MOS, null, values1);
+                                    Log.i("srcmarineinfo1", "mnum: " + mnum);
+
+                                    values1 = new ContentValues();
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+
+
 
                 }
 
