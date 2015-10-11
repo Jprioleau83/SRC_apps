@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.cnsintegration.srcmarineinfo1"
     android:versionCode="5"
-    android:versionName="5.0.937" >
+    android:versionName="5.0.1073">
 
     <uses-sdk
         android:minSdkVersion="14"
@@ -20,7 +20,8 @@
         android:theme="@style/Theme.mycuss" >
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:configChanges="orientation|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

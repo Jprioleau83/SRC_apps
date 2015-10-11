@@ -47,6 +47,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.DateFormat;
 import java.util.ArrayList;
@@ -143,6 +144,7 @@ public class MainActivity extends FragmentActivity
         adapter = new NavDrawerListAdapter(getApplicationContext(),
                 navDrawerItems);
         mDrawerList.setAdapter(adapter);
+
 
         // enabling action bar app icon and behaving it as toggle button
         getActionBar().setDisplayHomeAsUpEnabled(true);
@@ -310,9 +312,17 @@ public class MainActivity extends FragmentActivity
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
+        // Checks the orientation of the screen for landscape and portrait
+
+
         // Pass any configuration change to the drawer toggls
-        mDrawerToggle.onConfigurationChanged(newConfig);
-        setContentView(R.layout.activity_main);
+       // mDrawerToggle.onConfigurationChanged(newConfig);
+        //setContentView(R.layout.activity_main);
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        if (!prefs.getBoolean("firstTime", false)) {
+            sv.show();
+        }
+       //
     }
 
 
@@ -322,14 +332,14 @@ public class MainActivity extends FragmentActivity
     private void displayView(int position) {
         // update the main content by replacing fragments
         Fragment fragment = null;
-        HomeFragment hfragment = null;
+        ActionFragment afragment = null;
 
         int casenum = 0;
         switch (position) {
             case 0:
-                fragment = new ActionFragment();
+                afragment = new ActionFragment();
 
-                hfragment = new HomeFragment();
+                fragment = new HomeFragment();
                 break;
             case 1:
                 fragment = new ServiceFragment(0);
@@ -371,6 +381,7 @@ public class MainActivity extends FragmentActivity
         if (fragment != null) {
             FragmentManager fragmentManager = getSupportFragmentManager();
 
+
             if (casenum == 0) {
 
 
@@ -383,12 +394,14 @@ public class MainActivity extends FragmentActivity
 
 
 
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, hfragment).addToBackStack(null).commit();
+                    fragmentManager.beginTransaction().replace(R.id.fragment_container, fragment).addToBackStack(null).commit();
+                   // fragmentManager.saveFragmentInstanceState(fragment);
                 } else {
 
 
-                    getSupportFragmentManager().beginTransaction().replace(R.id.service_fragment, fragment).addToBackStack(null)
-                            .replace(R.id.rank_fragment, hfragment).commit();
+                    fragmentManager.beginTransaction().replace(R.id.service_fragment, afragment).addToBackStack(null)
+                            .replace(R.id.rank_fragment, fragment).commit();
+                   // fragmentManager.saveFragmentInstanceState(fragment);
 
                 }
                 onHomeCreated();
@@ -407,9 +420,11 @@ public class MainActivity extends FragmentActivity
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).addToBackStack(null).commit();
 
 
+
                 } else {
                     //TODO:  add blank fragment
                     getSupportFragmentManager().beginTransaction().replace(R.id.service_fragment, fragment).addToBackStack(null).addToBackStack(null).commit();
+
                     //.replace(R.id.rank_fragment, rankFrag).addToBackStack(null).commit();
 
 
@@ -430,9 +445,11 @@ public class MainActivity extends FragmentActivity
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, Mfragment).addToBackStack(null).commit();
 
 
+
                 } else {
                     getSupportFragmentManager().beginTransaction().replace(R.id.service_fragment, fragment).addToBackStack(null)
                             .replace(R.id.rank_fragment, Mfragment).addToBackStack(null).commit();
+
 
 
                 }
@@ -445,6 +462,7 @@ public class MainActivity extends FragmentActivity
 
                 if (findViewById(R.id.fragment_container) != null) {
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).addToBackStack(null).commit();
+
                 } else {
 
 
@@ -456,6 +474,7 @@ public class MainActivity extends FragmentActivity
                     MOSFrag mosFragview = new MOSFrag();
                     getSupportFragmentManager().beginTransaction().replace(R.id.service_fragment, fragment).addToBackStack(null)
                             .replace(R.id.rank_fragment, mosFragview).commit();
+
                     onRankCreated();
 
 
@@ -526,6 +545,7 @@ public class MainActivity extends FragmentActivity
                     //.replace(R.id.rank_fragment, rankFrag).addToBackStack(null).commit();
 
 
+
                 }
 
 
@@ -536,6 +556,7 @@ public class MainActivity extends FragmentActivity
             mDrawerList.setSelection(position);
             setTitle(navMenuTitles[position]);
             mDrawerLayout.closeDrawer(mDrawerList);
+
         } else {
             // error in creating fragment
             Log.e("MainActivity", "Error in creating fragment");
