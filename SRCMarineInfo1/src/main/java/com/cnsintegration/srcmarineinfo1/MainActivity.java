@@ -363,7 +363,8 @@ public class MainActivity extends FragmentActivity
                 break;
 
             case 5:
-                fragment = new OrgFragment();
+                fragment = new OrgviewerFragment(getSupportFragmentManager());
+
 
                 casenum = 5;
                 break;
@@ -525,6 +526,36 @@ public class MainActivity extends FragmentActivity
 
 
                 }
+
+                SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+                if (!prefs.getBoolean("firstTimeORG", false)) {
+                    // run your one time code
+                    SharedPreferences.Editor editor = prefs.edit();
+                    editor.putBoolean("firstTimeORG", true);
+                    editor.commit();
+
+
+                    ShowcaseView.ConfigOptions co = new ShowcaseView.ConfigOptions();
+
+                    co.hideOnClickOutside = true;
+                    co.fadeInDuration = 700;
+                    co.fadeOutDuration = 700;
+
+
+
+                    Display display = getWindowManager().getDefaultDisplay();
+                    final Point size = new Point();
+                    display.getSize(size);
+                    int height = size.y;
+                    int width = size.x;
+                    float centerY = height / 2;
+                    PointTarget pg = new PointTarget(width / 2, (int) centerY);
+
+                    sv = ShowcaseView.insertShowcaseView(pg, this, R.string.showcase_main_rank_title, R.string.showcase_main_rank_message, co);
+                    sv.animateGesture(width - 15, (int) centerY, 0, (int) centerY);
+                    sv.setOnShowcaseEventListener(this);
+                }
+
 
 
             }

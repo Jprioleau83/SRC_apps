@@ -23,8 +23,11 @@ public class OrgFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private int res1;
 
-
+    public OrgFragment(int res1) {
+        this.res1 = res1;
+    }
 
     /**
      * Use this factory method to create a new instance of
@@ -67,7 +70,7 @@ public class OrgFragment extends Fragment {
         con = getActivity();
 
         TouchImageView img = new TouchImageView(con);
-        img.setImageResource(R.drawable.spawarorgcht);
+        img.setImageResource(res1);
         img.setMaxZoom(4f);
 
 
