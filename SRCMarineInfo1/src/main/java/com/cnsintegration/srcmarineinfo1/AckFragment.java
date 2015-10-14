@@ -46,6 +46,7 @@ public class AckFragment extends Fragment {
 
 
     public static int mActiontype;
+    public String ltr ="";
     int mCurrentPosition = -1;
     public Context mCtx;
     ListView list;
@@ -65,6 +66,12 @@ public class AckFragment extends Fragment {
     public String[] Ack_TABLE_COLUMNS = { "id", DataBaseWrapper.Ack, DataBaseWrapper.Ack_Name, DataBaseWrapper.Ack_Details, DataBaseWrapper.Ack_Link, DataBaseWrapper.Ack_Icon };
     final static String ARG_POSITION = "position";
 
+    public AckFragment(String letter) {
+
+        ltr = letter;
+
+    }
+
     public AckFragment() {
 
 
@@ -72,12 +79,10 @@ public class AckFragment extends Fragment {
     }
 
 
-
-
     public List getAllAck() {
         List acks = new ArrayList();
 
-        Cursor cursor = database.query(DataBaseWrapper.Ackdb, Ack_TABLE_COLUMNS , null, null, null, null, null);
+        Cursor cursor = database.query(DataBaseWrapper.Ackdb, Ack_TABLE_COLUMNS , "ack LIKE '" + ltr +"%'", null, null, null,"ack");
 
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {

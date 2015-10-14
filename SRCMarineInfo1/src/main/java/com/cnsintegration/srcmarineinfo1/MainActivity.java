@@ -1,18 +1,10 @@
 package com.cnsintegration.srcmarineinfo1;
 
 
-import android.annotation.TargetApi;
-import android.app.Activity;
-import android.app.Dialog;
-import android.app.ProgressDialog;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
-import android.graphics.Color;
 import android.graphics.Point;
 import android.graphics.Typeface;
-import android.graphics.drawable.ColorDrawable;
-import android.os.Build;
 import android.preference.PreferenceManager;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
@@ -24,7 +16,6 @@ import android.content.res.Configuration;
 
 import com.cnsintegration.srcmarineinfo1.Database.DataBaseWrapper;
 import com.cnsintegration.srcmarineinfo1.adapter.MyAdapter;
-import com.cnsintegration.srcmarineinfo1.adapter.RankData;
 import com.cnsintegration.srcmarineinfo1.model.NavDrawerItem;
 import com.cnsintegration.srcmarineinfo1.adapter.NavDrawerListAdapter;
 
@@ -40,14 +31,11 @@ import android.view.MenuItem;
 import android.view.View;
 
 import android.view.ViewGroup;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.text.DateFormat;
 import java.util.ArrayList;
@@ -61,11 +49,10 @@ import com.espian.showcaseview.OnShowcaseEventListener;
 import com.espian.showcaseview.ShowcaseView;
 import com.espian.showcaseview.targets.ActionViewTarget;
 import com.espian.showcaseview.targets.PointTarget;
-import com.espian.showcaseview.targets.ViewTarget;
 
 public class MainActivity extends FragmentActivity
         implements ActionFragment.OnServicesSelectedListener, ServiceFragment.OnServicesSelectedListener, ServiceFragment.OnServicesSelectedListener2, RankFragment.OnRankCreated, RankFragment.OnRankCreatedListener1, HomeFragment.OnHomeCreatedListener, MilitaryTimeFragment.OnMilitaryTimeListener,
-        RankTypeFragment.OnRankTypeSelectedListener, OnShowcaseEventListener, MOSTypeFragment.OnMOSTypeSelectedListener {
+        RankTypeFragment.OnRankTypeSelectedListener, OnShowcaseEventListener, MOSTypeFragment.OnMOSTypeSelectedListener, AckTypeFragment.OnAckheadSelectedListener {
 
 
     private DrawerLayout mDrawerLayout;
@@ -370,7 +357,7 @@ public class MainActivity extends FragmentActivity
                 break;
 
             case 6:
-                fragment = new AckFragment();
+                fragment = new AckTypeFragment();
 
                 casenum = 6;
                 break;
@@ -679,8 +666,6 @@ public class MainActivity extends FragmentActivity
 
     }
 
-
-
     public void onRankTypeSelected(String ranktype, int position) {
         if (findViewById(R.id.fragment_container) != null) {
 
@@ -697,6 +682,30 @@ public class MainActivity extends FragmentActivity
         } else {
             //two columns view
             RankFragment rt = new RankFragment(ranktype, position);
+
+            getSupportFragmentManager().beginTransaction().replace(R.id.rank_fragment, rt).addToBackStack(null).commit();
+
+        }
+
+
+    }
+
+    public void onAckTypeSelected(String ranktype) {
+        if (findViewById(R.id.fragment_container) != null) {
+
+            AckFragment af = new AckFragment(ranktype);
+            Bundle args = new Bundle();
+
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+
+            transaction.replace(R.id.fragment_container, af);
+            transaction.addToBackStack(null);
+            transaction.commit();
+
+
+        } else {
+            //two columns view
+            AckFragment rt = new AckFragment(ranktype);
 
             getSupportFragmentManager().beginTransaction().replace(R.id.rank_fragment, rt).addToBackStack(null).commit();
 

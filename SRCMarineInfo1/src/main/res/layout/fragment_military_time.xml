@@ -3,7 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.cnsintegration.srcmarineinfo1.MilitaryTimeFragment">
-
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView2">
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
@@ -668,5 +671,8 @@
 
 
     </LinearLayout>
+
+    </ScrollView>
+
 
 </FrameLayout>

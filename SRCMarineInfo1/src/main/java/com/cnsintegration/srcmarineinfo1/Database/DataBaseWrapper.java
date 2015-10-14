@@ -14436,19 +14436,98 @@ public class DataBaseWrapper extends SQLiteOpenHelper implements OnTaskCompleted
 
     public void populateack(SQLiteDatabase db){
 
-    ContentValues values1 = new ContentValues();
-   // values1 = new ContentValues();
-    values1.put(Ack, "EPLRS");
-    values1.put(Ack_Name, "Enhanced Position Location Relay System");
-    values1.put(Ack_Details, "The Enhanced Position Location Reporting System (EPLRS) is a secure, jam resistant, computer controlled communications network that distributes near real-time tactical information, generally integrated into radio sets, and coordinated by a Network Control Station.[1] It is primarily used for data distribution, and position location and reporting. It enhances command and control of tactical units by providing commanders with the location of friendly units.[2] It was first fielded by the US Army in 1987.");
-    values1.put(Ack_Link, "http://en.wikipedia.org/wiki/Enhanced_Position_Location_Reporting_System");
-    values1.put(Ack_Icon, "eplrs");
+        ContentValues values1 = new ContentValues();
+       // values1 = new ContentValues();
+        values1.put(Ack, "EPLRS");
+        values1.put(Ack_Name, "Enhanced Position Location Relay System");
+        values1.put(Ack_Details, "The Enhanced Position Location Reporting System (EPLRS) is a secure, jam resistant, computer controlled communications network that distributes near real-time tactical information, generally integrated into radio sets, and coordinated by a Network Control Station.[1] It is primarily used for data distribution, and position location and reporting. It enhances command and control of tactical units by providing commanders with the location of friendly units.[2] It was first fielded by the US Army in 1987.");
+        values1.put(Ack_Link, "http://en.wikipedia.org/wiki/Enhanced_Position_Location_Reporting_System");
+        values1.put(Ack_Icon, "eplrs");
 
-    db.insert(Ackdb, null, values1);
+        db.insert(Ackdb, null, values1);
+        values1 = new ContentValues();
+
+        values1.put(Ack, "ACT");
+        values1.put(Ack_Name, "Application Configuration Tool");
+        values1.put(Ack_Details, "The Enhanced Position Location Reporting System (EPLRS) is a secure, jam resistant, computer controlled communications network that distributes near real-time tactical information, generally integrated into radio sets, and coordinated by a Network Control Station.[1] It is primarily used for data distribution, and position location and reporting. It enhances command and control of tactical units by providing commanders with the location of friendly units.[2] It was first fielded by the US Army in 1987.");
+
+        values1.put(Ack_Icon, "usmc");
+
+        db.insert(Ackdb, null, values1);
+
+        values1 = new ContentValues();
+
+        values1.put(Ack, "ACE");
+        values1.put(Ack_Name, "Aviation Combat Element");
+        values1.put(Ack_Details, "In the United States Marine Corps, the aviation combat element or air combat element (ACE) is the air arm of the Marine Air-Ground Task Force (MAGTF). It provides rotary-wing, tiltrotor, and fixed-wing aircraft, support equipment, pilots, maintenance personnel, as well as command and control assets to the commander");
+        values1.put(Ack_Link, "https://en.wikipedia.org/wiki/Aviation_combat_element");
+        values1.put(Ack_Icon, "usmc");
+
+        db.insert(Ackdb, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(Ack, "C2");
+        values1.put(Ack_Name, "Command and Control");
+        values1.put(Ack_Details, "The US Department of Defense Dictionary of Military and Associated Terms defines command and control as: The exercise of authority and direction by a properly designated commander over assigned and attached forces in the accomplishment of the mission. ");
+        values1.put(Ack_Link, "https://en.wikipedia.org/wiki/Command_and_control");
+        values1.put(Ack_Icon, "usmc");
+
+        db.insert(Ackdb, null, values1);
+        values1 = new ContentValues();
+        values1.put(Ack, "C2PC");
+        values1.put(Ack_Name, "Command and Control Personal Computer");
+        values1.put(Ack_Details, "C2PC displays the COP from a Global Command and Control System (GCCS)-based server or tactical data from other C2PC workstations. Users can view and edit the COP, apply overlays, display imagery, send and receive tactical messages and gain overall battlefield situational awareness.");
+        values1.put(Ack_Link, "http://www.northropgrumman.com/capabilities/c2pc/Pages/default.aspx");
+        values1.put(Ack_Icon, "usmc");
+
+        db.insert(Ackdb, null, values1);
+        values1 = new ContentValues();
+        values1.put(Ack, "COC");
+        values1.put(Ack_Name, "Combat Operations Center");
+        values1.put(Ack_Details, "The COC is a deployable, self-contained, centralized facility that provides shared command and control and situational awareness functionalities in a collaborative environment. The system is designed to enhance the tactical common operational picture for all levels of the Marine Air Ground Task Force (MAGTF).");
+        values1.put(Ack_Link, "https://marinecorpsconceptsandprograms.com/programs/command-and-control-situational-awareness-c2sa/combat-operations-center-coc");
+        values1.put(Ack_Icon, "usmc");
+
+        db.insert(Ackdb, null, values1);
+        values1 = new ContentValues();
+        values1.put(Ack, "COP");
+        values1.put(Ack_Name, "Common Operational Picture");
+        values1.put(Ack_Details, "A common operational picture (COP) is a single identical display of relevant (operational) information (e.g. position of own troops and enemy troops, position and status of important infrastructure such as bridges, roads, etc.) shared by more than one Command. A COP facilitates collaborative planning and assists all echelons to achieve situational awareness.");
+        values1.put(Ack_Link, "https://en.wikipedia.org/wiki/Common_operational_picture");
+        values1.put(Ack_Icon, "usmc");
+
+        db.insert(Ackdb, null, values1);
+        values1 = new ContentValues();
+        values1.put(Ack, "CPOF");
+        values1.put(Ack_Name, "Command Post of the Future");
+        values1.put(Ack_Details, "The United States Army's Command Post of the Future (CPOF) is a C2 software system that allows commanders to maintain topsight over the battlefield; collaborate with superiors, peers and subordinates over live data; and communicate their intent.");
+        values1.put(Ack_Link, "https://en.wikipedia.org/wiki/Command_Post_of_the_Future");
+        values1.put(Ack_Icon, "usmc");
+
+        db.insert(Ackdb, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(Ack, "DOD");
+        values1.put(Ack_Name, "Department of Defense");
+        values1.put(Ack_Details, "The Department of Defense (DoD, USDOD, or DOD) is an executive branch department of the federal government of the United States charged with coordinating and supervising all agencies and functions of the government concerned directly with national security and the United States Armed Forces.");
+        values1.put(Ack_Link, "http://www.defense.gov/");
+        values1.put(Ack_Icon, "usmc");
+
+        db.insert(Ackdb, null, values1);
+
+        values1 = new ContentValues();
+        values1.put(Ack, "ECP");
+        values1.put(Ack_Name, "Engineering Change Proposal");
+        values1.put(Ack_Details, "An Engineering Change Proposal (ECP) is the management tool used to propose a configuration change to a CI and its Government-baselined performance requirements and configuration documentation during acquisition (and during post-acquisition if the Government is the CDCA for the configuration documentation).");
+        values1.put(Ack_Link, "https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=4&cad=rja&uact=8&ved=0CCsQFjADahUKEwia35ym8MLIAhWHuB4KHXopBck&url=http%3A%2F%2Fwww.product-lifecycle-management.com%2Fmil-hdbk-61a-6-2.htm&usg=AFQjCNEbvgjTaSPoslFHYLPdvwaJFSz-3A&sig2=mTQCmggbI-qrwx8UM2QYfQ");
+        values1.put(Ack_Icon, "usmc");
+
+        db.insert(Ackdb, null, values1);
 
 
 
-}
+
+    }
 
     @Override
     public void onTaskStarted() {
@@ -15757,6 +15836,8 @@ public class DataBaseWrapper extends SQLiteOpenHelper implements OnTaskCompleted
         populateusarmyranks(db);
         populateusnavyranks(db);
         populateuscgranks(db);
+
+        populateack(db);
 
 
 

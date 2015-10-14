@@ -65,7 +65,7 @@ public class RankviewerFragment extends Fragment {
     @Override
     public void onDetach() {
         super.onDetach();
-        try {
+       /* try {
             Field childFragmentManager = Fragment.class
                     .getDeclaredField("mChildFragmentManager");
             childFragmentManager.setAccessible(true);
@@ -75,6 +75,6 @@ public class RankviewerFragment extends Fragment {
             throw new RuntimeException(e);
         } catch (IllegalAccessException e) {
             throw new RuntimeException(e);
-        }
+        }*/
     }
 }

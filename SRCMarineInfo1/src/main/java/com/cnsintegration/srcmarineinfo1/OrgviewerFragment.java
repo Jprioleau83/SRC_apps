@@ -107,16 +107,16 @@ public class OrgviewerFragment extends Fragment {
     @Override
     public void onDetach() {
         super.onDetach();
-        try {
+     /*   try {
             Field childFragmentManager = Fragment.class
                     .getDeclaredField("mChildFragmentManager");
             childFragmentManager.setAccessible(true);
             childFragmentManager.set(this, null);
-            fm.popBackStack();
+           // fm.popBackStack();
         } catch (NoSuchFieldException e) {
             throw new RuntimeException(e);
         } catch (IllegalAccessException e) {
             throw new RuntimeException(e);
-        }
+        }*/
     }
 }
